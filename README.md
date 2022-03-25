@@ -12,16 +12,6 @@ The following branches are built and deployed automatically. Check `#jenkins` in
 
 See [BRANCHES.md](BRANCHES.md) for an explanation.
 
-## Clone repository
-Be sure to include the recursive command the first time you clone the repository to include any submodules.
-
-    git clone git@bitbucket.org:bigtincan/hub-web-app-v5.git --recursive
-
-# Pulling
-To fetch the latest code, including submodules.
-
-    git pull && git submodule update --init --recursive
-
 ## Install & update dependencies
 Make sure you are running the latest version of Node.js, `npm` and `yarn`.
 
