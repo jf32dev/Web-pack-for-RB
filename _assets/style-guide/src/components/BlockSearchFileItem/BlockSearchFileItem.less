@@ -1,0 +1,257 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2020 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../libs/less/variables.less";
+
+.BlockSearchFileItem {
+  display: flex;
+  position: relative;
+  padding: 1rem 0;
+  // height: 9.75rem;
+  border-bottom: solid 1px @dividerColor;
+  border-bottom-color: var(--divider-color);
+
+  .thumbnail {
+    .gridCategoryColours();
+    width: 13.75rem;
+    height: 7.5rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 8px;
+    flex: 0 0 auto;
+    margin-right: 1rem;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #eee;
+    cursor: pointer;
+
+    &.hasThumbnail {
+      &:before, svg {
+        display: none;
+      }
+    }
+
+    // font icon
+    &:before {
+      font-size: 4rem;
+    }
+
+    // svg icon
+    svg {
+      width: 6rem;
+    }
+  }
+
+  > section {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .meta {
+      display: flex;
+      align-items: center;
+
+      .category {
+        .listCategoryColours();
+        color: #fff;
+        text-align: center;
+        padding: 0 0.625rem;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        font-weight: 600;
+        border-radius: 4px;
+
+        &:after {
+          content: attr(data-category);
+        }
+
+        /* powerpoint > PPT */
+        &[data-category=powerpoint]:after {
+          content: 'PPT';
+        }
+      }
+
+      .date {
+        color: var(--secondary-text);
+        font-size: 0.75rem;
+
+        > span {
+          vertical-align: middle;
+        }
+
+        &:before {
+          content: '';
+          display: inline-block;
+          width: 3px;
+          height: 3px;
+          border-radius: 50%;
+          margin: 0 0.5rem;
+          background-color: var(--secondary-text);
+          vertical-align: middle;
+        }
+      }
+
+      .certifiedWrapper {
+        font-size: 0.75rem;
+
+        &:before {
+          content: '';
+          display: inline-block;
+          width: 3px;
+          height: 3px;
+          border-radius: 50%;
+          margin-left: 0.5rem;
+          background-color: var(--secondary-text);
+          vertical-align: middle;
+        }
+      }
+
+      .certified {
+        color: #F3BF1C;
+        vertical-align: middle;
+        margin-left: 0.5rem;
+
+        &:before {
+          margin-bottom: 2px;
+          font-size: 1.25rem;
+        }
+      }
+    }
+
+    .fileDescription {
+      margin-top: 0.25rem;
+      overflow: hidden;
+
+      h3 {
+        font-size: 0.875rem;
+        font-weight: 600;
+        line-height: 1.57;
+        margin: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: var(--primary-text);
+      }
+
+      p {
+        margin: 0;
+        font-size: 0.8125rem;
+        color: var(--primary-text);
+        height: 2.625rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      em, mark {
+        font-style: initial;
+        background-color: var(--light-base-color);
+      }
+    }
+
+    .tags {
+      display: flex;
+      align-items: center;
+      font-size: 0.75rem;
+    }
+
+    .internalTag {
+      color: var(--accent-color);
+      font-weight: 600;
+      height: 1.25rem;
+
+      // icon
+      > span + span {
+        margin-left: 0.35rem;
+      }
+
+      &+.sourceTags {
+        &:before {
+          content: '';
+          display: inline-block;
+          width: 3px;
+          height: 3px;
+          border-radius: 50%;
+          margin: 0 0.5rem;
+          background-color: var(--secondary-text);
+          vertical-align: middle;
+        }
+      }
+    }
+
+    .sourceTags {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      color: var(--secondary-text);
+      height: 1.25rem;
+
+      > li {
+        display: inline-block;
+        margin: 0 0.25rem 0 0;
+
+        &:not(:first-child):before {
+          content: '';
+          display: inline-block;
+          width: 3px;
+          height: 3px;
+          border-radius: 50%;
+          margin: 0 0.5rem 0 0.25rem;
+          background-color: var(--secondary-text);
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+
+  .fileActions {
+    position: absolute;
+    top: 0.5rem;
+    right: 0;
+    display: flex;
+    align-items: center;
+
+    button {
+      width: 100%;
+      margin-right: 0.5rem;
+
+      // icon
+      &:before {
+        font-size: 1.2rem;
+        vertical-align: middle;
+        color: var(--base-color);
+      }
+    }
+  }
+
+  .menu {
+    cursor: pointer;
+    /*
+    li:last-child {
+      border-top: solid 1px @dividerColor;
+      border-top-color: var(--divider-color);
+    }
+    */
+  }
+}

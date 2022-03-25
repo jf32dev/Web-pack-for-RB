@@ -1,0 +1,344 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../libs/less/btc-font-mixins.less";
+@import "../../libs/less/utilities.less";
+@import "../../libs/less/variables.less";  // category colours
+
+@fileBg: #f9f9f9;
+
+@thumbPreviewHeight: 137.5px;
+@thumbPreviewWidth: 110px;
+
+.FileThumb {}
+
+.thumbnail() {
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:50%;
+
+  /* category label */
+  &:after {
+    content:attr(data-category);
+    text-transform:capitalize;
+    color:#fff;
+  }
+
+  /* Uppercase abbreviations */
+  &[data-category=btc], &[data-category=cad],
+  &[data-category=csv], &[data-category=pdf],
+  &[data-category=potx], &[data-category=rtf],
+  &[data-category=rtfd], &[data-category=txt],
+  &[data-category="3d-model"]
+  {
+    &:after {
+      text-transform:uppercase;
+    }
+  }
+
+  /* Alternate capitilisation/abbreviations */
+  &[data-category=app]:after {
+    text-transform:none;
+    content:'Add-On';
+  }
+  &[data-category=ebook]:after {
+    text-transform:none;
+    content:'eBook';
+  }
+  &[data-category=epub]:after {
+    text-transform:none;
+    content:'ePub';
+  }
+  &[data-category=ibooks]:after {
+    text-transform:none;
+    content:'iBooks';
+  }
+
+  /* Zip Icon */
+  &[data-category=zip]:before {
+    margin-top:0;
+    font-size:64px;
+  }
+}
+
+.listThumbnail {
+  .thumbnail();
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:2px;
+  position:relative;
+  flex:0 0 auto;
+
+  /* category label */
+  &:after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform:translateY(-50%);
+    text-align:center;
+  }
+
+  .listCategoryColours();
+
+  /* Scrollmotion > SM */
+  &[data-category=scrollmotion]:after {
+    content:'SM';
+  }
+
+  /* Show thumbnail preview on hover */
+  &:hover {
+    .listThumbPreview {
+      opacity:1;
+      z-index:1;
+    }
+  }
+
+  .listThumbPreview {
+    opacity:0;
+
+    position:absolute;
+    top: -@thumbPreviewHeight - 4;
+    //left: -@thumbPreviewHeight / 5;
+    left: auto;
+    width: @thumbPreviewWidth;
+    height: @thumbPreviewHeight;
+    z-index:-1;
+
+    pointer-events:none;
+    background-color:#fff;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:50% 50%;
+    border: solid 1px #ddd;
+    border-color: var(--divider-color);
+    border-radius: 2px;
+    transition:all @timing-fast ease-in;
+    transition-delay:250ms;
+  }
+}
+
+.gridThumbnail {
+  .thumbnail();
+  background-color:@fileBg;
+  text-align:center;
+  position:relative;
+  border:solid 1px #ddd;
+  border-color: var(--divider-color);
+  border-radius:2px;
+  transition:border-color @timing-fast ease-in;
+
+  /* file icon -- hidden by .showThumb */
+  &:before {
+    margin-top:25%;
+  }
+
+  /* category label */
+  &:after {
+    background-color:@primary-text;
+    position:absolute;
+    left:-5px;
+    bottom:10%;
+    border-radius:2px;
+    padding:0 0.5rem;
+    min-height:1rem;
+  }
+  .gridCategoryColours();
+}
+
+.showThumb {
+  &:before { display:none; }
+}
+
+/* Folder thumbnail */
+.folderThumb {
+  background:transparent !important;
+  border:none;
+  display:flex;
+  align-items:center;
+
+  > svg {
+    width:100% !important;
+    margin-left: -2px;
+    margin-right: -2px;
+  }
+
+  &.listThumbnail {
+    > svg {
+      width:80% !important;
+    }
+
+    &:after {
+      display:none;
+    }
+  }
+
+  &.gridThumbnail {
+    &:after {
+      background:transparent;
+      color: var(--base-color);
+      text-transform: lowercase;
+      left: 0;
+      right: 0;
+      padding:0;
+    }
+  }
+
+  &.gridLargeThumb {
+    &:before {
+      position:absolute;
+      left:0;
+      right:0;
+      font-size:32px;
+      margin-top:0;
+      color: var(--base-color);
+    }
+
+    &:after {
+      bottom:32px;
+    }
+  }
+  &.gridMediumThumb:after {
+    bottom:24px;
+  }
+  &.gridSmallThumb:after {
+    display:none;
+  }
+}
+
+/* common list sizes */
+/* category label sizes for common thumbWidth */
+.listLargeThumb {
+  margin-right:0.5rem;
+
+  &:after {
+    font-size:1rem;
+  }
+}
+.listMediumThumb {
+  margin-right:0.5rem;
+
+  &:after {
+    font-size:0.85rem;
+  }
+}
+.listSmallThumb {
+  margin-right:0.5rem;
+
+  &:after {
+    font-size:0.75rem;
+  }
+}
+
+/* common grid sizes */
+/* category/icons sizes for common thumbWidth */
+/* svg multi-coloured icon margin */
+.gridLargeThumb {
+  margin-bottom:0.5rem;
+
+  &:before {
+    font-size:56px;
+  }
+  &:after {
+    font-size:0.8rem;
+    bottom:16px;
+  }
+  svg {
+    height: 6.5rem;
+    width:72px;
+  }
+
+  /* Long-name categories  */
+  &[data-category=btc]:after {
+    text-transform:none;
+    content:'Presentation';
+  }
+
+  /* Zip Icon */
+  &[data-category=zip]:before {
+    font-size:88px;
+  }
+}
+
+.listLargeThumb, .gridMediumThumb, .gridSmallThumb, .listMediumThumb, .listSmallThumb {
+  /* lowercase abbreviations for some files */
+  &[data-category=earthviewer]:after { content: 'ETV'; }
+  &[data-category=numbers]:after { content: 'NUM'; }
+  &[data-category=oomph]:after { content: 'OOM'; }
+  &[data-category=powerpoint]:after { content: 'PPT'; }
+  &[data-category=learning]:after { content: 'EDU'; }
+  &[data-category='3d-model']:after { content: '3DM'; }
+}
+
+
+.listLargeThumb, .listMediumThumb, .listSmallThumb {
+  /* Keynote doesn't fit in list */
+  &[data-category=keynote]:after { content: 'Key'; }
+}
+
+.gridMediumThumb {
+  margin-bottom:0.25rem;
+
+  &:before {
+    margin-top:15px;
+    font-size:32px;
+  }
+  &:after {
+    font-size:12px;
+    bottom:10px;
+  }
+  svg {
+    height: 4rem;
+    width:44px;
+  }
+
+  /* Scrollmotion > SM */
+  &[data-category=scrollmotion]:after {
+    content:'SM';
+  }
+
+  /* Zip Icon */
+  &[data-category=zip]:before {
+    font-size:42px;
+  }
+}
+
+.gridSmallThumb {
+  margin-bottom:0rem;
+
+  &:before {
+    margin-top:20%;
+    font-size:28px;
+  }
+  &:after {
+    font-size:11px;
+    bottom:5px;
+  }
+  svg {
+    margin-top: 13%;
+    width:32px;
+  }
+
+  &[data-category=scrollmotion]:after {
+    content:'SM';
+  }
+
+  &[data-category=zip]:before {
+    font-size:38px;
+  }
+}

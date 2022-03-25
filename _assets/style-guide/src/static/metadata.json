@@ -1,0 +1,16 @@
+[{
+  "metadataId": 384,
+  "categoryId": 1,
+  "propertyId": 1,
+  "value": "test"
+}, {
+  "metadataId": 385,
+  "categoryId": 1,
+  "propertyId": 2,
+  "value": "Test2"
+}, {
+  "metadataId": 386,
+  "categoryId": 2,
+  "propertyId": 7,
+  "value": "Prospecting"
+}]

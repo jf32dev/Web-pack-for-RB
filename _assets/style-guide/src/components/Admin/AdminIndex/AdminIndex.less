@@ -1,0 +1,127 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2016 BigTinCan Mobile Pty Ltd
+ * @author Rubenson Barrios <rubenson.barrios@bigtincan.com>
+ */
+
+@import "../../../libs/less/btc-font-mixins.less";
+@import "../../../libs/less/variables.less";
+
+.AdminIndex {
+  align-self: center;
+}
+
+.searchInput {
+  max-width: 21rem;
+  margin: auto;
+  z-index: 1;
+
+  &:before {
+    left: 0.75rem !important;
+    //right: 0.75rem !important;
+    color: var(--base-color) !important;
+  }
+  > input {
+    padding-left: 2.75rem !important;
+    padding-right: 2rem !important;
+  }
+  > span { // Clear icon
+    right: 0.8rem;
+  }
+}
+
+.containerList {
+  margin: 1rem auto;
+  width: 21rem;
+  padding: 0.5rem;
+  position: relative;
+}
+
+.list {
+  transition: box-shadow 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  display: block;
+  visibility: visible;
+  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.15) !important;
+  position: absolute;
+  background: #ffffff;
+  width: 21rem;
+  left: 0;
+  margin: 0 0 2rem 0;
+  padding: 4rem 0 0 0;
+  margin-top: -4rem;
+
+  > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 10rem;
+    height: auto;
+    overflow:auto;
+
+    > li {
+      margin:0;
+      padding:0;
+      line-height: 2rem;
+      text-align: left;
+
+      &:hover {
+        background-color: var(--light-base-color);
+      }
+    }
+  }
+}
+
+.ItemList {
+  display:block;
+  color: var(--primary-text);
+  padding:1rem;
+  vertical-align: middle;
+
+  &:before {
+    color: var(--base-color);
+    margin-right: 1rem;
+    font-size: 1.6rem;
+    width: 1.6rem;
+    text-align: center;
+  }
+
+  > span {
+    display: inline-block;
+    color: var(--primary-text);
+    padding-right: 0.75rem;
+    margin-right: 0.5rem;
+    position: relative;
+    .icon-next(0.35rem);
+
+    &:before {
+      left: initial !important;
+      right: 0;
+      position: absolute;
+      font-size: 0.4rem;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      color: var(--secondary-text);
+    }
+  }
+
+  > a {
+    color: var(--base-color);
+    transition: unset !important;
+    &:hover {
+      text-decoration: none;
+      opacity: 0.8;
+      transition: unset !important;
+    }
+  }
+}

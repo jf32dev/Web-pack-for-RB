@@ -1,0 +1,51 @@
+{
+    "actionId": 48845489,
+    "actionType": "story",
+    "authString": "&access_token=d49e3a020284d59dae871089dc08c05cd059985b",
+    "code": "file-expiry",
+    "date": 1611183083,
+    "id": 56178,
+    "inList": true,
+    "read": true,
+    "showThumb": true,
+    "story": {
+        "author": 200,
+        "badgeColour": "#0cbd73",
+        "badgeTitle": "New1",
+        "colour": "#04e44a",
+        "commentCount": 0,
+        "excerpt": "",
+        "featuredImage": "",
+        "fileCount": 1,
+        "files": [
+            {
+                "id": 1,
+                "description": "test file"
+            }
+        ],
+        "id": 48845489,
+        "initialCreatedAt": 1611183066,
+        "initialPublishedAt": 1611183066,
+        "isArchived": false,
+        "isBookmark": false,
+        "isFeatured": false,
+        "isGeoProtected": false,
+        "isLiked": false,
+        "isProtected": false,
+        "isQuickfile": false,
+        "isQuicklink": false,
+        "isRead": false,
+        "name": "Demo ",
+        "permId": 48845489,
+        "quicklinkUrl": "",
+        "rating": 0,
+        "ratingCount": 0,
+        "sequence": 0,
+        "sharing": true,
+        "thumbnail": "",
+        "title": "Demo ",
+        "type": "story"
+    },
+    "type": "notification",
+    "thumbSize": "large"
+}

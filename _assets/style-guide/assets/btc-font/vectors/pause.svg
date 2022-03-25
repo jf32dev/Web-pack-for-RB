@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="416px" height="512px" viewBox="0 0 416 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.5.2 (25235) - http://www.bohemiancoding.com/sketch -->
+    <title>Pause</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="play" sketch:type="MSArtboardGroup" transform="translate(-48.000000, 0.000000)" fill="#000000">
+            <path d="M48,26.9858926 C48,12.0819957 60.0260048,0 74.7804027,0 L181.219597,0 C196.010005,0 208,12.1512527 208,26.9858926 L208,485.014108 C208,499.918005 195.973995,512 181.219597,512 L74.7804027,512 C59.9899947,512 48,499.848747 48,485.014108 L48,26.9858926 L48,26.9858926 Z M304,26.9858926 C304,12.0819957 316.026005,0 330.780403,0 L437.219597,0 C452.010005,0 464,12.1512527 464,26.9858926 L464,485.014108 C464,499.918005 451.973995,512 437.219597,512 L330.780403,512 C315.989995,512 304,499.848747 304,485.014108 L304,26.9858926 L304,26.9858926 Z" id="Pause" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

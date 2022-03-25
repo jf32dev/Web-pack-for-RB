@@ -1,0 +1,46 @@
+# --------------------------------------------------------------------------- #
+# Project Info
+#   Defaults shown. Learn more about these options by running
+#   `fontcustom help` or visiting <http://fontcustom.com>.
+# --------------------------------------------------------------------------- #
+
+font_name: btc-font
+css_selector: .icon-{{glyph}}
+preprocessor_path: ""
+autowidth: true
+no_hash: true
+force: false
+debug: false
+quiet: false
+
+input:
+  vectors: vectors
+  templates: templates
+
+output:
+  css: ../../src/libs/css
+  fonts: ../../src/libs/fonts
+  preview: styleguide
+  btcfont.html: styleguide
+  btc-font.less: ../../src/libs/less
+  btc-font-mixins.less: ../../src/libs/less
+
+templates:
+- preview
+- btcfont.html
+- btc-font.less
+- btc-font-mixins.less
+
+
+# -----------------------------------------------------------------------------
+# Font Settings (defaults shown)
+# -----------------------------------------------------------------------------
+# Size (in pica points) for which your font is designed.
+#font_design_size: 16
+# The em size. Setting this will scale the entire font to the given size.
+
+# The font's ascent and descent. Used to calculate the baseline.
+#font_descent: 64
+#font_ascent: 448
+# Horizontally fit glyphs to their individual vector widths.
+#autowidth: false

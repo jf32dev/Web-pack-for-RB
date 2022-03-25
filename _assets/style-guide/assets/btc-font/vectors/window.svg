@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="512px" height="512px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-window</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon-window" fill="#000000">
+            <g id="windows" transform="translate(18.000000, 16.000000)">
+                <path d="M0,67.6768767 L195.343446,41.1550936 L195.428838,228.99908 L0.178445831,230.107546 L0,67.6768767 L0,67.6768767 L0,67.6768767 Z M195.250393,250.642365 L195.402016,438.650057 L0.151624218,411.888714 L0.140676621,249.381268 L195.250393,250.642365 L195.250393,250.642365 L195.250393,250.642365 Z M218.930591,37.6855758 L477.939789,0 L477.939789,226.610035 L218.930591,228.659931 L218.930591,37.6855758 L218.930591,37.6855758 L218.930591,37.6855758 Z M478,252.410411 L477.939242,478 L218.930044,441.556421 L218.567132,251.988044 L478,252.410411 L478,252.410411 L478,252.410411 Z" id="Windows"></path>
+            </g>
+        </g>
+    </g>
+</svg>

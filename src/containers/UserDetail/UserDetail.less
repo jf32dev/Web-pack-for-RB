@@ -1,0 +1,111 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package hub-web-app-v5
+ * @copyright 2010-2017 BigTinCan Mobile Pty Ltd
+ * @author Rubenson Barrios <rubenson.barrios@bigtincan.com>
+ */
+
+@import "../../less/_variables.less";
+
+.UserDetail {
+  height: 100%;
+
+  >header {
+    padding-left: 2.5rem;
+  }
+
+  /* Sub-container wrap */
+  >div {
+    position: absolute;
+    top: @appHeaderHeight;
+    overflow: auto;
+    bottom: 0;
+    left: calc(@pageMargin + 0.5rem);
+    right: 0;
+  }
+}
+
+.userSummary {
+  padding-right: calc(@pageMargin + 0.5rem);
+}
+
+.userModal {
+  min-height: 5rem;
+
+  // loading indicator
+  >div {
+    padding-top: 1.5rem !important;
+  }
+}
+
+.userList {
+  width: 100%;
+  padding: 0.5rem 1rem !important;
+
+  >li {
+    border-top: 1px solid @dividerColor;
+    border-top-color: @divider-color;
+    position: relative;
+
+    &:first-child,
+    &:last-child {
+      border-top: 0;
+    }
+
+    /* user thumbnail */
+    >div>a {
+      margin-left: -0.5rem;
+    }
+
+    button {
+      position: absolute;
+      right: 0;
+      top: 14px;
+    }
+  }
+}
+
+.groupList {
+  width: 100%;
+  padding: 0.5rem 1rem !important;
+
+  >li {
+    border-top: 1px solid @dividerColor;
+    border-top-color: @divider-color;
+    position: relative;
+
+    &:first-child,
+    &:last-child {
+      border-top: 0;
+    }
+
+    /* user thumbnail */
+    >div>a {
+      margin-left: -0.5rem;
+    }
+
+    button {
+      position: absolute;
+      right: 0;
+      top: 14px;
+    }
+  }
+}
+
+.listContainer {
+  left: @pageMargin !important;
+
+  >ul {
+    margin-left: -0.25rem;
+  }
+}

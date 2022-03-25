@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../../../../css/btc.min.css">
+</head>
+<style>
+    body {
+        margin:15px;
+        overflow:auto;
+    }
+    p {
+        font-family: "btc-font";
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        line-height: 1;
+        text-decoration: inherit;
+        text-rendering: optimizeLegibility;
+        text-transform: none;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        font-smoothing: antialiased;
+    }
+    h1 {
+        font-size:30px;
+        margin:10px 0;
+    }
+    h2 {
+        margin:0;
+    }
+    .size-16 > * { font-size:16px; }
+    .size-32 > * { font-size:32px; }
+    .size-48 > * { font-size:48px; }
+    .size-64 > * { font-size:64px; }
+</style>
+<body>
+
+<h1><%= font_name %></h1>
+
+<section class="size-16">
+    <h2>16px</h2>
+    <p>
+    <% @glyphs.each do |name, value| selector = @options[:css_selector].sub('{{glyph}}', name.to_s) %>
+    &#x<%= value[:codepoint].to_s(16) %>
+    <% end %>
+    </p>
+</section>
+
+<section class="size-32">
+    <h2>32px</h2>
+    <p>
+    <% @glyphs.each do |name, value| selector = @options[:css_selector].sub('{{glyph}}', name.to_s) %>
+    &#x<%= value[:codepoint].to_s(16) %>
+    <% end %>
+    </p>
+</section>
+
+<section class="size-48">
+    <h2>48px</h2>
+    <p>
+    <% @glyphs.each do |name, value| selector = @options[:css_selector].sub('{{glyph}}', name.to_s) %>
+    &#x<%= value[:codepoint].to_s(16) %>
+    <% end %>
+    </p>
+</section>
+
+<section class="size-64">
+    <h2>64px</h2>
+    <p>
+    <% @glyphs.each do |name, value| selector = @options[:css_selector].sub('{{glyph}}', name.to_s) %>
+    &#x<%= value[:codepoint].to_s(16) %>
+    <% end %>
+    </p>
+</section>
+
+</body>
+</html>

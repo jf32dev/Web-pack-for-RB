@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="374px" height="512px" viewBox="0 0 374 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
+    <title>SearchPasswordOverlay</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-1" transform="translate(-69.000000, 0.000000)" fill="#000000">
+            <path d="M277,381.174603 C292.985412,373.38484 304,356.978718 304,338 C304,311.490332 282.509668,290 256,290 C229.490332,290 208,311.490332 208,338 C208,356.978718 219.014588,373.38484 235,381.174603 L235,421.002252 C235,432.597698 244.40202,442 256,442 C267.60053,442 277,432.598988 277,421.002252 L277,381.174603 Z M111,221 L69,221 L69,512 L443,512 L443,221 L401,221 L401,144.999006 C401,64.9114092 336.081289,0 256,0 C175.923664,0 111,64.9182662 111,144.999006 L111,221 Z M166,138 C166,92.1603658 203.155416,55 249.008383,55 L263.899762,55 C309.744026,55 346.499189,92.1502869 345.994468,138 L345.08079,221 L166,221 L166,138 Z" id="SearchPasswordOverlay"></path>
+        </g>
+    </g>
+</svg>

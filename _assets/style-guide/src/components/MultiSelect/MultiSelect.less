@@ -1,0 +1,283 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Rubenson Barrios<rubenson.barrios@bigtincan.com>
+ */
+
+@import "../../libs/less/btc-font-mixins.less";
+@import "../../libs/less/variables.less";
+@import "../../libs/less/utilities.less";
+
+@inputBg: #f5f5f5;
+
+.Container {
+  position: relative;
+  margin:0 -0.1rem 0.75rem;
+  padding:0.1rem;
+}
+.focused {
+  outline-color: var(--base-color);
+  outline-offset: -2px;
+  outline-style: auto;
+  outline-width: 3px;
+}
+.BoxList {
+  position:relative;
+  vertical-align:top;
+  background:@inputBg;
+  border:solid 1px transparent;
+  border-radius: 3px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin:0;
+  padding: 0.05rem 0.5rem;
+  min-height: 40px;
+  list-style:none;
+
+  input {
+    background:@inputBg;
+    border:solid 1px transparent;
+    border-radius: 3px;
+    color:var(--secondary-text);
+    display:block;
+    margin:0 !important;
+    padding: 0.2rem 0.55rem !important;
+    transition: background @timing-fast ease-in;
+    width:100%;
+    outline: none;
+
+    &:focus {
+      outline-color: transparent !important;
+      outline-width:0px !important;
+    }
+
+    &::-webkit-input-placeholder {
+      color:var(--secondary-text);
+    }
+  }
+}
+
+.textInput {
+  flex: 1 1 auto;
+  display: inline-flex;
+  margin: 0.15rem 0;
+
+  > div { width: 100%; }
+}
+
+.item {
+  position:relative;
+  margin:0.3rem 0.55rem 0.3rem 0;
+  display:inline-block;
+  color:#fff;
+  background-color:var(--base-color);
+  padding:0.15rem 0.5rem;
+  border-radius:4px;
+  white-space: nowrap;
+  max-width: 200px;
+
+  > span:first-child {
+    .overflow-ellipsis();
+    overflow: hidden;
+    max-width: 190px;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: top;
+    height: 22px;
+  }
+}
+
+.error {
+  > span:first-child {
+    border-bottom: dotted 2px #fff;
+  }
+}
+
+.deleteItem {
+  .icon-close(8px);
+
+  position:absolute;
+  top:-0.35rem;
+  right:-0.35rem;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  height:0.75rem;
+  width:0.75rem;
+
+  border-radius:50%;
+  color:#fff;
+  background-color:var(--secondary-text);
+  transition:background @timing-fast linear;
+  cursor:pointer;
+
+  &:before {
+    font-weight:bold;
+  }
+  &:hover {
+    background-color:var(--primary-text);
+  }
+}
+
+.disabled, .disabled * {
+  cursor:not-allowed !important;
+  user-select:none;
+}
+
+.noResults {
+  //position: absolute;
+  left: 0;
+  right: 0;
+  min-height: 2.5rem;
+  line-height: 2.5rem;
+  padding: 0 1.3rem;
+  margin-top:0;
+  //margin-bottom: 1rem;
+  //border: 1px solid #f5f5f5;
+  //border-bottom-left-radius: 3px;
+  //border-bottom-right-radius: 3px;
+  background-color: #fcfcfc;
+  color: var(--secondary-text);
+}
+.optionList {
+  z-index: 5;
+  position: absolute;
+  left: 1px;
+  width: calc(~"100% - 2px");
+  right: 0;
+  min-height: 1.5rem;
+  padding: 0;
+  margin-top:0;
+  margin-bottom: 1rem;
+  border: 1px solid #f5f5f5;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: #fcfcfc;
+  box-shadow: 0 0 0.3px 0 rgba(0, 0, 0, 0.3);
+  max-height: 200px;
+  overflow: auto;
+
+  > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: var(--secondary-text);
+  }
+}
+
+// Loading indicator
+.loading {
+  animation: spin 400ms infinite linear;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  border-right-color: #333;
+  display: inline-block;
+  vertical-align: middle;
+
+  position: absolute;
+  right: 0.5rem;
+  top: 0.7rem;
+  z-index: 1;
+}
+
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+}
+
+
+// option Item list
+.optionItem {
+  padding: 0 1.3rem;
+  margin: 0;
+  line-height: 35px;
+}
+.focusOption {
+  background-color: var(--light-base-color);
+}
+
+.avatar {
+  height: 50px;
+  padding: 0.5rem 1.3rem;
+
+  //avatar
+  > div {
+    position: relative;
+    padding-left: 36px;
+
+    &:before {
+      position: absolute;
+      left: 0;
+      top: 0.3rem;
+      border-radius: 50%;
+      color: #fff;
+      padding: 0.3rem;
+    }
+  }
+  span {
+    width: 100%;
+    .overflow-ellipsis();
+
+    display: block;
+    line-height: 16px;
+  }
+}
+
+// Shows image
+.thumbnail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size:cover;
+  background-color: Transparent;
+  font-size: 0.8rem;
+  border-radius:50%;
+  text-align:center;
+  color:#fff;
+  transition: all @timing-fast linear;
+  margin:0;
+  text-transform:uppercase;
+  width: 1.55rem;
+  height: 1.55rem;
+  min-width: 25px;
+  min-height: 25px;
+  position: absolute;
+  left: 0;
+  top: 4px;
+
+  &:before {
+    font-size: 1.15rem;
+  }
+}
+
+.backgroundColor {
+  background-color: var(--base-color);
+}
+
+.crmFlag {
+  &:before {
+    left: inherit !important;
+    right: 0 !important;
+    color: #999999 !important;
+    top: 0 !important;
+    font-size: 1.5rem;
+  }
+}

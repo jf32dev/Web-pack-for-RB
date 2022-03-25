@@ -1,0 +1,44 @@
+[
+  {
+    "min": 0,
+    "max": 8,
+    "title": "Starter Pack",
+    "colour": "#cd7f32",
+    "enabled": true
+  },
+  {
+    "min": 9,
+    "max": 10,
+    "title": "Content Learner",
+    "colour": "#bfc1c2",
+    "enabled": true
+  },
+  {
+    "min": 11,
+    "max": 13,
+    "title": "Content Beginner",
+    "colour": "#0099ff",
+    "enabled": true
+  },
+  {
+    "min": 14,
+    "max": 51,
+    "title": "Adequate",
+    "colour": "#ff0000",
+    "enabled": true
+  },
+  {
+    "min": 52,
+    "max": 60,
+    "title": "Above Average",
+    "colour": "#e0baaf",
+    "enabled": true
+  },
+  {
+    "min": 61,
+    "max": 100,
+    "title": "Expert",
+    "colour": "#d85d73",
+    "enabled": true
+  }
+]

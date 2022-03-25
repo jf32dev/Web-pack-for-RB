@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="512px" height="512px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.5.2 (25235) - http://www.bohemiancoding.com/sketch -->
+    <title>image</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="image" sketch:type="MSArtboardGroup" fill="#000000">
+            <g id="icon-image" sketch:type="MSLayerGroup" transform="translate(0.000000, 64.000000)">
+                <path d="M425.220339,119.466667 C425.220339,152.456533 398.023593,179.2 364.474576,179.2 C330.925559,179.2 303.728814,152.456533 303.728814,119.466667 C303.728814,86.4768 330.925559,59.7333333 364.474576,59.7333333 C398.023593,59.7333333 425.220339,86.4768 425.220339,119.466667" id="Fill-5" sketch:type="MSShapeGroup"></path>
+                <path d="M16,329.233672 L168.353526,172 L314.446944,322.773043 L393.759599,240.919867 L496,346.435207 L496,368 L16,368 L16,329.233672 L16,329.233672 Z" id="Path-294" sketch:type="MSShapeGroup"></path>
+                <path d="M0,0 L512,0 L512,384 L0,384 L0,0 L0,0 L0,0 Z M16,16 L496,16 L496,368 L16,368 L16,16 L16,16 L16,16 Z" id="Rectangle-83" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

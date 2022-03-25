@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512px" height="512px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>Plus</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Plus" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill="#F26724" fill-rule="nonzero" id="Combined-Shape-Copy">
+            <path d="M204.8,204.8 L204.8,50.9643776 C204.8,22.817536 227.525888,0 256,0 C284.276992,0 307.2,23.3299968 307.2,50.9643776 L307.2,204.8 L461.035622,204.8 C489.182464,204.8 512,227.525888 512,256 C512,284.276992 488.670003,307.2 461.035622,307.2 L307.2,307.2 L307.2,461.035622 C307.2,489.182464 284.474112,512 256,512 C227.723008,512 204.8,488.670003 204.8,461.035622 L204.8,307.2 L50.9643776,307.2 C22.817536,307.2 0,284.474112 0,256 C0,227.723008 23.3299968,204.8 50.9643776,204.8 L204.8,204.8 Z"></path>
+        </g>
+    </g>
+</svg>

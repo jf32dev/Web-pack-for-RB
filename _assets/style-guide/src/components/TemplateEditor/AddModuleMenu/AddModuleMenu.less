@@ -1,0 +1,126 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../../libs/less/variables.less";
+
+.AddModuleMenu {
+  display: flex !important;
+  align-items: center;
+  height: 100%;
+  padding-left: 1.25rem !important;
+  padding-right: 1.25rem !important;
+
+  // don't change colour when active
+  > div {
+    color: #fff !important;
+  }
+
+  // icon
+  > div > span:first-child {
+    color: #fff;
+    margin-right: 0.5rem;
+
+    &:before {
+      font-size: 0.9rem;
+      margin-bottom: 3px;
+    }
+  }
+
+  .heading {
+    font-size: 120%;
+  }
+
+  h4 {
+    background: #f5f5f5;
+    text-align: center;
+    margin: 0;
+    padding: 0.5rem 0;
+  }
+
+  ul {
+    width: 20rem;
+    margin-top: 0.75rem !important;
+
+    li {
+      display: inline-block;
+      width: 50%;
+      text-align: center;
+      cursor: pointer;
+      vertical-align: top;
+
+      &:before {
+        content: '';
+        background-color: var(--divider-color);
+        background-repeat: no-repeat;
+        display: block;
+        margin: 0 auto 0.25rem;
+        width: 90% !important;
+        height: 5rem;
+        background-size: 2.25rem;
+        background-position: 50%;
+        transition: all @timing-fast ease-out;
+      }
+
+      &:hover {
+        background-color: inherit !important;
+
+        &:before {
+          box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.19);
+          transform: scale(1.03);
+        }
+      }
+
+      &[data-type=btca]:before {
+        background-image: url(./components/TemplateEditor/AddModuleMenu/app.png);
+        background-size: 4rem;
+      }
+      &[data-type=file-list]:before {
+        background-image: url(./components/TemplateEditor/AddModuleMenu/file.png);
+      }
+      &[data-type=story-list]:before {
+        background-image: url(./components/TemplateEditor/AddModuleMenu/story.png);
+      }
+      &[data-type=user-list]:before {
+        background-image: url(./components/TemplateEditor/AddModuleMenu/user.png);
+      }
+      &[data-type=featured-list]:before {
+        background-image: url(./components/TemplateEditor/AddModuleMenu/featured.png);
+        background-size: 7.25rem;
+      }
+      &[data-type=bookmark-list]:before {
+        background-image: url(./components/TemplateEditor/AddModuleMenu/bookmark.png);
+      }
+    }
+  }
+
+  /** Media Query breakpoints */
+  @media @mobile-xs {
+
+  }
+  @media @mobile {
+
+  }
+  @media @tablet {
+
+  }
+  @media @desktop {
+
+  }
+  @media @desktop-xl {
+
+  }
+}

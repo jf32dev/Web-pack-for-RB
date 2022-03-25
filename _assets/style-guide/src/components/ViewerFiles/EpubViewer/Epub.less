@@ -1,0 +1,53 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Jason Huang <jason.huang@bigtincan.com>
+ */
+
+//@import "../../libs/less/variables.less";
+
+//.Epub {
+//  height: 100%;
+//  width: 100%;
+//  overflow: auto;
+//  position: relative;
+//}
+
+.viewer {
+  height: 100%;
+  overflow: auto;
+  position: relative;
+  transform-origin: top left;
+  [epub\:type] {
+    background-color: red;
+  }
+}
+
+.hidden {
+  display: none !important;
+}
+
+//.loadingContainer {
+//  position: absolute;
+//  left: 50%;
+//  transform: translateX(-50%);
+//}
+
+.loading {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}

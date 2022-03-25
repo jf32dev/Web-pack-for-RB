@@ -1,0 +1,115 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../libs/less/variables.less";
+
+/* Animate list transitions */
+@keyframes slide-in {
+  from { opacity: 0; transform: translateX(0%); }
+  to { opacity: 1; transform: translateX(-100%); }
+}
+@keyframes slide-out {
+  from { opacity: 0; transform: translateX(-100%); }
+  to { opacity: 1; transform: translateX(0%); }
+}
+
+.BreadcrumbList {
+  display: flex;
+  height: 100%;
+  flex-direction:column;
+
+  > header {
+    display: flex;
+    align-items:center;
+    min-height: 2rem;
+  }
+
+  .breadcrumbs {
+    flex: 0 1 auto;
+    overflow: hidden;
+
+    > li {
+      cursor: pointer;
+    }
+  }
+
+  .dropMenu {
+    flex: 0;
+
+    /* icon */
+    > div > span {
+      cursor:pointer;
+
+      &:before {
+        font-size:0.7rem;
+        padding:0 0.5rem;
+      }
+    }
+  }
+
+  .filterContent {
+    width: 18.75rem;
+    margin-bottom: 0.625rem;
+    > input {
+      margin: 0 !important;
+    }
+  }
+}
+
+/* List Wrapper (wraps Transition container) */
+.listWrapper {
+  display:flex;
+
+  overflow: hidden;
+  position: relative;
+  flex: 1 1 auto;
+}
+
+.transitionWrapper {
+  width:100%;
+
+  /* Blankslate */
+  > div {
+    overflow-x:hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width:100%;
+  }
+
+  > ul {
+    position: absolute;
+  }
+}
+
+.animationsEnabled {
+  > ul {
+    overflow-x:hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width:100%;
+  }
+}
+
+.list0ActiveAnimate {
+  animation: slide-out @timing-medium forwards linear;
+}
+
+.list1ActiveAnimate {
+  animation: slide-in @timing-medium forwards linear;
+}

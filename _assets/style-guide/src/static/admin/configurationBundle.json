@@ -1,0 +1,913 @@
+{ "current": {
+    "channels": [
+      {
+        "id": "channel_subscribe",
+        "label": "Can subscribe ",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to subscribe to Channels.",
+        "options": ""
+      },
+      {
+        "id": "show_hidden_channel_toggle",
+        "label": "Show hidden channel toggle",
+        "type": "checkbox",
+        "value": "0",
+        "description": "Allow user to view hidden channels",
+        "options": ""
+      }
+    ],
+    "device_settings": [
+      {
+        "id": "has_open_in",
+        "label": "Allow open in",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to open content in other applications.",
+        "options": ""
+      },
+      {
+        "id": "has_copy_file_viewer",
+        "label": "Can copy text in viewers",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to use iOS copy-paste functionality to copy text in file viewer.",
+        "options": ""
+      },
+      {
+        "id": "has_device_browser_restrictions",
+        "label": "Device browser restrictions",
+        "type": "checkbox",
+        "value": "0",
+        "description": "Apply browsing restrictions by allowing websites to be blacklisted or whitelisted.",
+        "options": ""
+      },
+      {
+        "id": "force_download_subscribed_only",
+        "label": "Download subscribed content only",
+        "type": "checkbox",
+        "value": "0",
+        "description": "Only content which the user has subscribed to will be downloaded.",
+        "options": ""
+      },
+      {
+        "id": "has_android_file_encryption",
+        "label": "Require Android file encryption",
+        "type": "checkbox",
+        "value": "0",
+        "description": "Encrypt content if using an Android device.",
+        "options": ""
+      },
+      {
+        "id": "cellular_download_max",
+        "label": "Cellular download maximum (MB)",
+        "type": "text",
+        "value": "0",
+        "description": "Apply maximum download restrictions.",
+        "options": ""
+      },
+      {
+        "id": "wifi_download_max",
+        "label": "WiFi download maximum (MB)",
+        "type": "text",
+        "value": "0",
+        "description": "Apply maximum WiFi download restrictions. ",
+        "options": ""
+      },
+      {
+        "id": "user_lock_screen_timeout",
+        "label": "Inactivity lock timeout",
+        "type": "select",
+        "value": "0",
+        "description": "Set a period of time before the user\u0027s device is locked.",
+        "options": [
+          {
+            "value": 0,
+            "label": "never",
+            "lang_key": "never",
+            "n": ""
+          },
+          {
+            "value": 30,
+            "label": "30 seconds",
+            "lang_key": "n-second",
+            "n": 30
+          },
+          {
+            "value": 60,
+            "label": "1 minute",
+            "lang_key": "n-minute",
+            "n": 1
+          },
+          {
+            "value": 180,
+            "label": "3 minutes",
+            "lang_key": "n-minute",
+            "n": 3
+          },
+          {
+            "value": 300,
+            "label": "5 minutes",
+            "lang_key": "n-minute",
+            "n": 5
+          },
+          {
+            "value": 1200,
+            "label": "20 minutes",
+            "lang_key": "n-minute",
+            "n": 20
+          }
+        ]
+      },
+      {
+        "id": "inactivity_lock_type",
+        "label": "Inactivity lock type",
+        "type": "select",
+        "value": "pin_code",
+        "description": "Inactivity lock type",
+        "options": [
+          {
+            "value": "pin_code",
+            "label": "Pin Code",
+            "lang_key": "Pin Code",
+            "n": ""
+          },
+          {
+            "value": "reauthentication",
+            "label": "Re-authentication",
+            "lang_key": "reauthentication",
+            "n": 1
+          }
+        ]
+      }
+    ],
+    "features": [
+      {
+        "id": "has_interest_areas",
+        "label": "Interest Areas",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Enable interest areas.",
+        "options": ""
+      },
+      {
+        "id": "has_leaderboard",
+        "label": "Leaderboard",
+        "type": "checkbox",
+        "value": "1",
+        "description": "enable leaderboard feature\t",
+        "options": ""
+      },
+      {
+        "id": "has_logout",
+        "label": "Logout",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to log out of bigtincan hub.",
+        "options": ""
+      },
+      {
+        "id": "has_meetings",
+        "label": "Meetings",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Enable meetings.",
+        "options": ""
+      },
+      {
+        "id": "has_my_files",
+        "label": "My Files",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Enable bigtincan hub My Files feature.",
+        "options": ""
+      },
+      {
+        "id": "has_notes",
+        "label": "Notes",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Enable notes.",
+        "options": ""
+      },
+      {
+        "id": "has_people",
+        "label": "People",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Enable bigtincan hub People feature.",
+        "options": ""
+      },
+      {
+        "id": "has_personal_content",
+        "label": "Personal content",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Enable personal content.",
+        "options": ""
+      },
+      {
+        "id": "has_search",
+        "label": "Search",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Enable bigtincan hub Search feature.",
+        "options": ""
+      },
+      {
+        "id": "has_settings",
+        "label": "Settings",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Enable bigtincan hub Settings.",
+        "options": ""
+      },
+      {
+        "id": "show_annotation_tool",
+        "label": "Show BTC annotation tool",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Show the annotation option in the UI",
+        "options": ""
+      },
+      {
+        "id": "show_related_stories",
+        "label": "Show Related Stories",
+        "type": "checkbox",
+        "value": "1",
+        "description": "show related stories",
+        "options": ""
+      },
+      {
+        "id": "has_text_chat",
+        "label": "Text chat",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Enable text chat.",
+        "options": ""
+      },
+      {
+        "id": "has_top_people",
+        "label": "Top People",
+        "type": "checkbox",
+        "value": "1",
+        "description": "enable top people feature\t",
+        "options": ""
+      },
+      {
+        "id": "has_web_tabs",
+        "label": "Web tabs",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Enable bigtincan hub Web tabs feature.",
+        "options": ""
+      },
+      {
+        "id": "webapp_home_screen_tab",
+        "label": "Home screen tab",
+        "type": "select",
+        "value": "recommended",
+        "description": "Home screen tab to be shown when logging in",
+        "options": [
+          {
+            "value": "recommended",
+            "label": "Recommended",
+            "lang_key": "recommended"
+          },
+          {
+            "value": "popular",
+            "label": "Popular",
+            "lang_key": "popular"
+          },
+          {
+            "value": "latest",
+            "label": "Latest",
+            "lang_key": "latest"
+          },
+          {
+            "value": "mycontent",
+            "label": "My content",
+            "lang_key": "mycontent"
+          }
+        ]
+      },
+      {
+        "id": "webapp_v5_landing_page",
+        "label": "Landing page V5",
+        "type": "select",
+        "value": "company",
+        "description": "Landing page to be shown after logging in",
+        "options": [
+          {
+            "value": "company",
+            "label": "Company",
+            "lang_key": "company"
+          },
+          {
+            "value": "content",
+            "label": "Content",
+            "lang_key": "content"
+          },
+          {
+            "value": "chat",
+            "label": "Chat",
+            "lang_key": "chat"
+          },
+          {
+            "value": "activity",
+            "label": "Activity",
+            "lang_key": "activity"
+          },
+          {
+            "value": "me",
+            "label": "Me",
+            "lang_key": "me"
+          },
+          {
+            "value": "archive",
+            "label": "Archive",
+            "lang_key": "archive"
+          },
+          {
+            "value": "forms",
+            "label": "Forms",
+            "lang_key": "forms"
+          }
+        ]
+      }
+    ],
+    "gamification": [
+      {
+        "id": "show_story_score",
+        "label": "Show story badges",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Show story badges.",
+        "options": ""
+      },
+      {
+        "id": "show_user_badges",
+        "label": "Show user badges",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Show user badges.",
+        "options": ""
+      }
+    ],
+    "integrations": [
+      {
+        "id": "has_cloud_storage",
+        "label": "Cloud Storage",
+        "type": "checkbox",
+        "value": "0",
+        "description": "Allow users to use Cloud Storage",
+        "options": ""
+      },
+      {
+        "id": "crm_integration",
+        "label": "CRM Integration",
+        "type": "checkbox",
+        "value": "0",
+        "description": "Select to enable CRM Integration for this bundle",
+        "options": ""
+      },
+      {
+        "id": "is_javascript_bridge_enabled",
+        "label": "Enable JavaScript bridge",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Enable to allow developers to use JavaScript bridge API.",
+        "options": ""
+      }
+    ],
+    "publishing": [
+      {
+        "id": "story_author_delete_only",
+        "label": "Author delete only",
+        "type": "checkbox",
+        "value": "0",
+        "description": "Enable author-only delete so that only the author of the Story can delete it.",
+        "options": ""
+      },
+      {
+        "id": "story_author_edit_only",
+        "label": "Author edit only",
+        "type": "checkbox",
+        "value": "0",
+        "description": "Enable author-only edit so that only the author of the Story can edit it.",
+        "options": ""
+      },
+      {
+        "id": "story_can_alias",
+        "label": "Can alias",
+        "type": "checkbox",
+        "value": "0",
+        "description": "Allow users to create story aliases.",
+        "options": ""
+      },
+      {
+        "id": "story_can_comment",
+        "label": "Can comment",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to comment on Stories.",
+        "options": ""
+      },
+      {
+        "id": "story_can_copy",
+        "label": "Can copy",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to copy Stories to other Channels.",
+        "options": ""
+      },
+      {
+        "id": "story_can_copy_description",
+        "label": "Can copy description",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to copy Story descriptions using default iOS copy-paste functionality.",
+        "options": ""
+      },
+      {
+        "id": "story_can_create",
+        "label": "Can create",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to create Stories.",
+        "options": ""
+      },
+      {
+        "id": "story_opt_quick_file",
+        "label": "Can create Quickfile",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to create Quick file Stories. Quick file Stories act as links to files, which can be opened direct from the Story.",
+        "options": ""
+      },
+      {
+        "id": "story_opt_quick_form",
+        "label": "Can create Quickform",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to create Quickform Stories. Quickform Stories act as links to forms, which can be opened directly from the Story.",
+        "options": ""
+      },
+      {
+        "id": "story_opt_quick_link",
+        "label": "Can create Quicklink",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to create Quick link Stories. This allows users to open a link direct from the Story.",
+        "options": ""
+      },
+      {
+        "id": "story_can_delete",
+        "label": "Can delete",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to delete Stories.",
+        "options": ""
+      },
+      {
+        "id": "story_can_edit",
+        "label": "Can edit",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to edit Stories.",
+        "options": ""
+      },
+      {
+        "id": "story_can_edit_options",
+        "label": "Can edit options",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to adjust Story options.",
+        "options": ""
+      },
+      {
+        "id": "story_can_flag",
+        "label": "Can flag",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to flag a story.",
+        "options": ""
+      },
+      {
+        "id": "story_can_like",
+        "label": "Can like \/ rate",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to like \/ rate Stories.",
+        "options": ""
+      },
+      {
+        "id": "story_can_sort",
+        "label": "Can sort",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to use the sort feature which orders Stories in a specified way.",
+        "options": ""
+      },
+      {
+        "id": "story_can_subscribe",
+        "label": "Can subscribe",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to subscribe to Stories.",
+        "options": ""
+      },
+      {
+        "id": "story_opt_web_file",
+        "label": "Web file",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to attach a link to a webpage as a HTML file in Stories.",
+        "options": ""
+      }
+    ],
+    "story_options": [
+      {
+        "id": "story_opt_annotations",
+        "label": "Annotations",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to use annotations for content.",
+        "options": ""
+      },
+      {
+        "id": "story_opt_events",
+        "label": "Events",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to add Events to Stories.",
+        "options": ""
+      },
+      {
+        "id": "story_opt_expiry",
+        "label": "Expiry",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to set expiry dates for Stories. The expiry date means Stories are no longer available after the specified date.",
+        "options": ""
+      },
+      {
+        "id": "story_opt_featured_dates",
+        "label": "Featured dates",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to set the featured dates for a story",
+        "options": ""
+      },
+      {
+        "id": "story_opt_location_constraints",
+        "label": "Location constraints",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to specify a specific area in which their Story can be accessed.",
+        "options": ""
+      },
+      {
+        "id": "story_opt_notifications",
+        "label": "Notifications",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to set notifications for when Stories have been updated, changed or edited.",
+        "options": ""
+      },
+      {
+        "id": "story_opt_priority",
+        "label": "Priority",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to specify the priority of a story.",
+        "options": ""
+      },
+      {
+        "id": "story_opt_protected",
+        "label": "Protected",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to set a password for their Stories so that it can only by viewed once a user password has been inputted.",
+        "options": ""
+      },
+      {
+        "id": "story_opt_publish_date",
+        "label": "Publish date",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to set the publish date for a story",
+        "options": ""
+      },
+      {
+        "id": "story_opt_tags",
+        "label": "Tags",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to add Tags to Stories.",
+        "options": ""
+      }
+    ],
+    "story_sharing": [
+      {
+        "id": "story_share_optional_files_attached",
+        "label": "Attach Optional Files",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Set whether optional files should be attached to a story share by default",
+        "options": ""
+      },
+      {
+        "id": "story_share_email",
+        "label": "Device",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to share Stories through email.",
+        "options": ""
+      },
+      {
+        "id": "story_share_server",
+        "label": "Share w\/ Audit",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to share Stories through HubShare.",
+        "options": ""
+      }
+    ]
+  },
+  "legacy": {
+    "general": [
+      {
+        "id": "channel_create_personal",
+        "label": "Can create personal (Legacy)",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to create personal Channels.",
+        "options": ""
+      },
+      {
+        "id": "channel_delete_personal",
+        "label": "Can delete personal  (Legacy)",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to delete personal Channels.",
+        "options": ""
+      },
+      {
+        "id": "are_file_thumbnails_enabled",
+        "label": "Enable thumbnails (Legacy)",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to download and display thumbnails for content.",
+        "options": ""
+      }
+    ],
+    "features": [
+      {
+        "id": "webapp_landing_page",
+        "label": "Landing page",
+        "type": "select",
+        "value": "tabs",
+        "description": "Landing page to be shown after logging in",
+        "options": [
+          {
+            "value": "home",
+            "label": "Home",
+            "lang_key": "home"
+          },
+          {
+            "value": "tabs",
+            "label": "Tabs",
+            "lang_key": "tabs"
+          },
+          {
+            "value": "web_tabs",
+            "label": "Web Tabs",
+            "lang_key": "web_tabs"
+          },
+          {
+            "value": "calendar",
+            "label": "Calendar",
+            "lang_key": "calendar"
+          },
+          {
+            "value": "people",
+            "label": "People",
+            "lang_key": "people"
+          },
+          {
+            "value": "bookmarks",
+            "label": "Bookmarks",
+            "lang_key": "bookmarks"
+          },
+          {
+            "value": "archive",
+            "label": "Archive",
+            "lang_key": "archive"
+          },
+          {
+            "value": "help",
+            "label": "Help",
+            "lang_key": "help"
+          }
+        ]
+      }
+    ],
+    "home_screen": [
+      {
+        "id": "home_screen_vnone",
+        "label": "Home Screen Unversioned",
+        "type": "select",
+        "value": "0",
+        "description": "select to set homescreen for devices which doesnt specify a bridge version(legacy)",
+        "options": []
+      },
+      {
+        "id": "home_screen_v1_0",
+        "label": "Home Screen Version 1",
+        "type": "select",
+        "value": "0",
+        "description": "select to set homescreen for bridge version 1.0",
+        "options": []
+      },
+      {
+        "id": "home_screen_v2_0",
+        "label": "Home Screen Version 2",
+        "type": "select",
+        "value": "0",
+        "description": "select to set homescreen for bridge version 2.0",
+        "options": []
+      }
+    ],
+    "my_files_legacy": [
+      {
+        "id": "local_file_documents",
+        "label": "Can create local documents",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to create new documents which are stored on their device.",
+        "options": ""
+      },
+      {
+        "id": "local_file_presentations",
+        "label": "Can create local presentations",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to create new presentations which are stored on their device.",
+        "options": ""
+      },
+      {
+        "id": "local_file_spreadsheets",
+        "label": "Can create local spreadsheets",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to create new spreadsheets which are stored on their device.",
+        "options": ""
+      }
+    ],
+    "remote_repositories_legacy": [
+      {
+        "id": "repo_box",
+        "label": "Box",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to access their Box account through bigtincan hub.",
+        "options": ""
+      },
+      {
+        "id": "repo_dropbox",
+        "label": "Dropbox",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to access their Dropbox account through bigtincan hub.",
+        "options": ""
+      },
+      {
+        "id": "repo_google_drive",
+        "label": "Google Drive",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to access their Google Drive account through bigtincan hub.",
+        "options": ""
+      },
+      {
+        "id": "repo_skydrive",
+        "label": "SkyDrive",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to access their SkyDrive account through bigtincan hub.",
+        "options": ""
+      },
+      {
+        "id": "repo_webdav",
+        "label": "WebDAV",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to enable WebDAV.",
+        "options": ""
+      }
+    ],
+    "stories": [
+      {
+        "id": "story_can_create_note",
+        "label": "Can create Notes (Legacy)",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to create Notes.",
+        "options": ""
+      },
+      {
+        "id": "story_can_favourite",
+        "label": "Can favourite (Legacy)",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to mark a Story as a favorite.",
+        "options": ""
+      },
+      {
+        "id": "story_can_move",
+        "label": "Can move",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to move Stories to other Channels.",
+        "options": ""
+      }
+    ],
+    "story_options": [
+      {
+        "id": "story_opt_file_url",
+        "label": "File URL",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Allow users to attach URLs for files from remote repositories.",
+        "options": ""
+      }
+    ],
+    "ui": [
+      {
+        "id": "has_calendar",
+        "label": "Calendar (Legacy)",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Enable bigtincan hub Calendar feature.",
+        "options": ""
+      },
+      {
+        "id": "has_favourites",
+        "label": "Favourites (Legacy)",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Enable bigtincan hub Favorites feature.",
+        "options": ""
+      },
+      {
+        "id": "has_feeds",
+        "label": "Feeds (Legacy)",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Enable bigtincan hub Feeds feature.",
+        "options": ""
+      },
+      {
+        "id": "has_home",
+        "label": "Home (Legacy)",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Enable bigtincan hub Home screen.",
+        "options": ""
+      },
+      {
+        "id": "has_print",
+        "label": "Print (Legacy)",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Enable printing.",
+        "options": ""
+      },
+      {
+        "id": "has_show_subscribed_only",
+        "label": "Show subscribed content only",
+        "type": "checkbox",
+        "value": "0",
+        "description": "Tick to show this option so users can enable or disable it.",
+        "options": ""
+      },
+      {
+        "id": "use_splash",
+        "label": "Splash (Legacy)",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Enable custom splash screen on launch.",
+        "options": ""
+      },
+      {
+        "id": "has_video_chat",
+        "label": "Video chat (Legacy)",
+        "type": "checkbox",
+        "value": "1",
+        "description": "Enable video chat.",
+        "options": ""
+      }
+    ]
+  }
+}

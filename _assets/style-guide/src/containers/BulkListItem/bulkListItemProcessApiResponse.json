@@ -1,0 +1,79 @@
+[
+  {
+    "id": 1,
+    "type": "user_import",
+    "uploadedAt": "2019-09-09T04:09:45+00:00",
+    "totalRecords": 9,
+    "completedRecords": 8,
+    "status": "processing",
+    "user": "Super User",
+    "filename": "user-metadata - test.csv"
+  },
+  {
+    "id": 2,
+    "type": "user_import",
+    "uploadedAt": "2019-10-09T04:09:45+00:00",
+    "totalRecords": 9,
+    "completedRecords": 9,
+    "status": "completed",
+    "user": "Super User",
+    "filename": "user-metadata - test.csv"
+  },
+  {
+    "id": 4,
+    "type": "user_import",
+    "uploadedAt": "2019-09-16T00:39:30+00:00",
+    "totalRecords": 4,
+    "completedRecords": 1,
+    "status": "completed",
+    "user": "Super User",
+    "filename": "user-metadata - test.csv",
+    "errors": [
+      {
+        "row": 4,
+        "details": [
+          {
+            "property": "Platform",
+            "value": "ios",
+            "message": "is invalid"
+          },
+          {
+            "property": "Name",
+            "value": "",
+            "message":  "cannot be blank"
+          }
+        ]
+      },
+      {
+        "row": 5,
+        "details": [
+          {
+            "property": "Department",
+            "value": "customer supp",
+            "message": "is invalid"
+          }
+        ]
+      },
+      {
+        "row": 6,
+        "details": [
+          {
+            "property": "Role",
+            "value": "customer supp",
+            "message": "is invald"
+          },
+          {
+            "property": "Department",
+            "value": "",
+            "message": "cannot be blank"
+          },
+          {
+            "property": "Group",
+            "value": "customer supp",
+            "message": "is duplicated"
+          }
+        ]
+      }
+    ]
+  }
+]

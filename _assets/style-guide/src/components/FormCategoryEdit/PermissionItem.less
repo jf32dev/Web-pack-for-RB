@@ -1,0 +1,100 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../libs/less/utilities.less";
+@import "../../libs/less/variables.less";
+
+.PermissionItem {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+
+  // Match FormCategoryEdit.less
+  > * {
+    flex: 0 1 13rem;
+
+    &:first-child {
+      flex: 0 0 30%;
+    }
+    &:last-child {
+      flex: 1 0 auto;
+      text-align: right;
+    }
+  }
+
+  /** Media Query breakpoints */
+  @media @mobile-xs {
+
+  }
+  @media @mobile {
+
+  }
+  @media @tablet {
+
+  }
+  @media @desktop {
+
+  }
+  @media @desktop-xl {
+
+  }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info {
+  display:inline-block;
+  flex:1 1 auto;
+  height:100%;
+  line-height:140%;
+  margin-left:0.5rem;
+}
+
+.name {
+  display:inline;
+  display:-webkit-box;
+  color:@primary-text;
+  transition: all @timing-fast linear;
+  max-height:1.35rem;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.note {
+  .overflow-ellipsis();
+  color:@secondary-text;
+  font-size:90%;
+  max-width:10rem;
+  display:block;
+}
+
+.select {
+  padding-right: 1rem;
+}
+
+.delete {
+  padding: 0.5rem;
+
+  &:before {
+    font-size: 1.3rem;
+  }
+}

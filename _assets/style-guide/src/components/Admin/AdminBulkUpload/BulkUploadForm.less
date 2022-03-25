@@ -1,0 +1,168 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package hub-web-app-v5
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Rubenson Barrios <rubenson.barrios@bigtincan.com>
+ */
+
+@import "../../../libs/less/btc-font-mixins.less";
+@import "../../../libs/less/variables.less";
+@import "../../../libs/less/utilities.less";
+
+.contentWrap {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  padding: 0 !important;
+
+  .selectWrapper {
+    display: flex;
+    flex-direction: row;
+
+    > div {
+      width: calc(~"70% + 1rem");
+      margin-left: calc(~"30% - 0.5rem");
+    }
+  }
+
+  .metadataWrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    > span {
+      width: 30%;
+      display: flex;
+      margin: 0.4rem 0 0.55rem;
+    }
+    > section {
+      width: 70% !important;
+      > div {
+        width: 100% !important;
+      }
+    }
+  }
+}
+
+.fileItem {
+  padding: 1.5rem 1rem;
+  width: auto !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: left;
+
+  > div {
+    max-width: initial !important;
+    &:first-child {
+      margin-right: 1.5rem;
+    }
+  }
+}
+
+.formWrapper {
+  border-top: 1px solid;
+  border-top-color: var(--divider-color);
+  padding: 1.25rem;
+
+  h5 {
+    text-align: left;
+  }
+}
+
+.platformWrap {
+  margin-left: 9.5rem;
+}
+
+.selectWrap {
+  margin: 1.5rem 0;
+  display: flex;
+
+  > label {
+    color: #222222 !important;
+    width: 30%;
+    text-align: left;
+    align-self: center;
+    margin-bottom: 0 !important;
+  }
+  > div {
+    width: 70%;
+
+    > div {
+      // Fixing dropdown list spacing when label has 2 or more lines
+      top: auto !important;
+    }
+  }
+
+  div[class*="is-open"] {
+    //position: fixed;
+  }
+}
+
+.checkboxInput {
+  margin-top: 0.1rem;
+  width: 40%;
+}
+
+.passwordWrap {
+  margin-top: 0;
+  overflow: initial;
+  display: flex;
+  flex-direction: column;
+
+  > div {
+    display: flex;
+    margin: 0 0 0.75rem !important;
+
+    > label {
+      color: #222222 !important;
+      width: 27%;
+      text-align: left;
+      align-self: center;
+    }
+    > input { margin: 0; }
+  }
+}
+// SLIDE Animation
+.slide-appear {
+  opacity: 0;
+  transition: opacity .3s ease-in;
+}
+
+.slide-appear.slide-appear-active {
+  opacity: 1;
+}
+
+.slide-enter {
+  height: 0;
+  transition: height .3s ease-in;
+}
+
+.slide-enter.slide-enter-active {
+  height: 6.5rem;
+  transition: height .3s ease-in;
+}
+
+.slide-exit {
+  height: 6.5rem;
+  transition: height .18s ease-out;
+}
+
+.slide-exit.slide-exit-active {
+  opacity: 0;
+  height: 0;
+}
+
+.displayNone {
+  display: none;
+}

@@ -1,0 +1,112 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Jason Huang <jason.huang@bigtincan.com>
+ */
+
+@import "../../../libs/less/variables.less";
+@import "../../../libs/less/btc-font-mixins.less";
+
+.FileUploads {
+  margin: 0 3.15rem 2rem 1.6rem;
+  overflow-x: hidden;
+  /** Media Query breakpoints */
+  @media @mobile-xs {
+
+  }
+  @media @mobile {
+
+  }
+  @media @tablet {
+
+  }
+  @media @desktop {
+
+  }
+  @media @desktop-xl {
+
+  }
+}
+
+.allowedFileUploads {
+  border-top:solid 1px @dividerColor;
+  border-top-color: var(--divider-color);
+  margin-top: 1rem;
+
+  .inputContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .input {
+      width: 12.5rem;
+      margin-right: 1.563rem;
+
+      input {
+        margin-bottom: 0rem;
+      }
+    }
+
+    button {
+      width: 3.438rem;
+      height: 1.875rem;
+    }
+  }
+}
+
+.deleted{
+  .icon-zoomIn(1rem);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transform: rotate(45deg);
+  &:before {
+    color: @errorColor;
+  }
+}
+
+.allowedExtensionItem {
+  border-bottom:solid 1px @dividerColor;
+  border-bottom-color: var(--divider-color);
+  width: 12.5rem;
+  display: inline-flex;
+  justify-content: space-between;
+  margin-left: 3rem;
+  height: 3.125rem;
+  align-items: center;
+}
+
+.allowedExtension {
+  margin-left: -3rem;
+  display: flex;
+  flex-wrap: wrap;
+  border-top: solid 1px @dividerColor;
+  border-top-color: var(--divider-color);
+  margin-top: 0.25rem;
+}
+
+.resetDefaults {
+  display: flex;
+  justify-content: flex-end;
+  button {
+    width: 7.313rem;
+    height: 1.875rem;
+  }
+}
+
+.warning {
+  height: 1rem;
+  color: var(--error-color);
+}
+

@@ -1,0 +1,110 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Jason Huang <jason.huang@bigtincan.com>
+ */
+
+@import "../../../../libs/less/btc-font-mixins.less";
+@import "../../../../libs/less/variables.less";
+
+.GroupList{
+  width: 100%;
+  position: relative;
+
+  /** Media Query breakpoints */
+  @media @mobile {
+
+  }
+  @media @tablet {
+
+  }
+  @media @desktop {
+
+  }
+  @media @desktop-xl {
+
+  }
+}
+
+div.groupItemDiv {
+  background-color: white;
+}
+
+ul.searchResultList {
+  overflow: auto;
+  height: auto;
+}
+
+.searchResultListContainer {
+  overflow-y: scroll;
+}
+
+.searchList {
+  position: absolute;
+  top: 0rem;
+  width: 100%;
+  height:17.5rem;
+  z-index: -1;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  overflow: hidden;
+  padding: 3.2rem 0.5rem 0.5rem;
+  transform: scale(1.05);
+  opacity: 0;
+  display: none;
+
+  > div {
+    overflow-y: scroll;
+    height: 100%;
+  }
+}
+
+.display {
+  display: block;
+  opacity: 1;
+  z-index: 1;
+  transform: scale(1);
+}
+
+.hidden{
+  display: none;
+}
+
+.displayInput {
+  position: absolute;
+  padding: 0.5rem;
+  width: 100%;
+  z-index: 2;
+}
+
+.input {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+
+.groupItems {
+  padding: 0 0.5rem;
+  padding-top: 3.2rem;
+}
+
+.groupItemActived {
+  > div > a {
+    opacity: 0.5;
+  }
+
+  > div > div:nth-child(2) {
+    opacity: 0.5;
+  }
+}

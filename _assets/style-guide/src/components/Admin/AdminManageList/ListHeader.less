@@ -1,0 +1,101 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package hub-web-app-v5
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Rubenson Barrios <rubenson.barrios@bigtincan.com>
+ */
+
+@import "../../../libs/less/btc-font-mixins.less";
+@import "../../../libs/less/variables.less";
+@import "../../../libs/less/utilities.less";
+
+.Header {
+  display:block;
+  position: relative;
+  //min-height: 2.7rem;
+}
+
+.wrapper {
+  display:flex;
+  flex:1 1 auto;
+  height:100%;
+  line-height:140%;
+  justify-content: space-between;
+  padding: 0.4rem  0.75rem;
+}
+
+.name {
+  font-size: 105%;
+  color: var(--primary-text);
+  display: inline;
+  width: 100%;
+  margin-top: 0.44rem;
+  margin-bottom: 0.75rem;
+  .overflow-ellipsis();
+}
+
+.actions {
+  flex: 0 0 auto;
+  display:flex;
+  align-items: center;
+  flex-direction: row;
+  padding-left:0.15rem;
+
+  > span {
+    margin-right: 1.25rem;
+    width: 1.4rem;
+    height: 1.4rem;
+    line-height: 1.4rem;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.iconPlus {
+  // submenu position
+  > div > div {
+    top: 1.5rem !important;
+  }
+  // plus icon
+  span:before {
+    margin-right: 1.25rem;
+    font-size: 1.1rem !important;
+    cursor: pointer;
+    vertical-align: top;
+  }
+}
+
+.iconAdd {
+  cursor: pointer;
+  .icon-plus(1.1rem);
+  &:before {
+    color: var(--base-color);
+    cursor: pointer;
+  }
+}
+
+.iconFilter {
+  cursor: pointer;
+  .icon-search(1.25rem);
+  &:before {
+    color: var(--base-color);
+  }
+}
+.isFilterEnabled {
+  cursor: pointer;
+  .icon-search(1.25rem);
+  &:before {
+    color: var(--dark-base-color);
+  }
+}

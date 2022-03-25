@@ -1,0 +1,164 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2016 BigTinCan Mobile Pty Ltd
+ * @author Rubenson Barrios <rubenson.barrios@bigtincan.com>
+ */
+
+@import "../../../libs/less/btc-font-mixins.less";
+@import "../../../libs/less/variables.less";
+@import "../../../libs/less/utilities.less";
+
+@maxWidth: 60rem;
+
+.Header {
+  position: relative;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--divider-color);
+  padding-bottom: 1rem;
+}
+
+.headerWrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  > button {
+    align-self: center;
+  }
+}
+
+.subHeaderLabel {
+  color: var(--secondary-text);
+  display: inline-block;
+  vertical-align: top;
+  max-width: 6rem;
+  margin-right: 0.6rem;
+  padding-right: 0.3rem;
+  position: relative;
+  font-weight: bold;
+  .overflow-ellipsis();
+
+  &:after {
+    color: var(--secondary-text);
+    content: '/';
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    position: absolute;
+    right: -0.7rem;
+  }
+}
+
+.selectWrapper {
+  display: block;
+}
+
+.select {
+  width: 22rem;
+  margin-right: 2rem;
+}
+
+input:focus::-webkit-contacts-auto-fill-button{
+  opacity: 0;
+  visibility: hidden;
+  display: none !important;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
+
+.categoryDescription {
+  color: var(--secondary-text);
+  font-size: 95%;
+  display: block;
+
+  padding: 0.5rem 0;
+}
+
+// Content
+.contentWrapper {
+  height: 100%;
+  padding-bottom: 1.5rem;
+
+  > section {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: solid 1px @dividerColor;
+    border-color: var(--divider-color);
+
+    &:last-child {
+      border: none;
+    }
+  }
+}
+
+.subjectWrapper {
+  max-width: @maxWidth;
+  display: block;
+  width: 100%;
+  min-height: 3.8rem;
+  padding: 0.75rem;
+  background-color: #fafafa;
+  border: solid 1px @dividerColor;
+  border-color: var(--divider-color);
+  border-radius: 2px;
+  color: var(--primary-text);
+}
+
+.subjectInfo {
+  color: var(--secondary-text);
+  font-size: 95%;
+  font-style: italic;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.emailEditor {
+  max-width: @maxWidth;
+}
+
+.editorActionButtons {
+  max-width: @maxWidth;
+  text-align: right;
+}
+
+.previewHeader {
+  max-width: @maxWidth;
+  padding-bottom: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  h4 {
+    margin: 0;
+  }
+}
+
+.emailPreview {
+  max-width: @maxWidth;
+}
+
+.loader {
+  display: flex;
+  height: 100%;
+  min-height: 10rem;
+  align-content: center;
+  align-items: center;
+  content: " ";
+  margin: auto;
+
+  > div {
+    margin: auto;
+  }
+}

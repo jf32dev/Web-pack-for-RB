@@ -1,0 +1,115 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../libs/less/btc-font-mixins.less";
+@import "../../libs/less/variables.less";
+
+@iconSize: 20px;
+
+.MediaControls {
+  z-index: 2147483647; /* stay on top in fullscreen (Chrome/Safari) */
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:100%;
+  padding:1rem 2rem;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  > span:last-child {
+    padding-right:0;
+  }
+}
+
+.isVideo {
+  color:#fff;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, #000 100%);
+}
+
+.play, .pause, .restart {
+  vertical-align:middle;
+  width:1.5rem;
+  height:1.5rem;
+  cursor:pointer;
+}
+
+.play {
+  .icon-play(@iconSize);
+}
+
+.pause {
+  .icon-pause(@iconSize);
+}
+
+.restart {
+  .icon-restart(@iconSize);
+}
+
+.elapsed, .duration {
+  font-weight:bold;
+}
+
+.elapsed, .duration, .volume, .fullscreen, .expand, .collapse {
+  padding:0 0.85rem;
+}
+
+.duration {
+  width:5rem;
+  text-align:right;
+}
+
+.volume {
+  .icon-volumeMax(@iconSize);
+  position:relative;
+  vertical-align:middle;
+  cursor:pointer;
+
+  &:before {
+    width:1.3rem;
+  }
+}
+
+.mute {
+  .icon-volumeMute(@iconSize);
+}
+
+.expand, .collapse {
+  text-align:center;
+  cursor:pointer;
+}
+
+.expand {
+  .icon-expand(@iconSize);
+  vertical-align:middle;
+}
+
+.collapse {
+  .icon-collapse(@iconSize);
+  vertical-align:middle;
+}
+
+.fullscreen {
+  .icon-fullscreen(@iconSize);
+  vertical-align:middle;
+  cursor:pointer;
+
+  &:before {
+    font-weight:bold;
+  }
+}

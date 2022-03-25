@@ -1,0 +1,148 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Jason Huang <jason.huang@bigtincan.com>
+ */
+
+@import "../../../libs/less/variables.less";
+
+.AdminStoryArchiving {
+  padding: 0 3.15rem 2rem 1.6rem;
+
+  /** Media Query breakpoints */
+  @media @mobile {
+
+  }
+  @media @tablet {
+
+  }
+  @media @desktop {
+
+  }
+  @media @desktop-xl {
+
+  }
+}
+
+.markContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  > div {
+    margin-top: 0.5rem;
+
+    &:nth-child(4) {
+      margin-top: 3rem;
+    }
+  }
+
+  > h4 {
+    margin-top: 0.5rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 0.5px solid @dividerColor;
+    border-bottom-color: var(--divider-color);
+  }
+}
+
+.numericRangeSlider {
+  margin-top: 1rem;
+}
+
+.updateImpact{
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--secondary-text);
+}
+
+.updateImpactValue {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--primary-text);
+}
+
+.inactivateLimitMonths, .waitTimeBeforeArchivingDays {
+  width: 4rem;
+}
+
+.inactivateLimitMonthsContainer, .archivingValueContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  input {
+    margin-bottom: 0 !important;
+  }
+
+  > div:first-child {
+    margin-right: 1rem;
+  }
+}
+
+.archivingCheckbox {
+  margin-top: 1.5rem;
+}
+
+.archivingContainer {
+  > div {
+    margin-top: 0.5rem;
+  }
+
+  > h4 {
+    margin-top: 0.5rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 0.5px solid @dividerColor;
+    border-bottom-color: var(--divider-color);
+  }
+}
+
+.archivingValueContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.waitTimeBeforeArchivingDays{
+  margin-right: 1rem;
+  input {
+    padding: 6px !important;
+  }
+}
+
+.archivingTimeSelector{
+  width: 8rem;
+}
+
+.deletingCheckbox {
+  margin-top: 1.5rem;
+}
+
+.deletingContainer {
+  > h4 {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.deletingSelector {
+  margin-top: 0.5rem;
+  width: 25rem;
+}
+
+.deletingWarning{
+  color: var(--error-color);
+  margin-top: 0.5rem;
+}
+

@@ -1,0 +1,76 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../libs/less/btc-font-mixins.less";
+@import "../../libs/less/variables.less";
+
+.ProfileMenu {
+
+  button {
+    padding:0.75rem;
+    margin:-1px -1px -2px -1px;
+    width:250px !important;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+}
+
+.headingThumb {
+  display:inline-flex !important;
+  vertical-align:middle;
+}
+
+.headingIcon {
+  .icon-triangle(12px);
+  margin-left:0.5rem;
+  color:@base-color;
+  vertical-align:middle;
+}
+
+.userThumb {
+  padding:1rem;
+
+  > a {
+    margin-right:0.75rem;
+  }
+}
+
+.linkList {
+  margin:0 !important;
+  padding:0.25rem 1rem !important;
+  border-top:solid 1px #ddd;
+  border-top-color: var(--divider-color);
+  font-size:90%;
+
+  li {
+    margin:0.75rem 0;
+    padding:0;
+
+    &:hover {
+      background:inherit !important;
+    }
+
+    a {
+      display:block;
+      color:@secondary-text;
+
+      &:hover {
+        color:@base-color;
+      }
+    }
+  }
+}

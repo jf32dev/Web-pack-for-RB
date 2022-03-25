@@ -1,0 +1,117 @@
+{
+  "name": "bigtincan Default Homescreen",
+  "items": [
+    {
+      "i": "featured-stories",
+      "layout": {
+        "x": 0,
+        "y": 0,
+        "h": 2.975,
+        "w": 12
+      },
+      "type": "featured-list",
+      "title": "",
+      "source": "featured",
+      "limit": 10,
+      "grid": true,
+      "isNewDesign": true,
+      "view": "grid"
+    },
+    {
+      "i": "top-stories",
+      "layout": {
+        "x": 0,
+        "y": 2.975,
+        "h": 2.9,
+        "w": 12
+      },
+      "type": "story-list",
+      "title": "Top {stories}",
+      "source": "top",
+      "limit": 20,
+      "grid": true,
+      "isNewDesign": true,
+      "view": "grid"
+    },
+    {
+      "i": "latest-stories",
+      "layout": {
+        "x": 0,
+        "y": 5.875,
+        "h": 3.6166666666666667,
+        "w": 12
+      },
+      "type": "story-list",
+      "title": "Latest {stories}",
+      "source": "latest",
+      "limit": 20,
+      "grid": true,
+      "isNewDesign": true,
+      "view": "card"
+    },
+    {
+      "i": "recommended-stories",
+      "layout": {
+        "x": 0,
+        "y": 9.491666666666667,
+        "h": 2.9,
+        "w": 12
+      },
+      "type": "story-list",
+      "title": "Recommended {stories}",
+      "source": "recommended",
+      "limit": 20,
+      "grid": true,
+      "isNewDesign": true,
+      "view": "grid"
+    },
+    {
+      "i": "bookmarks",
+      "layout": {
+        "x": 0,
+        "y": 12.391666666666667,
+        "h": 3.1,
+        "w": 12
+      },
+      "type": "bookmark-list",
+      "title": "My Bookmarks",
+      "source": "bookmark",
+      "limit": 20,
+      "grid": true,
+      "isNewDesign": true,
+      "view": "grid"
+    },
+    {
+      "i": "leaderboard",
+      "layout": {
+        "x": 0,
+        "y": 15.491666666666667,
+        "h": 3.283333333333333,
+        "w": 12
+      },
+      "type": "user-list",
+      "title": "Leaderboard",
+      "source": "leaderboard",
+      "limit": 20,
+      "grid": true,
+      "isNewDesign": true,
+      "view": "grid"
+    },
+    {
+      "i": "popular-stories",
+      "layout": {
+        "x": 0,
+        "y": 18.775,
+        "h": 3.6166666666666667,
+        "w": 12
+      },
+      "type": "story-list",
+      "title": "Popular {stories}",
+      "source": "popular",
+      "limit": 20,
+      "grid": true,
+      "isNewDesign": true,
+      "view": "card"
+    }
+  ]
+}

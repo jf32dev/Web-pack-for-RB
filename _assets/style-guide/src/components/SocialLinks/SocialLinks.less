@@ -1,0 +1,111 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../libs/less/btc-font-mixins.less";
+@import "../../libs/less/tooltips.less";
+@import "../../libs/less/variables.less";
+
+@appleColor: rgba(0,0,0,0.8);
+@bloggerColor: #EC7800;
+@fbColor: #3B5998;
+@skypeColor: #12A5F4;
+@twitterColor: #55acee;
+@linkedinColor: #0077b5;
+@custom1Color: #aaa;
+@custom2Color: #bbb;
+
+.SocialLinks {
+  margin:0;
+  padding:0;
+  list-style:none;
+
+  li {
+    .tooltip(n);
+    margin:0 1.5rem 0 0;
+    padding:0;
+    display:inline-block;
+    color:@base-color;
+    transition: all 150ms ease-out;
+
+    &:last-child {
+      margin-right:0;
+    }
+
+    a {
+      display:block;
+      width:22px;
+      height:22px;
+    }
+  }
+}
+
+.appleId > a {
+  .icon-apple();
+
+  &:hover {
+    color:@appleColor;
+  }
+}
+.bloggerUrl > a {
+  .icon-blogger();
+
+  &:hover {
+    color:@bloggerColor;
+  }
+}
+.facebookUrl > a {
+  .icon-facebook();
+
+  &:hover {
+    color:@fbColor;
+  }
+}
+.skypeId > a {
+  .icon-skype();
+
+  &:hover {
+    color:@skypeColor;
+  }
+}
+.twitterUrl > a {
+  .icon-twitter();
+
+  &:hover {
+    color:@twitterColor;
+  }
+}
+.linkedin > a {
+  .icon-linkedin();
+
+  &:hover {
+    color:@linkedinColor;
+  }
+}
+.custom1 > a {
+  .icon-link();
+
+  &:hover {
+    color:@custom1Color;
+  }
+}
+.custom2 > a {
+  .icon-link();
+
+  &:hover {
+    color:@custom2Color;
+  }
+}

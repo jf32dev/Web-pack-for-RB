@@ -1,0 +1,137 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Jason Huang <jason.huang@bigtincan.com>
+ */
+
+@import '../../libs/less/variables.less';
+@import "../../libs/less/btc-font-mixins.less";
+
+.hidden{
+  position: absolute;
+  right: 200vw;
+}
+
+.editor{
+  div[class*="fr-toolbar"] {
+    display: inline-block;
+    left: 40%;
+    transform: translateX(-40%);
+    overflow: visible !important;
+    border: 0.5px solid @dividerColor !important;
+    border-color: var(--divider-color) !important;
+    border-radius: 4px !important;
+    width: max-content;
+    margin: 0 auto;
+    background: transparent;
+  }
+
+  div[class*="fr-wrapper"] {
+    //margin-top: 6rem;
+    margin-top: 10rem;
+    border: none !important;
+    @media @mobile, @mobile-xs {
+      margin-top: 8rem;
+    }
+  }
+
+  div[class*="fr-view"] {
+    padding: 0px !important;
+  }
+
+  span[class*="fr-placeholder"] {
+    padding: 0px !important;
+  }
+
+  label[for*="fr-link-insert-layer"],
+  label[for*="fr-color-hex-layer"],
+  label[for*="fr-image-size-layer"] {
+    background-color: transparent !important;
+  }
+
+  div[class*="btc-theme"] div[class*="fr-view"] {
+    strong, em, u {
+      font-family: inherit;
+    }
+  }
+}
+
+.textAreaOnly {
+  div[class*="fr-toolbar"] {
+    display: none;
+  }
+
+  div[class*="fr-wrapper"] {
+    margin-top: 0rem;
+  }
+}
+
+
+.hiddenResize {
+
+  > div {
+    div:last-child {
+      div:last-child {
+        display: none
+      }
+    }
+  }
+}
+
+.left {
+  cursor: pointer;
+  margin-top: 0.5rem;
+  z-index: 1;
+  position: absolute;
+}
+
+.right {
+  cursor: pointer;
+  margin-top: 0.5rem;
+  margin-right: 1rem;
+  z-index: 2;
+  right: 0px;
+  position: absolute;
+}
+
+.leftRight {
+  width: 100%;
+  position: absolute;
+  @media @mobile, @mobile-xs {
+    position: relative;
+    height: 2.5rem;
+  }
+}
+
+.title {
+  margin-top: 4rem;
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+
+  @media @mobile, @mobile-xs {
+    margin-top: 3rem;
+  }
+}
+
+.story {
+  margin-top: 8rem;
+  z-index: 1;
+  position: absolute;
+
+  @media @mobile, @mobile-xs {
+    margin-top: 6rem;
+  }
+}
+

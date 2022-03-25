@@ -1,0 +1,156 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Jason Huang <jason.huang@bigtincan.com>
+ */
+
+@import "../../libs/less/btc-font-mixins.less";
+@import "../../libs/less/tooltips.less";
+@import "../../libs/less/utilities.less";
+@import "../../libs/less/variables.less";
+
+@iconSize: 20px;
+@minWidth: 736px;
+
+.BroadcastToolbar{
+  background-color: rgba(35, 35, 35, 0.9);
+  padding:0.5rem 0.5rem;
+  border-radius:4px;
+  color:#fff;
+  z-index:2;
+  width: calc(100% - 2rem);
+
+  position:absolute;
+  top:1rem;
+  left:50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.leftItems {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.rightItems {
+  display: flex;
+  flex-direction: row;
+}
+
+.centerItems {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-70%);
+
+  span {
+    font-size: 10px;
+    @media screen and (max-width: @minWidth) {
+      max-width: 20px;
+      .overflow-ellipsis();
+    }
+  }
+}
+
+.live {
+  .activeInfoBox();
+  position: absolute;
+  background-color: @errorColor;
+  right: -40px;
+}
+
+.offline {
+  .activeInfoBox();
+  position: absolute;
+  top: 1px;
+  background-color: @secondaryText;
+  right: -64px;
+}
+
+.itemBtn {
+  width: 35px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.exit {
+  padding-right: 2rem;
+  position: relative;
+  font-size: 15px;
+  padding-left: 8px;
+  cursor: pointer;
+  .icon-close(15px);
+
+  &:before {
+    margin-right: 0.5rem;
+    cursor: pointer;
+  }
+}
+
+.user{
+  .icon-group(@iconSize);
+  &:before{
+    .itemBtn();
+  }
+}
+
+.chat{
+  .icon-comment(@iconSize);
+  &:before{
+    .itemBtn();
+  }
+}
+
+.activeInfoBox() {
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  padding: 0.5px 5px;
+  border-radius: 2px;
+  opacity: 0.8;
+  text-transform: uppercase;
+}
+
+.divuser {
+  position: relative;
+
+  span {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 16px;
+    color: white;
+    top: 0px;
+    right: 0px;
+    background-color: @baseColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+  }
+}

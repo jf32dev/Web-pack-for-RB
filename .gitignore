@@ -1,0 +1,14 @@
+.idea/
+node_modules/
+dist/
+build/
+.vscode/
+.history/
+_assets/translations/extractedMessages
+*.http
+*.iml
+webpack-assets.json
+webpack-stats.json
+npm-debug.log
+.DS_Store
+TODO.md

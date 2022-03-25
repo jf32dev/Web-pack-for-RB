@@ -1,0 +1,150 @@
+{
+  "checksum": {
+    "previous": "180f3b31b44dfd4e6e03870e14f453c3d2ec8a0456a7cc080bb79b06e97f33d9",
+    "current": "180f3b31b44dfd4e6e03870e14f453c3d2ec8a0456a7cc080bb79b06e97f33d9"
+  },
+  "fonts": [
+    "fontcustom/fontcustom_180f3b31b44dfd4e6e03870e14f453c3.ttf",
+    "fontcustom/fontcustom_180f3b31b44dfd4e6e03870e14f453c3.svg",
+    "fontcustom/fontcustom_180f3b31b44dfd4e6e03870e14f453c3.woff",
+    "fontcustom/fontcustom_180f3b31b44dfd4e6e03870e14f453c3.eot"
+  ],
+  "glyphs": {
+    "archive": {
+      "codepoint": 61697,
+      "source": "./archive.svg"
+    },
+    "bookmark": {
+      "codepoint": 61726,
+      "source": "./bookmark.svg"
+    },
+    "bookmark-fill": {
+      "codepoint": 61727,
+      "source": "./bookmark-fill.svg"
+    },
+    "close": {
+      "codepoint": 61728,
+      "source": "./close.svg"
+    },
+    "content": {
+      "codepoint": 61729,
+      "source": "./content.svg"
+    },
+    "copy": {
+      "codepoint": 61730,
+      "source": "./copy.svg"
+    },
+    "download": {
+      "codepoint": 61731,
+      "source": "./download.svg"
+    },
+    "edit": {
+      "codepoint": 61732,
+      "source": "./edit.svg"
+    },
+    "error": {
+      "codepoint": 61733,
+      "source": "./error.svg"
+    },
+    "flag": {
+      "codepoint": 61734,
+      "source": "./flag.svg"
+    },
+    "flag-fill": {
+      "codepoint": 61735,
+      "source": "./flag-fill.svg"
+    },
+    "form": {
+      "codepoint": 61704,
+      "source": "./form.svg"
+    },
+    "grid": {
+      "codepoint": 61736,
+      "source": "./grid.svg"
+    },
+    "history": {
+      "codepoint": 61737,
+      "source": "./history.svg"
+    },
+    "like": {
+      "codepoint": 61738,
+      "source": "./like.svg"
+    },
+    "like-fill": {
+      "codepoint": 61739,
+      "source": "./like-fill.svg"
+    },
+    "list": {
+      "codepoint": 61740,
+      "source": "./list.svg"
+    },
+    "more": {
+      "codepoint": 61741,
+      "source": "./more.svg"
+    },
+    "next": {
+      "codepoint": 61742,
+      "source": "./next.svg"
+    },
+    "pdf": {
+      "codepoint": 61713,
+      "source": "./pdf.svg"
+    },
+    "plus": {
+      "codepoint": 61743,
+      "source": "./plus.svg"
+    },
+    "prev": {
+      "codepoint": 61744,
+      "source": "./prev.svg"
+    },
+    "refresh": {
+      "codepoint": 61745,
+      "source": "./refresh.svg"
+    },
+    "share": {
+      "codepoint": 61746,
+      "source": "./share.svg"
+    },
+    "subscribe": {
+      "codepoint": 61747,
+      "source": "./subscribe.svg"
+    },
+    "wheelbarrow": {
+      "codepoint": 61748,
+      "source": "./wheelbarrow.svg"
+    }
+  },
+  "options": {
+    "autowidth": false,
+    "config": false,
+    "css_selector": ".icon-{{glyph}}",
+    "debug": false,
+    "font_ascent": 448,
+    "font_descent": 64,
+    "font_design_size": 16,
+    "font_em": 512,
+    "font_name": "fontcustom",
+    "force": false,
+    "input": {
+      "templates": ".",
+      "vectors": "."
+    },
+    "no_hash": false,
+    "output": {
+      "css": "fontcustom",
+      "fonts": "fontcustom",
+      "preview": "fontcustom"
+    },
+    "preprocessor_path": null,
+    "quiet": false,
+    "templates": [
+      "css",
+      "preview"
+    ]
+  },
+  "templates": [
+    "fontcustom/fontcustom.css",
+    "fontcustom/fontcustom-preview.html"
+  ]
+}

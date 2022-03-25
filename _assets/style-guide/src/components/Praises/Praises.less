@@ -1,0 +1,125 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Rubenson Barrios <rubenson.barrios@bigtincan.com>
+ */
+
+@import "../../libs/less/btc-font-mixins.less";
+@import "../../libs/less/variables.less";
+@import "../../libs/less/utilities.less";
+
+.praiseWrap {
+  list-style: none;
+  margin: 0;
+
+  > li {
+    display: flex;
+    margin: 0.1rem 0;
+    padding: 1.15rem 0;
+    position: relative;
+  }
+}
+
+.praiseContainerWrap {
+  display: flex;
+  padding:0 0 0.5rem;
+
+  > h4 {
+    margin:0.25rem 2rem 0 0;
+    flex:1 0 auto;
+  }
+}
+
+.inputWrap {
+  display:flex;
+  width:100%;
+}
+
+.input {
+  flex: 1 1 auto;
+  width:100%;
+  margin-top: 0.3rem;
+  margin-right:1rem;
+
+  textarea {
+    padding:0 0.25rem;
+    width:100%;
+    border:none;
+    resize:none;
+    border-bottom:solid 1px #ddd;
+    border-color: @divider-color;
+
+    &::-webkit-input-placeholder {
+      color:@secondary-text;
+    }
+
+    &:focus {
+      outline:none;
+    }
+  }
+}
+
+.user {
+  align-items: start;
+  min-width: 12.5rem;
+}
+.message {
+  color: @secondary-text;
+  overflow: hidden;
+}
+.messageAdmin {
+  padding-right: 5.25rem;
+}
+.deleteMessage {
+  color:#f00;
+  cursor:pointer;
+  user-select:none;
+  position: absolute;
+  right: 1.5rem;
+}
+.delete {
+  color:#f00;
+  cursor:pointer;
+  user-select:none;
+}
+.confirmDelete {
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  opacity:0.9;
+  background-color:@light-base-color;
+  text-align:center;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+
+  p {
+    margin:0 0 0.5rem;
+  }
+
+  ul {
+    margin:0;
+    padding:0;
+
+    li {
+      cursor:pointer;
+      display:inline-block;
+      margin:0 1rem;
+      padding:0 0.5rem;
+    }
+  }
+}

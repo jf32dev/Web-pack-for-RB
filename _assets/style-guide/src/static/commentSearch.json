@@ -1,0 +1,109 @@
+[{
+  "id": 3322,
+  "type": "comment",
+  "message": "New comments here Testing the data",
+  "searchResult": {
+    "message": ["New comments here <em>testing</em> the data"]
+  },
+  "author": {
+    "id": 200,
+    "name": "Rubenson Barrios",
+    "title": "Web Developer",
+    "thumbnail": "https://push.bigtincan.info/files/f8f81f2d481420510651d0ced2fd296a933e87063364ce007cb9ff3b99cfe5b7.png"
+  },
+  "story": {
+    "id": 312697,
+    "permId": 312697,
+    "name": "New test stories"
+  }
+}, {
+  "id": 3322,
+  "type": "comment",
+  "message": "Lorem ipsum dolor sit <script>alert('welcome');</script> amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...",
+  "searchResult": {
+    "message": ["Lorem ipsum <em>dolor</em> sit <script>alert('welcome');</script> amet, <em>consectetur adipiscing elit</em>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..."]
+  },
+  "author": {
+    "id": 201,
+    "name": "Other User",
+    "title": "Tester",
+    "thumbnail": ""
+  },
+  "story": {
+    "id": 1000853133,
+    "permId": 1000329825,
+    "name": "does <em>it</em> blend!!?! !!"
+  }
+}, {
+  "id": 3322,
+  "type": "comment",
+  "message": "Data <script type=\"text/javascript\"> window.location = \"http://www.htmlcodes.ws/\"; </script> return from the search",
+  "searchResult": {
+    "message": ["<em>Data</em> <script type=\"text/javascript\"> window.location = \"http://www.htmlcodes.ws/\"; </script> return from the <em>search</em>"]
+  },
+  "author": {
+    "id": 202,
+    "name": "New user",
+    "title": "Developer",
+    "thumbnail": "https://push.bigtincan.info/files/f8f81f2d481420510651d0ced2fd296a933e87063364ce007cb9ff3b99cfe5b7.png"
+  },
+  "story": {
+    "id": 10008523133,
+    "permId": 1000329825,
+    "name": "does it <em>blend</em>!!?! !!"
+  }
+}, {
+  "id": 3322,
+  "type": "comment",
+  "message": "Data <script type=\"text/javascript\"> window.location = \"http://www.htmlcodes.ws/\"; </script> return from the search",
+  "searchResult": {
+    "message": ["<em>Data</em> <script type=\"text/javascript\"> window.location = \"http://www.htmlcodes.ws/\"; </script> return from the <em>search</em>"]
+  },
+  "author": {
+    "id": 202,
+    "name": "New user",
+    "title": "Developer"
+  },
+  "story": {
+    "id": 10008523133,
+    "permId": 1000329825,
+    "name": "does it <em>blend</em>!!?! !!",
+    "thumbnail": "https://push.bigtincan.org/files/9c77f1d9-d2e8-c90b-b374-b642f49ec9da.jpg"
+  }
+}, {
+  "id": 3326,
+  "type": "comment",
+  "message": "Data return from the search",
+  "searchResult": {
+    "message": ["Data return from the <em>search</em>"]
+  },
+  "author": {
+    "id": 202,
+    "name": "Me user",
+    "title": "Sales Assistant"
+  },
+  "story": {
+    "name": "Testing file pairs",
+    "thumbnail": "https://push.bigtincan.info/files/f8f81f2d481420510651d0ced2fd296a933e87063364ce007cb9ff3b99cfe5b7.png",
+    "id": 10008523135,
+    "permId": 1000329828
+  }
+}, {
+  "id": 3326,
+  "type": "comment",
+  "message": "Data return from the <em>search</em>",
+  "searchResult": {
+    "message": ["Data return from the <em>search</em>"]
+  },
+  "author": {
+    "id": 202,
+    "name": "Me user",
+    "title": "Software Developer",
+    "thumbnail": ""
+  },
+  "story": {
+    "name": "Data file test",
+    "id": 10008523139,
+    "permId": 1000329828
+  }
+}]

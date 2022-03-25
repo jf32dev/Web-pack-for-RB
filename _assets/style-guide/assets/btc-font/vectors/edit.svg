@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>512</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="512" sketch:type="MSArtboardGroup" fill="#000000">
+            <path d="M485.487293,107.354809 L512,80.8421053 L431.157895,0 L40.4210526,390.736842 L0,512 L121.263158,471.578947 L466.927333,125.91477 C475.081041,144.708433 458.105263,161.684211 458.105263,161.684211 L323.368421,296.421053 L340.210526,313.263158 L474.947368,178.526316 C474.947368,178.526316 515.235126,143.610255 485.487293,107.354809 L485.487293,107.354809 Z M363.789474,195.368421 L128,431.157895 L80.8421053,384 L316.631579,148.210526 L363.789474,195.368421 L363.789474,195.368421 Z M384,175.157895 L478.315789,80.8421053 L431.157895,33.6842105 L336.842105,128 L384,175.157895 L384,175.157895 Z M107.789474,451.368421 L40.4210526,471.578947 L60.6315789,404.210526 L107.789474,451.368421 L107.789474,451.368421 Z" id="Edit" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

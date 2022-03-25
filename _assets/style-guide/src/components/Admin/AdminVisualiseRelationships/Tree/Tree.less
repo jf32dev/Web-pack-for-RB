@@ -1,0 +1,160 @@
+
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2016 BigTinCan Mobile Pty Ltd
+ * @author Rubenson Barrios <rubenson.barrios@bigtincan.com>
+ */
+
+//@import "../../../../libs/less/btc-font-mixins.less";
+//@import "../../../../libs/less/variables.less";
+
+.graphWrapper {
+  padding-top: 3rem;
+  height: 100%;
+  width: 100%;
+  min-width: 486px;
+  position: relative;
+
+  > svg {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    path {
+      fill: none;
+      stroke: #ccc;
+      stroke-width: 1.5px;
+    }
+  }
+}
+
+// If zoom enabled
+.grabbable {
+  cursor: move; /* fallback if grab cursor is unsupported */
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+.grabbable:active {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+
+.node {
+  cursor: pointer;
+  font-size: 0.62rem;
+
+  rect {
+    //fill: #fafafa;
+    fill-opacity: 1;
+    stroke-width: 1px;
+  }
+  text { fill: var(--primary-text) !important; }
+}
+
+.node--internal {
+  //rect { fill: #fafafa !important; }
+}
+
+.leafNode {
+  rect { fill: #fafafa !important; }
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}
+
+// Node
+.nodeBase {
+  cursor: pointer;
+  fill: #777;
+  stroke: #000;
+  stroke-width: 2;
+}
+
+.leafNodeBase {
+  cursor: pointer;
+  fill: transparent;
+  stroke: #000;
+  stroke-width: 2;
+}
+
+// Links
+.linkBase {
+  fill: none;
+  stroke: #fafafa;
+  stroke-width: 1.2px;
+}
+
+// Legend
+
+.legend {
+  position: absolute;
+  list-style: none;
+  margin: 0;
+  display: inline-block;
+  top: 1rem;
+  left: 1.5rem;
+  background-color: #fafafa;
+  z-index: 2;
+
+  > li {
+    display: inline-block;
+  }
+}
+.legendIcon {
+  display: inline-block;
+  background-color: #ddd;
+  border:1px solid;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  line-height: 1rem;
+
+  &.tab {
+    border-color: #e2023a;
+    background-color: #F5AABB;
+  }
+  &.channel {
+    border-color: #f26724;
+    background-color: #FBCBB5;
+  }
+  &.group {
+    border-color: #0092ec;
+    background-color: #B7E0F9;
+  }
+  &.user {
+    border-color: #04e44a;
+    background-color: #B8F7CC;
+  }
+  &.interest-group {
+    border-color: #7e622a;
+    background-color: #DAD2C3;
+  }
+  &.link {
+    border-color: #4c4c4c;
+    background-color: #CCCCCC;
+  }
+}
+.legendName {
+  font-size: 90%;
+  margin-right: 1.5rem;
+  vertical-align: middle;
+  line-height: 1.2rem;
+}

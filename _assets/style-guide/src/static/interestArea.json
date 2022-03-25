@@ -1,0 +1,33 @@
+[
+  {
+    "id": 124,
+    "name": "Another Test",
+    "thumbnail": "",
+    "type": "interestArea",
+    "colour": "#e2023a"
+
+  },
+  {
+    "id": 123,
+    "name": "Electronics",
+    "thumbnail": "http://www.gettyimages.com.au/gi-resources/images/Homepage/Hero/US/embed-504165888.jpg",
+    "type": "interestArea",
+    "colour": "#02e8d1"
+  },
+  {
+    "id": 122,
+    "name": "Travel",
+    "thumbnail": "http://www.gettyimages.com.au/gi-resources/images/Homepage/Hero/US/embed-504165888.jpg",
+    "selected": true,
+    "type": "interestArea",
+    "colour": "#02e8d1"
+  },
+  {
+    "id": 121,
+    "name": "Nature",
+    "thumbnail": "http://www.gettyimages.com.au/gi-resources/images/Homepage/Hero/US/embed-504165888.jpg",
+    "selected": true,
+    "type": "interestArea",
+    "colour": "#02e8d1"
+  }
+]

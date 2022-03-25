@@ -1,0 +1,147 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package hub-web-app-v5
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Rubenson Barrios <rubenson.barrios@bigtincan.com>
+ */
+
+@import "../../../../libs/less/btc-font-mixins.less";
+@import "../../../../libs/less/variables.less";
+
+.dropdown {
+  > div:nth-child(3) {
+    z-index: 5;
+    padding: 0;
+    border: 1px solid;
+    border-color: var(--divider-color);
+    border-radius: 4px;
+    background-color: #fcfcfc !important;
+    box-shadow: 0 0 0.3px 0 rgba(0, 0, 0, 0.3);
+    list-style: none;
+    margin: 0;
+    margin-top: 0.2rem;
+    color: var(--secondary-text);
+
+    > div > div {
+      padding: 0.2rem 0 !important;
+      margin: 0;
+      line-height: 30px !important;
+    }
+  }
+}
+
+.itemWrap {
+  > span {
+    cursor: pointer !important;
+  }
+
+  &:hover {
+    > span {
+      background-color: #eee !important;
+    }
+  }
+}
+.idFocused {
+  > span {
+    background-color: #ccc !important;
+    cursor: pointer !important;
+  }
+}
+.isSelected {
+  > span {
+    background-color: var(--light-base-color);
+    cursor: pointer !important;
+  }
+}
+.item {
+  line-height: 30px;
+  height: 30px;
+  display: inline-block;
+  width: auto;
+  padding: 0 1.5rem;
+  color: var(--secondary-text);
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+}
+
+.itemContainer {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0.55rem;
+  width: 90%;
+
+  > div {
+    width: 350px;
+  }
+}
+
+.removeBtn {
+  right: -0.5rem;
+  position: absolute;
+  .icon-zoomIn(1rem);
+
+  &:before{
+    cursor: pointer;
+    color: var(--error-color);
+    transform: rotate(45deg);
+    top: 0.6rem;
+    position: absolute;
+  }
+}
+
+.type {
+  .body-font-bold();
+  color: var(--secondary-text);
+  margin-right: 1rem;
+  display: inline-block;
+}
+.note {
+  color: var(--secondary-text);
+}
+
+.dropdownDisabled {
+  > div {
+    background-color: #fff !important;
+    border-color: var(--divider-color);
+  }
+}
+
+.isLocked {
+  position: relative;
+  max-width: 90% !important;
+
+  .icon-lock(1rem);
+  &:before {
+    right: 0;
+    position: absolute;
+    top: 9px;
+    color: var(--secondary-text);
+  }
+}
+
+.isVisible {
+  position: absolute;
+  right: 0;
+  top: 0.25rem;
+
+  .icon-eye(1rem);
+  &:before {
+    right: 0;
+    position: absolute;
+    top: 9px;
+    color: var(--secondary-text);
+  }
+}

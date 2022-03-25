@@ -1,0 +1,96 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Jason Huang <jason.huang@bigtincan.com>
+ */
+
+@import "../../../libs/less/variables.less";
+
+.EditImageModal {
+  /** Media Query breakpoints */
+  @media @mobile {
+
+  }
+  @media @tablet {
+
+  }
+  @media @desktop {
+
+  }
+  @media @desktop-xl {
+
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+
+  >div:nth-child(2) {
+    padding-left: 1rem;
+  }
+
+  button[data-action="replaceImage"] {
+    margin-top: 1rem;
+  }
+
+  button[data-action="deleteImage"] {
+    margin-top: 0.5rem;
+  }
+}
+
+.imageBackground {
+  width: 13rem;
+  height: 13rem;
+  background-size: cover;
+  background-image:url(../../StoryThumb/bg_StoryHeader.svg);
+}
+
+.labelValue{
+  font-size: 0.9rem;
+
+  span:first-child {
+    color: @primaryText;
+  }
+  span:nth-child(2) {
+    color: @secondaryText;
+  }
+}
+
+.viewStories {
+  color: @baseColor;
+  cursor: pointer;
+  padding-bottom: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.multiSelect {
+  ul {
+    background-color: white;
+    input {
+      background-color: white;
+    }
+  }
+}
+
+.tags{
+  color: @primaryText;
+  padding-top: 1rem;
+  font-weight: 600;
+  margin-bottom: -0.5rem;
+}
+
+.disabled {
+  cursor: not-allowed;
+}

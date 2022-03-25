@@ -1,0 +1,207 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package hub-web-app-v5
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../libs/less/btc-font-mixins.less";
+@import "../../libs/less/tooltips.less";
+@import "../../libs/less/utilities.less";
+@import "../../libs/less/variables.less";
+
+// Repo service colours
+// TO DO - move to style-guide global variables?
+
+/* Colours by service */
+.serviceColours(@iterator: 1) when(@iterator <= length(@service)) {
+  @name: extract(extract(@service, @iterator), 1);
+  &[data-service=@{name}] {
+    background-color: extract(extract(@service, @iterator), 2);
+  }
+  .serviceColours((@iterator + 1));
+}
+
+.thumbnail() {
+  .serviceColours();
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:before {
+    color:#fff;
+  }
+}
+
+.RepoItem {
+  display:block;
+  overflow:hidden;
+  position:relative;
+
+  &.isActive {
+    background-color: var(--light-base-color);
+  }
+
+  > a {
+    display:block;
+  }
+}
+
+.noLink {
+  cursor:pointer;
+}
+
+/* List Styles */
+.listItem {
+  align-items:center;
+  transition:background @timing-fast linear;
+
+  &.noLink {
+    padding:0.5rem;
+
+    &:hover {
+      background-color:@light-base-color;
+    }
+  }
+
+  .wrapper {
+    display:flex;
+    align-items: center;
+  }
+
+  a {
+    display:flex;
+    align-items: center;
+    color:@primary-text;
+    padding:0.5rem;
+
+    &:hover {
+      text-decoration:none;
+      background-color:@light-base-color;
+    }
+  }
+}
+
+.listThumbnail {
+  .thumbnail();
+  margin-right:0.5rem;
+
+  &:before {
+    font-size:32px;
+    line-height:1.45;
+  }
+}
+
+/* List Sizes */
+.listItemLarge {
+  .listThumbnail:before {
+    font-size:48px;
+  }
+
+  .name {
+    -webkit-line-clamp: 3;
+    max-height:4.2rem;
+  }
+}
+
+.listItemMedium {
+  .name {
+    max-height:2.75rem;
+  }
+}
+
+.listItemSmall {
+  .listThumbnail:before {
+    font-size:24px;
+  }
+
+  .name {
+    -webkit-line-clamp: 1;
+    max-height:1.35rem;
+  }
+}
+
+/* Grid Styles */
+.gridItem {
+  display:inline-block;
+  margin:1rem;
+  margin-top:0;
+  vertical-align:top;
+}
+
+.gridThumbnail {
+  .thumbnail();
+
+  &:before {
+    font-size:84px;
+  }
+}
+
+/* Grid Sizes */
+.gridItemLarge {
+  .name {
+    -webkit-line-clamp: 1;
+    max-height:1.35rem;
+  }
+}
+
+.gridItemMedium {
+  margin-bottom:0.75rem;
+  margin-left:0.75rem;
+  margin-right:0.75rem;
+
+  .gridThumbnail:before {
+    font-size:56px;
+  }
+
+  .name {
+    -webkit-line-clamp: 1;
+    max-height:1.35rem;
+  }
+}
+
+.gridItemSmall {
+  margin-bottom:0.5rem;
+  margin-left:0.5rem;
+  margin-right:0.5rem;
+  overflow:visible;  // required for tooltip
+  .tooltip(n);
+
+  &:after {
+    max-width:20rem;
+    .overflow-ellipsis();
+  }
+
+  .gridThumbnail:before {
+    font-size:24px;
+  }
+
+  .name {
+    display:none;
+  }
+}
+
+.name {
+  color:@primary-text;
+  display: inline-block;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow:hidden;
+}
+.note {
+  color:@secondary-text;
+  font-size:90%;
+  display:block;
+  .overflow-ellipsis();
+}

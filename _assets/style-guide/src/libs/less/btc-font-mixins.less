@@ -1,0 +1,2156 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package hub-web-app
+ * @copyright 2010-2016 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+/* LESS Mixins */
+// Mixin for fontcustom icon font
+.btc-font() {
+  display: inline-block;
+  font-family: "btc-font";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.icon-a(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1a4';
+    font-size:@size;
+  }
+}
+
+.icon-alfresco(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f100';
+    font-size:@size;
+  }
+}
+
+.icon-align-center(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f19c';
+    font-size:@size;
+  }
+}
+
+.icon-align-jusify(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f19d';
+    font-size:@size;
+  }
+}
+
+.icon-align-left(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f19e';
+    font-size:@size;
+  }
+}
+
+.icon-align-right(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f19f';
+    font-size:@size;
+  }
+}
+
+.icon-android(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f196';
+    font-size:@size;
+  }
+}
+
+.icon-annotate(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f101';
+    font-size:@size;
+  }
+}
+
+.icon-app(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1d7';
+    font-size:@size;
+  }
+}
+
+.icon-apple(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f102';
+    font-size:@size;
+  }
+}
+
+.icon-approved-content(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f216';
+    font-size:@size;
+  }
+}
+
+.icon-archive(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f103';
+    font-size:@size;
+  }
+}
+
+.icon-archive-nav(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f204';
+    font-size:@size;
+  }
+}
+
+.icon-audio(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f104';
+    font-size:@size;
+  }
+}
+
+.icon-automation(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f205';
+    font-size:@size;
+  }
+}
+
+.icon-az(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1af';
+    font-size:@size;
+  }
+}
+
+.icon-azure(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f105';
+    font-size:@size;
+  }
+}
+
+.icon-bar-chart(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1dd';
+    font-size:@size;
+  }
+}
+
+.icon-blogger(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f106';
+    font-size:@size;
+  }
+}
+
+.icon-bold(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1a5';
+    font-size:@size;
+  }
+}
+
+.icon-bookmark(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f107';
+    font-size:@size;
+  }
+}
+
+.icon-bookmark-all(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f108';
+    font-size:@size;
+  }
+}
+
+.icon-bookmark-all-fill(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f109';
+    font-size:@size;
+  }
+}
+
+.icon-bookmark-fill(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f10a';
+    font-size:@size;
+  }
+}
+
+.icon-box(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f10b';
+    font-size:@size;
+  }
+}
+
+.icon-broadcast(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1b3';
+    font-size:@size;
+  }
+}
+
+.icon-broadcast-screen(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1b5';
+    font-size:@size;
+  }
+}
+
+.icon-browser(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1db';
+    font-size:@size;
+  }
+}
+
+.icon-btc(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1b7';
+    font-size:@size;
+  }
+}
+
+.icon-calendar(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f10c';
+    font-size:@size;
+  }
+}
+
+.icon-calendar-nav(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f206';
+    font-size:@size;
+  }
+}
+
+.icon-camcorder(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f10d';
+    font-size:@size;
+  }
+}
+
+.icon-camcorder-fill(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f199';
+    font-size:@size;
+  }
+}
+
+.icon-canvas-add(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f218';
+    font-size:@size;
+  }
+}
+
+.icon-canvas-nav(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f207';
+    font-size:@size;
+  }
+}
+
+.icon-chat(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f10e';
+    font-size:@size;
+  }
+}
+
+.icon-chat-nav(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f208';
+    font-size:@size;
+  }
+}
+
+.icon-circle-fill(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f10f';
+    font-size:@size;
+  }
+}
+
+.icon-close(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f110';
+    font-size:@size;
+  }
+}
+
+.icon-cloud(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f111';
+    font-size:@size;
+  }
+}
+
+.icon-cloud-fill(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f112';
+    font-size:@size;
+  }
+}
+
+.icon-cloud-sf(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f113';
+    font-size:@size;
+  }
+}
+
+.icon-cloud-sf-fill(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1ae';
+    font-size:@size;
+  }
+}
+
+.icon-cmis(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f114';
+    font-size:@size;
+  }
+}
+
+.icon-collapse(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f115';
+    font-size:@size;
+  }
+}
+
+.icon-comment(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f116';
+    font-size:@size;
+  }
+}
+
+.icon-comment-fill(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f117';
+    font-size:@size;
+  }
+}
+
+.icon-company(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1ab';
+    font-size:@size;
+  }
+}
+
+.icon-company-fill(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1b2';
+    font-size:@size;
+  }
+}
+
+.icon-company-nav(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f209';
+    font-size:@size;
+  }
+}
+
+.icon-content(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f118';
+    font-size:@size;
+  }
+}
+
+.icon-content-nav(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f20a';
+    font-size:@size;
+  }
+}
+
+.icon-copy(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f119';
+    font-size:@size;
+  }
+}
+
+.icon-cq5(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f11a';
+    font-size:@size;
+  }
+}
+
+.icon-create-header(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f20b';
+    font-size:@size;
+  }
+}
+
+.icon-crm-integration(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1c2';
+    font-size:@size;
+  }
+}
+
+.icon-csv(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f11b';
+    font-size:@size;
+  }
+}
+
+.icon-custom-apps(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1fd';
+    font-size:@size;
+  }
+}
+
+.icon-custom-naming(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1c5';
+    font-size:@size;
+  }
+}
+
+.icon-dash(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f11c';
+    font-size:@size;
+  }
+}
+
+.icon-date(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1b0';
+    font-size:@size;
+  }
+}
+
+.icon-delete(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1f6';
+    font-size:@size;
+  }
+}
+
+.icon-doc-pages(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f11d';
+    font-size:@size;
+  }
+}
+
+.icon-dock(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f11e';
+    font-size:@size;
+  }
+}
+
+.icon-document(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f11f';
+    font-size:@size;
+  }
+}
+
+.icon-documentum(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f120';
+    font-size:@size;
+  }
+}
+
+.icon-dot-handle(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1d6';
+    font-size:@size;
+  }
+}
+
+.icon-download(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f121';
+    font-size:@size;
+  }
+}
+
+.icon-draft(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f122';
+    font-size:@size;
+  }
+}
+
+.icon-dropbox(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f123';
+    font-size:@size;
+  }
+}
+
+.icon-dual-pane(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f124';
+    font-size:@size;
+  }
+}
+
+.icon-dynamics(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1ac';
+    font-size:@size;
+  }
+}
+
+.icon-earth(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f125';
+    font-size:@size;
+  }
+}
+
+.icon-earthviewer(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f126';
+    font-size:@size;
+  }
+}
+
+.icon-ebook(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f127';
+    font-size:@size;
+  }
+}
+
+.icon-edit(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f128';
+    font-size:@size;
+  }
+}
+
+.icon-edit-box(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1c6';
+    font-size:@size;
+  }
+}
+
+.icon-education(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1e1';
+    font-size:@size;
+  }
+}
+
+.icon-egnyte(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f129';
+    font-size:@size;
+  }
+}
+
+.icon-email(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1c7';
+    font-size:@size;
+  }
+}
+
+.icon-email-envelope(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1b9';
+    font-size:@size;
+  }
+}
+
+.icon-endQuote(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f12b';
+    font-size:@size;
+  }
+}
+
+.icon-epub(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f12c';
+    font-size:@size;
+  }
+}
+
+.icon-eraser(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1d9';
+    font-size:@size;
+  }
+}
+
+.icon-error(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f12d';
+    font-size:@size;
+  }
+}
+
+.icon-evernote(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f12e';
+    font-size:@size;
+  }
+}
+
+.icon-expand(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f12f';
+    font-size:@size;
+  }
+}
+
+.icon-eye(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1a9';
+    font-size:@size;
+  }
+}
+
+.icon-eye-fill(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1e8';
+    font-size:@size;
+  }
+}
+
+.icon-eye-invisible(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1ef';
+    font-size:@size;
+  }
+}
+
+.icon-eye-visible(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1f0';
+    font-size:@size;
+  }
+}
+
+.icon-facebook(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f130';
+    font-size:@size;
+  }
+}
+
+.icon-file(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f131';
+    font-size:@size;
+  }
+}
+
+.icon-file-alt(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1d8';
+    font-size:@size;
+  }
+}
+
+.icon-file-fill(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f20c';
+    font-size:@size;
+  }
+}
+
+.icon-files(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1c8';
+    font-size:@size;
+  }
+}
+
+.icon-filter(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1cb';
+    font-size:@size;
+  }
+}
+
+.icon-filter-fill(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1ce';
+    font-size:@size;
+  }
+}
+
+.icon-flag(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f132';
+    font-size:@size;
+  }
+}
+
+.icon-flag-fill(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f133';
+    font-size:@size;
+  }
+}
+
+.icon-folder(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1e2';
+    font-size:@size;
+  }
+}
+
+.icon-folder-open(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f219';
+    font-size:@size;
+  }
+}
+
+.icon-folders(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1ba';
+    font-size:@size;
+  }
+}
+
+.icon-font(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f134';
+    font-size:@size;
+  }
+}
+
+.icon-form(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f135';
+    font-size:@size;
+  }
+}
+
+.icon-form-alt(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1eb';
+    font-size:@size;
+  }
+}
+
+.icon-form-category(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1ea';
+    font-size:@size;
+  }
+}
+
+.icon-forms-nav(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f20d';
+    font-size:@size;
+  }
+}
+
+.icon-fullscreen(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f136';
+    font-size:@size;
+  }
+}
+
+.icon-gamification(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1c9';
+    font-size:@size;
+  }
+}
+
+.icon-gdrive(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f137';
+    font-size:@size;
+  }
+}
+
+.icon-gear(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f138';
+    font-size:@size;
+  }
+}
+
+.icon-gear-fill(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1d1';
+    font-size:@size;
+  }
+}
+
+.icon-genie(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f201';
+    font-size:@size;
+  }
+}
+
+.icon-graph(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1d4';
+    font-size:@size;
+  }
+}
+
+.icon-grid(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f139';
+    font-size:@size;
+  }
+}
+
+.icon-group(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f13a';
+    font-size:@size;
+  }
+}
+
+.icon-handle(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f13b';
+    font-size:@size;
+  }
+}
+
+.icon-handle-diagonal(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1da';
+    font-size:@size;
+  }
+}
+
+.icon-handle-vertical(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1cf';
+    font-size:@size;
+  }
+}
+
+.icon-heart(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f13c';
+    font-size:@size;
+  }
+}
+
+.icon-help(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f13d';
+    font-size:@size;
+  }
+}
+
+.icon-help-nav(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f20e';
+    font-size:@size;
+  }
+}
+
+.icon-history(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f13e';
+    font-size:@size;
+  }
+}
+
+.icon-home-screens(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1bb';
+    font-size:@size;
+  }
+}
+
+.icon-hubspot(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f13f';
+    font-size:@size;
+  }
+}
+
+.icon-ibooks(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f198';
+    font-size:@size;
+  }
+}
+
+.icon-image(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f141';
+    font-size:@size;
+  }
+}
+
+.icon-indent(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1a0';
+    font-size:@size;
+  }
+}
+
+.icon-info(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f142';
+    font-size:@size;
+  }
+}
+
+.icon-info-fill(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1d2';
+    font-size:@size;
+  }
+}
+
+.icon-ipad(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f143';
+    font-size:@size;
+  }
+}
+
+.icon-italic(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1a6';
+    font-size:@size;
+  }
+}
+
+.icon-jive(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f144';
+    font-size:@size;
+  }
+}
+
+.icon-keyhole(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1bc';
+    font-size:@size;
+  }
+}
+
+.icon-keynote(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f145';
+    font-size:@size;
+  }
+}
+
+.icon-launch(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1e5';
+    font-size:@size;
+  }
+}
+
+.icon-learning(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1df';
+    font-size:@size;
+  }
+}
+
+.icon-leftArrow(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f202';
+    font-size:@size;
+  }
+}
+
+.icon-like(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f146';
+    font-size:@size;
+  }
+}
+
+.icon-like-fill(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f147';
+    font-size:@size;
+  }
+}
+
+.icon-link(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f148';
+    font-size:@size;
+  }
+}
+
+.icon-linkedin(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f149';
+    font-size:@size;
+  }
+}
+
+.icon-list(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f14a';
+    font-size:@size;
+  }
+}
+
+.icon-location(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f14b';
+    font-size:@size;
+  }
+}
+
+.icon-lock(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f14c';
+    font-size:@size;
+  }
+}
+
+.icon-me-nav(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f20f';
+    font-size:@size;
+  }
+}
+
+.icon-meeting(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f14d';
+    font-size:@size;
+  }
+}
+
+.icon-microphone(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f14e';
+    font-size:@size;
+  }
+}
+
+.icon-microphone-fill(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f19a';
+    font-size:@size;
+  }
+}
+
+.icon-minus(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1d5';
+    font-size:@size;
+  }
+}
+
+.icon-mobile(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f14f';
+    font-size:@size;
+  }
+}
+
+.icon-more(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f150';
+    font-size:@size;
+  }
+}
+
+.icon-more-fill(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f151';
+    font-size:@size;
+  }
+}
+
+.icon-move(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1e0';
+    font-size:@size;
+  }
+}
+
+.icon-music(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f152';
+    font-size:@size;
+  }
+}
+
+.icon-nav-chevron(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f21c';
+    font-size:@size;
+  }
+}
+
+.icon-next(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f153';
+    font-size:@size;
+  }
+}
+
+.icon-nextPage(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f154';
+    font-size:@size;
+  }
+}
+
+.icon-none(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f155';
+    font-size:@size;
+  }
+}
+
+.icon-note(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f156';
+    font-size:@size;
+  }
+}
+
+.icon-note-fill(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f157';
+    font-size:@size;
+  }
+}
+
+.icon-notifications(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f158';
+    font-size:@size;
+  }
+}
+
+.icon-notifications-nav(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f210';
+    font-size:@size;
+  }
+}
+
+.icon-numbers(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f159';
+    font-size:@size;
+  }
+}
+
+.icon-onedrive(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f15a';
+    font-size:@size;
+  }
+}
+
+.icon-oomph(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f15b';
+    font-size:@size;
+  }
+}
+
+.icon-ordered-list(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1a1';
+    font-size:@size;
+  }
+}
+
+.icon-outdent(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1a2';
+    font-size:@size;
+  }
+}
+
+.icon-outlook(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1ec';
+    font-size:@size;
+  }
+}
+
+.icon-package(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1be';
+    font-size:@size;
+  }
+}
+
+.icon-padlock-locked(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1f1';
+    font-size:@size;
+  }
+}
+
+.icon-padlock-unlocked(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1f2';
+    font-size:@size;
+  }
+}
+
+.icon-pages(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f15c';
+    font-size:@size;
+  }
+}
+
+.icon-paintbrush(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f19b';
+    font-size:@size;
+  }
+}
+
+.icon-pause(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f15d';
+    font-size:@size;
+  }
+}
+
+.icon-pdf(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f15e';
+    font-size:@size;
+  }
+}
+
+.icon-pen(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f15f';
+    font-size:@size;
+  }
+}
+
+.icon-pencil-edit(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1f3';
+    font-size:@size;
+  }
+}
+
+.icon-phone(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f160';
+    font-size:@size;
+  }
+}
+
+.icon-phone-fill(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f161';
+    font-size:@size;
+  }
+}
+
+.icon-pin(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f162';
+    font-size:@size;
+  }
+}
+
+.icon-placeholder-email(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f217';
+    font-size:@size;
+  }
+}
+
+.icon-play(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f163';
+    font-size:@size;
+  }
+}
+
+.icon-plus(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f164';
+    font-size:@size;
+  }
+}
+
+.icon-plus-bold(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1f7';
+    font-size:@size;
+  }
+}
+
+.icon-powerpoint(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1ed';
+    font-size:@size;
+  }
+}
+
+.icon-prev(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f165';
+    font-size:@size;
+  }
+}
+
+.icon-prevPage(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f166';
+    font-size:@size;
+  }
+}
+
+.icon-private-activity(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f167';
+    font-size:@size;
+  }
+}
+
+.icon-promote(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1b6';
+    font-size:@size;
+  }
+}
+
+.icon-prov(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f168';
+    font-size:@size;
+  }
+}
+
+.icon-quicklink(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f169';
+    font-size:@size;
+  }
+}
+
+.icon-quicklink-fill(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f16a';
+    font-size:@size;
+  }
+}
+
+.icon-refresh(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f16b';
+    font-size:@size;
+  }
+}
+
+.icon-reports-nav(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f211';
+    font-size:@size;
+  }
+}
+
+.icon-restart(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f16c';
+    font-size:@size;
+  }
+}
+
+.icon-rightArrow(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f203';
+    font-size:@size;
+  }
+}
+
+.icon-rotate(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f16d';
+    font-size:@size;
+  }
+}
+
+.icon-rss(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1a8';
+    font-size:@size;
+  }
+}
+
+.icon-rtf(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f16e';
+    font-size:@size;
+  }
+}
+
+.icon-rtfd(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f16f';
+    font-size:@size;
+  }
+}
+
+.icon-s3(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f170';
+    font-size:@size;
+  }
+}
+
+.icon-salesforce(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f171';
+    font-size:@size;
+  }
+}
+
+.icon-savo(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f172';
+    font-size:@size;
+  }
+}
+
+.icon-search(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f173';
+    font-size:@size;
+  }
+}
+
+.icon-search-header(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f212';
+    font-size:@size;
+  }
+}
+
+.icon-search-nav(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f213';
+    font-size:@size;
+  }
+}
+
+.icon-settings-nav(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f214';
+    font-size:@size;
+  }
+}
+
+.icon-share(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f174';
+    font-size:@size;
+  }
+}
+
+.icon-share-fill(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f175';
+    font-size:@size;
+  }
+}
+
+.icon-sharefile(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f176';
+    font-size:@size;
+  }
+}
+
+.icon-sharepoint(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f177';
+    font-size:@size;
+  }
+}
+
+.icon-shareuser(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1fc';
+    font-size:@size;
+  }
+}
+
+.icon-skype(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f178';
+    font-size:@size;
+  }
+}
+
+.icon-smb(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f179';
+    font-size:@size;
+  }
+}
+
+.icon-sort(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f17a';
+    font-size:@size;
+  }
+}
+
+.icon-sort-ascending(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f21a';
+    font-size:@size;
+  }
+}
+
+.icon-sort-descending(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f21b';
+    font-size:@size;
+  }
+}
+
+.icon-star(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f200';
+    font-size:@size;
+  }
+}
+
+.icon-startQuote(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f17b';
+    font-size:@size;
+  }
+}
+
+.icon-stop(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f17c';
+    font-size:@size;
+  }
+}
+
+.icon-stop-fill(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f17d';
+    font-size:@size;
+  }
+}
+
+.icon-story(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f17e';
+    font-size:@size;
+  }
+}
+
+.icon-story-plus(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1dc';
+    font-size:@size;
+  }
+}
+
+.icon-subscribe(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f17f';
+    font-size:@size;
+  }
+}
+
+.icon-subscribe-fill(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f180';
+    font-size:@size;
+  }
+}
+
+.icon-subscription(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f181';
+    font-size:@size;
+  }
+}
+
+.icon-sugarsync(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f182';
+    font-size:@size;
+  }
+}
+
+.icon-syncing(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1e9';
+    font-size:@size;
+  }
+}
+
+.icon-table(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1de';
+    font-size:@size;
+  }
+}
+
+.icon-tag(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1fb';
+    font-size:@size;
+  }
+}
+
+.icon-tick(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f183';
+    font-size:@size;
+  }
+}
+
+.icon-tick-alt(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1ee';
+    font-size:@size;
+  }
+}
+
+.icon-toc(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f184';
+    font-size:@size;
+  }
+}
+
+.icon-trash(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1b1';
+    font-size:@size;
+  }
+}
+
+.icon-triangle(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f185';
+    font-size:@size;
+  }
+}
+
+.icon-twitter(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f186';
+    font-size:@size;
+  }
+}
+
+.icon-twixl(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f187';
+    font-size:@size;
+  }
+}
+
+.icon-txt(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f188';
+    font-size:@size;
+  }
+}
+
+.icon-underline(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1a7';
+    font-size:@size;
+  }
+}
+
+.icon-unlink(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1f9';
+    font-size:@size;
+  }
+}
+
+.icon-unordered-list(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1a3';
+    font-size:@size;
+  }
+}
+
+.icon-user(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f189';
+    font-size:@size;
+  }
+}
+
+.icon-user-crm(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f18a';
+    font-size:@size;
+  }
+}
+
+.icon-user-edit(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1cd';
+    font-size:@size;
+  }
+}
+
+.icon-user-fill(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f18b';
+    font-size:@size;
+  }
+}
+
+.icon-user-metadata(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1bf';
+    font-size:@size;
+  }
+}
+
+.icon-user-upload(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1f8';
+    font-size:@size;
+  }
+}
+
+.icon-users(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1c0';
+    font-size:@size;
+  }
+}
+
+.icon-vcard(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f18c';
+    font-size:@size;
+  }
+}
+
+.icon-video(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f18d';
+    font-size:@size;
+  }
+}
+
+.icon-volumeMax(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f18e';
+    font-size:@size;
+  }
+}
+
+.icon-volumeMute(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f18f';
+    font-size:@size;
+  }
+}
+
+.icon-warning(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1fa';
+    font-size:@size;
+  }
+}
+
+.icon-web(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f190';
+    font-size:@size;
+  }
+}
+
+.icon-webdav(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f191';
+    font-size:@size;
+  }
+}
+
+.icon-websites(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1e4';
+    font-size:@size;
+  }
+}
+
+.icon-wheelbarrow(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f192';
+    font-size:@size;
+  }
+}
+
+.icon-window(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f197';
+    font-size:@size;
+  }
+}
+
+.icon-zip(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f193';
+    font-size:@size;
+  }
+}
+
+.icon-zoomIn(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f194';
+    font-size:@size;
+  }
+}
+
+.icon-zoomIn-fill(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f1d0';
+    font-size:@size;
+  }
+}
+
+.icon-zoomOut(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f195';
+    font-size:@size;
+  }
+}
+
+.icon-navChevron(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .btc-font();
+    content:'\f21c';
+    font-size:@size;
+  } 
+}

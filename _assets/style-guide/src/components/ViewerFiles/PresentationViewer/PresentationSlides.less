@@ -1,0 +1,119 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Jason Huang <jason.huang@bigtincan.com>
+ */
+
+@import "../../../libs/less/variables.less";
+@import "../../../libs/less/btc-font-mixins.less";
+
+.PresentationSlides {
+
+  background-color: black;
+  min-width: 200px;
+  width: 22rem;
+  height: 100%;
+  padding: 3rem 5px 20px 1rem;
+  user-select: none;
+
+  /** Media Query breakpoints */
+  @media @mobile {
+
+  }
+  @media @tablet {
+
+  }
+  @media @desktop {
+
+  }
+  @media @desktop-xl {
+
+  }
+}
+
+.hidden{
+  display: none;
+}
+
+.slideContainer{
+  background-color: @primary-text;
+  margin-top: 21px;
+  height: calc(~'100%' - 21px);
+
+  overflow-y: scroll;
+  display: flex;
+  width: 200px;
+  z-index:2;
+  position: relative;
+
+  flex-direction: column;
+
+  ul {
+    list-style-type: none;
+
+    li.dragging {
+      background: #eee;
+    }
+
+    li div[data-type="hidden"] {
+      opacity: 0.6;
+      filter: alpha(opacity=60);
+      .icon-zoomOut(3rem);
+      &:before {
+        color: @secondaryText;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+
+.image {
+  color:  @base-text;
+  text-align: center;
+}
+
+.dragging {
+  border: 4px solid @baseColor;
+  border-color: @base-color;
+  background-color: @primary-text;
+}
+
+.slideImage {
+  position: relative;
+  width: 100%;
+  height: 0;
+  margin: 1%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border: 0.5px solid @dividerColor;
+  border-color: @divider-color;
+}
+
+.slideTimer {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0px;
+  text-shadow: -0.3px 0 black, 0 0.3px black, 0.3px 0 black, 0 -0.3px black;
+}
+
+ul[data-type="slides"] {
+  .active {
+    border: 4px solid @baseColor;
+    border-color: @base-color;
+  }
+}

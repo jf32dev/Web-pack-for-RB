@@ -1,0 +1,128 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../libs/less/btc-font-mixins.less";
+@import "../../libs/less/utilities.less";
+@import "../../libs/less/variables.less";
+
+.FileEditList {
+  display:flex;
+  flex-direction:column;
+  height:100%;
+
+  > ol {
+    min-height: 8.8rem;
+  }
+  > ul, > ol {
+    margin:0 -0.5rem;  // scrollbars outside
+    padding:0 0.5rem;
+    list-style:none;
+    overflow:auto;
+    transform: translate3d(0,0,0);  // prevents scroll breaking in chrome
+
+    > li {
+      margin:0;
+      padding:0;
+      vertical-align:top;
+
+      // target .folderContents if last item
+      // applies padding for file tooltips
+      &:last-child {
+        > div > div:nth-child(3) {
+          padding-bottom: 2rem;
+        }
+      }
+    }
+  }
+}
+
+.isSorting, .isSorting * {
+  .grabbing();
+}
+
+.header {
+  flex:1 0 auto;
+  padding:0 0.5rem 0.25rem;
+  color:@secondary-text;
+}
+
+.headings {
+  display:flex;
+  align-items: center;
+
+  flex:1 0 auto;
+  margin:0;
+  padding:0;
+  list-style:none;
+  user-select:none;
+
+  .sequence {
+    .icon-sort(12px);
+    vertical-align:middle;
+    padding-left:0.7rem;
+    width: 6.75rem;
+  }
+
+  .name {
+    flex: 1 0 auto;
+    padding-left: 0.25rem;
+    min-width: 24rem;
+  }
+
+  .share {
+    margin-right: 2rem;
+    text-align: left;
+    width: 8.75rem;
+  }
+  .options {
+    text-align: left;
+    width: 14rem;
+  }
+
+  &.withSequence {
+    .name {
+      min-width: 25rem;
+      width: 25rem;
+
+      @media @mobile, @tablet {
+        min-width: 16.5rem !important;
+        max-width: 16.5rem !important;
+      }
+
+      @media @desktop {
+        min-width: 18rem;
+        max-width: 18rem;
+      }
+    }
+    .share {
+      margin-right: 5rem;
+
+      @media @desktop {
+        margin-right: 2rem;
+      }
+    }
+  }
+}
+
+// Sortable ghost
+li.isSorting {
+  list-style:none;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.16);
+  border: solid 0.5px #dddddd;
+}

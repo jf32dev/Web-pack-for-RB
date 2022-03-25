@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="512px" height="512px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-azure</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon-azure" fill="#000000">
+            <g id="azure" transform="translate(4.000000, 0.000000)">
+                <path d="M504,244.595553 L504,0 L223.470785,40.9804288 L223.470785,244.595553 L504,244.595553 L504,244.595553 Z M203.710176,43.8711239 L0,73.630962 L0,244.595553 L203.710176,244.595553 L203.710176,43.8711239 L203.710176,43.8711239 Z M0,264.386076 L0,437.521238 L203.710176,467.623262 L203.710176,264.386076 L0,264.386076 L0,264.386076 Z M223.470785,470.549705 L504,512 L504,264.386076 L223.470785,264.386076 L223.470785,470.549705 L223.470785,470.549705 Z" id="MicrosoftAzureOverlay"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,12 @@
+[{
+  "packageFamilyName": "bigtincanmobile.bigtincanhub_8pcqgajh0e9ve",
+  "paths": [ "/story/*", "/file/*", "/landing/*" ]
+},
+{
+  "packageFamilyName": "HinoTrucks.HinoIgnition_rp36dxqzs3280",
+  "paths": [ "/story/*", "/file/*", "/landing/*" ]
+},
+{
+  "packageFamilyName": "bigtincanmobile.Amazon-TheSource_8pcqgajh0e9ve",
+  "paths": [ "/story/*", "/file/*", "/landing/*" ]
+}]

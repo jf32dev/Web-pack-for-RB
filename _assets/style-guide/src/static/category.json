@@ -1,0 +1,54 @@
+{
+  "id": 1001,
+  "type": "category",
+  "name": "AVeryLongNamewithNosapcestoreallytestoutCSS",
+  "description": "Form Category Description",
+  "permissions": [
+    {
+      "id": 166154,
+      "type": "group",
+      "name": "Test Group with a very long name surely this name is too long why would anyone do this someone will.",
+      "thumbnail": "src/static/images/story1.jpg",
+      "childCount": 1,
+      "colour": "#e202ae",
+      "canSubscribe": false,
+      "permissions": 1,
+      "notes": "My personal group"
+    },
+    {
+      "email": "userTest@gmail.com",
+      "id": 166154,
+      "type": "people",
+      "name": "Testy McTester",
+      "thumbnail": "src/static/images/user1.png",
+      "role": "Tester",
+      "isFollowed": false,
+      "isFollowLoading": true,
+      "permissions": 3
+    }
+  ],
+  "formPermissions": [
+    {
+      "email": "testTetser@gmail.com",
+      "id": 165819,
+      "type": "people",
+      "name": "Tester Tester",
+      "thumbnail": "src/static/images/user2.png",
+      "role": "Super Tester",
+      "isFollowed": false,
+      "permissions": 3
+    },
+    {
+      "id": 166152,
+      "type": "group",
+      "name": "iOS Groups",
+      "thumbnail": "",
+      "childCount": 14,
+      "colour": "#00cc00",
+      "canSubscribe": false,
+      "permissions": 3,
+      "notes": "Testing notes in groups"
+    }
+  ],
+  "formCount": 1
+}

@@ -1,0 +1,34 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package hub-web-app
+ * @copyright 2010-2016 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+/* LESS Mixins */
+// Mixin for fontcustom icon font
+.<%= font_name %>() {
+<%= glyph_properties %>
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+<% @glyphs.each do |name, value| selector = @options[:css_selector].sub('{{glyph}}', name.to_s) %>
+.icon-<%= name %>(@size: 24px, @place: ~'before') {
+  &:@{place} {
+    .<%= font_name %>();
+    content:'\<%= value[:codepoint].to_s(16) %>';
+    font-size:@size;
+  }
+}
+<% end %>

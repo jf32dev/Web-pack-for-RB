@@ -1,0 +1,182 @@
+{
+  "attributes": [
+    {
+      "id": 1,
+      "attribute": "Brand",
+      "visibility": 1,
+      "locked": 0,
+      "sequence": 0,
+      "values": [
+        {
+          "id": 11,
+          "attributeValue": "Gap"
+        },
+        {
+          "id": 12,
+          "attributeValue": "ON"
+        },
+        {
+          "id": 17,
+          "attributeValue": "Banana Republic"
+        },
+        {
+          "id": 18,
+          "attributeValue": "NewBrand"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "attribute": "Region",
+      "visibility": 1,
+      "locked": 1,
+      "sequence": 0,
+      "values": [
+        {
+          "id": 4,
+          "attributeValue": "Inner West"
+        },
+        {
+          "id": 5,
+          "attributeValue": "North"
+        },
+        {
+          "id": 6,
+          "attributeValue": "South"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "attribute": "test",
+      "visibility": 0,
+      "locked": 0,
+      "sequence": 0
+    }
+  ],
+  "valuesList": [
+    {
+      "id": 4,
+      "attributeValue": "Inner West",
+      "attribute": {
+        "id": 2,
+        "name": "Region",
+        "locked": 0,
+        "visibility": 1,
+        "sequence": 0
+      }
+    },
+    {
+      "id": 5,
+      "attributeValue": "North",
+      "attribute": {
+        "id": 2,
+        "name": "Region",
+        "locked": 0,
+        "visibility": 1,
+        "sequence": 0
+      }
+    },
+    {
+      "id": 6,
+      "attributeValue": "South",
+      "attribute": {
+        "id": 2,
+        "name": "Region",
+        "locked": 0,
+        "visibility": 1,
+        "sequence": 0
+      }
+    },
+    {
+      "id": 11,
+      "attributeValue": "Gap",
+      "attribute": {
+        "id": 1,
+        "name": "Brand",
+        "locked": 1,
+        "visibility": 1,
+        "sequence": 0
+      }
+    },
+    {
+      "id": 12,
+      "attributeValue": "ON",
+      "attribute": {
+        "id": 1,
+        "name": "Brand",
+        "locked": 0,
+        "visibility": 1,
+        "sequence": 0
+      }
+    },
+    {
+      "id": 17,
+      "attributeValue": "Banana Republic",
+      "attribute": {
+        "id": 1,
+        "name": "Brand",
+        "locked": 1,
+        "visibility": 0,
+        "sequence": 0
+      }
+    },
+    {
+      "id": 18,
+      "attributeValue": "NewBrand",
+      "attribute": {
+        "id": 1,
+        "name": "Brand",
+        "locked": 1,
+        "visibility": 1,
+        "sequence": 0
+      }
+    }
+  ],
+  "valuesSelected": [
+    {
+      "id": 5,
+      "attributeValue": "North",
+      "attribute": {
+        "id": 2,
+        "name": "Region",
+        "locked": 0,
+        "visibility": 1,
+        "sequence": 0
+      }
+    },
+    {
+      "id": 11,
+      "attributeValue": "Gap",
+      "attribute": {
+        "id": 1,
+        "name": "Brand",
+        "locked": 1,
+        "visibility": 1,
+        "sequence": 0
+      }
+    },
+    {
+      "id": 12,
+      "attributeValue": "ON",
+      "attribute": {
+        "id": 1,
+        "name": "Brand",
+        "locked": 0,
+        "visibility": 1,
+        "sequence": 0
+      }
+    },
+    {
+      "id": 18,
+      "attributeValue": "NewBrand",
+      "attribute": {
+        "id": 1,
+        "name": "Brand",
+        "locked": 1,
+        "visibility": 0,
+        "sequence": 0
+      }
+    }
+  ]
+}

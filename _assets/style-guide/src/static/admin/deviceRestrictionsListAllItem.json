@@ -1,0 +1,222 @@
+[
+  {
+    "id": 51283,
+    "title": "adelll",
+    "type": "regular",
+    "notes": "",
+    "users_count": 13,
+    "featured_img_id": 0,
+    "featured_img": "",
+    "can_subscribe": 1,
+    "default_colour": "#7e622a"
+  },
+  {
+    "id": 48149,
+    "title": "ADTestGroup",
+    "type": "regular",
+    "notes": "",
+    "users_count": 12,
+    "featured_img_id": 0,
+    "featured_img": "",
+    "can_subscribe": 0,
+    "default_colour": "#02e8d1"
+  },
+  {
+    "id": 6230,
+    "title": "AD_Group",
+    "type": "regular",
+    "notes": "",
+    "users_count": 16,
+    "featured_img_id": 0,
+    "featured_img": "",
+    "can_subscribe": 0,
+    "default_colour": "#04e44a"
+  },
+  {
+    "id": 77282,
+    "title": "Alex Test Group",
+    "type": "regular",
+    "notes": "",
+    "users_count": 4,
+    "featured_img_id": 0,
+    "featured_img": "",
+    "can_subscribe": 0,
+    "default_colour": "#0092ec"
+  },
+  {
+    "id": 33430,
+    "title": "All users",
+    "type": "regular",
+    "notes": "",
+    "users_count": 12,
+    "featured_img_id": 0,
+    "featured_img": "",
+    "can_subscribe": 0,
+    "default_colour": "#04e44a"
+  },
+  {
+    "id": 4213,
+    "title": "Android",
+    "type": "regular",
+    "notes": "",
+    "users_count": 12,
+    "featured_img_id": 0,
+    "featured_img": "",
+    "can_subscribe": 0,
+    "default_colour": "#02e8d1"
+  },
+  {
+    "id": 80939,
+    "title": "asdfgh",
+    "type": "regular",
+    "notes": "asdf",
+    "users_count": 3,
+    "featured_img_id": 0,
+    "featured_img": "",
+    "can_subscribe": 0,
+    "default_colour": "#4c4c4c"
+  },
+  {
+    "id": 78726,
+    "title": "bigtincantest",
+    "type": "regular",
+    "notes": "test",
+    "users_count": 1014,
+    "featured_img_id": 34520,
+    "featured_img": "https:\/\/pubapi.bigtincan.org\/f\/Dm9jEkGXJpW6KRWbN5O0\/cover_art\/b1673398b2d23d16718d18760084676b9b2f34f51f5c6745813ce28f8c161678.png",
+    "can_subscribe": 0,
+    "default_colour": "#ffd400"
+  },
+  {
+    "id": 83794,
+    "title": "Clarizza's Interests",
+    "type": "regular",
+    "notes": "Test",
+    "users_count": 4,
+    "featured_img_id": 35296,
+    "featured_img": "https:\/\/push.bigtincan.org\/f\/Dm9jEkGXJpW6KRWbN5O0\/cover_art\/3790b884eb5215ef02ed9b8f306580fb9f5cd32167350fb8f84e7461c1ef5efe.gif",
+    "can_subscribe": 1,
+    "default_colour": "#ffd400"
+  },
+  {
+    "id": 4219,
+    "title": "Design",
+    "type": "regular",
+    "notes": "",
+    "users_count": 6,
+    "featured_img_id": 0,
+    "featured_img": "",
+    "can_subscribe": 0,
+    "default_colour": "#0092ec"
+  },
+  {
+    "id": 4220,
+    "title": "DevOps & Security",
+    "type": "regular",
+    "notes": "",
+    "users_count": 6,
+    "featured_img_id": 0,
+    "featured_img": "",
+    "can_subscribe": 0,
+    "default_colour": "#02e8d1"
+  },
+  {
+    "id": 51280,
+    "title": "Doc test",
+    "type": "regular",
+    "notes": "",
+    "users_count": 9,
+    "featured_img_id": 0,
+    "featured_img": "",
+    "can_subscribe": 1,
+    "default_colour": "#e2023a"
+  },
+  {
+    "id": 51338,
+    "title": "Doc Test Group",
+    "type": "regular",
+    "notes": "",
+    "users_count": 1,
+    "featured_img_id": 0,
+    "featured_img": "",
+    "can_subscribe": 0,
+    "default_colour": "#7e622a"
+  },
+  {
+    "id": 4339,
+    "title": "Documentation",
+    "type": "regular",
+    "notes": "",
+    "users_count": 23,
+    "featured_img_id": 26605,
+    "featured_img": "https:\/\/pubapi.bigtincan.org\/f\/Dm9jEkGXJpW6KRWbN5O0\/cover_art\/0dca3d7d3f4fb51619e80c25ffd427374e7422cf62dc5ba7ea7a75aae926a674.png",
+    "can_subscribe": 1,
+    "default_colour": "#e2023a"
+  },
+  {
+    "id": 10161,
+    "title": "Domain Users",
+    "type": "regular",
+    "notes": "for ldap users",
+    "users_count": 10,
+    "featured_img_id": 0,
+    "featured_img": "",
+    "can_subscribe": 0,
+    "default_colour": "#04e44a"
+  },
+  {
+    "id": 83436,
+    "title": "Dummy Test Chat",
+    "type": "regular",
+    "notes": "",
+    "users_count": 2,
+    "featured_img_id": 0,
+    "featured_img": "",
+    "can_subscribe": 0,
+    "default_colour": "#e202ae"
+  },
+  {
+    "id": 4263,
+    "title": "Glasgow",
+    "type": "regular",
+    "notes": "",
+    "users_count": 19,
+    "featured_img_id": 25320,
+    "featured_img": "https:\/\/push.bigtincan.org\/f\/Dm9jEkGXJpW6KRWbN5O0\/cover_art\/293e429dbb8ce88d68363481247aceef90d787c1de46ce5c12d5b91a3fa49d41.png",
+    "can_subscribe": 1,
+    "default_colour": "#02e8d1"
+  },
+  {
+    "id": 33431,
+    "title": "GroupA",
+    "type": "regular",
+    "notes": "",
+    "users_count": 5,
+    "featured_img_id": 0,
+    "featured_img": "",
+    "can_subscribe": 0,
+    "default_colour": "#0092ec"
+  },
+  {
+    "id": 7435,
+    "title": "GroupAdmin_TestGroup",
+    "type": "regular",
+    "notes": "",
+    "users_count": 4,
+    "featured_img_id": 0,
+    "featured_img": "",
+    "can_subscribe": 0,
+    "default_colour": "#7e622a"
+  },
+  {
+    "id": 33432,
+    "title": "GroupB",
+    "type": "regular",
+    "notes": "",
+    "users_count": 1,
+    "featured_img_id": 0,
+    "featured_img": "",
+    "can_subscribe": 0,
+    "default_colour": "#0092ec"
+  }
+]

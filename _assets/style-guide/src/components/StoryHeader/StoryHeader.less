@@ -1,0 +1,352 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../libs/less/btc-font-mixins.less";
+@import "../../libs/less/tooltips.less";
+@import "../../libs/less/variables.less";
+
+@storyHeaderHeight:250px;
+
+@text-color: #fff;
+@x-margin: 1.35rem;
+@y-margin: 0.95rem;
+
+.StoryHeader {
+  position:absolute;
+  top:0;
+  right:0;
+  left:0;
+  height:@storyHeaderHeight;
+  color:@text-color;
+  z-index: 1;
+
+  background-color:#E2023A;
+  background-image:url(../StoryHeader/bg_StoryHeader.svg);
+  background-position: 50%;
+  background-size: cover;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+
+  transform: translate3d(0,0,0);
+  will-change: height;
+
+  /** Media Query breakpoints */
+  @media @mobile {
+    background-size:1500px;
+  }
+  @media @tablet {
+    background-size:1500px;
+  }
+}
+
+.controlBar {
+  display: flex;
+  padding:@y-margin @x-margin;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  background: #000;
+  opacity: 0.3;
+
+  @media print {
+    display:none;
+  }
+}
+
+.storyClose {
+  .icon-close(16px);
+  position: absolute;
+  top:@y-margin;
+  left:@x-margin;
+  font-size:1rem;
+  cursor:pointer;
+  user-select:none;
+
+  &:before {
+    padding-right:0.5rem;
+  }
+}
+
+.storyActions {
+  position:absolute;
+  top:@y-margin;
+  right:@x-margin;
+  font-size:1rem;
+  user-select:none;
+  z-index: 2;
+
+  > span, > a, > div {
+    color:@text-color;
+    display:inline-block;
+    margin:0 0 0 0.75rem;
+    padding:0 0.75rem;
+    height:30px;
+    cursor:pointer;
+    border:solid 1px transparent;
+    border-radius:4px;
+    text-decoration:none;
+    transition: border @timing-fast ease-out;
+
+    &:before {
+      padding-right:0.5rem;
+    }
+
+    &:hover {
+      border-color:rgba(255,255,255,0.5);
+    }
+  }
+
+  > span[data-id='like'] {
+    @media @mobile-xs {
+      display:none;
+    }
+  }
+}
+
+.centerContainer {
+  text-align:center;
+  width:80%;
+  will-change: width;
+  z-index: 1;
+}
+
+.storyTitle {
+  position:relative;
+
+  h1 {
+    padding:0;
+    border:none;
+    margin:0.3rem auto;
+    vertical-align:middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    display:inline-block;
+    display: -webkit-inline-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    max-height: 8.5rem;
+
+    will-change: opacity, font-size, width;
+  }
+
+  > * {
+    display:inline-block;
+  }
+}
+
+.locationPath {
+  opacity:0.8;
+  font-size:95%;
+  will-change: opacity;
+  margin-bottom:1rem;
+
+  a {
+    color:#fff;
+    padding:0 0.5rem;
+  }
+  a:hover {
+    color:var(--light-base-color);
+  }
+}
+
+.author {
+  display:flex;
+  justify-content: center;
+
+  margin-top:0.75rem;
+  will-change: opacity;
+}
+
+// Feed shows updated time only
+.updated {
+  padding-top:1rem;
+  opacity:0.8;
+}
+
+// Normal story shows author info
+.authorItem {
+  display:flex;
+  text-align:left;
+  color: @text-color;
+  &:hover {
+    span {
+      color: @light-base-color;
+    }
+  }
+}
+
+.authorThumb {
+  margin-right:0.5rem !important;
+}
+
+.authorInfo {
+  opacity:0.8;
+
+  > span {
+    display:block;
+
+    &:last-child {
+      font-size:0.85rem;
+    }
+  }
+}
+
+.featuredBadge {
+  display:inline-block;
+  margin-bottom:0.25rem;
+  padding:0.25rem 0.75rem;
+  border:solid 1px #fff;
+  border-radius:3px;
+  user-select:none;
+  @media @tablet {
+    display:none;
+  }
+
+  @media @mobile {
+    display:none;
+  }
+
+  @media @mobile-xs {
+    display:none;
+  }
+
+  @media @desktop {
+    display:inline-block;
+  }
+
+  @media @desktop-xl {
+    display:inline-block;
+  }
+}
+
+.dropMenu {
+  // icon
+  > div > span:before {
+    font-size:16px !important;
+    vertical-align: inherit !important;
+  }
+}
+
+/* drop down menus */
+.dropMenuActive {
+  background:#fff;
+
+  // icon
+  > div > span:before {
+    font-size:16px !important;
+    vertical-align: inherit !important;
+  }
+}
+
+/* share menu */
+.shareMenu {
+  .tooltip(s);
+
+  &:before {
+    padding:0 !important;  // tooltip fix
+  }
+}
+
+/* share menu items */
+.linkedin {
+  .icon-linkedin(16px);
+  &:before {
+    color:#007bb6 !important;
+  }
+}
+
+.twitter {
+  .icon-twitter(16px);
+  &:before {
+    color:#00aced !important;
+  }
+}
+
+.facebook {
+  .icon-facebook(16px);
+  &:before {
+    color:#3b5998 !important;
+  }
+}
+
+.flagList {
+  position:absolute;
+  top:0.85rem;
+
+  margin:0 0 0 0.5rem;
+  padding:0;
+  list-style:none;
+  vertical-align:sub;
+  cursor:pointer;
+  transition:opacity @timing-fast linear;
+
+  li {
+    .tooltip(n);
+    margin:0 0.25rem;
+    padding:0;
+    display:inline-block;
+
+    > span {
+      .icon-flag-fill(15px);
+
+      &:before {
+        color:#fff;
+        padding: 0.2rem 0.25rem 0.15rem 0.32rem;
+        border-radius: 3px;
+        vertical-align: middle;
+      }
+
+      &[data-flag-id='3']:before {
+        background-color:#ed1c24;
+      }
+      &[data-flag-id='2']:before {
+        background-color:#ffd200;
+      }
+      &[data-flag-id='1']:before {
+        background-color:#26acde;
+      }
+    }
+  }
+}
+
+.editComingSoon {
+  .tooltip(s);
+
+  &:before {
+    padding:0 !important;  // tooltip fix
+  }
+
+  > span {
+    .icon-edit(16px);
+
+    &:before {
+      padding-right:0.5rem;
+    }
+  }
+}

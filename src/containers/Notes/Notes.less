@@ -1,0 +1,82 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package hub-web-app-v5
+ * @copyright 2010-2017 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../less/_variables.less";
+
+.Notes {
+  position:relative;
+  height:100%;
+  margin-left: @pageMargin;
+  padding-left: 0.5rem;
+
+  /** Media Query breakpoints */
+  @media @mobile {
+
+  }
+  @media @tablet {
+
+  }
+  @media @desktop {
+
+  }
+  @media @desktop-xl {
+
+  }
+}
+
+.notesListWrapper {
+  > header {
+    min-height: @appHeaderHeight !important;
+
+    > ul {
+      > li:not(:first-child) {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.notesList {
+  margin-left: -1.25rem !important;
+}
+
+.deleteHeader {
+  position: absolute;
+  top: 0;
+  right: @pageMargin;
+
+  display:flex;
+  align-items:center;
+  height:@appHeaderHeight;
+
+  flex: 1 1 auto;
+  text-align:right;
+}
+
+.deleteNotesModalBody {
+  padding: 1rem 1.5rem;
+  text-align:center;
+}
+
+.deleteNoteModalFooter {
+  > button:first-child {
+    margin-right: 0.5rem;
+  }
+  > button:last-child {
+    margin-left: 0.5rem;
+  }
+}

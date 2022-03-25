@@ -1,0 +1,83 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Jason Huang <jason.huang@bigtincan.com>
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../libs/less/btc-font-mixins.less";
+@import "../../libs/less/variables.less";
+
+.ShareMessage {
+
+  /** Media Query breakpoints */
+  @media @mobile {
+
+  }
+  @media @tablet {
+
+  }
+  @media @desktop {
+
+  }
+  @media @desktop-xl {
+
+  }
+}
+
+.accordion {
+  > div:first-child {
+    padding-left: 0.5rem;
+  }
+}
+
+.message {
+  padding-left: 0.5rem;
+  margin-top: 0.5rem;
+  word-break: break-word;
+
+  &.isTruncated {
+    cursor: pointer;
+  }
+}
+
+.expand {
+  .icon-next(0.7rem);
+  display: block;
+  text-align: center;
+  cursor: pointer;
+
+  &:before {
+    color: var(--base-color);
+    margin: 0.5rem 0;
+    transform: rotate(90deg) scale(0.8, 0.9);
+  }
+
+  &.isExpanded:before {
+    transform: rotate(-90deg) scale(0.8, 0.9);
+  }
+}
+
+.noMessage {
+  padding-left: 0.5rem;
+  margin-bottom: 1.25rem !important;
+  text-align: center;
+  color: var(--secondary-text);
+}
+
+.actions {
+  padding-left: 0.5rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.1rem;
+}

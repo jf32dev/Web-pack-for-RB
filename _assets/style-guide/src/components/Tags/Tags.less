@@ -1,0 +1,148 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../libs/less/btc-font-mixins.less";
+@import "../../libs/less/variables.less";
+
+@tagBgColor: #f2f2f2;
+@tagCloseIconColor: #ff0000;
+
+.Tags {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.85rem;
+}
+
+.tagItem {
+  position: relative;
+  margin: 0.3rem 1rem 0.3rem 0;
+  display: inline-block;
+  color: var(--secondary-text);
+  background-color: @tagBgColor;
+  border-radius: 4px;
+  padding: 0 0.25rem;
+  height: 1.5rem;
+
+  .tabItemRoot {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-left: 0.25rem;
+
+    .deleteContainer,
+    .tagValue {
+      display: flex;
+      height: 1.25rem;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.8125rem;
+    }
+
+    .deleteContainer {
+      margin-left: 0.3438rem;
+    }
+  }
+}
+
+.itemTagText {
+  display: inline-block;
+
+  &:first-child {
+    margin-left: 0;
+  }
+  input[type="text"] {
+    margin: 0;
+  }
+}
+
+.tagText {
+  flex: 1 1 auto;
+  max-width: 14rem;
+
+  input {
+    margin-bottom: 0;
+  }
+}
+
+.hasLink {
+  .tagItem {
+    a {
+      color: var(--secondary-text);
+      text-decoration: none;
+      transition: all @timing-fast linear;
+
+      &:hover {
+        color: var(--base-color);
+      }
+      &:active {
+        color: var(--divider-color);
+        background-color: var(--base-color);
+      }
+    }
+  }
+}
+
+.alt {
+  .tagItem {
+    background-color: var(--base-color);
+    color: #fff;
+  }
+
+  &.hasLink {
+    background: none;
+
+    .tagItem a {
+      background-color: var(--base-color);
+      color: #fff;
+
+      &:hover {
+        color: var(--divider-color);
+      }
+      &:active {
+        color: var(--secondary-text);
+      }
+    }
+  }
+}
+
+.isClickable {
+  .tagItem {
+    cursor: pointer;
+  }
+}
+
+.deleteTag {
+  .icon-zoomIn(0.95rem);
+  transform: rotateZ(45deg);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 0.938rem;
+  width: 0.938rem;
+  color: @tagCloseIconColor;
+  cursor: pointer;
+
+  &:before {
+    margin-top: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

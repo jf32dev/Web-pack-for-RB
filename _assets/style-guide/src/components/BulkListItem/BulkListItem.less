@@ -1,0 +1,69 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2019 BigTinCan Mobile Pty Ltd
+ * @author Olivia Mo <olivia.mo@bigtincan.com>
+ */
+
+@import "../../libs/less/variables.less";
+@import "../../libs/less/btc-font-mixins.less";
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+
+  p {
+    margin: 0;
+  }
+
+  a:hover {
+    cursor: pointer;
+  }
+}
+
+.bulkListItemContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid;
+  border-bottom-color: var(--divider-color);
+
+  p {
+    margin: 0;
+  }
+
+  .viewResults:hover {
+    cursor: pointer;
+  }
+
+  .dateUser {
+    color: var(--secondary-text);
+  }
+
+  .status {
+    width: 300px;
+  }
+}
+
+.warning {
+  display: flex;
+  align-items: center;
+  color: #ffd400;
+  .icon-warning(19px);
+
+  a {
+    margin-left: 0.5rem;
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "tab": {
+    "original": "Tab",
+    "custom": "Tab"
+  },
+  "tabs": {
+    "original": "Tabs",
+    "custom": "Tabs"
+  },
+  "channel": {
+    "original": "Channel",
+    "custom": "Channel"
+  },
+  "channels": {
+    "original": "Channels",
+    "custom": "Channeles"
+  },
+  "story": {
+    "original": "Story",
+    "custom": "Story"
+  },
+  "stories": {
+    "original": "Stories",
+    "custom": "Stories"
+  },
+  "meeting": {
+    "original": "Meeting",
+    "custom": "Meeting"
+  },
+  "meetings": {
+    "original": "Meetings",
+    "custom": "Meetings"
+  },
+  "major": {
+    "original": "Major",
+    "custom": "Major"
+  },
+  "minor": {
+    "original": "Minor",
+    "custom": "Minor"
+  },
+  "possible": {
+    "original": "Possible",
+    "custom": "Possible"
+  }
+}

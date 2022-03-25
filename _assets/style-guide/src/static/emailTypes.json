@@ -1,0 +1,132 @@
+[
+  {
+    "header": "welcome_emails",
+    "children": [
+      {
+        "subheader": "",
+        "children": [
+          "email_activation",
+          "reset_email"
+        ]
+      }
+    ]
+  },
+  {
+    "header": "general_updates",
+    "children": [
+      {
+        "subheader": "",
+        "children": [
+          "forwarded_your_content",
+          "shared_content_viewed",
+          "story_comment_replied"
+        ]
+      }
+    ]
+  },
+  {
+    "header": "my_content",
+    "children": [
+      {
+        "subheader": "",
+        "children": [
+          "story_commented_to_author",
+          "file_annotated_to_author",
+          "shared_content_notify_author",
+          "subscribed_story_to_author",
+          "story_flag_added",
+          "story_inactive"
+        ]
+      }
+    ]
+  },
+  {
+    "header": "other_users_content",
+    "children": [
+      {
+        "subheader": "others_stories_are_published",
+        "children": [
+          "story_published_via_user_followed",
+          "story_published_via_channel_subscribed",
+          "story_published_via_channel"
+        ]
+      },
+      {
+        "subheader": "updates_on_others_stories",
+        "children": [
+          "story_updated_via_user_followed",
+          "story_updated_via_channel_subscribed",
+          "story_updated_via_channel",
+          "story_updated_via_story_subscribed"
+        ]
+      },
+      {
+        "subheader": "comments_on_others_stories",
+        "children": [
+          "story_commented_via_channel",
+          "story_commented_via_channel_subscribed",
+          "story_commented_via_story_subscribed",
+          "story_commented_via_user_followed"
+        ]
+      },
+      {
+        "subheader": "annotations_on_files",
+        "children": [
+          "file_annotated_via_channel",
+          "file_annotated_via_channel_subscribed",
+          "file_annotated_via_story_subscribed",
+          "file_annotated_via_user_followed"
+        ]
+      },
+      {
+        "subheader": "",
+        "children": [
+          "story_flag_removed"
+        ]
+      },
+      {
+        "subheader": "",
+        "children": [
+          "added_to_channel"
+        ]
+      }
+    ]
+  },
+  {
+    "header": "share_notifications",
+    "children": [
+      {
+        "subheader": "",
+        "children": [
+          "shared_content_internal",
+          "shared_content_external"
+        ]
+      }
+    ]
+  },
+  {
+    "header": "profile_activities",
+    "children": [
+      {
+        "subheader": "",
+        "children": [
+          "praise_email",
+          "follow_user_notification"
+        ]
+      }
+    ]
+  },
+  {
+    "header": "broadcasts",
+    "children": [
+      {
+        "subheader": "",
+        "children": [
+          "broadcast_invitation",
+          "broadcast_invitation_external",
+          "broadcast_summary"
+        ]
+      }
+    ]
+  }
+]

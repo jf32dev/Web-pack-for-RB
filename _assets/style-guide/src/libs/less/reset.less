@@ -1,0 +1,275 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package hub-web-app
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+/**
+ * Custom Normalize/Reset
+ * Inspiration from: https://github.com/filipelinhares/sanilize.css
+ * Global reset, does not contain variables or mixins
+ */
+
+/*
+ * 1: Prevent IOS and IE text size adjust after device orientation change,
+ * without disabling user zoom.
+ * 2: IE11
+ * 3: All browsers without overlaying scrollbars
+ */
+:root {
+  -webkit-text-size-adjust: 100%;/* 1 */
+  -ms-text-size-adjust: 100%;/* 1 */
+  text-size-adjust: 100%;/* 1 */
+  -ms-overflow-style: -ms-autohiding-scrollbar;/* 2 */
+  //overflow-y: scroll;/* 3 */;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  cursor: default;
+
+  /** CSS Variables */
+  --base-color: @baseColor;
+  --accent-color: @accentColor;
+  --dark-base-color: @darkBaseColor;
+  --light-base-color: @lightBaseColor;
+  --base-text: @baseText;
+  --background-color: @backgroundColor;
+
+  // Fixed colour variables
+  --primary-text: @primaryText;
+  --secondary-text: @secondaryText;
+  --description-text: @descriptionText;
+  --divider-color: @dividerColor;
+  --disabled-color: @disabledColor;
+  --notification-color: @notificationColor;
+}
+
+* {
+  box-sizing: border-box;
+  font-size: inherit;
+  line-height: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+::before, ::after {
+  text-decoration: inherit;
+  vertical-align: inherit;
+  box-sizing: inherit;
+}
+
+/* specify text selection background color and omit drop shadow */
+::-moz-selection {
+  text-shadow: none;
+  background-color: #b3d4fc;/* required when declaring ::selection */
+}
+
+::selection {
+  text-shadow: none;
+  background-color: #b3d4fc;/* required when declaring ::selection */
+}
+
+/* hide content from screens but not screenreaders */
+@media screen {
+  [hidden~="screen"] {
+    display: inherit;
+  }
+  [hidden~="screen"]:not(:active):not(:focus):not(:target) {
+    position: absolute !important;
+    clip: rect(0 0 0 0) !important;
+  }
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-weight:400;
+}
+
+iframe {
+  width:100%;
+  border:none;
+}
+
+/* Chrome 40+, iOS 8+, Safari 8+, -nPrevent modern browsers from displaying `audio` without controls.
+ *  Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/*
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+input[type="number"] {
+  width: auto; /* Firefox 36+ */
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield; /* Safari 8+ */
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; /* Safari 8 */
+}
+
+pre {
+  overflow: auto;/* Internet Explorer 11+ */
+}
+
+small {
+  font-size: 80%;/* All browsers */
+}
+
+[hidden], template {
+  display: none;
+}
+
+/* Android 4.4+, Chrome 40+, Firefox 36+, iOS 8+, Safari 8+ */
+[unselectable] {
+  user-select: none;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted; /* Styling not present in IE 8/9/10/11, Safari, and  Chrome */
+}
+
+img {
+  border: 0; /* Remove border when inside `a` element in IE 8/9/10 */
+}
+
+/* specify the text decoration of anchors */
+a {
+  background-color: transparent;
+  color:var(--base-color);
+  text-decoration: none;
+  transition:all @timing-fast ease-out;
+}
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  text-decoration:none;
+}
+
+/* specify media element style */
+audio, canvas, iframe, img, progress, svg, video {
+  vertical-align: baseline;
+}
+
+audio, canvas, progress, video {
+  display: inline-block; /* Internet Explorer 11+, Windows Phone 8.1+ */
+}
+
+label {
+  display:inline-block;
+}
+
+/* specify inheritance of form elements */
+button, input, select, textarea {
+  font-family: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+
+button {
+  overflow: visible; /* Address `overflow` set to `hidden` in IE 8/9/10/11 */
+}
+
+/* specify the minimum height of form elements */
+button, [type="button"], [type="date"], [type="datetime"], [type="datetime-local"], [type="email"], [type="month"], [type="number"], [type="password"], [type="reset"], [type="search"], [type="submit"], [type="tel"], [type="text"], [type="time"], [type="url"], [type="week"], select, textarea {
+  min-height: 1rem;
+}
+
+/* specify the font family of code elements */
+code, kbd, pre, samp {
+  font-family: "Bitstream Vera Sans Mono", Consolas, Courier, monospace;
+}
+
+/* specify the list style of nav lists */
+nav {
+  ol, ul {
+    margin:0;
+    padding:0;
+    list-style: none;
+
+    li {
+      margin:0;
+      padding:0;
+    }
+  }
+}
+
+/* style select like a standard input */
+select {
+  -moz-appearance: none; /* Firefox 36+ */
+  -webkit-appearance: none; /* Chrome 41+ */
+}
+
+select::-ms-expand {
+  display: none; /* Internet Explorer 11+ */
+}
+
+select::-ms-value {
+  color: currentColor; /* Internet Explorer 11+ */
+}
+
+/* specify the border styles of tables */
+table {
+  border: none;
+  border-collapse: collapse;
+  empty-cells: show;
+  border-spacing: 0;
+  max-width: 100%;
+}
+table.fr-dashed-borders td, table.fr-dashed-borders th {
+  border-style: dashed;
+}
+table.fr-alternate-rows tbody tr:nth-child(2n) {
+  background: #f5f5f5;
+}
+table td, table th {
+  border: 1px solid #ddd;
+  padding: 0.25rem;
+}
+table td:empty, table th:empty {
+  height: 20px;
+}
+table td.fr-highlighted, table th.fr-highlighted {
+  border: 1px double red;
+}
+table td.fr-thick, table th.fr-thick {
+  border-width: 2px;
+}
+table th {
+  background: #e6e6e6;
+}
+
+/* specify textarea resizability */
+textarea {
+  resize: vertical;
+  overflow: auto; /* Internet Explorer 11+ */
+}

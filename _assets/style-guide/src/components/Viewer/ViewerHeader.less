@@ -1,0 +1,296 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../libs/less/btc-font-mixins.less";
+@import "../../libs/less/utilities.less";
+@import "../../libs/less/variables.less";
+
+@headerBg: #f8f8f8;
+@headerText: @base-color;
+@headerBorderColor: @divider-color;
+
+@headerBg-dark: #333;
+@headerText-dark: #DDD;
+@headerBorderColor-dark: #555;
+
+.ViewerHeader {
+  display:flex;
+  flex:0 0 auto;
+  justify-content:center;
+  align-content:center;
+  text-align:center;
+  position:relative;
+  padding: 0.5rem 1.5rem;
+
+  border:solid 1px #ddd;
+  border-color: @headerBorderColor;
+
+  background-color:@headerBg;
+  color:@headerText;
+}
+
+.headerDocked {
+  transition:background @timing-medium ease-out;
+
+  &:hover {
+    background:#f4f4f4;
+  }
+
+  > div:last-child {
+    cursor:pointer;
+  }
+}
+
+// Dark theme
+.isDark {
+  border:solid 1px @headerBorderColor-dark;
+  background-color:@headerBg-dark;
+  color:@headerText-dark;
+
+  .fileDescription {
+    color:@headerText-dark;
+  }
+
+  &.headerDocked {
+    background-color:@headerBg-dark;
+
+    &:hover {
+      background-color:@headerBorderColor-dark;
+    }
+  }
+}
+
+.left, .right {
+  display: flex;
+  align-items: center;
+  width: 30%;
+}
+
+.left {
+  justify-content: flex-start;
+}
+
+.right {
+  justify-content: flex-end;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+}
+
+.close {
+  .icon-close(16px);
+  font-size:1rem;
+  padding-right:0.5rem;
+  cursor:pointer;
+  user-select:none;
+  vertical-align:middle;
+
+  &:before {
+    font-weight:700;
+    padding-right:0.5rem;
+    vertical-align:baseline !important;
+  }
+}
+
+/* Header Icons */
+.actionsWrapper {
+  display:inline-block;
+
+  /* Icons */
+  > span, > a, > div {
+    cursor:pointer;
+    user-select:none;
+    padding:0 1rem;
+
+    &:before {
+      vertical-align:middle;
+    }
+
+    &:hover {
+      border-color:rgba(255,255,255,0.5);
+    }
+  }
+}
+
+span.isActive {
+  //color:var(--dark-base-color);
+  &:before {
+    color: @base-text;
+    border-radius: 4px;
+    background-color: @base-color;
+    .pptHeaderIcon()
+  }
+}
+
+.toc {
+  .icon-toc(18px);
+}
+.findtext {
+  .icon-search(18px);
+}
+.pages {
+  .icon-doc-pages(18px);
+  &:before {
+    .pptHeaderIcon()
+  }
+}
+.bookmark {
+  .icon-bookmark(18px);
+
+  &.bookmarkRemove {
+    .icon-bookmark-fill(18px);
+  }
+}
+
+.disable:before {
+  cursor: not-allowed;
+  color: var(--light-base-color);
+}
+
+/* Menu Options */
+.bookmarkAll {
+  .icon-bookmark-all(16px);
+}
+.bookmarkAllDelete {
+  .icon-bookmark-all-fill(16px);
+}
+
+.broadcast {
+  padding: 0 0.5rem;
+  .icon-broadcast-screen(1.2rem);
+  &:before {
+    .pptHeaderIcon()
+  }
+}
+
+.pen {
+  padding: 0 0.5rem;
+  .icon-pen(1.2rem);
+  &:before {
+    .pptHeaderIcon()
+  }
+}
+.fullscreen {
+  padding: 0 0.5rem;
+  .icon-fullscreen(1.2rem);
+  &:before {
+    .pptHeaderIcon()
+  }
+}
+
+.dock {
+  .icon-dock();
+  cursor:pointer;
+  vertical-align: middle;
+}
+
+/* drop down menus */
+.viewerDropMenu {
+  display:inline-block;
+  padding-left:0.5rem;
+  cursor: pointer;
+
+  ul {
+    min-width:10rem;
+    text-align:left;
+  }
+}
+
+.viewerActiveDropMenu {
+
+}
+
+.downloadIcon {
+  .icon-download();
+  cursor:pointer;
+  vertical-align:middle;
+  transition: all @timing-fast linear;
+  opacity:1;
+  &:before {
+    font-size:20px;
+  }
+}
+
+/**
+ * Docked
+ */
+.isDocked {
+  .icon-next();
+  padding-left:2rem;
+  vertical-align:middle;
+
+  &:before {
+    transform: rotate(-90deg);
+    font-size:12px;
+  }
+}
+
+.fileDescription, .fileLocation {
+  text-align:center;
+  margin:0;
+  padding:0;
+  border:none;
+  .overflow-ellipsis();
+}
+.fileDescription {
+  color: var(--primary-text);
+  font-size:0.85rem;
+  margin-top:0;
+}
+.fileLocation {
+  margin-top: 0.2rem;
+  color: var(--secondary-text);
+  font-size:0.8rem;
+}
+
+.pptHeaderIcon {
+  width: 25px;
+  height: 25px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.publicBranding {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1rem;
+  position: absolute;
+
+  span:first-child {
+    color: var(--secondary-text);
+    font-size: 0.65rem;
+  }
+
+  span:last-child {
+    font-size: 0.85rem;
+    color: var(--primary-text);
+  }
+}
+
+.alignToTheLeft {
+  left: 2rem !important;
+}
+.alignToTheLeftWithPadding {
+  left: 14rem !important;
+}

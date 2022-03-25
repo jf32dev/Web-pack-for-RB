@@ -1,0 +1,110 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Jason Huang <jason.huang@bigtincan.com>
+ */
+
+@import "../../../libs/less/variables.less";
+
+.IconRadioGroup {
+
+  /** Media Query breakpoints */
+  @media @mobile {
+
+  }
+  @media @tablet {
+
+  }
+  @media @desktop {
+
+  }
+  @media @desktop-xl {
+
+  }
+
+  > div {
+    display: flex;
+    flex-direction: row;
+
+    > div {
+      margin-right: 2rem;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      > div {
+        margin-bottom: 0.5rem;
+        margin-top: 1rem;
+        cursor: pointer;
+      }
+
+      > input {
+        margin-bottom: 1em;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.icon {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 1rem;
+}
+
+.default {
+  .icon();
+  background-size: contain;
+  background-position: center center;
+  svg {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+.red {
+  .icon();
+  background-color: #d0021b;
+}
+
+.pink {
+  .icon();
+  background-color: #e202ae;
+}
+
+.purple {
+  .icon();
+  background-color: #7e00b9;
+}
+
+.blue {
+  .icon();
+  background-color: #0092ec;
+}
+
+.skyBlue {
+  .icon();
+  background-color: #02e8d1;
+}
+
+.green {
+  .icon();
+  background-color: #04e44a;
+}
+
+.yellow {
+  .icon();
+  background-color: #ffd400;
+}
+
+

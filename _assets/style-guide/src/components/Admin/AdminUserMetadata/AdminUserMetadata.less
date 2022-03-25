@@ -1,0 +1,91 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2019 BigTinCan Mobile Pty Ltd
+ * @author Rubenson Barrios <rubenson.barrios@bigtincan.com>
+ */
+@import "../../../libs/less/variables.less";
+@import "../../../libs/less/btc-font-mixins.less";
+@import "../../../libs/less/utilities.less";
+@import "../../../libs/less/tooltips.less";
+
+.AdminUserMetadata {
+  padding: 0 3.15rem 2rem 1.6rem;
+  height: calc(~"100vh - 5rem");
+  overflow: auto;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+
+    > div {
+      font-size: 0.6875rem;
+      color: var(--secondary-text);
+      max-width: 33.81rem;
+      padding-bottom: 1.688rem;
+    }
+
+    button {
+      margin-top: 1rem;
+      height: calc(~"1rem + 22px");
+      width: 8.125rem;
+    }
+
+    button[disabled] {
+      background-color: var(--secondary-text);
+    }
+
+  }
+}
+
+.bulkUploadBtn {
+  margin-bottom: 1rem;
+  &:before {
+    font-size: 1.2rem;
+    vertical-align: text-top;
+  }
+}
+
+.bulkAddBtn {
+  margin: 1rem;
+}
+
+.tableHeader {
+  display: flex;
+  border-bottom: 1px solid;
+  border-color: var(--divider-color);
+  min-width: 42rem;
+
+  > div {
+    box-sizing: border-box;
+    flex-grow: 1;
+    width: 100%;  // Default to full width
+    padding: 0.4rem 1.2rem;
+
+    &:first-child { width: 30%; min-width: 14.5rem; }
+    &:nth-child(2) { width: 30%; }
+    &:nth-child(3) { width: 15%; max-width: 8rem; text-align: center; }
+    &:nth-child(4) { width: 15%; max-width: 8rem; text-align: center; }
+    &:nth-child(5) { width: 10%; }
+  }
+}
+
+.counter {
+  display: inline-block;
+  background-color: var(--divider-color);
+  border-radius: 10%;
+  padding: 0.1rem 0.25rem;
+  font-size: 90%;
+  margin-left: 0.5rem;
+  color: #444;
+}

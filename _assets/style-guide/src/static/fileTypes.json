@@ -1,0 +1,249 @@
+[
+  {
+    "id": 0,
+    "dateAdded": 1536107453,
+    "description": "presentation.btc",
+    "category": "btc",
+    "storyTitle": "Selling to Apple Inc",
+    "customDetailsIsEnabled": true,
+    "fileSettings": {
+      "fileGeneralSettings": {
+        "detailsFieldLabel": "Approved content",
+        "hintText": "hint text",
+        "showCustomFileDetailsIcon": true
+      }
+    }
+  },
+  {
+    "id": 1,
+    "dateAdded": 1536107453,
+    "description": "data.csv",
+    "category": "csv",
+    "storyTitle": "Selling to Apple Inc"
+  },
+  {
+    "id": 2,
+    "dateAdded": 1536107453,
+    "description": "example.cad",
+    "category": "cad",
+    "storyTitle": "Selling to Apple Inc"
+  },
+  {
+    "id": 3,
+    "dateAdded": 1536107453,
+    "description": "example.earthviewer",
+    "category": "earthviewer",
+    "storyTitle": "Selling to Apple Inc"
+  },
+  {
+    "id": 4,
+    "dateAdded": 1536107453,
+    "description": "great_book.ebook",
+    "category": "ebook",
+    "storyTitle": "Selling to Apple Inc"
+  },
+  {
+    "id": 5,
+    "dateAdded": 1536107453,
+    "description": "ace_book.epub",
+    "category": "epub",
+    "storyTitle": "Selling to Apple Inc"
+  },
+  {
+    "id": 6,
+    "dateAdded": 1536107453,
+    "description": "spreadsheet.xlsx",
+    "category": "excel",
+    "storyTitle": "Selling to Apple Inc"
+  },
+  {
+    "id": 7,
+    "dateAdded": 1536107453,
+    "description": "example.btcf",
+    "category": "form",
+    "storyTitle": "Selling to Apple Inc"
+  },
+  {
+    "id": 8,
+    "dateAdded": 1536107453,
+    "description": "example.ibooks",
+    "category": "ibooks",
+    "storyTitle": "Selling to Apple Inc"
+  },
+  {
+    "id": 9,
+    "dateAdded": 1536107453,
+    "description": "image.jpg",
+    "category": "image",
+    "storyTitle": "Selling to Apple Inc"
+  },
+  {
+    "id": 10,
+    "dateAdded": 1536107453,
+    "description": "example.keynote",
+    "category": "keynote",
+    "storyTitle": "Selling to Apple Inc"
+  },
+  {
+    "id": 11,
+    "dateAdded": 1536107453,
+    "description": "unknown file",
+    "category": "none",
+    "storyTitle": "Selling to Apple Inc"
+  },
+  {
+    "id": 12,
+    "dateAdded": 1536107453,
+    "description": "example.numbers",
+    "category": "numbers",
+    "storyTitle": "Selling to Apple Inc"
+  },
+  {
+    "id": 13,
+    "dateAdded": 1536107453,
+    "description": "example.oomph",
+    "category": "oomph",
+    "storyTitle": "Selling to Apple Inc"
+  },
+  {
+    "id": 14,
+    "dateAdded": 1536107453,
+    "description": "example.pages",
+    "category": "pages",
+    "storyTitle": "Selling to Apple Inc"
+  },
+  {
+    "id": 15,
+    "dateAdded": 1536107453,
+    "description": "example.pdf",
+    "category": "pdf",
+    "storyTitle": "Selling to Apple Inc"
+  },
+  {
+    "id": 16,
+    "dateAdded": 1536107453,
+    "description": "example.powerpoint",
+    "category": "powerpoint",
+    "storyTitle": "Selling to Apple Inc"
+  },
+  {
+    "id": 17,
+    "dateAdded": 1536107453,
+    "description": "example.project",
+    "category": "project",
+    "storyTitle": "Selling to Apple Inc"
+  },
+  {
+    "id": 18,
+    "dateAdded": 1536107453,
+    "description": "example.prov",
+    "category": "prov",
+    "storyTitle": "Selling to Apple Inc"
+  },
+  {
+    "id": 19,
+    "dateAdded": 1536107453,
+    "description": "example.rtf",
+    "category": "rtf",
+    "storyTitle": "Selling to Apple Inc"
+  },
+  {
+    "id": 20,
+    "dateAdded": 1536107453,
+    "description": "example.rtfd",
+    "category": "rtfd",
+    "storyTitle": "Selling to Apple Inc"
+  },
+  {
+    "id": 21,
+    "dateAdded": 1536107453,
+    "description": "example.twixl",
+    "category": "twixl",
+    "storyTitle": "Selling to Apple Inc"
+  },
+  {
+    "id": 22,
+    "dateAdded": 1536107453,
+    "description": "example.txt",
+    "category": "txt",
+    "storyTitle": "Selling to Apple Inc"
+  },
+  {
+    "id": 23,
+    "dateAdded": 1536107453,
+    "description": "example.vcard",
+    "category": "vcard",
+    "storyTitle": "Selling to Apple Inc"
+  },
+  {
+    "id": 24,
+    "dateAdded": 1536107453,
+    "description": "example.video",
+    "category": "video",
+    "storyTitle": "Selling to Apple Inc"
+  },
+  {
+    "id": 25,
+    "dateAdded": 1536107453,
+    "description": "example.visio",
+    "category": "visio",
+    "storyTitle": "Selling to Apple Inc"
+  },
+  {
+    "id": 26,
+    "dateAdded": 1536107453,
+    "description": "example.web",
+    "category": "web",
+    "storyTitle": "Selling to Apple Inc"
+  },
+  {
+    "id": 27,
+    "dateAdded": 1536107453,
+    "description": "example.word",
+    "category": "word",
+    "storyTitle": "Selling to Apple Inc"
+  },
+  {
+    "id": 28,
+    "dateAdded": 1536107453,
+    "description": "example.zip",
+    "category": "zip",
+    "storyTitle": "Selling to Apple Inc"
+  },
+  {
+    "id": 29,
+    "dateAdded": 1536107453,
+    "description": "example.scrollmotiontransit",
+    "category": "scrollmotion",
+    "storyTitle": "Selling to Apple Inc"
+  },
+  {
+    "id": 30,
+    "dateAdded": 1536107453,
+    "description": "example folder",
+    "category": "folder",
+    "fileCount": 134,
+    "storyTitle": "Selling to Apple Inc"
+  },
+  {
+    "id": 31,
+    "dateAdded": 1536107453,
+    "description": "    powerpoint template with a very very VERY VERY long name",
+    "category": "potx",
+    "storyTitle": "Selling to Apple Inc"
+  },
+  {
+    "id": 32,
+    "dateAdded": 1536107453,
+    "description": "application.btca",
+    "category": "app",
+    "storyTitle": "Selling to Apple Inc"
+  },
+  {
+    "id": 33,
+    "dateAdded": 1536107453,
+    "description": "learning.btce",
+    "category": "learning",
+    "storyTitle": "Selling to Apple Inc"
+  }
+]

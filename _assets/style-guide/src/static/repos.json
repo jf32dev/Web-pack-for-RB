@@ -1,0 +1,163 @@
+[
+  {
+    "id": 1,
+    "type": "repo",
+    "name": "Adobe CQ5",
+    "folderId": "root",
+    "service": "cq5"
+  },
+  {
+    "id": 2,
+    "type": "repo",
+    "name": "Alfresco",
+    "folderId": "root",
+    "service": "alfresco"
+  },
+  {
+    "id": 3,
+    "type": "repo",
+    "name": "Alfresco Cloud",
+    "folderId": "root",
+    "service": "alfresco_cloud"
+  },
+  {
+    "id": 4,
+    "type": "repo",
+    "name": "Amazon S3",
+    "folderId": "root",
+    "service": "s3"
+  },
+  {
+    "id": 5,
+    "type": "repo",
+    "name": "Azure Storage",
+    "folderId": "root",
+    "service": "azure"
+  },
+  {
+    "id": 6,
+    "type": "repo",
+    "name": "Box",
+    "folderId": "root",
+    "service": "box"
+  },
+  {
+    "id": 7,
+    "type": "repo",
+    "name": "CMIS",
+    "folderId": "root",
+    "service": "cmis"
+  },
+  {
+    "id": 8,
+    "type": "repo",
+    "name": "Dropbox",
+    "folderId": "root",
+    "service": "dropbox"
+  },
+  {
+    "id": 9,
+    "type": "repo",
+    "name": "Documentum",
+    "folderId": "root",
+    "service": "documentum"
+  },
+  {
+    "id": 10,
+    "type": "repo",
+    "name": "Egnyte",
+    "folderId": "root",
+    "service": "egnyte"
+  },
+  {
+    "id": 11,
+    "type": "repo",
+    "name": "Evernote",
+    "folderId": "root",
+    "service": "evernote"
+  },
+  {
+    "id": 12,
+    "type": "repo",
+    "name": "Google Drive",
+    "folderId": "root",
+    "service": "gdrive"
+  },
+  {
+    "id": 13,
+    "type": "repo",
+    "name": "HubSpot Files",
+    "folderId": "root",
+    "service": "hubspot"
+  },
+  {
+    "id": 14,
+    "type": "repo",
+    "name": "Jive",
+    "folderId": "root",
+    "service": "jive"
+  },
+  {
+    "id": 15,
+    "type": "repo",
+    "name": "OneDrive",
+    "folderId": "root",
+    "service": "onedrive"
+  },
+  {
+    "id": 16,
+    "type": "repo",
+    "name": "OneDrive for Business",
+    "folderId": "root",
+    "service": "onedrivebiz"
+  },
+  {
+    "id": 17,
+    "type": "repo",
+    "name": "Salesforce",
+    "folderId": "root",
+    "service": "salesforce"
+  },
+  {
+    "id": 18,
+    "type": "repo",
+    "name": "SAVO",
+    "folderId": "root",
+    "service": "savo"
+  },
+  {
+    "id": 19,
+    "type": "repo",
+    "name": "ShareFile",
+    "folderId": "root",
+    "service": "sharefile"
+  },
+  {
+    "id": 20,
+    "type": "repo",
+    "name": "SharePoint Online",
+    "folderId": "root",
+    "service": "sharepoint"
+  },
+  {
+    "id": 21,
+    "type": "repo",
+    "name": "SMB",
+    "folderId": "root",
+    "service": "smb"
+  },
+  {
+    "id": 22,
+    "type": "repo",
+    "name": "SugarSync",
+    "folderId": "root",
+    "service": "sugarsync"
+  },
+  {
+    "id": 23,
+    "type": "repo",
+    "name": "WebDAV",
+    "folderId": "root",
+    "service": "webdav"
+  }
+]

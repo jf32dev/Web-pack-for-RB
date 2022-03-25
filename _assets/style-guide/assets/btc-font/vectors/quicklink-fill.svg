@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="512px" height="512px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.1 (29687) - http://www.bohemiancoding.com/sketch -->
+    <title>quicklink</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="quicklink" fill="#000000">
+            <path d="M336.752531,10.6824454 L125.591865,274.633272 C115.477329,287.276442 123.0034,302.592187 139.073401,302.592186 L204.763837,302.551374 L146.669808,486.515802 C138.912741,511.07985 158.254173,521.530319 174.424386,501.317555 L385.585054,237.366727 C395.69959,224.723556 388.173518,209.407812 372.103518,209.407811 L306.414421,209.444341 L364.507107,25.4841981 C372.264176,0.92014973 352.922743,-9.53031895 336.752531,10.6824454 Z" id="icon-quicklink-fill"></path>
+        </g>
+    </g>
+</svg>

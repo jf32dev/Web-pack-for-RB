@@ -1,0 +1,42 @@
+{
+  "email_activation": 1,
+  "reset_email": 3,
+  "forwarded_your_content": 1,
+  "shared_content_viewed": 2,
+  "story_comment_replied": 1,
+  "story_commented_to_author": 3,
+  "file_annotated_to_author": 1,
+  "shared_content_notify_author": 2,
+  "subscribed_story_to_author": 3,
+
+  "story_flag_added": 1,
+
+  "others_stories_are_published": 2,
+  "story_published_via_user_followed": 2,
+  "story_published_via_channel_subscribed": 1,
+  "story_published_via_channel": 3,
+
+  "updates_on_others_stories": 1,
+  "story_updated_via_user_followed": 2,
+  "story_updated_via_channel_subscribed": 1,
+  "story_updated_via_channel": 1,
+  "story_updated_via_story_subscribed": 3,
+
+  "comments_on_others_stories": 1,
+  "story_commented_via_channel": 2,
+  "story_commented_via_channel_subscribed": 3,
+  "story_commented_via_story_subscribed": 1,
+  "story_commented_via_user_followed": 2,
+
+  "annotations_on_files": 0,
+  "file_annotated_via_channel": 0,
+  "file_annotated_via_channel_subscribed": 0,
+  "file_annotated_via_story_subscribed": 0,
+  "file_annotated_via_user_followed": 0,
+
+  "shared_content_internal": 3,
+  "story_flag_removed": 2,
+  "added_to_channel": 1,
+
+  "broadcast_summary": 0
+}

@@ -1,0 +1,18 @@
+{
+"id":603,
+"name":"Google",
+"type":"blacklist",
+"last_updated":"1500867493",
+"groups":[{
+  "id":6230,
+   "title":"AD_Group",
+   "users_count":16
+   },{"id":33430,"title":"All users","users_count":12},
+   {"id":48149,"title":"ADTestGroup","users_count":12},
+   {"id":51283,"title":"adelll","users_count":13}],
+ "items":[{
+  "id":"621",
+  "type":"url",
+  "match":"http:\/\/google.com"
+  },{"id":"622","type":"url","match":"http:\/\/haha.com"
+}]}

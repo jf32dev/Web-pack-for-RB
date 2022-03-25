@@ -1,0 +1,137 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Jason Huang <jason.huang@bigtincan.com>
+ */
+
+@import "../../libs/less/variables.less";
+
+.BroadcastLogin {
+  display:flex;
+  width: 450px;
+  height: 450px;
+  background-color: @base-text;
+  border-radius: 4px;
+  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.15);
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding: 71px 0px 66px;
+
+  @media screen and (max-width: 450px) {
+    width: 100%;
+  }
+
+  &:focus {
+    outline:none;
+  }
+  /** Media Query breakpoints */
+  @media @mobile {
+
+  }
+  @media @tablet {
+
+  }
+  @media @desktop {
+
+  }
+  @media @desktop-xl {
+
+  }
+}
+
+.PasswordRequired {
+  padding: 36px 0px 66px;
+}
+
+.active {
+  padding: 107px 0px 105px;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: 300;
+  position: relative;
+  color: @primary-text;
+  text-align: center;
+}
+
+.live {
+  position: absolute;
+  top: 5px;
+  background-color: @error-color;
+  right: -40px;
+  width: 33.5px;
+
+  .activeInfoBox()
+}
+
+.offLive {
+  background-color: var(--secondary-text);
+
+  .activeInfoBox()
+}
+
+.activeInfoBox() {
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  padding: 0.5px 5px;
+  border-radius: 2px;
+  opacity: 0.8;
+  text-transform: uppercase;
+}
+
+.desc {
+  width: 327px;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  padding-bottom: 10px;
+  color: var(--secondary-text);
+
+  @media screen and (max-width: 327px) {
+    width: 100%;
+  }
+}
+
+.viewBtn{
+  width: 280px;
+}
+
+.error {
+  color: var(--error-color);
+}
+
+.emailInputError {
+  input {
+    border: 0.5px solid @errorColor !important;
+    border-color: var(--error-color);
+    margin: 0 0 0 0;
+  }
+}
+
+.nameValue {
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  max-width: 200px;
+}

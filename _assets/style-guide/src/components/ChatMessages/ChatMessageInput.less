@@ -1,0 +1,82 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../libs/less/variables.less";
+
+.ChatMessageInput {
+  display: flex;
+  justify-content: space-between;
+  flex:1 0 auto;
+}
+
+.isCompact {
+  .attachMenu {
+    border-radius: 0;
+  }
+  textarea:focus {
+    outline:none;
+  }
+}
+
+.attachMenu {
+  background:#f5f5f5;
+  display:flex;
+  align-items: flex-start;
+  padding: 0.5rem 0.9rem !important;
+  cursor:pointer;
+  border-top-left-radius:5px;
+  border-bottom-left-radius:5px;
+  transition:color 150ms linear, background-color 150ms linear, border-color 150ms linear;
+
+  &:hover {
+    background: #e1e1e1;
+  }
+
+  /* icon */
+  > div:first-child > span:before {
+    font-size:16px;
+  }
+}
+
+.textarea {
+  width:100%;
+  z-index:1;
+  min-height:2.5rem;  // thanks safari
+
+  > textarea {
+    border-radius:0 !important;
+    margin:0 !important;
+    max-height:7rem;
+    min-height:2.5rem;
+  }
+}
+
+.btnWrap {
+  background:#f5f5f5;
+  display:flex;
+  align-items: flex-start;
+
+  > button {
+    color:var(--base-color);
+    min-height:2.5rem;
+    font-size:1rem;
+    padding: 0 1rem;
+    font-weight: bold;
+    border-top-left-radius:0;
+    border-bottom-left-radius:0;
+  }
+}

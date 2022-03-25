@@ -1,0 +1,134 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Jason Huang <jason.huang@bigtincan.com>
+ */
+
+@import "../../../../libs/less/variables.less";
+@import "../../../../libs/less/btc-font-mixins.less";
+
+@stepper_diameter: 1.625rem;
+@line_color: #979797;
+
+.Stepper {
+  padding: 0 5rem;
+  /** Media Query breakpoints */
+  @media @mobile {
+
+  }
+  @media @tablet {
+
+  }
+  @media @desktop {
+
+  }
+  @media @desktop-xl {
+
+  }
+
+  display: flex;
+
+  .label {
+    white-space: nowrap;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 0.8125rem;
+    color: var(--primary-text);
+    top: 1.7rem;
+  }
+
+  > div:not(:last-child) {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .number, .tick, .active {
+    border-radius: @stepper_diameter;
+    width: @stepper_diameter;
+    height: @stepper_diameter;
+    border: solid 1.5px @line_color;
+    border-color: @line_color;
+    position: relative;
+    .icon-subscribe-fill(23.5px);
+    span {
+      position: absolute;
+      top: 5%;
+      left: 53%;
+      transform: translate(-50%, 0);
+      font-size: 0.8rem;
+      transition-delay: 0s;
+    }
+    &:before {
+      visibility: hidden;
+      position: absolute;
+      color: white;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+  }
+
+  .number span {
+    color: var(--primary-text);
+  }
+
+  .active {
+    border: solid 1.5px @baseColor;
+    border-color: @baseColor;
+    transition-delay: .5s;
+    span {
+      transition-delay: .5s;
+      color: var(--base-color);
+    }
+  }
+
+  .tick {
+    border: solid 1.5px @baseColor;
+    border-color: var(--base-color);
+    font-size: 0.75rem;
+    transition-delay: .5s;
+    &:before {
+      //position: relative;
+      visibility: visible;
+      color: var(--base-color);
+      transition: all .5s ease-in;
+    }
+
+    span {
+      color: var(--base-color);
+    }
+  }
+
+  .lineFinished, .lineUnFinished {
+    width: calc(~"100% - "@stepper_diameter);
+    height: 2px;
+    position: relative;
+    top: 12px;
+    background-image: linear-gradient(to right,  @line_color, @line_color 50%, var(--base-color) 50%, var(--base-color));
+    background-position: 100% 0;
+    background-size: 200% 100%;
+    transition: all .5s ease-in;
+  }
+
+  .lineFinished {
+    background-position: 100% 0;
+  }
+
+  .lineUnFinished {
+
+    background-position: 200% 100%;
+  }
+}

@@ -1,0 +1,251 @@
+
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2020 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../libs/less/variables.less";
+
+.CanvasSlideThumb {
+  &.isActive {
+    .slide {
+      &:after {
+        content: '';
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        right: -1px;
+        bottom: -1px;
+
+        border: solid 3px @baseColor;
+        border-color: var(--base-color);
+        border-radius: 4px;
+        pointer-events: none;
+      }
+    }
+  }
+
+  &.isDisabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  &.isEdit {
+    .slide {
+      width: 100%;
+      height: 12.6875rem;
+
+      .title {
+        font-size: 1rem;
+        min-height: inherit;
+      }
+    }
+  }
+
+  .actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0.5rem;
+    opacity: 1;
+    height: 1.825rem;
+    transition: opacity 250ms ease-out;
+
+    > button {
+      font-weight: bold;
+      box-shadow: 0 2px 4px 0 rgba(34, 34, 34, 0.22);
+    }
+    > button+button {
+      margin-left: 0.5rem;
+    }
+  }
+
+  .slide {
+    background-color: #fff;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    width: 18.125rem;
+    height: 10.25rem;
+    position: relative;
+    border: solid 1px #E1E1E1;
+    border-radius: 4px;
+    user-select: none;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      padding: 0 0.25rem;
+      margin: 0.6rem;
+      font-size: 0.8125rem;
+      font-weight: 400;
+      word-wrap: anywhere;
+      border: solid 1px transparent;
+      min-height: 1.2rem;
+    }
+    .row {
+      display: flex;
+      justify-content: space-between;
+      flex: 1 1 auto;
+      position: relative;
+    }
+    .col {
+      height: 100%;
+      position: relative;
+    }
+    .internalNote {
+      position: absolute;
+      bottom: 0.5rem;
+      right: 0.5rem;
+
+      background-color: var(--base-text);
+      box-shadow: 0px 1px 2px rgba(34, 34, 34, 0.24);
+      border-radius: 6px;
+      color: var(--destructive-color);
+      padding: 0.15rem 0.5rem;
+
+      > span + span {
+        margin-left: 0.5rem;
+      }
+    }
+
+    &.oneColTitle {
+      .col {
+        width: 100%;
+
+        .blockText {
+          margin: 0 0.5rem;
+        }
+      }
+    }
+    &.twoColTitle, &.twoCol {
+      .col {
+        width: 50%;
+      }
+    }
+    &.threeColTitle, &.threeCol {
+      .row {
+        justify-content: flex-start;
+      }
+      .col {
+        width: 33.3%;
+      }
+    }
+    &.threeRow {
+      flex-direction: column;
+
+      .row {
+        height: 33.3%;
+        flex: 0 0 auto;
+      }
+    }
+
+    .blockImage {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .thumbLoader {
+        margin-top: -1.5rem;
+      }
+    }
+    .blockText {
+      display: flex;
+      height: 100%;
+      padding: 0.25rem;
+
+      > * {
+        margin: 0;
+        padding: 0;
+        font-weight: normal;
+        color: var(--primary-text);
+        border: none;
+      }
+
+      h2 {
+        font-size: 0.95rem;
+      }
+      h3 {
+        font-size: 0.8rem;
+      }
+      h4 {
+        font-size: 0.7rem;
+      }
+      p {
+        font-size: 0.5rem;
+      }
+    }
+
+    .textBlock {
+      padding: 0.5rem;
+      font-size: 90%;
+    }
+  }
+
+  .meta {
+    position: relative;
+    margin-top: 0.25rem;
+    opacity: 1;
+    transition: opacity 250ms ease-out;
+
+    .category {
+      display: none;  // hidden for now
+
+      .listCategoryColours();
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      color: #fff;
+      text-align: center;
+      padding: 0 0.5rem;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border-radius: 3px;
+
+      &:after {
+        content: attr(data-category);
+      }
+
+      /* powerpoint > PPT */
+      &[data-category=powerpoint]:after {
+        content: 'PPT';
+      }
+    }
+
+    .blockCount {
+      position: absolute;
+      top: 2px;
+      left: 0;
+      background-color: var(--notification-color);
+      color: #fff;
+      font-size: 85%;
+      border-radius: 4px;
+      padding: 0 0.75rem;
+    }
+
+    .count {
+      text-align: center;
+    }
+  }
+}

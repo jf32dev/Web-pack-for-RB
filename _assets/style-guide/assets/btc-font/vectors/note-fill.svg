@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="512px" height="512px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.5.2 (25235) - http://www.bohemiancoding.com/sketch -->
+    <title>note</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="note" sketch:type="MSArtboardGroup" fill="#000000">
+            <path d="M0,25.5653327 C0,11.4459894 11.4117098,0 25.5653327,0 L486.434668,0 C500.554011,0 512,11.4117098 512,25.5653327 L512,486.434668 C512,500.554011 500.588291,512 486.434668,512 L25.5653327,512 C11.4459894,512 0,500.588291 0,486.434668 L0,25.5653327 L0,25.5653327 Z M76.8,76.8 L409.6,76.8 L409.6,102.4 L76.8,102.4 L76.8,76.8 L76.8,76.8 Z M76.8,153.6 L358.4,153.6 L358.4,179.2 L76.8,179.2 L76.8,153.6 L76.8,153.6 Z M76.8,230.4 L384,230.4 L384,256 L76.8,256 L76.8,230.4 L76.8,230.4 Z M76.8,307.2 L409.6,307.2 L409.6,332.8 L76.8,332.8 L76.8,307.2 L76.8,307.2 Z M76.8,384 L332.8,384 L332.8,409.6 L76.8,409.6 L76.8,384 L76.8,384 Z" id="icon-note" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

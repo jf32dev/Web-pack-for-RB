@@ -1,0 +1,135 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package hub-web-app-v5
+ * @copyright 2010-2017 BigTinCan Mobile Pty Ltd
+ * @author Rubenson Barrios <rubenson.barrios@bigtincan.com>
+ */
+
+@import "../../less/_variables.less";
+
+.UserEdit {
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+}
+
+/* Edit Header */
+.editHeader {
+  position:fixed;
+  top:0;
+  right:0;
+  left:@appNavWidth;
+  height:@appHeaderHeight;
+  color:@secondary-text;
+  padding-left:@pageMargin;
+  padding-right:@pageMargin;
+  z-index: 1;
+  background:#fff;
+
+  display: flex;
+  align-items: center;
+
+  > nav {
+    flex:1 1 auto;
+  }
+
+  @media @mobile {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+
+    > nav {
+      display:none;
+    }
+  }
+  @media @tablet {
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    > nav {
+      width:60%;
+      flex: 0 1 auto;
+    }
+  }
+
+  /* scrollContainer */
+  + div {
+    padding-top:1rem;
+  }
+}
+
+.actions {
+
+  @media @mobile {
+    flex: 1 1 auto;
+    text-align: right;
+
+    button {
+      min-width:auto !important;
+    }
+  }
+
+  @media @tablet {
+    flex: 1 1 auto;
+    text-align: right;
+
+    button {
+      min-width:auto !important;
+    }
+  }
+
+  @media @desktop {
+    flex: 1 1 auto;
+    text-align: right;
+
+    button {
+      min-width:auto !important;
+    }
+  }
+}
+
+.editSection {
+  margin:0 auto 1rem;
+
+  &:first-child h3 {
+    margin-top:0;
+  }
+
+  h3 {
+    margin:2rem 0 1rem;
+    padding:0;
+
+    > span {
+      margin-left:0.5rem;
+      font-weight:normal;
+      font-size:90%;
+    }
+  }
+
+  /** Media Query breakpoints */
+  @media @mobile {
+    margin-left:0.5rem;
+    margin-right:0.5rem;
+  }
+  @media @tablet {
+    margin-left:1rem;
+    margin-right:1rem;
+  }
+  @media @desktop {
+    max-width:724px;
+  }
+  @media @desktop-xl {
+    max-width:924px;
+  }
+}

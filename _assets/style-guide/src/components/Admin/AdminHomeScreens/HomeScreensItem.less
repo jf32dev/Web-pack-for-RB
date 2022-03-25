@@ -1,0 +1,132 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Jason Huang <jason.huang@bigtincan.com>
+ */
+
+@import "../../../libs/less/btc-font-mixins.less";
+@import "../../../libs/less/variables.less";
+
+.HomeScreensItem {
+  > div:first-child {
+    display: flex;
+    flex-direction: row;
+    padding: 0.625rem;
+  }
+
+  &:hover {
+    background-color: var(--light-base-color);
+  }
+
+  > div:first-child > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-grow: 1;
+    width: 20%;
+    word-break: break-word;
+
+    button + button {
+      margin-left: 0.75rem !important;
+      height: 1.875rem;
+    }
+  }
+
+  .addOnSection > div {
+    width: 15% !important;
+  }
+
+  .webSection, .addOnSection {
+    > div:first-child {
+      width: 40% !important;
+    }
+  }
+}
+
+.screensFileThumb {
+  width: 2.8125rem !important;
+  height: 2.8125rem !important;
+}
+
+.name {
+  color: var(--secondary-text);
+}
+
+.radio {
+  margin: 0 auto;
+}
+
+.download {
+  .icon-download();
+  display: block;
+  margin: 0 auto;
+
+  &:active {
+    color: var(--dark-base-color);
+  }
+}
+
+.btns {
+  justify-content: flex-end;
+  min-height: 1.875rem;
+
+  button {
+    min-height: 1.875rem;
+  }
+  &.preview {
+    justify-content: center;
+  }
+}
+
+.view {
+  width: 1.875rem;
+  height: 1.875rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  &:before {
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+}
+
+.fullProgress {
+  background-color: var(--divider-color);
+  height: 1px;
+  width: 100%;
+}
+
+.progress {
+  background-color: var(--base-color);
+  height: 1px;
+  transition: width 1s ease-in-out;
+}
+
+.disabled {
+  button {
+    opacity: 0.3 !important;
+  }
+}
+.assignContainer {
+  cursor: pointer;
+  .assignIcon{
+    color: var(--base-color);
+  }
+
+  .assignLabel{
+    margin-left:0.25rem;
+    color: var(--base-color);
+  }
+}

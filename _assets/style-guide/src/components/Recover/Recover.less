@@ -1,0 +1,133 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../libs/less/variables.less";
+
+@inputBg: #f5f5f5;
+
+.Recover {
+  width: 450px;
+  height: 450px;
+  background-color: #fff;
+  border-radius: 4px;
+  padding:40px 60px 0;
+  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.15);
+
+  &:focus {
+    outline:none;
+  }
+
+  h1 {
+    margin:2rem 0 0;
+    padding:0;
+    border:none;
+    text-align:center;
+    font-size: 20px;
+    color:#42332e;
+    font-weight:normal;
+    text-transform:capitalize;
+  }
+
+}
+
+@media @mobile-xs {
+  .Recover {
+    width: 100%;
+    padding: 20px 10px;
+    box-shadow: none;
+  }
+}
+@media @mobile {
+  .Recover {
+    width: 100%;
+    padding: 20px 10px;
+    box-shadow: none;
+  }
+}
+@media @tablet {
+  .Recover {
+    padding: 20px 40px;
+  }
+}
+
+.loading {
+  cursor:wait;
+
+  * {
+    pointer-events:none;
+  }
+}
+
+.logo {
+  margin:0 auto;
+  height:46px;
+  width:200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.wrapper {
+  position:relative;
+}
+
+.blurb {
+  margin:1rem 0 1.5rem;
+  text-align:center;
+  color:@secondary-text;
+}
+
+.input {
+  .body-font();
+  color:@secondary-text;
+  background:@inputBg;
+  border:solid 1px transparent;
+  border-radius: 3px;
+  display:block;
+  margin:0 auto;
+  padding: 0.5rem 0.75rem;
+  width:90%;
+}
+
+.buttonWrap {
+  display:flex;
+  justify-content: space-between;
+  margin:6rem auto 0;
+  width:90%;
+}
+
+.errorMessage {
+  color:#f00;
+  position:absolute;
+  left: 1.5rem;
+  right: 1.5rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.button {
+  min-width:135px !important;
+  margin:0 !important;
+}
+
+.submitted {
+  margin-top:4.5rem;
+}
+
+.submittedButton {
+  margin-top:2.5rem;
+  width:100%;
+}

@@ -1,0 +1,291 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Jason Huang <jason.huang@bigtincan.com>
+ */
+
+@import "../../../libs/less/btc-font-mixins.less";
+@import "../../../libs/less/variables.less";
+
+@headerBg: #f8f8f8;
+@headerText: @base-color;
+@headerBorderColor: @divider-color;
+
+@headerBg-dark: #333;
+@headerText-dark: #DDD;
+@headerBorderColor-dark: #555;
+
+.ViewerHeader {
+  display:flex;
+  flex:0 0 auto;
+  justify-content:space-between;
+  align-content:center;
+  text-align:center;
+  position:relative;
+  flex-wrap: wrap;
+  width: 100%;
+  //border:solid 1px @headerText-dark;
+  border-color: @headerBorderColor;
+
+  background-color:@baseText;
+  color:@headerText;
+}
+
+.headerDocked {
+  transition:background @timing-medium ease-out;
+
+  &:hover {
+    background:#f4f4f4;
+  }
+
+  > div:last-child {
+    cursor:pointer;
+  }
+}
+
+.left {
+  display: flex;
+  align-items: center;
+
+  @media @mobile {
+    order: 1;
+  }
+  @media @tablet {
+    order: 1;
+  }
+  @media @desktop {
+    order: 1;
+  }
+  @media @desktop-xl {
+    order: 1;
+  }
+}
+
+.right {
+  height: 0px;
+  margin-top: 2px;
+
+  @media @mobile {
+    order: 2;
+  }
+  @media @tablet {
+    order: 2;
+  }
+  @media @desktop {
+    order: 2;
+  }
+  @media @desktop-xl {
+    order: 3;
+  }
+}
+
+.center {
+  text-align:center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+  top: -2px;
+
+  @media @mobile {
+    order: 3;
+  }
+  @media @tablet {
+    order: 3;
+  }
+  @media @desktop {
+    order: 3;
+  }
+  @media @desktop-xl {
+    order: 2;
+  }
+}
+
+.close {
+  .icon-close(16px);
+  font-size:1rem;
+  padding-right:0.5rem;
+  cursor:pointer;
+  user-select:none;
+  vertical-align:middle;
+
+  &:before {
+    font-weight:700;
+    padding-right:0.5rem;
+    vertical-align:baseline !important;
+  }
+}
+
+/* center */
+.itemBorder {
+  border: solid 0.5px @headerText-dark;
+  border-radius: 3px;
+  .itemBorderLess;
+
+  >a:before{
+    //font-size: 15px;
+    position: relative;
+    //top: 3px;
+    color: @primary-text;
+    //-webkit-font-smoothing: antialiased;
+    //-moz-osx-font-smoothing: grayscale;
+    //font-style: normal;
+    //font-weight: normal;
+  }
+}
+
+.itemBorderLess {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 0.1rem;
+  display: flex;
+  height: 32px;
+
+  @media @mobile {
+    margin-top: 0.5rem;
+  }
+  @media @tablet {
+    margin-top: 0.5rem;
+  }
+}
+
+.centerFont{
+  width: 150px;
+}
+.centerSize{
+
+}
+
+div.centerDropdown {
+  color: black;
+  min-width: 100px;
+  background: white;
+  text-align: left;
+  border: solid 0.5px @headerText-dark;
+  border-radius: 3px;
+  padding: 0.25rem 0.5rem 0.15rem;
+
+  > div > span::after{
+    color: black !important;
+    position: absolute;
+    right: 9px;
+    top: 11px;
+  }
+}
+
+.centerIconDropMenu {
+  position: relative;
+  top: 2px;
+  margin: 0px 5px;
+  color: black;
+}
+
+.dropdownItem {
+  color: black;
+
+  li {
+    padding: 0.5rem 0.75rem;
+    margin: auto;
+  }
+}
+/* Header Icons */
+/* right */
+
+/* drop down menus */
+
+/*icons*/
+a.icon-bold{
+  &:before {
+    top:2px;
+  }
+  .icon-bold(12px);
+}
+
+a.icon-italic{
+  &:before {
+    top:3px;
+  }
+  .icon-italic(14px);
+}
+
+a.icon-underline{
+  &:before {
+    top:3px;
+  }
+  .icon-underline(13px);
+}
+
+a.icon-align-left{
+  &:before {
+    top:3px;
+  }
+  .icon-align-left(14px);
+}
+
+a.icon-align-center{
+  &:before {
+    top:3px;
+  }
+  .icon-align-center(14px);
+}
+
+a.icon-align-right{
+  &:before {
+    top:3px;
+  }
+  .icon-align-right(14px);
+}
+
+a.icon-align-justify{
+  &:before {
+    top:3px;
+  }
+  .icon-align-jusify(14px);
+}
+
+a.icon-list-ol{
+  &:before {
+    top:3.5px;
+  }
+  .icon-ordered-list(15px);
+}
+
+a.icon-list-ul{
+  &:before {
+    top:3.5px;
+  }
+  .icon-unordered-list(15px);
+}
+
+a.icon-outdent{
+  &:before {
+    top:5px;
+  }
+  .icon-outdent(19px);
+}
+
+a.icon-indent{
+  &:before {
+    top:5px;
+  }
+  .icon-indent(19px);
+}
+
+a.icon-link{
+  &:before {
+    top:3px;
+  }
+  .icon-link(14px);
+}

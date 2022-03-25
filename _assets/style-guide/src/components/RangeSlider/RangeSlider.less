@@ -1,0 +1,179 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Rubenson Barrios<rubenson.barrios@bigtincan.com>
+ */
+
+@import "../../libs/less/tooltips.less";
+@import "../../libs/less/btc-font-mixins.less";
+@import "../../libs/less/utilities.less";
+@import "../../libs/less/tooltips.less";
+@import "../../libs/less/variables.less";
+
+// Slider
+.slider {
+  background-color: #ddd;
+  z-index: 0;
+}
+.sliderRoundClass {
+  height: 0.25rem;
+}
+.sliderRectClass {
+  height: 0.65rem;
+}
+
+// Bars
+.bar {
+  position: relative;
+  background: #ddd;
+}
+.barRoundClass {
+  height: 0.25rem;
+}
+.barRectClass {
+  height: 0.65rem;
+}
+
+// Handles
+.handle {
+  font-size: 0.9em;
+  text-align: center;
+  color: #fff;
+  .grab();
+
+  // Tooltip
+  > div {
+    .tooltip(n);
+    position: relative;
+    width: 100%;
+    background-color: transparent;
+    height: 100%;
+  }
+  &.activeHandle {
+    .grabbing();
+  }
+  &.activeHandle > div {
+    &:before, &:after {
+      display: inline-block !important;
+    }
+  }
+}
+
+.handleRectangle {
+  top: -0.5rem;
+  width: 1rem;
+  height: 1.6rem;
+  background-color: #dddddd;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.36);
+  .icon-handle-vertical(0.8rem);
+
+  &:before {
+    color: var(--secondary-text);
+    vertical-align: middle;
+    line-height: 1.6rem;
+  }
+
+  &.activeHandle {
+    background-color: #d5d5d5 !important;
+  }
+
+  > div { // Tooltip
+    top: -1.5rem;
+  }
+}
+
+.handleRound {
+  top: -0.4rem;
+  background-color: #dddddd;
+  background-color: var(--base-color);
+  border-radius: 50%;
+  height: 1rem;
+  width: 1rem;
+  .grab();
+
+  &.activeHandle {
+    background-color: var(--dark-base-color);
+    .grabbing();
+  }
+}
+
+.Pips {
+  width: 2em;
+  height: 1em;
+  line-height: 1em;
+  position: absolute;
+  font-size: .8em;
+  color: #999;
+  overflow: visible;
+  text-align: center;
+  top: -1rem;
+  margin-left: -1em;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.shortPinps {
+  background-color: @dividerColor;
+  width: 1px;
+  height: 0.4rem;
+  position: absolute;
+  left: 50%;
+}
+
+.longPinps {
+  background-color: @secondaryText;
+  width: 1px;
+  height: 0.6rem;
+  position: absolute;
+  left: 50%;
+}
+
+.pipsContainer {
+  margin: 0px 1rem;
+  position: relative;
+}
+
+.minPinps {
+  position: relative;
+  top: 0.8rem;
+  left: 0.1rem;
+  color: @secondaryText;
+  font-size: 0.8rem;
+}
+
+.maxPinps {
+  position: relative;
+  top: 0.8rem;
+  right: 0.5rem;
+  color: @secondaryText;
+  font-size: 0.8rem;
+}
+
+.numeric{
+  position: absolute;
+}
+
+.numericContainer {
+  margin: 0px 2rem 0px 1.1rem;
+  position: relative;
+}
+
+.lastNumericItem {
+  position: absolute;
+}

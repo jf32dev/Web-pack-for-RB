@@ -1,0 +1,117 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2020 BigTinCan Mobile Pty Ltd
+ * @author Rubenson Barrios <rubenson.barrios@bigtincan.com>
+ */
+
+@import "../../libs/less/btc-font-mixins.less";
+@import "../../libs/less/utilities.less";
+@import "../../libs/less/variables.less";
+
+.DateModalPicker {
+  .modalHeader {
+    background-color: transparent;
+    text-align: left;
+
+    > h3 {
+      margin: 0 1.25rem;
+      color: var(--primary-text);
+      font-size: 1.12rem;
+    }
+  }
+
+  .modalContainerClass {
+    overflow: initial;
+
+    > div > div {
+      overflow: initial;
+    }
+  }
+
+  .modalBodyClass {
+    overflow: initial;
+  }
+
+  .contentModalBody {
+    padding: 1.25rem;
+    display: flex;
+
+    > div {
+      flex: 1 auto;
+      position: relative;
+
+      &:first-child {
+        margin-right: 1.25rem;
+      }
+
+      label {
+        color: var(--secondary-text);
+      }
+
+      // calendar icon
+      span[class~="rw-select-bordered"] {
+        border-left: 1px solid #fff;
+        text-align: center;
+        button:nth-child(1) {
+          width: 2.3125rem;
+          background-color: @dropdownMenuBackgroundColor;
+        }
+      }
+
+      span[class~="rw-i-calendar"]:before {
+        color: var(--base-color);
+      }
+
+      input[class~="rw-widget-input"] {
+        box-shadow: none;
+        border-radius: @borderRadius;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0;
+        background-color: @dropdownMenuBackgroundColor;
+        height: 2.5rem;
+      }
+
+      div[class~="rw-widget-container"] {
+        border-radius: @borderRadius;
+        border: none;
+        background-color: @dropdownMenuBackgroundColor;
+      }
+    }
+
+    .selectClearZone {
+      position: absolute;
+      right: 3.5rem;
+      top: 2.55rem;
+      z-index: 99;
+      cursor: pointer;
+      color: #999;
+
+      .selectClear {
+        .icon-close(1rem);
+        &:before {
+          font-weight: 600;
+        }
+      }
+
+      &:hover {
+        color: var(--base-color);
+      }
+    }
+  }
+
+  .dateTimePicker {
+    display: initial;
+    width: 15.375rem;
+  }
+}

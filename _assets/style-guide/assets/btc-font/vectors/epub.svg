@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="512px" height="512px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.5.2 (25235) - http://www.bohemiancoding.com/sketch -->
+    <title>epub</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="epub" sketch:type="MSArtboardGroup" fill="#000000">
+            <g id="icon-epub" sketch:type="MSLayerGroup" transform="translate(0.000000, 5.000000)">
+                <path d="M255.98976,412.827485 L95.10912,253.519446 L255.98976,94.2316832 L309.632,147.322535 L202.36288,253.519446 L255.98976,306.630574 L416.88064,147.327604 L276.72576,8.57560396 C265.28768,-2.77457426 246.71744,-2.77457426 235.26912,8.57560396 L8.58624,233.00903 C-2.86208,244.349069 -2.86208,262.715168 8.58624,274.065347 L235.26912,498.493703 C246.72768,509.833743 265.28768,509.833743 276.72576,498.493703 L503.41888,274.065347 C514.86208,262.715168 514.86208,244.349069 503.41888,233.00903 L470.51264,200.438733 L255.98976,412.827485" id="Fill-4" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

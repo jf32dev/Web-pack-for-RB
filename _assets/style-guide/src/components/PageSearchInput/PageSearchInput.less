@@ -1,0 +1,391 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2020 BigTinCan Mobile Pty Ltd
+ * @author Rubenson Barrios <rubenson.barrios@bigtincan.com>
+ */
+
+@import "../../libs/less/variables.less";
+@import "../../libs/less/utilities.less";
+@import "../../libs/less/btc-font-mixins.less";
+
+.PageSearchInput {
+  // Fullscreen style search
+  &.full {
+    background: #fff;
+    border-radius: 0.25rem;
+    width: 80%;
+    max-width: 69rem;
+    padding: 1.25rem 1.25rem;
+
+    div[class="Select-value"] {
+      background-color: #eee;
+      border-radius: 0.25rem;
+      display: flex;
+      align-items: center;
+      height: 2.5rem;
+    }
+
+    > header > h3 {
+      display: block;
+      font-size: 1.12rem;
+      text-align: center;
+      color: var(--primary-text);
+      margin: 0 0 1.5rem;
+    }
+
+    .searchButton[disabled] {
+      background-color: var(--base-color);
+      border-color: var(--base-color);
+      color: var(--base-text);
+      opacity: 1;
+    }
+  }
+
+  > header > h3 {
+    display: none;
+  }
+
+  h4 {
+    font-size: 0.87rem;
+    font-weight: bold;
+    color: var(--primary-text);
+  }
+
+  .searchType {
+    width: 9rem;
+    margin: 0;
+    margin-right: 0.5rem; // seperate the `all results` button and search input box
+
+    span[class~="Select-value-label"],
+    span[class~="Select-multi-value-wrapper"] {
+      color: var(--secondary-text) !important;
+    }
+
+    > div > div:nth-child(2) {
+      height: 40px !important;
+      border-radius: 0.25rem;
+      background-color: #eeeeee;
+
+      > span > div > span {
+        display: flex;
+        align-items: center;
+        height: 2.5rem;
+      }
+    }
+
+    div[class~="has-value"] {
+      &:not([class~="is-open"]) {
+        div[class="Select-control"] {
+          border-radius: 0.25rem;
+          background-color: #eee;
+        }
+      }
+    }
+
+    div[class~="is-open"] div[class="Select-control"] {
+      border-bottom-right-radius: 0 !important;
+      border-bottom-left-radius: 0 !important;
+      background-color: #fff;
+      div[class="Select-value"] {
+        background-color: #fff;
+      }
+    }
+
+    div[class~="Select-menu-outer"] {
+      background-color: #fff;
+      border-color: #ddd;
+    }
+
+    .isChecked {
+      .icon-tick-alt();
+      &:before {
+        color: var(--base-color);
+        font-size: 0.8125rem;
+        position: absolute;
+        right: 0.5rem;
+        top: 0.6rem;
+      }
+    }
+  }
+
+  .suggestionWrapper {
+    flex: 1 1 auto;
+    margin-right: 1rem;
+    position: relative;
+    div:nth-child(1) {
+      &::before {
+        left: 0;
+        font-size: 1.375rem;
+      }
+      input {
+        padding-left: 1.6875rem;
+        font-size: 0.875rem;
+        padding-right: 0;
+        outline: none;
+        &:focus {
+          border-color: var(--base-color);
+        }
+      }
+      span {
+        padding: 0;
+        &::before {
+          font-size: 1.125rem;
+        }
+      }
+    }
+    .suggestionContainer {
+      position: absolute;
+      top: 2.5rem;
+      background-color: #eee;
+      box-shadow: 0 4px 8px 0 rgba(34, 34, 34, 0.12);
+      border-bottom-right-radius: 0.25rem;
+      border-bottom-left-radius: 0.25rem;
+      border: 1px solid;
+      border-color: var(--primary-text);
+      padding: 0;
+      padding-top: 0.5rem;
+      width: 100%;
+      z-index: 1;
+      max-height: 13rem;
+      overflow: auto;
+
+      h4 {
+        color: #777;
+        font-size: 0.6825rem;
+        font-weight: 600;
+        margin: 0 1rem 0.25rem 1rem;
+      }
+
+      .activeSuggestion {
+        background-color: var(--light-base-color);
+      }
+
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        &.suggestionList {
+          li {
+            &:hover {
+              background-color: var(--light-base-color);
+            }
+          }
+        }
+
+        li {
+          .overflow-ellipsis();
+          height: 2rem;
+          line-height: 2rem;
+          font-size: 0.75rem;
+          color: var(--primary-text);
+          margin: 0;
+          padding-left: 1rem;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .inputWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+
+    .textInput {
+      flex: 1 1 auto;
+
+      &:before {
+        color: var(--base-color);
+      }
+
+      > span {
+        color: var(--base-color);
+      }
+
+      input {
+        height: 2.5rem;
+        margin: 0;
+        background-color: #fff;
+        border: none;
+        border-radius: 0;
+        border-bottom: 1px solid;
+        border-color: var(--divider-color);
+
+        &:focus {
+          border-bottom-right-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+      }
+    }
+
+    .buttonWrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex: 0 0 auto;
+      button:nth-child(2) {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+
+  &.full .textInput input {
+    border: none;
+    border-bottom: 1px solid;
+    border-radius: 0;
+    border-color: var(--divider-color);
+  }
+
+  .selectedFilters {
+    margin: 0.5rem 0;
+
+    .remainingCountItem,
+    .clearFiltersItem {
+      margin: 0.3rem 0 0 0;
+      padding: 0 0.5rem;
+      cursor: pointer;
+    }
+    .remainingCountItem {
+      color: var(--primary-text);
+      margin-right: 0;
+
+      > span {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        margin-left: 0.25rem;
+      }
+    }
+  }
+
+  &.full .selectedFilters {
+    min-height: 2.5rem;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    > li {
+      height: 1.875rem;
+      border-radius: 0.25rem;
+      background-color: #eee;
+      color: var(--secondary-text) !important;
+      padding: 0 0.5rem;
+      margin-right: 0.5rem;
+      > div {
+        > span {
+          max-width: 13.75rem;
+          display: block !important;
+          line-height: 1.25rem;
+          .overflow-ellipsis();
+          color: var(--primary-text);
+        }
+      }
+    }
+  }
+
+  .tagsForModal {
+    display: flex;
+    flex-wrap: wrap;
+
+    > li {
+      min-height: 1.875rem;
+      height: max-content;
+      color: var(--primary-text);
+      font-size: 0.8125rem;
+      padding: 0.125rem 0.5rem;
+      display: flex;
+      align-items: center;
+    }
+  }
+  .clearFiltersItem {
+    background-color: transparent !important;
+    margin: 0.32rem;
+    margin-left: 0;
+    display: flex;
+  }
+
+  .clearFiltersBtn {
+    border-color: transparent;
+    background-color: transparent;
+    color: var(--base-color);
+    padding: 0.05rem 0;
+    margin: 0;
+  }
+
+  .filterWrap {
+    padding: 0;
+    // display: flex;
+    align-items: center;
+
+    &.full {
+      color: #fff;
+      border-top: solid 1px @dividerColor;
+      border-top-color: var(--divider-color);
+
+      .filterSelect,
+      .filterSelectActive {
+        background-color: var(--background-color);
+        border-color: var(--background-color);
+      }
+    }
+
+    .filterSelect,
+    .filterSelectActive {
+      margin-left: 1rem;
+      background-color: @inputBg;
+      border-color: @inputBg;
+      cursor: pointer;
+
+      // heading
+      > div > span {
+        color: var(--secondary-text);
+      }
+
+      // content-wrap
+      > div > div {
+        min-width: 13rem;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+
+      // indicator
+      > div > span:after {
+        color: var(--base-color);
+      }
+    }
+  }
+
+  .filterModalBody {
+    padding: 1rem 1.5rem;
+  }
+
+  .modalHeader {
+    background-color: transparent;
+    text-align: left;
+
+    > h3 {
+      margin: 0 1.5rem;
+      color: var(--primary-text);
+      font-size: 1.12rem;
+    }
+  }
+
+  .footerWrapper {
+    text-align: center;
+  }
+}

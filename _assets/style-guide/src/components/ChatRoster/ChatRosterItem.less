@@ -1,0 +1,120 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../libs/less/variables.less";
+@import "../../libs/less/utilities.less";
+
+.ChatRosterItem {
+  background:#fff;
+  transition: all @timing-fast linear;
+
+  &:hover {
+    opacity:0.7;
+  }
+
+  > div {
+    cursor:pointer;
+
+    > div:first-child {
+      width:56px;  // safari fix for thumbWrap?
+    }
+  }
+}
+
+.info {
+  position:relative;
+  line-height:140%;
+  width:100%;
+  min-width:25%;
+  margin-left:0.5rem;
+}
+
+.name {
+  display:-webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-height: 2.5rem;
+}
+
+.presence {
+  display:inline-block;
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  margin-left:5px;
+  margin-bottom:2px;
+
+  // offline
+  &[data-presence='0'] {
+    display:none;
+  }
+
+  // available
+  &[data-presence='100'] {
+    background:#4cd502;
+  }
+
+  // busy
+  &[data-presence='70'] {
+    background:orange;
+  }
+
+  // unavailable
+  &[data-presence='50'] {
+    background:#ccc;
+  }
+}
+
+.message, .email {
+  color:@secondary-text;
+  font-size:90%;
+  width: 70%;
+  display: inline-block;
+  vertical-align: middle;
+  .overflow-ellipsis();
+}
+
+.count {
+  display:block;
+  position:absolute;
+  top:0;
+  right:0;
+  width:21px;
+  height:21px;
+  line-height:21px;
+  text-align:center;
+  background-color:@base-color;
+  border-radius:50%;
+  font-size:90%;
+  font-weight:bold;
+  color:@base-text;
+}
+
+.countOver99 {
+  font-size:18px;
+  line-height:26px;
+}
+
+.time {
+  display:inline-block;
+  font-size:80%;
+  color:@secondary-text;
+  width:30%;
+  vertical-align: middle;
+  text-align: right;
+}

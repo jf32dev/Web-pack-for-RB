@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>512</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="512" sketch:type="MSArtboardGroup" fill="#000000">
+            <g id="icon-grid" sketch:type="MSLayerGroup">
+                <path d="M0,0 L0,10.0181691 L0,213.981831 L0,224 L10.0199196,224 L213.98008,224 L224,224 L224,213.981831 L224,10.0181691 L224,0 L213.98008,0 L10.0199196,0 L0,0 Z M24,24 L200,24 L200,200 L24,200 L24,24 Z" id="rect11" sketch:type="MSShapeGroup"></path>
+                <path d="M288,288 L288,298.018169 L288,501.981831 L288,512 L298.01992,512 L501.98008,512 L512,512 L512,501.981831 L512,298.018169 L512,288 L501.98008,288 L298.01992,288 L288,288 Z M312,312 L488,312 L488,488 L312,488 L312,312 Z" id="rect11-copy" sketch:type="MSShapeGroup"></path>
+                <path d="M288,0 L288,10.0181691 L288,213.981831 L288,224 L298.01992,224 L501.98008,224 L512,224 L512,213.981831 L512,10.0181691 L512,0 L501.98008,0 L298.01992,0 L288,0 Z M312,24 L488,24 L488,200 L312,200 L312,24 Z" id="rect11-copy-2" sketch:type="MSShapeGroup"></path>
+                <path d="M0,288 L0,298.018169 L0,501.981831 L0,512 L10.0199196,512 L213.98008,512 L224,512 L224,501.981831 L224,298.018169 L224,288 L213.98008,288 L10.0199196,288 L0,288 Z M24,312 L200,312 L200,488 L24,488 L24,312 Z" id="rect11-copy-3" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

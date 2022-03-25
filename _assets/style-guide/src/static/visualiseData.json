@@ -1,0 +1,398 @@
+{
+  "name": "Jason! Rossiter!",
+  "children": [
+    {
+      "name": "All users",
+      "children": [
+        {
+          "name": "ChannelA",
+          "children": [
+            {
+              "name": "Web Testing",
+              "type": "tab"
+            }
+          ],
+          "type": "channel"
+        },
+        {
+          "name": "Secret Pizza",
+          "children": [
+            {
+              "name": "All Pizza",
+              "type": "tab"
+            }
+          ],
+          "type": "channel"
+        },
+        {
+          "name": "SMH Feed",
+          "children": [
+            {
+              "name": "[FEEDS]",
+              "type": "tab"
+            }
+          ],
+          "type": "channel"
+        }
+      ],
+      "type": "group"
+    },
+    {
+      "name": "Jason! Rossiter!",
+      "children": [
+        {
+          "name": "A LONG CHANNEL TITLE",
+          "children": [
+            {
+              "name": "Shared with me",
+              "type": "tab"
+            }
+          ],
+          "type": "channel"
+        },
+        {
+          "name": "Again",
+          "children": [
+            {
+              "name": "My Content",
+              "type": "tab"
+            }
+          ],
+          "type": "channel"
+        },
+        {
+          "name": "Disco Time1",
+          "children": [
+            {
+              "name": "All Disco",
+              "type": "tab"
+            }
+          ],
+          "type": "channel"
+        },
+        {
+          "name": "Glasgow",
+          "children": [
+            {
+              "name": "BTCO Testing",
+              "type": "tab"
+            }
+          ],
+          "type": "channel"
+        },
+        {
+          "name": "Glasgow Sample Files",
+          "children": [
+            {
+              "name": "Server Testing",
+              "type": "tab"
+            }
+          ],
+          "type": "channel"
+        },
+        {
+          "name": "Hide Me",
+          "children": [
+            {
+              "name": "All Disco",
+              "type": "tab"
+            }
+          ],
+          "type": "channel"
+        },
+        {
+          "name": "Jason",
+          "children": [
+            {
+              "name": "Server Testing",
+              "type": "tab"
+            }
+          ],
+          "type": "channel"
+        },
+        {
+          "name": "Kostia",
+          "children": [
+            {
+              "name": "iOS Testing",
+              "type": "tab"
+            }
+          ],
+          "type": "channel"
+        },
+        {
+          "name": "My Channel",
+          "children": [
+            {
+              "name": "My Content",
+              "type": "tab"
+            }
+          ],
+          "type": "channel"
+        },
+        {
+          "name": "SMH Unique",
+          "children": [
+            {
+              "name": "Server Testing",
+              "type": "tab"
+            }
+          ],
+          "type": "channel"
+        },
+        {
+          "name": "Top secret goods",
+          "children": [
+            {
+              "name": "Shared with me",
+              "type": "tab"
+            }
+          ],
+          "type": "channel"
+        }
+      ],
+      "type": "group"
+    },
+    {
+      "name": "Server1",
+      "children": [
+        {
+          "name": "Disco Time1",
+          "children": [
+            {
+              "name": "All Disco",
+              "type": "tab"
+            }
+          ],
+          "type": "channel"
+        },
+        {
+          "name": "Esly",
+          "children": [
+            {
+              "name": "Windows Testing",
+              "type": "tab"
+            }
+          ],
+          "type": "channel"
+        },
+        {
+          "name": "Freeman",
+          "children": [
+            {
+              "name": "Server Testing",
+              "type": "tab"
+            }
+          ],
+          "type": "channel"
+        },
+        {
+          "name": "HiddenChannelsameera",
+          "children": [
+            {
+              "name": "Server Testing",
+              "type": "tab"
+            }
+          ],
+          "type": "channel"
+        },
+        {
+          "name": "Hong",
+          "children": [
+            {
+              "name": "Server Testing",
+              "type": "tab"
+            }
+          ],
+          "type": "channel"
+        },
+        {
+          "name": "Jason",
+          "children": [
+            {
+              "name": "Server Testing",
+              "type": "tab"
+            }
+          ],
+          "type": "channel"
+        },
+        {
+          "name": "Pratikshya",
+          "children": [
+            {
+              "name": "Server Testing",
+              "type": "tab"
+            }
+          ],
+          "type": "channel"
+        },
+        {
+          "name": "Rakhi",
+          "children": [
+            {
+              "name": "Server Testing",
+              "type": "tab"
+            }
+          ],
+          "type": "channel"
+        },
+        {
+          "name": "Ryan",
+          "children": [
+            {
+              "name": "Server Testing",
+              "type": "tab"
+            }
+          ],
+          "type": "channel"
+        },
+        {
+          "name": "Sameera",
+          "children": [
+            {
+              "name": "Server Testing",
+              "type": "tab"
+            }
+          ],
+          "type": "channel"
+        },
+        {
+          "name": "Server Channel",
+          "children": [
+            {
+              "name": "Server Testing",
+              "type": "tab"
+            }
+          ],
+          "type": "channel"
+        },
+        {
+          "name": "Server Channel",
+          "children": [
+            {
+              "name": "Server Testing",
+              "type": "tab"
+            }
+          ],
+          "type": "channel"
+        },
+        {
+          "name": "Server Channel",
+          "children": [
+            {
+              "name": "Server Testing",
+              "type": "tab"
+            }
+          ],
+          "type": "channel"
+        },
+        {
+          "name": "Server Channel",
+          "children": [
+            {
+              "name": "Server Testing",
+              "type": "tab"
+            }
+          ],
+          "type": "channel"
+        },
+        {
+          "name": "Server Channel",
+          "children": [
+            {
+              "name": "Server Testing",
+              "type": "tab"
+            },
+            {
+              "name": "Server Testingw",
+              "type": "tab"
+            },
+            {
+              "name": "Server Testing3",
+              "type": "tab"
+            }
+          ],
+          "type": "channel"
+        }
+      ],
+      "type": "group"
+    },
+    {
+      "name": "Server2",
+      "type": "group"
+    },
+    {
+      "name": "Server3",
+      "type": "group"
+    },
+    {
+      "name": "Server4",
+      "type": "group"
+    },
+    {
+      "name": "Server5",
+      "type": "group"
+    },
+    {
+      "name": "Server6",
+      "type": "group"
+    },
+    {
+      "name": "Server7",
+      "type": "group"
+    },
+    {
+      "name": "Server8",
+      "type": "group"
+    },
+    {
+      "name": "Server9",
+      "type": "group"
+    },
+    {
+      "name": "Server10",
+      "type": "group"
+    },
+    {
+      "name": "Server11",
+      "type": "group"
+    },
+    {
+      "name": "Server12",
+      "type": "group"
+    },
+    {
+      "name": "Server13",
+      "type": "group"
+    },
+    {
+      "name": "Server14",
+      "type": "group"
+    },
+    {
+      "name": "Server15",
+      "type": "group"
+    },
+    {
+      "name": "Server16",
+      "type": "group"
+    },
+    {
+      "name": "Server17",
+      "type": "group"
+    },
+    {
+      "name": "Server18",
+      "type": "group"
+    },
+    {
+      "name": "Server19",
+      "type": "group"
+    },
+    {
+      "name": "Server20",
+      "type": "group"
+    }
+  ],
+  "type": "user"
+}

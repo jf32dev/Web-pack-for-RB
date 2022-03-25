@@ -1,0 +1,117 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Jason Huang <jason.huang@bigtincan.com>
+ */
+@import "../../../libs/less/variables.less";
+@import "../../../libs/less/btc-font-mixins.less";
+@import "../../../libs/less/btc-font.less";
+@import "../../../libs/less/utilities.less";
+@import "../../../libs/less/tooltips.less";
+
+.AdminCSP {
+  margin: 0 3.15rem 2rem 1.6rem;
+  height: calc(~"100vh - 7rem");
+  overflow: scroll;
+
+  /** Media Query breakpoints */
+  @media @mobile-xs {
+
+  }
+  @media @mobile {
+
+  }
+  @media @tablet {
+
+  }
+  @media @desktop {
+
+  }
+  @media @desktop-xl {
+
+  }
+
+  .headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  [data-name="headers"], [data-name="row"]  {
+    [data-index="0"], [data-row-index="0"] {
+      width: 70%;
+      > div {
+        width: 100%;
+        .AdminFormFieldInput {
+          width: 100%;
+          max-width: 100%;
+          padding-bottom: 0rem;
+        }
+      }
+    }
+
+    [data-index="1"], [data-row-index="1"] {
+      width: 30%;
+      min-width: 19rem;
+    }
+  }
+
+  h3 {
+    margin: 0;
+  }
+
+  .addUrl {
+    width: 9.188rem;
+    margin-left: 4rem;
+    margin-top: 0.9375rem;
+  }
+
+  h5 {
+    font-size: 0.6875rem;
+    padding-bottom: .5rem;
+
+    .red {
+      color: var(--error-color);
+      font-weight: 600;
+    }
+  }
+
+  h4 {
+    margin-top: 2rem;
+  }
+
+  .remove {
+    width: 5.9375rem;
+    font-size: 0.8125rem;
+    height: 1.875rem;
+    font-weight: 900;
+  }
+
+  .globalMenu {
+    width: 14.375rem;
+    padding-bottom: 2rem;
+  }
+
+  .longTip {
+    .tooltip(se);
+    .longtip();
+    &:after {
+      text-align: left;
+      text-transform: initial;
+    }
+    margin-left: 0.625rem;
+  }
+}
+

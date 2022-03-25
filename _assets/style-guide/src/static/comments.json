@@ -1,0 +1,101 @@
+[
+    {
+      "id": 5898,
+      "message": "Example comment....",
+      "time": 1460073635,
+      "parentId": 0,
+      "author": {
+        "id": 200,
+        "email": "rubenson@bigtincan.com",
+        "type": "people",
+        "name": "Rubenson Barrios",
+        "thumbnail": "",
+        "role": "Web Developer",
+        "isFollowed": false
+      },
+      "canDelete": false,
+      "replies": [
+        {
+          "id": 5899,
+          "message": "Vinyl plaid asymmetrical, chillwave Pitchfork photo booth cardigan Thundercats pork belly mustache Intelligentsia iPhone letterpress. Meh butcher trust fund, Neutra occupy post-ironic cardigan ennui. DIY freegan wayfarers hella skateboard, Intelligentsia High Life artisan ethical cliche Helvetica narwhal retro messenger bag selvage.",
+          "time": 1465268748,
+          "parentId": 5898,
+          "author": {
+            "id": 204,
+            "email": "lochlan@bigtincan.com",
+            "type": "people",
+            "name": "Lochlan M'Bride",
+            "thumbnail": "",
+            "role": "Webby",
+            "isFollowed": false
+          },
+          "canDelete": true
+        }, {
+          "id": 5900,
+          "message": "I am a second reply",
+          "time": 1465269748,
+          "parentId": 5898,
+          "author": {
+            "id": 204,
+            "email": "lochlan@bigtincan.com",
+            "type": "people",
+            "name": "Lochlan M'Bride",
+            "thumbnail": "",
+            "role": "Webby",
+            "isFollowed": false
+          },
+          "canDelete": true
+        }
+      ]
+    },
+    {
+      "id": 5900,
+      "message": "Wahoooo!",
+      "time": 1465269336,
+      "parentId": 0,
+      "author": {
+        "id": 204,
+        "email": "lochlan@bigtincan.com",
+        "type": "people",
+        "name": "Lochlan M'Bride",
+        "thumbnail": "",
+        "role": "Webby",
+        "isFollowed": false
+      },
+      "canDelete": true,
+      "replies": [
+        {
+          "id": 5999,
+          "message": "a comment\nwith\nline\nbreaks!",
+          "time": 1465268748,
+          "parentId": 5900,
+          "author": {
+            "id": 204,
+            "email": "lochlan@bigtincan.com",
+            "type": "people",
+            "name": "Lochlan M'Bride",
+            "thumbnail": "",
+            "role": "Webby",
+            "isFollowed": false
+          },
+          "canDelete": true
+        }
+      ]
+    },
+    {
+      "id": 5901,
+      "message": "Please do not reply!",
+      "time": 1465279336,
+      "parentId": 0,
+      "author": {
+        "id": 204,
+        "email": "lochlan@bigtincan.com",
+        "type": "people",
+        "name": "Lochlan M'Bride",
+        "thumbnail": "",
+        "role": "Webby",
+        "isFollowed": false
+      },
+      "canDelete": true
+    }
+  ]

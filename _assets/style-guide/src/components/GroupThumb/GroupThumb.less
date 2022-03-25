@@ -1,0 +1,83 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package hub-web-app-v5
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../libs/less/btc-font-mixins.less";
+@import "../../libs/less/variables.less";
+
+.thumbnail() {
+  .icon-group();
+  border-radius:50%;
+  background-position: 50%;
+  background-size:cover;
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:before {
+    color:#fff;
+  }
+}
+
+.GroupThumb {
+  .thumbnail();
+
+  &.hasThumb {
+    &:before {
+      opacity: 0;  // hide group icon
+    }
+  }
+}
+
+.listThumbnail {
+
+  &:before {
+    font-size:32px;
+    line-height:1.45;
+  }
+  &[data-size=small]:before {
+    font-size: 2rem;
+  }
+  &[data-size=medium]:before {
+    font-size: 2.5rem;
+  }
+  &[data-size=large]:before {
+    font-size: 3.5rem;
+  }
+}
+
+.gridThumbnail {
+  margin:0 auto;
+  transition: all @timing-fast linear;
+
+  &:before {
+    font-size:128px;
+    line-height:1.5;
+  }
+  &:hover {
+    opacity:0.7;
+  }
+  &[data-size=small]:before {
+    font-size: 2rem;
+  }
+  &[data-size=medium]:before {
+    font-size: 3rem;
+  }
+  &[data-size=large]:before {
+    font-size: 4rem;
+  }
+}

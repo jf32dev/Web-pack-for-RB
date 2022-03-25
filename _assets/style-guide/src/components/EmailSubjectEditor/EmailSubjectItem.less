@@ -1,0 +1,275 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2016 BigTinCan Mobile Pty Ltd
+ * @author Rubenson Barrios <rubenson.barrios@bigtincan.com>
+ */
+
+@import "../../libs/less/btc-font-mixins.less";
+@import "../../libs/less/utilities.less";
+
+@timing: 350ms;
+
+.Wrapper {
+  //display:flex;
+  //flex-direction:column;
+  height:100%;
+
+  > div {
+    display: flex;
+
+    > div {
+      .overflow-ellipsis();
+      max-width: 180px;
+      vertical-align: top;
+      display: inline-block;
+      min-width: 120px;
+      height: 1.75rem;
+      border-radius: 3px;
+      border: 1px solid #e5e5e5;
+      background-color: #fff;
+      padding: 0;
+      margin: 0.2rem 0.2rem;
+
+      &:last-child {
+        > div > div:nth-child(3) {
+          padding-bottom: 2rem;
+        }
+      }
+    }
+  }
+
+  > ul, > ol {
+    min-height: 1.75rem;
+    margin:0 0.5rem;  // scrollbars outside
+    padding:0 0.5rem;
+    list-style:none;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    //overflow:auto;
+    transform: translate3d(0,0,0);  // prevents scroll breaking in chrome
+
+    > li {
+      vertical-align:top;
+      display: inline-block;
+      min-width: 120px;
+      height: 1.75rem;
+      border-radius: 3px;
+      border: 1px solid #e5e5e5;
+      background-color: #fff;
+      padding: 0;
+      margin: 0.2rem 0.2rem;
+
+      &:last-child {
+        > div > div:nth-child(3) {
+          padding-bottom: 2rem;
+        }
+      }
+    }
+  }
+}
+
+.Item {
+  position: relative;
+  transition: background @timing ease-out;
+  vertical-align: top;
+  display: inline-block;
+  //max-width: 100%;
+  min-width: 2rem;
+  height: 1.75rem;
+  border-radius: 3px;
+  border: 1px solid #e5e5e5;
+  background-color: #efefef;
+  padding: 0 1.5rem 0 0;
+  margin: 0.2rem 0.4rem;
+}
+
+.ItemInput {
+  background-color: #ffffff !important;
+
+  input {
+    max-width: 20rem;
+  }
+}
+
+.isDragging {
+  background-color: #ddd !important;
+  border-color: #ddd !important;
+  transition: background @timing ease-out;
+
+  div input {
+    background-color: #ddd !important;
+    border-color: #ddd;
+    transition: background @timing ease-out;
+  }
+}
+
+.removeBtn {
+  display: flex;
+  position: absolute;
+  right: 0.3rem;
+  top: 50%;
+  transform: translate(0, -50%);
+  color: #ff0000;
+  line-height: 1.8rem;
+  .icon-delete(0.5rem);
+  cursor: pointer;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.hiddenAddMore {
+  content: ' ';
+  position: absolute;
+  margin-right: 0;
+  cursor: text;
+  background: transparent;
+  right: -5.5rem;
+  width: 5.5rem;
+  height: 1.75rem;
+}
+.addMore {
+  z-index: 2;
+  /* content: ' '; */
+  position: absolute;
+  top: 0;
+  //right: -0.025rem;
+  left: 0;
+  width: 1rem;
+  height: 1rem;
+  color: var(--base-color);
+  cursor: pointer;
+  .icon-zoomIn-fill(1.3rem);
+
+  &:before {
+    top: 1.55rem;
+    position: absolute;
+    z-index: 4;
+  }
+  &:after {
+    z-index: 3;
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0.6rem;
+    height: 1.6rem;
+    width: 2px;
+    background-color: var(--base-color);
+  }
+}
+
+.handler {
+  content: ' ';
+  width: 0.5rem;
+  cursor: grab;
+  display: inline-block;
+  color: var(--secondary-text);
+  margin: 0 0.2rem 0 0.5rem;
+  //vertical-align: middle;
+  //line-height: 1.5rem;
+  .icon-dot-handle(0.65rem);
+
+  &:before {
+    height: 0.75rem;
+    vertical-align: middle;
+  }
+}
+
+// Drop menu styles
+.dropMenu {
+  line-height: 1.65rem;
+  color: var(--secondary-text);
+  width: 1rem;
+  display: inline-block;
+  text-align: center;
+  position: initial !important;
+  top: 0;
+  right: 1.3rem;
+  cursor: pointer;
+  .icon-triangle(0.6rem);
+
+  > div > div {
+    top: 1.75rem;
+  }
+}
+.VariableList {
+  > li {
+    padding: 0 !important;
+    border-bottom: 1px solid #fff;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}
+.VariableItem {
+  cursor: pointer;
+  text-align: left;
+  padding: 0.09rem 0.75rem;
+  background-color: #efefef;
+  font-weight: bold;
+  font-style: italic;
+  max-width: 10rem;
+  .overflow-ellipsis();
+
+  &:hover {
+    background-color: var(--light-base-color);
+  }
+}
+
+.CustomItem {
+  background-color: #ffffff;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.Selected {
+  background-color: #fcfcfc;
+}
+// .--
+
+.subjectBoxInput {
+  display: inline-block;
+  line-height: 1.55rem;
+  background-color: #fff;
+  color: var(--secondary-text);
+  vertical-align: inherit;
+
+  > div { vertical-align: middle; }
+  input {
+    background-color: #fff !important;
+    border-width: 0 !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    min-width: 1rem;
+  }
+}
+
+.subjectBoxLabel {
+  .overflow-ellipsis();
+  max-width: 180px;
+  padding: 0 0.2rem 0 0;
+  display: inline-block;
+  line-height: 1.3rem;
+  height: 1.55rem;
+  color: var(--secondary-text);
+  vertical-align: middle;
+  user-select:none;
+}
+
+.hidden{
+  display: none;
+}

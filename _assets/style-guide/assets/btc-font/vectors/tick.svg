@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="512px" height="512px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>tick</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="tick" sketch:type="MSArtboardGroup" fill="#000000">
+            <g id="icon-tick" sketch:type="MSLayerGroup" transform="translate(0.000000, 64.000000)">
+                <path d="M438.641206,0.416432432 L204.226251,236.811243 L73.358794,104.837189 L0.586613065,178.222703 L204.227538,383.584865 L511.413387,73.8032432 L438.641206,0.416432432 Z" id="Shape" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

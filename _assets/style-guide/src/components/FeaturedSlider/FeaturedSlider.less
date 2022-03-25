@@ -1,0 +1,86 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../libs/less/btc-font-mixins.less";
+@import "../../libs/less/variables.less";
+
+@slideHeight: 346px;
+
+.FeaturedSlider {
+  user-select: none;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  height:450px;
+  transform: translate3d(0,0,0);
+}
+
+.control() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position:absolute;
+  top:0;
+  height:@slideHeight;
+
+  z-index:100;
+  cursor:pointer;
+  color:#fff;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition:all @timing-fast ease-in;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.prev {
+  .control();
+  .icon-dock(48px);
+  left:0;
+
+  &:before {
+    transform:rotate(90deg);
+  }
+}
+
+.next {
+  .control();
+  .icon-dock(48px);
+  right:0;
+
+  &:before {
+    transform:rotate(-90deg);
+  }
+}
+
+.track {
+  top:0;
+  left:0;
+  position: relative;
+  transform: translate3d(0,0,0);
+}
+
+.listItem {
+  float:left;
+  margin-right: 1rem;
+}

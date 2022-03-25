@@ -1,0 +1,204 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../libs/less/btc-font-mixins.less";
+@import "../../libs/less/utilities.less";
+@import "../../libs/less/variables.less";
+
+@tabBg: #eee;
+@tabBgHover: #f4f4f4;
+@activeTabBg: #f8f8f8;
+@activeTabBHoverBg: #f8f8f8;
+
+@tabBg-dark: #222;
+@tabBgHover-dark: #555;
+@activeTabBg-dark: #333;
+@activeTabBHoverBg-dark: @secondary-text;
+@divider-color-dark:#555;
+@secondary-text-dark:#aaa;
+
+.ViewerTabs {
+  display:flex;
+  align-items:stretch;
+}
+
+// Dark theme
+.isDark {
+  .TabItem {
+    border-right:solid 1px @divider-color-dark;
+    background:@tabBg-dark;
+
+    &:hover {
+      background:@tabBgHover-dark;
+    }
+  }
+  .activeTabItem {
+    background:@activeTabBg-dark;
+
+    &:hover {
+      background:@activeTabBHoverBg-dark;
+    }
+  }
+  .title {
+    color:#eee;
+  }
+
+  .closeTab:hover {
+    color:#eee !important;
+  }
+  .TabControl {
+    color:#eee;
+    background:@activeTabBg-dark;
+  }
+  .prevControl {
+    border-right:solid 1px @divider-color-dark;
+  }
+  .nextControl {
+    border-left:solid 1px @divider-color-dark;
+  }
+  .note {
+    color:@secondary-text-dark;
+  }
+}
+
+.TabControl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width:45px;
+  max-width:45px;
+  cursor:pointer;
+  color:#aaa;
+  transition:color @timing-medium ease-out;
+
+  &:hover {
+    color:@base-color;
+  }
+}
+.prevControl {
+  .icon-prev(16px);
+  border-right:solid 1px @dividerColor;
+  border-right-color: var(--divider-color);
+}
+.nextControl {
+  .icon-next(16px);
+  border-left:solid 1px @dividerColor;
+  border-left-color: var(--divider-color);
+}
+.disabledControl {
+  pointer-events:none;
+  opacity:0.7;
+}
+
+.tabListWrap {
+  width:100%;
+  overflow:hidden;
+}
+
+.tabList {
+  padding:0;
+  margin:0;
+  list-style:none;
+  display:flex;
+  flex:0 1 auto;
+  transition: @timing-medium ease-in-out;
+}
+
+.TabItem {
+  position:relative;
+  margin:0;
+  padding:0.5rem 0;
+  text-align:center;
+  flex:1 1 auto;
+  transition:background @timing-medium ease-out;
+  border-right:solid 1px #ddd;
+  border-right-color: var(--divider-color);
+  background:@tabBg;
+  min-height: 2.5rem;
+
+  &:last-child {
+    border-right:none;
+  }
+
+  &:hover {
+    background:@tabBgHover;
+  }
+}
+
+.activeTabItem {
+  background:@activeTabBg;
+
+  &:hover {
+    background:@activeTabBHoverBg;
+  }
+
+  .closeTab {
+    &:before {
+      color:@base-color;
+    }
+  }
+}
+
+.title, .note {
+  max-width:70%;
+  margin:0 auto;
+  padding:none;
+  border:none;
+  display:block;
+  .overflow-ellipsis();
+}
+
+.title {
+  font-size:0.9rem;
+  color:@primary-text;
+}
+
+.note {
+  display:none;  /* hidden until we have something to show here */
+  font-size:0.75rem;
+  margin-top:0.1rem;
+  color:@secondary-text;
+}
+
+.loading {
+  position:absolute;
+  left:0;
+  bottom:0;
+  height:0.25rem;
+  color:@base-color;
+}
+
+.closeTab {
+  .icon-close(1rem);
+  position:absolute;
+  top:50%;
+  left:0.5rem;
+  transform:translateY(-50%);
+  cursor:pointer;
+  padding:0.5rem;
+  user-select:none;
+  transition:color @timing-fast ease-in;
+
+  &:before {
+    font-weight:bold;
+    color:#aaa;
+  }
+
+  &:hover {
+    color:#555 !important;
+  }
+}

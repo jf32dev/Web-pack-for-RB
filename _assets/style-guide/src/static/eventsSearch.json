@@ -1,0 +1,133 @@
+[{
+  "id": 123,
+  "name": "Meeting test 1",
+  "start": 1457934335,
+  "end": 1458014411,
+  "allDay": false,
+  "timezone": "Australia/Sydney",
+  "type": "meeting",
+  "searchResult": {
+    "name": "<em>test</em>"
+  },
+  "story": {
+    "id": 1000853133,
+    "permId": 1000329825,
+    "type": "story",
+    "name": "does it blend!!?! !!",
+    "thumbnail": "",
+    "colour": "#e202ae"
+  }
+}, {
+  "id": 123,
+  "type": "meeting",
+  "name": "Testing events",
+  "start": 1458356783,
+  "end": 1458443183,
+  "allDay": true,
+  "timezone": "Australia/Sydney",
+  "searchResult": {
+    "name": "<em>Test</em>ing events"
+  },
+  "story": {
+    "id": 1000853134,
+    "permId": 1000329825,
+    "type": "story",
+    "name": "does it blend!!?! !!",
+    "thumbnail": "",
+    "colour": "#e202ae"
+  }
+}, {
+  "id": 123,
+  "name": "Some data to test meetingTitle",
+  "type": "meeting",
+  "start": 1458702388,
+  "end": 1458709200,
+  "allDay": false,
+  "timezone": "Australia/Sydney",
+  "searchResult": {
+    "name": "Some data to <em>test</em> meetingTitle"
+  },
+  "story": {
+    "id": 1000868921,
+    "permId": 1000330010,
+    "type": "story",
+    "name": "Test video links",
+    "thumbnail": "",
+    "colour": "#4c4c4c"
+  }
+}, {
+  "id": 123,
+  "name": "More meetingTitle",
+  "type": "meeting",
+  "start": 1458443183,
+  "end": 1458457200,
+  "allDay": false,
+  "timezone": "Australia/Sydney",
+  "searchResult": {
+    "name": "More meeting<em>Title</em>"
+  },
+  "story": {
+    "id": 1000883947,
+    "permId": 1000387174,
+    "type": "story",
+    "name": "Testing file pairs",
+    "thumbnail": "",
+    "colour": "#0092ec"
+  }
+}, {
+  "id": 123,
+  "name": "Event Data",
+  "start": 1458443183,
+  "end": 1459249200,
+  "allDay": false,
+  "timezone": "Australia/Sydney",
+  "searchResult": {
+    "name": "Event <em>Data</em>"
+  },
+  "story": {
+    "id": 1000853143,
+    "permId": 1000548160,
+    "type": "story",
+    "name": "Story Description",
+    "thumbnail": "",
+    "colour": "#e202ae"
+  }
+}, {
+  "id": 123,
+  "name": "Event meetingTitle test",
+  "type": "meeting",
+  "start": 1458443183,
+  "end": 1458443183,
+  "allDay": false,
+  "timezone": "Australia/Sydney",
+  "searchResult": {
+    "name": "Event meetingTitle <em>test</em>"
+  },
+  "story": {
+    "id": 1000839381,
+    "permId": 1000574840,
+    "type": "story",
+    "name": "Can't upload btcf files...?",
+    "thumbnail": "",
+    "colour": "#ffd400"
+  }
+}, {
+  "id": 123,
+  "name": "Event meetingTitle 3",
+  "type": "meeting",
+  "start": 1458443183,
+  "end": 1458443183,
+  "allDay": false,
+  "timezone": "Australia/Sydney",
+  "searchResult": {
+    "name": "Event meetingTitle 3 <em>test</em>"
+  },
+  "story": {
+    "id": 1000833646,
+    "permId": 1000538775,
+    "type": "story",
+  "name": "testing cloud sharing status",
+  "thumbnail": "",
+  "colour": "#f26724"
+  }
+}]

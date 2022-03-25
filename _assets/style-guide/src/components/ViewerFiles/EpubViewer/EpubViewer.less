@@ -1,0 +1,68 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Jason Huang <jason.huang@bigtincan.com>
+ */
+
+@import "../../../libs/less/btc-font-mixins.less";
+@import "../../../libs/less/variables.less";
+
+@iconSize: 20px;
+@animation-speed: @timing-slow;
+
+.EpubViewer {
+  height: 100%;
+  margin: 1rem;
+  overflow: hidden;
+
+  div[title=ViewerToolbar] {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s @animation-speed, opacity @animation-speed linear;
+  }
+
+  &:hover {
+    div[title=ViewerToolbar] {
+      visibility: visible;
+      opacity: 0.8;
+      transition: opacity @animation-speed linear;
+    }
+  }
+
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    height: 6px;
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: rgba(0,0,0,.3);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.3);
+  }
+}
+
+.fullScreen {
+  height: 100%;
+  width: 100%;
+}
+
+.epub {
+  transform-origin: top left;
+}
+
+.center{
+  display: flex;
+  align-items: center;
+}

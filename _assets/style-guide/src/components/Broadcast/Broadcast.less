@@ -1,0 +1,69 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Jason Huang <jason.huang@bigtincan.com>
+ */
+
+@import "../../libs/less/variables.less";
+
+.centerMiddle {
+  //padding: 6rem 3rem;
+  display: flex;
+  .iframeSize();
+}
+
+.hidden {
+  display: none;
+}
+
+.iframeSize {
+  //width: 100vw;
+  //height: 100vh;
+}
+
+.broadcastIframe {
+  height: 100vh;
+}
+
+.Broadcast {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.mouseMoveChecker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+}
+
+.fadeIn {
+  opacity: 1;
+}
+
+.fadeOut {
+  transition: opacity .25s;
+  opacity: 0;
+}
+
+.watermark {
+  position:fixed;
+  width:100%;
+  height:100%;
+  z-index:1;
+  pointer-events:none;
+}

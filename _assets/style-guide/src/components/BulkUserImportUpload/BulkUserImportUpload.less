@@ -1,0 +1,135 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2019 BigTinCan Mobile Pty Ltd
+ * @author Olivia Mo <olivia.mo@bigtincan.com>
+ */
+
+@import "../../libs/less/variables.less";
+@import "../../libs/less/btc-font-mixins.less";
+
+.bulkUserImportUploadContainer {
+  margin-top: 1rem;
+
+  p {
+    padding: 1rem;
+    margin: 0;
+    color: var(--secondary-text);
+  }
+
+  a {
+    margin: 1rem;
+    margin-right: 0;
+    cursor: pointer;
+  }
+}
+
+p.downloadSampleCSV {
+  color: var(--secondary-text);
+  padding-bottom: 0.5rem;
+}
+
+.sampleContainer {
+  margin: 0 1rem;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: var(--divider-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  p {
+    color: var(--primary-text);
+    padding: 0.5rem 0;
+  }
+
+  .downloadIcon {
+    .icon-download(20px);
+    cursor:pointer;
+    vertical-align:middle;
+    transition: all @timing-fast linear;
+    padding-right: 1rem;
+    color: var(--base-color);
+  }
+}
+
+.blankslateMessage div > p {
+  margin: 0 !important;
+  padding-top: 0;
+}
+
+.browseButton {
+  font-size: 14px !important;
+  padding: 0.2rem 0.8rem;
+  position: relative;
+  bottom: 1rem;
+}
+
+.thumbnailDropzone {
+  border: 1px solid;
+  border-color: #f7f7f7;
+}
+
+.progressBar {
+  padding: 1rem;
+}
+
+/* Dropzones */
+.dropzone() {
+  overflow: hidden;
+  background-color: #f7f7f7;
+  border-radius: 7px;
+  margin: auto;
+  position: relative;
+  text-align:center;
+  transition: background @timing-fast linear;
+
+  svg, div[data-category="csv"] {
+    transition: all @timing-fast linear;
+  }
+}
+
+.dropzoneActive() {
+  background:rgba(100, 100, 100, 0.15);
+
+  svg, div[data-category="csv"] {
+    transform:scale(1.05);
+  }
+}
+
+.dropzoneReject() {
+  cursor:not-allowed;
+  border-color: #ee0000;
+}
+
+/* thumbnail dropzone */
+.thumbnailDropzone, .containerWrap {
+  .dropzone();
+  padding: 3rem;
+  margin: 0 1rem;
+}
+.thumbnailDropzoneActive {
+  .dropzoneActive();
+  cursor: pointer;
+  border-color: #24a62b;
+}
+.thumbnailDropzoneReject {
+  .dropzoneReject();
+  border: 1px solid;
+  border-color: #ee0000;
+  opacity: 0.5;
+}
+
+.thumbnailDropzone .blankslateWrap > span > div {
+  margin: 0;
+}

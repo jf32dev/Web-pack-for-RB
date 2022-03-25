@@ -1,0 +1,93 @@
+pipeline {
+    agent any
+
+    parameters {
+        choice(
+            name: 'DEPLOY_ENV',
+            choices: '\ntmo-qa\ntmo-preview\ntmo-prod',
+            description: 'Environment to which tag will be released'
+        )
+    }
+
+    options {
+        timeout(time: 2, unit: 'HOURS')
+        buildDiscarder(
+            logRotator(
+                artifactDaysToKeepStr: '',
+                artifactNumToKeepStr: '10',
+                daysToKeepStr: '',
+                numToKeepStr: '10'
+            )
+        )
+    }
+
+    stages {
+        stage('Setup Environment') {
+            steps {
+                script {
+                    btc.initEnvironment()
+                }
+            }
+        }
+
+        stage('Test') {
+            agent {
+                kubernetes {
+                    yamlFile 'scripts/TestPod.yaml'
+                }
+            }
+            steps {
+                container('test') {
+                    sh "${WORKSPACE}/scripts/test.sh"
+                }
+            }
+        }
+
+        stage('Deploy') {
+            when { anyOf { branch 'master'; branch 'preview'; branch 'develop'; } }
+            agent {
+                kubernetes {
+                    yamlFile 'scripts/KanikoPod.yaml'
+                }
+            }
+            steps {
+                container('kaniko') {
+                    sh "${WORKSPACE}/scripts/kaniko.sh"
+                }
+
+                container('curl') {
+                    sh 'apk --update add curl'
+                    sh 'which curl'
+                    sh "${WORKSPACE}/scripts/salt_deploy.sh"
+                }
+            }
+        }
+
+        stage('Post integration tests') {
+            when { anyOf { branch 'preview' } }
+
+            parallel {
+                stage('Run Cypress tests') {
+                    steps {
+                        build job: 'hub-web-v5-cypress-tests-info/develop'
+                    }
+                }
+
+                stage('Run Postman tests') {
+                    steps {
+                        build job: 'hub-web-app-v5-postman-tests/develop'
+                    }
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            script {
+                btc.notifySlack()
+            }
+        }
+    }
+}
+

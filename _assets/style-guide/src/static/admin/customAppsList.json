@@ -1,0 +1,40 @@
+[
+  {
+    "id": 13,
+    "name": "33c4e2c8-b581-446d-9dc0-1a2433ca377b-dafdasfadsfdasfadsfdasfdfdasfdfasd",
+    "authMethod": "api_key",
+    "createdAt": 1537271249,
+    "oauthClientId": "1.e3c3b1da0848ce060ed25647ff963ce0",
+    "oauthScopes": [
+      "story_w",
+      "story_r"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Audit Server",
+    "authMethod": "api_key",
+    "createdAt": 1536222550,
+    "oauthClientId": "pa_i-love-api_aOd9qJ",
+    "oauthScopes": [
+      "story_r",
+      "story_w",
+      "channel_r",
+      "channel_w",
+      "test_r",
+      "test_w",
+      "form_r",
+      "history_w"
+    ]
+  },
+  {
+    "id": 1,
+    "name": "Salesforce Plugin",
+    "authMethod": "authorization",
+    "createdAt": 1536222138,
+    "oauthClientId": "bigtincan_sf_plugin",
+    "oauthScopes": [
+      "salesforce_plugin"
+    ]
+  }
+]

@@ -1,0 +1,158 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../libs/less/btc-font-mixins.less";
+@import "../../libs/less/variables.less";
+
+.Text {
+  position:relative;
+  vertical-align:top;
+
+  /* icon */
+  &:before {
+    position:absolute;
+    color:var(--secondary-text);
+    font-size:20px;
+    left: 0.75rem;
+    bottom: 0.55rem;
+  }
+
+  label {
+    cursor: pointer;
+    color:var(--secondary-text);
+    margin-bottom:0.25rem;
+  }
+
+  span.plainText,
+  input {
+    background:@inputBg;
+    border:solid 1px transparent;
+    border-radius: 3px;
+    color:var(--primary-text);
+    display:block;
+    margin:0 0 0.75rem;
+    padding: 0.5rem 0.75rem;
+    transition: background @timing-fast ease-in;
+    width:100%;
+
+    &:focus {
+      outline-color:var(--base-color);
+      outline-width:3px;
+    }
+
+    &::-webkit-input-placeholder {
+      color: @inputPlaceholderText;
+    }
+
+    /* Chrome, Safari, Edge, Opera */
+    &[type=number]::-webkit-outer-spin-button,
+    &[type=number]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  /* Firefox */
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+}
+
+.autosize {
+  &:before {
+    bottom: 1.3rem;
+  }
+}
+
+.disabled {
+  cursor:not-allowed !important;
+  user-select:none;
+
+  * {
+    cursor:not-allowed !important;
+    user-select:none;
+  }
+
+  .clear {
+    pointer-events: none;
+  }
+}
+
+.inline {
+  display:inline-block;
+
+  /* inlines next to one another */
+  &+.inline {
+    margin-left:1rem;
+  }
+
+  label {
+    display:inline-block;
+    margin-right:1rem;
+    margin-bottom:0;
+  }
+
+  input {
+    display:inline-block;
+  }
+}
+
+.hasIcon {
+  input {
+    padding-left: 2.25rem;
+  }
+}
+
+.hasClear {
+  input {
+    padding-right: 2rem;
+  }
+}
+
+.hasCopy {
+  input {
+    padding-right: 3.5rem;
+  }
+}
+
+.hasWarning {
+  input {
+    padding-right: 3.5rem;
+  }
+}
+
+.clear {
+  .icon-close(14px);
+}
+
+.copy, .clear, .warning {
+  position: absolute;
+  right: 0.25rem;
+  bottom: 0.5rem;
+  cursor: pointer !important;
+  color: var(--secondary-text);
+  padding: 0 0.5rem;
+
+  &:hover {
+    color:var(--primary-text);
+  }
+}
+
+.warning {
+  .icon-warning(1rem);
+  color: #ffdd33 !important;
+}

@@ -1,0 +1,311 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../libs/less/variables.less";
+
+.Btn {
+  background-color: #fff;
+  background-color: var(--background-color);
+  display: inline-block;
+  position: relative;
+
+  border: solid 1px;
+  color: var(--base-color);
+  border-color: var(--base-color);
+
+  text-align: center;
+  padding: 0.15rem 0.5rem;
+  margin: 0;
+  height: auto;
+  cursor: pointer;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: color @timing-fast linear, background-color @timing-fast linear,
+    border-color @timing-fast linear;
+  user-select: none;
+
+  > * {
+    vertical-align: middle;
+  }
+
+  /* Icon size */
+  &:before {
+    font-size: 13px;
+    vertical-align: initial;
+  }
+
+  /* Icon position */
+  &:not(.iconOnly):before {
+    margin: 0 0.5rem 0 0;
+  }
+
+  /* Browser states */
+  &:hover:not(.disabled):not(.loading) {
+    text-decoration: none;
+  }
+  &:active:not(.disabled):not(.loading) {
+    background-color: var(--base-color);
+    color: var(--base-text);
+  }
+  &:focus {
+    outline: none;
+  }
+
+  /* Space between adjacent buttons */
+  & + .Btn {
+    margin-left: 1.25rem;
+  }
+
+  /* Disabled states */
+  &[disabled],
+  &.disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+  &[disabled]:not(.loading),
+  &.disabled:not(.loading) {
+    background-color: #999;
+    background-color: var(--disabled-color);
+    border-color: #999;
+    border-color: var(--disabled-color);
+    color: #fff;
+    color: var(--base-text);
+  }
+
+  /* Loading */
+  &.loading {
+    opacity: 0.7;
+    cursor: wait;
+  }
+
+  /* Small style */
+  &.small:not(.iconOnly) {
+    padding: 0.12rem 0.55rem;
+    font-size: 0.875rem;
+
+    /* icon */
+    &:before {
+      vertical-align: middle;
+      margin: 0 0.4rem 0 0;
+    }
+
+    /* Space between adjacent buttons */
+    & + .Btn.small {
+      margin-left: 1rem;
+    }
+  }
+
+  /* Large style */
+  &.large {
+    padding: 0.35rem 1rem;
+    font-size: 1.05rem;
+    min-width: 8.125rem;
+
+    /* Icon size */
+    &:before {
+      font-size: 16px;
+    }
+
+    /* Icon position */
+    &:not(.iconOnly):before {
+      margin: 0 1.1rem 0 0;
+    }
+
+    &.btc-btn-counter:after {
+      margin-left: 15px;
+    }
+  }
+
+  /* Inverted style */
+  &.inverted {
+    background-color: var(--base-color);
+    color: var(--base-text);
+
+    &:hover:not(.disabled):not(.loading) {
+      opacity: 0.8;
+    }
+
+    &:active:not(.disabled):not(.loading) {
+      background-color: var(--light-base-color);
+      color: var(--base-color);
+    }
+
+    &[disabled],
+    &.disabled {
+      opacity: 1;
+    }
+  }
+
+  /* Warning/Delete-1 style */
+  &.warning {
+    background-color: var(--error-color);
+    border-color: var(--error-color);
+    color: #fff;
+
+    &:hover:not(.disabled):not(.loading) {
+      color: #f1f1f1;
+    }
+
+    &:active:not(.disabled):not(.loading) {
+      color: var(--error-color);
+      background-color: #fff;
+    }
+
+    /* Inverted warning/delete style */
+    &.inverted {
+      background-color: #fff;
+      border-color: var(--destructive-color);
+      color: var(--destructive-color);
+
+      &:hover:not(.disabled):not(.loading) {
+        color: rgb(255, 88, 88);
+      }
+
+      &:active:not(.disabled):not(.loading) {
+        color: #fff;
+        background-color: var(--error-color);
+      }
+
+      &[disabled],
+      &.disabled {
+        color: var(--disabled-color);
+      }
+    }
+  }
+
+  /* Delete-2 button style */
+  &.remove {
+    background-color: var(--destructive-color);
+    border-color: var(--destructive-color);
+    color: #fff;
+
+    &:hover:not(.disabled):not(.loading) {
+      color: #f1f1f1;
+    }
+
+    &:active:not(.disabled):not(.loading) {
+      color: var(--destructive-color);
+      background-color: #fff;
+    }
+
+    /* Inverted warning/delete style */
+    &.inverted {
+      background-color: #fff;
+      border-color: var(--destructive-color);
+      color: var(--destructive-color);
+
+      &:hover:not(.disabled):not(.loading) {
+        color: rgb(255, 88, 88);
+      }
+
+      &:active:not(.disabled):not(.loading) {
+        color: #fff;
+        background-color: var(--destructive-color);
+      }
+
+      &.disabled {
+        color: #BDBDBD;
+        opacity: 1;
+        border-color: #BDBDBD;
+      }
+    }
+  }
+
+  /* Border-less style */
+  &.borderless {
+    border: none;
+
+    &:hover:not(.disabled):not(.loading) {
+      background-color: var(--light-base-color);
+    }
+  }
+
+  /* Alternate style */
+  &.alt {
+    color: var(--secondary-text);
+    background-color: #eeeeee;
+    border-color: #eeeeee;
+
+    &:hover:not(.disabled):not(.loading) {
+      background-color: #e1e1e1;
+      border-color: #e1e1e1;
+    }
+    &:active:not(.disabled):not(.loading) {
+      background-color: var(--secondary-text);
+    }
+
+    /* Inverted alt style */
+    &.inverted {
+      color: var(--secondary-text);
+      background-color: #fff;
+      border-color: #aaa;
+
+      &.disabled {
+        color: #bdbdbd;
+        border: solid 1px #bdbdbd;
+      }
+    }
+
+    /* secondary alt style */
+    &.secondary {
+      color: var(--base-color);
+      background-color: #fff;
+      border-color: var(--base-color);
+
+      &:hover:not(.disabled) {
+        background-color: #fff;
+        border-color: var(--base-color);
+      }
+
+      &.disabled {
+        color: #BDBDBD;
+        border: solid 1px #BDBDBD;
+        opacity: 1;
+      }
+    }
+
+    /* borderless alt style */
+    &.borderless {
+      color: var(--base-color);
+      background-color: #fff;
+
+      &:hover:not(.disabled):not(.loading) {
+        background-color: var(--light-base-color);
+      }
+
+      &.disabled {
+        color: #BDBDBD;
+        opacity: 1;
+      }
+    }
+  }
+
+  /* Counter in button */
+  &.counter {
+    &:after {
+      content: attr(data-count);
+      display: inline-block;
+      padding: 2px 5px;
+      margin-left: 0.5rem;
+      font-size: 11px;
+      line-height: 1;
+      color: var(--secondary-text);
+      background-color: #eee;
+      border-radius: 20px;
+    }
+  }
+}

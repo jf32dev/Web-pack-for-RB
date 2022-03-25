@@ -1,0 +1,11 @@
+.idea
+.gitattributes
+.githash
+*.DS_Store
+node_modules/
+npm-debug.log
+build/
+src/static/sample_btcp/
+.vscode/
+.history/
+TODO.md

@@ -1,0 +1,57 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package hub-web-app-v5
+ * @copyright 2010-2017 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../less/_variables.less";
+
+.StoryEditTags {
+  padding-bottom:1rem;
+  border-bottom:solid 1px @dividerColor;
+  border-bottom-color: var(--divider-color);
+}
+
+.tagSearch {
+  margin:0 0 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  > div {
+    margin-bottom:0.5rem;
+  }
+}
+
+.tagList {
+  align-items: center;
+  margin-right:1rem;
+
+  input { margin: 0; }
+}
+
+.suggestedTags {
+  display:flex;
+  align-items:center;
+  margin:0 0 1rem;
+  min-height: 2.75rem;
+
+  h5 {
+    margin:0 1rem 0 0;
+    font-weight:100;
+  }
+  p {
+    color: var(--secondary-text);
+  }
+}

@@ -1,0 +1,267 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../libs/less/btc-font-mixins.less";
+@import "../../libs/less/transitions.less";
+@import "../../libs/less/variables.less";
+
+// shared with ChatIncomingCall.less
+@denyColor: #ff3b30;
+@iconSize: 46px;
+
+@publisherWidth: 12rem;
+@publisherHeight: @publisherWidth * (2/3);
+
+// strike-through to indicate disabled/mute
+.disabled-line(@top: 0.55rem, @left: 0.35rem) {
+  &:after {
+    position:absolute;
+    top:@top;
+    left:@left;
+
+    content:'';
+    border:solid 1px #000;
+    background:#fff;
+    height: 0.2rem;
+    width: 1.85rem;
+
+    transform:rotate(58deg);
+  }
+}
+
+.ChatRoom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display:flex;
+
+  // dev-only - display current status
+  /*
+  &:before {
+    position:absolute;
+    bottom:0;
+    left:0;
+    background:#00cc00;
+    color:#fff;
+    content:attr(data-status);
+    z-index:10;
+    padding:0 0.25rem;
+  }
+  */
+
+  /** Media Query breakpoints */
+  @media @mobile {
+    .publisher {
+      display:none;
+    }
+  }
+  @media @tablet {
+    .publisher {
+      width:10rem;
+      height:7.5rem;
+    }
+  }
+  @media @desktop {
+
+  }
+  @media @desktop-xl {
+
+  }
+}
+
+.callWrap {
+  background-color: var(--primary-text);
+  display:flex;
+  flex-direction:row;
+  flex: 1 1 auto;
+  z-index:1;
+
+  > div {
+    min-height: 15rem;
+    flex: 1 1 auto;
+    position:relative;
+  }
+}
+
+.incomingView {
+  height:100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction:column;
+}
+
+.inviteUser {
+  color:#fff;
+  margin:0;
+  width:20rem;
+  font-size: 120%;
+}
+
+.userStatus {
+  text-align:center;
+  color:@secondary-text;
+}
+
+.callView {
+  position:relative;
+}
+
+/** local video */
+.publisherView {
+  position:absolute;
+  bottom:0.75rem;
+  right:0.75rem;
+  color:#fff;
+  z-index:1;
+
+  min-width: @publisherWidth;
+  min-height: @publisherHeight;
+}
+
+/** remote video */
+.subscriberView {
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  height:100%;
+  color:#fff;
+}
+
+/** controls */
+.uiControls, .callControls {
+  color:#fff;
+  margin:0;
+  padding:0;
+  list-style:none;
+  z-index: 2;
+
+  li {
+    margin:0;
+    cursor:pointer;
+  }
+}
+
+/** ui controls */
+.uiControls {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:2.5rem;
+
+  //background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.48), rgba(0, 0, 0, 0.0));
+
+  li {
+    position:absolute;
+    top:0.75rem;
+  }
+}
+
+.fullscreenControl {
+  .icon-expand(1.25rem);
+  left:0.75rem;
+}
+
+.messagesControl {
+  .icon-comment(1.25rem);
+  transform: scale(-1, 1);
+  right:0.75rem;
+}
+
+/** call controls */
+.callControls {
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  height:3.75rem;
+
+  //background-image: linear-gradient(to top, rgba(0, 0, 0, 0.48), rgba(0, 0, 0, 0.0));
+
+  display:flex;
+  align-items: center;
+  justify-content: center;
+
+  li {
+    padding:0 0.5rem;
+    margin:0 0.5rem;
+  }
+}
+
+.audioControl, .videoControl {
+  position:relative;
+  width:2.5rem;
+  text-align: center;
+
+  // fade in disabled line
+  &:after {
+    opacity:0;
+    transition:opacity 150ms linear;
+  }
+
+  &.disabled:after {
+    opacity:1;
+  }
+
+  &.unavailable {
+    cursor:not-allowed;
+    opacity:0.5;
+  }
+}
+
+.audioControl {
+  .icon-microphone-fill();
+  .disabled-line();
+}
+
+.disconnectControl {
+  .icon-phone-fill();
+  background:@denyColor;
+  border-radius:50%;
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  width:@iconSize;
+  height:@iconSize;
+
+  &:before {
+    transform:rotate(135deg);
+  }
+}
+
+.videoControl {
+  .icon-camcorder-fill();
+  .disabled-line(@top: 0.6rem, @left: 0.15rem);
+}
+
+/** messages */
+.messagesView {
+  flex: 0 0 auto;
+  display:flex;
+  text-align:center;
+  overflow:hidden;
+}

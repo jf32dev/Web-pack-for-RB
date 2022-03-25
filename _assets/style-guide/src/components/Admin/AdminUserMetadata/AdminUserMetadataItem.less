@@ -1,0 +1,117 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2019 BigTinCan Mobile Pty Ltd
+ * @author Rubenson Barrios <rubenson.barrios@bigtincan.com>
+ */
+@import "../../../libs/less/variables.less";
+@import "../../../libs/less/btc-font-mixins.less";
+@import "../../../libs/less/utilities.less";
+@import "../../../libs/less/tooltips.less";
+
+.AdminUserMetadataItem {
+  display: flex;
+  min-width: 42rem;
+  border-bottom: 1px solid;
+  border-color: var(--divider-color);
+
+  > div {
+    box-sizing: border-box;
+    flex-grow: 1;
+    width: 100%;  // Default to full width
+    padding: 0.4rem 1rem;
+    align-self: center;
+
+    &:first-child {
+      width: 30%; min-width: 14.5rem;
+      input { margin-bottom: 0; }
+      > span {
+        padding-top: 0.5rem;
+        width: 0.75rem;
+        text-align: right;
+      }
+    }
+    &:nth-child(2) { width: 30%; min-width: 12rem; }
+    &:nth-child(3) { width: 15%; max-width: 8rem; text-align: center; }
+    &:nth-child(4) { width: 15%; max-width: 8rem; text-align: center; }
+    &:nth-child(5) { width: 10%; text-align: right; }
+  }
+}
+
+.tableIndex {
+  display: inline-block;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.editBtn {
+  color: var(--base-color);
+  font-size: 1.2rem;
+
+  &:before {
+    font-size: 1.2rem;
+  }
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+}
+.deleteBtn {
+  font-size: 1.2rem;
+  color: #ff0000;
+
+  &:before { transform: rotate(45deg); }
+  &:hover {
+    opacity: 0.6;
+    cursor: pointer;
+  }
+}
+.removeMsg {
+  text-align: center;
+  max-width: 70%;
+  margin: auto;
+}
+
+.valuesWrapper {
+  display: flex;
+
+  > div {
+    flex: 1 auto;
+
+    display: inline-block;
+    .overflow-ellipsis();
+    //-webkit-line-clamp: 1;
+    //-webkit-box-orient: vertical;
+    overflow: hidden;
+    padding-right: 1rem;
+  }
+  > span {
+    align-self: center;
+  }
+  > div > span {
+    display: inline-block;
+    vertical-align: middle;
+    align-self: center;
+    line-height: 2rem;
+  }
+}
+
+.placeholder {
+  color: var(--secondary-text);
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.inputError input[type=text] {
+  border: 1px solid #ff0000;
+}

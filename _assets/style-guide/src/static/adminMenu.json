@@ -1,0 +1,106 @@
+[
+  {
+    "name": "general",
+    "type": "system",
+    "options": [
+      {"name": "general"},
+      {"name": "customization"},
+      {"name": "custom-welcome"}
+    ]
+  },
+  {
+    "name": "crm-integration",
+    "type": "system",
+    "options": []
+  },
+  {
+    "name": "custom-naming-convention",
+    "type": "system",
+    "options": []
+  },
+  {
+    "name": "home-screens",
+    "type": "system",
+    "options": []
+  },
+  {
+    "name": "security",
+    "type": "system",
+    "options": [
+      {"name": "general"},
+      {"name": "authentication"},
+      {"name": "application-restrictions"},
+      {"name": "dns"},
+      {"name": "devices"},
+      {"name": "password-rules"}
+    ]
+  },
+  {
+    "name": "structure",
+    "type": "system",
+    "options": []
+  },
+  {
+    "name": "web-sites",
+    "type": "system",
+    "options": []
+  },
+  {
+    "name": "users",
+    "type": "users",
+    "options": []
+  },
+  {
+    "name": "configuration-bundles",
+    "type": "users",
+    "options": []
+  },
+  {
+    "name": "custom-user-metadata",
+    "type": "users",
+    "options": []
+  },
+  {
+    "name": "gamification",
+    "type": "users",
+    "options": [
+      {"name": "social-iq-algorithm"},
+      {"name": "social-iq-badges"},
+      {"name": "content-iq-algorithm"},
+      {"name": "content-iq-badges"}
+    ]
+  },
+  {
+    "name": "user-self-enrolment",
+    "type": "users",
+    "options": []
+  },
+  {
+    "name": "stories",
+    "type": "content",
+    "options": [
+      {"name": "general"},
+      {"name": "archiving"},
+      {"name": "story-defaults"},
+      {"name": "metadata"}
+    ]
+  },
+  {
+    "name": "email",
+    "type": "content",
+    "options": [
+      {"name": "templates"},
+      {"name": "sender-information"},
+      {"name": "smtp-server-setup"}
+    ]
+  },
+  {
+    "name": "files",
+    "type": "content",
+    "options": [
+      {"name": "file-uploads"},
+      {"name": "cloud-services"},
+      {"name": "sync-engine"}
+    ]
+  }
+]

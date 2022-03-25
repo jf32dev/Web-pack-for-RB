@@ -1,0 +1,167 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2019 BigTinCan Mobile Pty Ltd
+ * @author Olivia Mo <olivia.mo@bigtincan.com>
+ */
+
+@import "../../libs/less/variables.less";
+@import "../../libs/less/btc-font-mixins.less";
+@import "../../libs/less/utilities.less";
+
+.uploadResultContainer {
+  margin-top: 1rem;
+  min-height: 80px;
+
+  p {
+    padding: 1rem;
+    margin: 0;
+    color: var(--secondary-text);
+  }
+
+  .importStatus {
+    padding: 0rem 1rem;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    .errorList {
+      margin: 0;
+      border-top: 1px solid;
+      border-top-color: var(--divider-color);
+
+      ul > li {
+        padding: 0.7rem 2rem 0.7rem 1rem;
+        border-top: 1px solid;
+        border-top-color: var(--divider-color);
+        margin: 0;
+
+        > div {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+    }
+
+    .errorHeader {
+      margin: 0;
+      margin-top: 2rem;
+      padding: 0.5rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .errorValue {
+      max-width: 30%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    li:last-child {
+      border-bottom: 1px solid;
+      border-bottom-color: var(--divider-color);
+    }
+  }
+}
+
+.metadataErrorList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-top: 1px solid;
+  border-top-color: var(--divider-color);
+  margin: 0;
+
+  .resultRowTitle {
+    white-space: nowrap;
+    position: relative;
+    padding: 0;
+  }
+}
+
+.hasErrors {
+  min-height: 340px;
+}
+
+.resultRowTitle {
+  white-space: nowrap;
+  position: absolute;
+  padding: 1rem;
+}
+
+.resultAccordion {
+  width: 100%;
+  > div {
+    text-align: right;
+    padding: 1rem;
+    a {
+      color: black;
+      text-transform: none;
+    }
+  }
+}
+
+.modalFooter {
+  margin: 1rem;
+  text-align: center;
+}
+
+.filterSelect {
+  max-width: 30rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0 0 10px;
+  border: 1px solid black;
+
+  label {
+    margin-bottom: 0.1rem !important;
+  }
+
+  div {
+    min-width: 6rem;
+  }
+}
+
+.downloadButton {
+  float: right;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+:global {
+  .is-focused:not(.is-open) > .Select-control {
+    border-color: transparent !important;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+
+  .Select-control {
+    background: white;
+  }
+
+  .Select.is-open > div {
+    border-color: transparent !important;
+  }
+
+  .Select.is-open > .Select-menu-outer {
+    border-color: black !important;
+  }
+}

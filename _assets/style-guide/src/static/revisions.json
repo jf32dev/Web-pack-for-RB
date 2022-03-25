@@ -1,0 +1,80 @@
+[
+  {
+    "id": 633345,
+    "permId": 633314,
+    "name": "Testing metadata",
+    "thumbnail": "",
+    "featuredImage": "",
+    "colour": "#e2023a",
+    "type": "revision",
+    "excerpt": "",
+    "isLiked": false,
+    "isBookmark": false,
+    "updated": 1459742490,
+    "commentCount": 0,
+    "fileCount": 0,
+    "protected": false,
+    "rating": 0,
+    "ratingCount": 0,
+    "author": {
+      "id": 204,
+      "type": "people",
+      "name": "Lochlan M'Bride",
+      "thumbnail": "",
+      "role": "",
+      "isFollowed": false
+    }
+  },
+  {
+    "id": 633343,
+    "permId": 633314,
+    "name": "Testing metadata",
+    "thumbnail": "",
+    "featuredImage": "",
+    "colour": "#e2023a",
+    "type": "revision",
+    "excerpt": "",
+    "isLiked": false,
+    "isBookmark": false,
+    "updated": 1459742413,
+    "commentCount": 0,
+    "fileCount": 0,
+    "protected": false,
+    "rating": 0,
+    "ratingCount": 0,
+    "author": {
+      "id": 204,
+      "type": "people",
+      "name": "Lochlan M'Bride",
+      "thumbnail": "",
+      "role": "",
+      "isFollowed": false
+    }
+  },
+  {
+    "id": 633314,
+    "permId": 633314,
+    "name": "Testing metadata",
+    "thumbnail": "",
+    "featuredImage": "",
+    "colour": "#e2023a",
+    "type": "revision",
+    "excerpt": "",
+    "isLiked": false,
+    "isBookmark": false,
+    "updated": 1459741793,
+    "commentCount": 0,
+    "fileCount": 0,
+    "protected": false,
+    "rating": 0,
+    "ratingCount": 0,
+    "author": {
+      "id": 204,
+      "type": "people",
+      "name": "Lochlan M'Bride",
+      "thumbnail": "",
+      "role": "",
+      "isFollowed": false
+    }
+  }
+]

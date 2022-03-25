@@ -1,0 +1,68 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Jason Huang <jason.huang@bigtincan.com>
+ */
+
+@import "../../../../libs/less/btc-font-mixins.less";
+@import "../../../../libs/less/variables.less";
+
+.RestrictionsList {
+
+  /** Media Query breakpoints */
+  @media @mobile {
+
+  }
+  @media @tablet {
+
+  }
+  @media @desktop {
+
+  }
+  @media @desktop-xl {
+
+  }
+}
+
+.title {
+  color: var(--primary-text);
+  font-size: 1rem;
+  border-bottom: 0.5px solid @dividerColor;
+  border-bottom-color: var(--divider-color);
+  padding-bottom: 1rem;
+}
+
+.item {
+  padding: 0.5rem 0;
+  border-bottom: 0.5px solid @dividerColor;
+  border-bottom-color: var(--divider-color);
+  color: var(--secondary-text);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding-top: 1rem;
+  .icon-zoomIn-fill();
+
+  &:before {
+    color: var(--base-color);
+    padding-right: 0.5rem;
+    font-size: 1.2rem;
+  }
+}

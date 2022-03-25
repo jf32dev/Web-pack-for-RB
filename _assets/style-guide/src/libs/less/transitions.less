@@ -1,0 +1,240 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+/**
+ * Modal enter/exit transitions
+ */
+
+@keyframes modalEnter {
+  from { opacity: 0; transform: scale( .96 ); }
+  to { opacity: 1; transform: scale( 1 ); }
+}
+@keyframes modalExit {
+  from { opacity: 1; transform: scale( 1 ); }
+  to { opacity: 0; transform: scale( .8 ); }
+}
+
+/**
+ * Rotate
+ * useful for loading indicator
+ */
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/**
+ * Chat/Call transitions
+ */
+
+// https://github.com/daneden/animate.css/blob/master/source/attention_seekers/tada.css
+@keyframes tada {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+  10%, 20% {
+    transform: rotate3d(0, 0, 1, -3deg);
+  }
+  30%, 50%, 70%, 90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+  40%, 60%, 80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes hangup {
+  from {
+    transform: rotate(135deg);
+  }
+  25% {
+    transform: rotate(135deg) translate(-1px, 1px);
+  }
+  to {
+    transform: rotate(135deg) translate(1px, -1px);
+  }
+}
+
+/**
+ * Transition classes used for React anmations
+ * https://facebook.github.io/react/docs/animation.html
+ */
+
+/* Node */
+.node-start() {
+  opacity: 0.01;
+}
+.node-end() {
+  opacity: 1;
+}
+.node-transition() {
+  transition: all @timing-fast linear;
+}
+.node-enter {
+  .node-start();
+}
+.node-enter.node-enter-active {
+  .node-end();
+  .node-transition();
+}
+.node-appear {
+  .node-start();
+}
+.node-appear.node-appear-active {
+  .node-end();
+  .node-transition();
+}
+.node-exit {
+  .node-start();
+}
+.node-exit.node-exit-active {
+  .node-end();
+  .node-transition();
+}
+
+/* Fade in */
+.fade-start() {
+  opacity: 0.01;
+}
+.fade-end() {
+  opacity: 1;
+}
+.fade-transition() {
+  transition: opacity @timing-medium ease-in;
+}
+.fade-enter {
+  .fade-start();
+}
+.fade-enter.fade-enter-active {
+  .fade-end();
+  .fade-transition();
+}
+.fade-exit {
+  .fade-end();
+}
+.fade-exit.fade-exit-active {
+  .fade-start();
+  .fade-transition();
+}
+
+/* Slide in from right */
+.slide-right-start() {
+  transform:translateX(100%);
+}
+.slide-right-end() {
+  transform:translateX(0%);
+}
+.slide-right-transition() {
+  transition: all @timing-medium ease-in;
+}
+.slide-right-enter {
+  .slide-right-start();
+}
+.slide-right-enter.slide-right-enter-active {
+  .slide-right-end();
+  .slide-right-transition();
+}
+.slide-right-exit {
+  .slide-right-end();
+}
+.slide-right-exit.slide-right-exit-active {
+  .slide-right-start();
+  .slide-right-transition();
+}
+
+/* Slide in from left */
+.slide-left-start() {
+  transform:translateX(-100%);
+}
+.slide-left-end() {
+  transform:translateX(0%);
+}
+.slide-left-transition() {
+  transition: all @timing-medium ease-in;
+}
+.slide-left-enter {
+  .slide-left-start();
+}
+.slide-left-enter.slide-left-enter-active {
+  .slide-left-end();
+  .slide-left-transition();
+}
+.slide-left-exit {
+  .slide-left-end();
+}
+.slide-left-exit.slide-left-exit-active {
+  .slide-left-start();
+  .slide-left-transition();
+}
+
+
+/* Slide in from top */
+.slide-top-start() {
+  transform:translateY(-100%);
+}
+.slide-top-end() {
+  transform:translateY(0%);
+}
+.slide-top-transition() {
+  transition: all @timing-medium ease-in;
+}
+.slide-top-enter {
+  .slide-top-start();
+}
+.slide-top-enter.slide-top-enter-active {
+  .slide-top-end();
+  .slide-top-transition();
+}
+.slide-top-exit {
+  .slide-top-end();
+}
+.slide-top-exit.slide-top-exit-active {
+  .slide-top-start();
+  .slide-top-transition();
+}
+
+/* Slide in from bottom */
+.slide-bottom-start() {
+  transform:translateY(100%);
+}
+.slide-bottom-end() {
+  transform:translateY(0%);
+}
+.slide-bottom-transition() {
+  transition: all @timing-slow ease-in;
+}
+.slide-bottom-enter {
+  .slide-bottom-start();
+}
+.slide-bottom-enter.slide-bottom-enter-active {
+  .slide-bottom-end();
+  .slide-bottom-transition();
+}
+.slide-bottom-exit {
+  .slide-bottom-end();
+}
+.slide-bottom-exit.slide-bottom-exit-active {
+  .slide-bottom-start();
+  .slide-bottom-transition();
+}

@@ -1,0 +1,67 @@
+{
+  "webcredentials": {
+    "apps": [
+      "YD7UWUH3TV.com.bigtincan.mobile.hub",
+      "YD7UWUH3TV.com.bigtincan.mobile.hub.vpp.acorda",
+      "YD7UWUH3TV.com.bigtincan.mobile.hub.vpp.mybdlibrary",
+      "YD7UWUH3TV.com.bigtincan.mobile.hub.vpp.farmersinsurance",
+      "YD7UWUH3TV.com.bigtincan.mobile.hub.vpp.hgportal",
+      "YD7UWUH3TV.com.bigtincan.mobile.hub.vpp.laresources",
+      "YD7UWUH3TV.com.bigtincan.mobile.hub.vpp.thermofisher",
+      "YD7UWUH3TV.com.bigtincan.mobile.hub.vpp.wyndham"
+    ]
+  },
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "YD7UWUH3TV.com.bigtincan.mobile.hub",
+        "paths": [ "/story/*", "/file/*" ]
+      },
+      {
+        "appID": "YD7UWUH3TV.com.bigtincan.mobile.hub.develop",
+        "paths": ["/story/*", "/file/*"]
+      },
+      {
+        "appID": "YD7UWUH3TV.com.bigtincan.mobile.hub.debug",
+        "paths": ["/story/*", "/file/*"]
+      },
+      {
+        "appID": "YD7UWUH3TV.com.bigtincan.mobile.hub.demo",
+        "paths": ["/story/*", "/file/*"]
+      },
+      {
+        "appID": "YD7UWUH3TV.com.bigtincan.mobile.hub.vpp.tmobile",
+        "paths": ["/story/*", "/file/*"]
+      },
+      {
+        "appID": "YD7UWUH3TV.com.bigtincan.mobile.hub.vpp.mybdlibrary",
+        "paths": ["/story/*", "/file/*"]
+      },
+      {
+        "appID": "YD7UWUH3TV.com.bigtincan.mobile.hub.vpp.farmersinsurance",
+        "paths": ["/story/*", "/file/*"]
+      },
+      {
+        "appID": "YD7UWUH3TV.com.bigtincan.mobile.hub.vpp.hgportal",
+        "paths": ["/story/*", "/file/*"]
+      },
+      {
+        "appID": "YD7UWUH3TV.com.bigtincan.mobile.hub.vpp.laresources",
+        "paths": ["/story/*", "/file/*"]
+      },
+      {
+        "appID": "YD7UWUH3TV.com.bigtincan.mobile.hub.vpp.thermofisher",
+        "paths": ["/story/*", "/file/*"]
+      },
+      {
+        "appID": "AAU76QKJVW.com.hino.hinoignition2",
+        "paths": ["/story/*", "/file/*"]
+      },
+      {
+        "appID": "YD7UWUH3TV.com.bigtincan.mobile.hub.vpp.wyndham",
+        "paths": ["/story/*", "/file/*"]
+      }
+    ]
+  }
+}

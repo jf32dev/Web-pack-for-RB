@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="/">
+    <meta charset="utf-8">
+    <title>SAML authentication redirecting...</title>
+    <script>
+      window.addEventListener('message', function(ev) {
+        if (ev.data.message === 'requestToken' && window.location.hash.indexOf('#story_access_token=') === 0) {
+          var token = window.location.hash.split('story_access_token=')[1];
+          ev.source.postMessage({ message: 'storyAccessToken', token: token }, '*');
+        }
+      });
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

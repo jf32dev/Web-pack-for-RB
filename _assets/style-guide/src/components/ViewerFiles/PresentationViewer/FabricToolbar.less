@@ -1,0 +1,106 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Jason Huang <jason.huang@bigtincan.com>
+ */
+
+@import "../../../libs/less/btc-font-mixins.less";
+@import "../../../libs/less/variables.less";
+
+@iconSize: 20px;
+
+.FabricToolbar{
+  border-radius:4px;
+  overflow: hidden;
+  color:#fff;
+  z-index:2;
+  width: 100%;
+  height: 100%;
+
+  //position:absolute;
+  //top:1rem;
+  //left:50%;
+  //transform: translateX(-50%);
+  white-space: nowrap;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn {
+  background-color: rgba(255, 255, 255, 0.1);
+  height: 100%;
+  width: 6rem;
+  border-radius: 0px;
+}
+
+.btnTrash {
+  background-color: transparent;
+  height: 100%;
+  width: 4rem;
+  border-radius: 0px;
+  &:before {
+    font-size: 1.5rem;
+    padding: 0px 1rem;
+  }
+}
+
+.right {
+  .fullHeight();
+  button {
+    margin-left: 0.1rem !important;
+  }
+}
+
+.left {
+  .fullHeight();
+}
+
+.fullHeight {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.red {
+  background-color: #d0011b;
+  .color();
+}
+
+.green {
+  background-color: #7ed321;
+  .color();
+}
+
+.blue {
+  background-color: #4C4CFF;
+  .color();
+}
+
+.color {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 1.5rem;
+  border: 0.5px solid white;
+  border-color: white;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.activeColor {
+  border: 2.5px solid white;
+  border-color: white;
+}

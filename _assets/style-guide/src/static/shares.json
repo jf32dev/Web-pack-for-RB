@@ -1,0 +1,313 @@
+[
+  {
+    "id": "0a1687bc0e862905f66b7f012196d420dbf13df6",
+    "type": "share",
+    "count": 0,
+    "date": 1481059879,
+    "users": [
+      {
+        "email": "rubenson@bigtincan.com",
+        "fileCount": 2,
+        "fileViewed": 0,
+        "viewedAt": 0,
+        "id": 5729,
+        "user": {
+          "id": 200,
+          "email": "rubenson@bigtincan.com",
+          "name": "rubenson test12 test barrios 765",
+          "thumbnail": "https://push.bigtincan.org/f/Dm9jEkGXJpW6KRWbN5O0/avatar/b588cdfc90aacf0f4180d063567fa878b6406709cf8d4f1932a6cdfb056eb511.png",
+          "role": "HTML / Web Developer 7654"
+        }
+      },
+      {
+        "email": "rutfin69@test.coms",
+        "fileCount": 2,
+        "fileViewed": 1,
+        "viewedAt": 1481159879,
+        "id": 5730
+      }
+    ]
+  },
+  {
+    "id": "6faf39ca7a5be4a89af1621a87d0c8834a38462d",
+    "type": "share",
+    "count": 1,
+    "date": 1480660384
+  },
+  {
+    "id": "20b52058de40b776131aa3854726cb1116ea227a",
+    "type": "share",
+    "count": 15,
+    "date": 1480660038
+  },
+  {
+    "id": "105a497bd39c07fec63ced0858e01a4748891405",
+    "type": "share",
+    "count": 21323123,
+    "date": 1480571925
+  },
+  {
+    "id": "f5463a6a4baefc9a232a958c4cf106ef34aa2670",
+    "type": "share",
+    "count": 1,
+    "date": 1480571731
+  },
+  {
+    "id": "f8c1ce02281ccc64983254621c0eaaa75c186be4",
+    "type": "share",
+    "count": 1,
+    "date": 1480469759
+  },
+  {
+    "id": "42725c1f5a04a3444486b51608b74fa5334278f0",
+    "type": "share",
+    "count": 1,
+    "date": 1478578480
+  },
+  {
+    "id": "a6732b1197d7b076227c05db53776f7bc663cf53",
+    "type": "share",
+    "count": 1,
+    "date": 1477884984
+  },
+  {
+    "id": "b7e518a78cda0877e69ac8c02d7e4154f4c2a208",
+    "type": "share",
+    "count": 1,
+    "date": 1477884798
+  },
+  {
+    "id": "3e9d15010374cff32d0a5a0c3164ae80c50fcf9e",
+    "type": "share",
+    "count": 1,
+    "date": 1477884642
+  },
+  {
+    "id": "0a1687bc0e862905f66b7f012196d420dbf13df6",
+    "type": "share",
+    "date": 1481059879,
+    "subject": "File Management Systems",
+    "filesCount": 6,
+    "contactsCount": 2,
+    "sharedContacts": [
+      {
+        "email": "rubenson@bigtincan.com",
+        "fileCount": 2,
+        "fileViewed": 0,
+        "viewedAt": 0,
+        "id": 5729,
+        "user": {
+          "id": 200,
+          "email": "rubenson@bigtincan.com",
+          "name": "rubenson test12 test barrios 765",
+          "thumbnail": "https://push.bigtincan.org/f/Dm9jEkGXJpW6KRWbN5O0/avatar/b588cdfc90aacf0f4180d063567fa878b6406709cf8d4f1932a6cdfb056eb511.png",
+          "role": "HTML / Web Developer 7654"
+        }
+      },
+      {
+        "email": "rubenson@bigtincan.com",
+        "fileCount": 2,
+        "fileViewed": 0,
+        "viewedAt": 0,
+        "id": 5729,
+        "user": {
+          "id": 200,
+          "email": "rubenson@bigtincan.com",
+          "name": "rubenson test12 test barrios 765",
+          "thumbnail": "https://push.bigtincan.org/f/Dm9jEkGXJpW6KRWbN5O0/avatar/b588cdfc90aacf0f4180d063567fa878b6406709cf8d4f1932a6cdfb056eb511.png",
+          "role": "HTML / Web Developer 7654"
+        }
+      }
+    ],
+    "files": [
+      {
+        "id": 0,
+        "dateAdded": 1536107453,
+        "description": "presentation.btc",
+        "category": "btc",
+        "storyTitle": "Selling to Apple Inc",
+        "customDetailsIsEnabled": true,
+        "fileSettings": {
+          "fileGeneralSettings": {
+            "detailsFieldLabel": "Approved content",
+            "hintText": "hint text",
+            "showCustomFileDetailsIcon": true
+          }
+        }
+      },
+      {
+        "id": 2,
+        "dateAdded": 1536104253,
+        "description": "data.csv",
+        "category": "csv",
+        "storyTitle": "Selling to Apple Inc",
+        "customDetailsIsEnabled": true,
+        "fileSettings": {
+          "fileGeneralSettings": {
+            "detailsFieldLabel": "Approved content",
+            "hintText": "hint text",
+            "showCustomFileDetailsIcon": true
+          }
+        }
+      }
+    ],
+    "file": {
+      "id": 7,
+      "customDetailsText": null,
+      "customDetailsIsEnabled": false,
+      "thumbnail": "https://www.guidedogs.org/wp-content/uploads/2015/09/golden-puppy-square-copy.jpg"
+    }
+  },
+  {
+    "id": "0a1687bc0e862905f66b7f012196d420dbf13df6",
+    "type": "share",
+    "date": 1481059879,
+    "subject": "",
+    "filesCount": 6,
+    "contactsCount": 3,
+    "sharedContacts": [
+      {
+        "email": "rubenson@bigtincan.com",
+        "fileCount": 2,
+        "fileViewed": 0,
+        "viewedAt": 0,
+        "id": 5729,
+        "user": {
+          "id": 200,
+          "email": "rubenson@bigtincan.com",
+          "name": "rubenson test12 test barrios 765",
+          "thumbnail": "https://push.bigtincan.org/f/Dm9jEkGXJpW6KRWbN5O0/avatar/b588cdfc90aacf0f4180d063567fa878b6406709cf8d4f1932a6cdfb056eb511.png",
+          "role": "HTML / Web Developer 7654"
+        }
+      },
+      {
+        "email": "rubenson@bigtincan.com",
+        "fileCount": 2,
+        "fileViewed": 0,
+        "viewedAt": 0,
+        "id": 5729,
+        "user": {
+          "id": 200,
+          "email": "rubenson@bigtincan.com",
+          "name": "rubenson test12 test barrios 765",
+          "thumbnail": "https://push.bigtincan.org/f/Dm9jEkGXJpW6KRWbN5O0/avatar/b588cdfc90aacf0f4180d063567fa878b6406709cf8d4f1932a6cdfb056eb511.png",
+          "role": "HTML / Web Developer 7654"
+        }
+      },
+      {
+        "email": "rubenson@bigtincan.com",
+        "fileCount": 2,
+        "fileViewed": 0,
+        "viewedAt": 0,
+        "id": 5729,
+        "user": {
+          "id": 200,
+          "email": "rubenson@bigtincan.com",
+          "name": "rubenson test12 test barrios 765",
+          "thumbnail": "https://push.bigtincan.org/f/Dm9jEkGXJpW6KRWbN5O0/avatar/b588cdfc90aacf0f4180d063567fa878b6406709cf8d4f1932a6cdfb056eb511.png",
+          "role": "HTML / Web Developer 7654"
+        }
+      }
+    ],
+    "files": [
+      {
+        "id": 1,
+        "dateAdded": 1536104253,
+        "description": "data.csv",
+        "category": "csv",
+        "storyTitle": "Selling to Apple Inc",
+        "customDetailsIsEnabled": true,
+        "fileSettings": {
+          "fileGeneralSettings": {
+            "detailsFieldLabel": "Approved content",
+            "hintText": "hint text",
+            "showCustomFileDetailsIcon": true
+          }
+        }
+      },
+      {
+        "id": 0,
+        "dateAdded": 1536107453,
+        "description": "presentation.btc",
+        "category": "btc",
+        "storyTitle": "Selling to Apple Inc",
+        "customDetailsIsEnabled": true,
+        "fileSettings": {
+          "fileGeneralSettings": {
+            "detailsFieldLabel": "Approved content",
+            "hintText": "hint text",
+            "showCustomFileDetailsIcon": true
+          }
+        }
+      },
+      {
+        "id": 2,
+        "dateAdded": 1536104253,
+        "description": "data.csv",
+        "category": "csv",
+        "storyTitle": "Selling to Apple Inc",
+        "customDetailsIsEnabled": true,
+        "fileSettings": {
+          "fileGeneralSettings": {
+            "detailsFieldLabel": "Approved content",
+            "hintText": "hint text",
+            "showCustomFileDetailsIcon": true
+          }
+        }
+      }
+    ],
+    "file": {
+      "id": 9,
+      "customDetailsText": "Approved content",
+      "customDetailsIsEnabled": true,
+      "thumbnail": "https://www.odysseyhouse.com.au/wordpress/wp-content/uploads/2018/02/cute-kitten-SQUARE@.jpg"
+    }
+  },
+  {
+    "id": "0a1687bc0e862905f66b7f012196d420dbf13df6",
+    "type": "share",
+    "date": 1481059879,
+    "subject": "",
+    "filesCount": 3,
+    "contactsCount": 1,
+    "sharedContacts": [
+      {
+        "email": "rubenson@bigtincan.com",
+        "fileCount": 2,
+        "fileViewed": 0,
+        "viewedAt": 0,
+        "id": 5729,
+        "user": {
+          "id": 200,
+          "email": "rubenson@bigtincan.com",
+          "name": "rubenson test12 test barrios 765",
+          "thumbnail": "https://push.bigtincan.org/f/Dm9jEkGXJpW6KRWbN5O0/avatar/b588cdfc90aacf0f4180d063567fa878b6406709cf8d4f1932a6cdfb056eb511.png",
+          "role": "HTML / Web Developer 7654"
+        }
+      }
+    ],
+    "files": [
+      {
+        "id": 1,
+        "dateAdded": 1536104253,
+        "description": "data.csv",
+        "category": "csv",
+        "storyTitle": "Selling to Apple Inc",
+        "customDetailsIsEnabled": true,
+        "fileSettings": {
+          "fileGeneralSettings": {
+            "detailsFieldLabel": "Approved content",
+            "hintText": "hint text",
+            "showCustomFileDetailsIcon": true
+          }
+        }
+      }
+    ],
+    "file": {
+      "id": 8,
+      "customDetailsText": null,
+      "customDetailsIsEnabled": false,
+      "thumbnail": ""
+    }
+  }
+]

@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+    web:
+        build:
+            context: .
+        ports:
+            - 80:80
+        environment:
+            - 'ESC=$$'
+            - MAINTENANCE=0
+            - API_URL=https://push.bigtincan.org
+            - JREPORT_URL=https://bi.bigtincan.org
+            - JREPORT_KEY=
+            - GOOGLE_MAPS_KEY=
+            - WEBSHARE_URL=

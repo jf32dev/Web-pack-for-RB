@@ -1,0 +1,280 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../libs/less/btc-font-mixins.less";
+@import "../../libs/less/utilities.less";
+@import "../../libs/less/variables.less";
+
+.FileEditItem {
+  position:relative;
+}
+
+.expanded {
+  background:#f5f5f5;
+}
+
+.confirmDelete {
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  z-index:1;
+  background-color: @light-base-color;
+  text-align:center;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+
+  p {
+    margin:0 1rem 0 0;
+    display:inline-block;
+  }
+
+  ul {
+    margin:0;
+    padding:0;
+
+    li {
+      cursor:pointer;
+      display:inline-block;
+      margin:0 1rem;
+      padding:0 0.5rem;
+    }
+  }
+}
+
+.fileWrap {
+  display:flex;
+  padding:0.5rem;
+  align-items:center;
+  transition:background @timing-fast linear;
+}
+
+.handle {
+  .icon-handle(16px);
+  cursor:move;
+  color: rgba(0, 0, 0, 0.3);
+  padding:0 0.5rem;
+  margin-right:0.5rem;
+}
+
+.uploading {
+  position:relative;
+}
+
+.progress {
+  position:absolute;
+  bottom:0;
+  left:0;
+  height:2px;
+  width:0;
+  border-radius:1px;
+  background-color:@accent-color;
+  opacity:0.75;
+  margin:0 0.5rem;
+  transition:width @timing-slow ease-out;
+}
+
+.error {
+  margin-left:2.5rem;
+
+  /* thumbnail */
+  .fileWrap > div:first-child {
+    .icon-error();
+    background-color:#f00;
+
+    &:before {
+      color:#fff;
+    }
+    &:after {
+      display:none;
+    }
+  }
+  .description {
+    text-decoration: line-through;
+  }
+}
+
+// match width of columns in FileEditList.less
+.descriptionWrap {
+  flex:1 0 auto;
+  display:flex;
+  flex-direction:column;
+  line-height: 1.2rem;
+  max-width: 540px;
+}
+
+.description {
+  .overflow-ellipsis();
+  color:@primary-text;
+}
+.sourceUrl {
+  .overflow-ellipsis();
+  font-size:90%;
+}
+
+.share {
+  width:200px;
+  text-align:center;
+}
+
+.shareStatusIndicator {
+  > span {
+    content:'';
+    display:inline-block;
+    border:solid 1px #ddd;
+    border-color:@divider-color;
+    width:7px;
+    height:7px;
+    margin:0 0.15rem;
+    border-radius:50%;
+
+    &.shareActive {
+      border-color:transparent;
+
+      &[data-status=optional] {
+        background:#68c700;
+      }
+      &[data-status=mandatory] {
+        background:#f5a623;
+      }
+      &[data-status=blocked] {
+        background:#ff0000;
+      }
+    }
+  }
+}
+
+.controls {
+  text-align:right;
+
+
+  button {
+    min-width:4.5rem;
+  }
+}
+
+.optionsWrap {
+  display:flex;
+  margin-left:4rem;
+  padding-bottom: 1rem;
+
+  h5 {
+    margin:0;
+    padding:0;
+    font-weight:normal;
+  }
+  p {
+    color:@secondary-text;
+  }
+}
+
+.editName {
+  flex:1 0 auto;
+
+  input {
+    margin:0 !important;
+
+    &:not(:disabled) {
+      background:#fff !important;
+    }
+  }
+}
+
+.folderNote {
+  margin-bottom:4rem;
+}
+
+.editThumbnail {
+  display:flex;
+  margin-right: 2rem;
+
+  @media @tablet {
+    margin-right: 1rem;
+  }
+
+  @media @desktop {
+    margin-right: 1rem;
+  }
+
+  .thumb {
+    margin-right:1rem;
+  }
+}
+
+.customThumb {
+  margin-bottom:1.5rem;
+}
+
+.watermarkWrap {
+  margin-top:1rem;
+}
+
+.editPresentation {
+  margin-right: 2rem;
+
+  @media @tablet {
+    margin-right: 1rem;
+  }
+
+  @media @desktop {
+    margin-right: 1rem;
+  }
+}
+
+.editWeb {
+  flex:1 0 auto;
+  margin-right:2.5rem;
+
+  input {
+    &:not(:disabled) {
+      background:#fff !important;
+    }
+  }
+}
+
+.editSharing {
+  margin-right: 2rem;
+
+  @media @tablet {
+    margin-right: 1rem;
+  }
+
+  @media @desktop {
+    margin-right: 1rem;
+  }
+}
+
+.folderContents {
+  margin-left:4.5rem;
+
+  h5 {
+    margin:0;
+    padding:0;
+    font-weight:normal;
+  }
+  ul {
+    overflow:visible;
+    margin-left:-0.25rem;
+
+    // remove pointer (no click event)
+    li > div {
+      cursor: default;
+    }
+  }
+}

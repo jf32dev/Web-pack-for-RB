@@ -1,0 +1,8 @@
+webpack/*
+karma.conf.js
+assets/*
+src/containers/*
+src/views/*
+src/static/*
+**/libs/*
+src/static/sample_btcp/

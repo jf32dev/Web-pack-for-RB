@@ -1,0 +1,83 @@
+pipeline {
+    agent none
+
+    environment {
+        CI = 'TEST'
+    }
+
+    options {
+        buildDiscarder(
+            logRotator(
+                artifactDaysToKeepStr: '',
+                artifactNumToKeepStr: '10',
+                daysToKeepStr: '',
+                numToKeepStr: '10'
+            )
+        )
+    }
+
+    stages {
+        stage('test the project') {
+            agent {
+                label 'linux'
+            }
+
+            stages {
+                stage('Prepare') {
+                    steps {
+                        sh 'echo this test require at least 8G memory'
+                        sh 'free'
+                        sh 'echo check the space'
+                        sh 'df'
+                        sh 'docker system prune -f || true'
+                        sh 'echo $UID'
+                    }
+                }
+
+                stage('Test') {
+                    steps {
+                        sh 'export userid=${UID} && export groupid=${GID} && docker-compose -f docker-compose-test.yaml pull && docker-compose -f docker-compose-test.yaml up --force-recreate --abort-on-container-exit'
+                    }
+                }
+            }
+
+            post {
+                always {
+                    sh 'docker-compose -f docker-compose-test.yaml down -v --rmi local'
+                }
+            }
+        }
+
+        stage('deploy the project') {
+            agent {
+                label 'k8s'
+            }
+
+            when { anyOf { branch 'master' } }
+
+            stages {
+                stage('Clean') {
+                    steps {
+                        echo 'Clean build'
+                        sh 'rm -rf build || true'
+                        sh 'groups'
+                        sh 'docker ps'
+                    }
+                }
+
+                stage('Deploy') {
+                    steps {
+                        echo 'build static files'
+                        sh "${WORKSPACE}/scripts/deploy.sh"
+                    }
+                }
+            }
+
+            post {
+                always {
+                    sh "${WORKSPACE}/scripts/post_deploy.sh ${currentBuild.currentResult}"
+                }
+            }
+        }
+    }
+}

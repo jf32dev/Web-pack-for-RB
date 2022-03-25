@@ -1,0 +1,250 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../libs/less/btc-font-mixins.less";
+@import "../../libs/less/variables.less";
+
+@sentBg: var(--base-color);
+@receivedBg: #f0f0f0;
+
+.ChatMessageItem {
+  margin:0 0.5rem 0.5rem;
+
+  /* alt timestamp layout */
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.messageSent {
+  /* alt timestamp layout */
+  flex-direction: row-reverse;
+  text-align:right;
+  margin-bottom:0;
+
+  &.isCompact {
+  }
+}
+
+.messageReceived {
+  text-align:left;
+}
+
+.messageWrap {
+  position:relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 46px;
+  margin-bottom:0.5rem;
+
+  /* show time */
+  &:hover+div {
+    opacity:1;
+  }
+}
+
+.receivedUser {
+  position:absolute;
+  bottom:0;
+  left:0;
+  z-index:1;
+}
+
+.messageBody {
+  position:relative;
+  display:inline-block;
+  vertical-align:middle;
+  border-radius:4px;
+  min-height:1.5rem;
+  padding:0.25rem 0.5rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+
+  &.isCompact {
+    margin-left: 2rem;
+    margin-right:0.75rem;
+  }
+}
+
+.messageBodySent {
+  background-color:@sentBg;
+  color:var(--base-text);
+  margin-right:18px;
+
+  &:before {
+    background-color:@sentBg;
+    content:'';
+    position:absolute;
+    bottom:0;
+    right:-10px;
+    width:15px;
+    height:15px;
+  }
+  &:after {
+    background-color:#fff;
+    content:'';
+    position:absolute;
+    bottom:2px;
+    right:-18px;
+    width:18px;
+    height:20px;
+    border-radius:10px;
+  }
+  a {
+    color:var(--primary-text);
+
+    &:hover {
+      text-decoration:underline;
+    }
+  }
+  &.isCompact {
+
+  }
+}
+
+.messageBodyReceived {
+  margin-left:56px;
+  background-color:@receivedBg;
+  color:contrast(@receivedBg);
+
+  &:before {
+    background-color:@receivedBg;
+    content:'';
+    position:absolute;
+    bottom:0;
+    left:-10px;
+    width:15px;
+    height:15px;
+  }
+  &:after {
+    background-color:#fff;
+    content:'';
+    position:absolute;
+    bottom:2px;
+    left:-18px;
+    width:18px;
+    height:20px;
+    border-radius:10px;
+  }
+  a {
+    color:@base-color;
+
+    &:hover {
+      text-decoration:underline;
+    }
+  }
+  &.isCompact {
+
+  }
+}
+
+.emojiOnly {
+  font-size:2rem;
+}
+
+.time {
+  align-self: flex-end;
+  margin:0 1rem 0.9rem;
+  font-size:80%;
+  color:@secondary-text;
+  transition: opacity @timing-medium ease-out;
+  opacity:0;  // show on hover
+}
+
+.storyAttachment {
+  background-color:#fff;
+  text-align: left;
+}
+
+.fileAttachment {
+  //color:var(--base-text);
+}
+
+.attachmentLoading {
+  padding:0.25rem 1.5rem;
+}
+
+.ErrorItem {
+  display:flex;
+  align-items: center;
+  padding:0.5rem;
+}
+
+.errorThumb {
+  .icon-none();
+  color:@divider-color;
+  background:#fff;
+  width:46px;
+  height:46px;
+  text-align:center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right:0.5rem;
+}
+
+.errorMessage {
+
+}
+
+.callInfo {
+  color:var(--secondary-text);
+  vertical-align: middle;
+  margin:1rem auto;
+  width: 100%;
+  text-align: center;
+
+  &.isVideo {
+    .label {
+      .icon-camcorder(18px);
+
+      &:after {
+        display:none;
+      }
+    }
+  }
+
+  &.incoming .label:after {
+    top: -0.45rem;
+    left: 0.65rem;
+    transform: rotate(135deg);
+  }
+
+  .label {
+    .icon-phone-fill(18px);
+    position:relative;
+    vertical-align:middle;
+
+    &:before {
+      margin-right:0.5rem;
+    }
+
+    &:after {
+      position: absolute;
+      left:0;
+      top:0;
+      content: '→';
+      font-size: 14px;
+    }
+  }
+  .duration {
+    &:before {
+      content:'-';
+      margin-right:0.25rem;
+    }
+    padding:0 0.25rem;
+  }
+}

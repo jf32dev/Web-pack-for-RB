@@ -1,0 +1,17 @@
+version: '3.7'
+services:
+    web:
+        container_name: docker_test
+        image: "bigtincan/chrome-nodejs-amazon-linux" # move to bigtincan company account
+        user: ${userid}:${groupid}
+        working_dir: /app
+        stdin_open: true
+        volumes:
+            - /etc/group:/etc/group:ro
+            - /etc/passwd:/etc/passwd:ro
+            - /etc/shadow:/etc/shadow:ro
+            - ${PWD}:/app
+        tty: true
+        cap_add:
+            - SYS_ADMIN
+        command: /app/scripts/test.sh

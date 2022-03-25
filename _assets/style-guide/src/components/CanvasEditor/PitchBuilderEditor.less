@@ -1,0 +1,389 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2020 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ * @author Rubenson Barrios <rubenson.barrios@bigtincan.com>
+ */
+
+@import "../../libs/less/utilities.less";
+@import "../../libs/less/variables.less";
+
+.CanvasEditor {
+  &.isDragging,
+  &.isDragging * {
+    .grabbing();
+  }
+
+  > header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    .stepDescription {
+      display: flex;
+      align-items: center;
+      flex: 1 1 auto;
+      height: 2.5rem;
+      padding: 0.55rem 0.75rem;
+      border-radius: 0.25rem;
+      background-color: #f4f4f4;
+
+      > h2 {
+        color: var(--secondary-text);
+        margin: 0;
+        padding: 0;
+        font-size: 1rem;
+        border: none;
+      }
+      > p {
+        color: var(--primary-text);
+        margin: 0 0 0 1.25rem;
+        font-size: 90%;
+      }
+    }
+    .saveBtn {
+      margin-left: 0.5rem;
+      height: 2.35rem;
+      width: 8.5rem;
+      display: flex;
+      align-items: center;
+
+      // icon
+      > span {
+        margin-left: 4.5rem;
+
+        &:before {
+          font-size: 70%;
+          transform: rotate(-90deg);
+        }
+      }
+    }
+  }
+
+  .editorWrapper {
+    display: flex;
+    height: 100%;
+    .loading {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -30%);
+    }
+  }
+
+  .slidesWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    > header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+      margin-right: 1rem;
+
+      button:not(:first-child) {
+        margin-left: 1rem;
+      }
+    }
+    .sectionControls {
+      display: flex;
+      align-items: center;
+
+      button {
+        height: 100%;
+        font-size: 0.812rem;
+      }
+
+      .filter {
+        display: none; // hidden for MVP
+        align-items: center;
+        margin-left: 1rem;
+
+        > label {
+          margin-bottom: 0;
+          margin-right: 0.5rem;
+          color: var(--primary-text);
+        }
+
+        > div {
+          width: 10rem;
+        }
+      }
+    }
+  }
+
+  .blankslate {
+    height: 100%;
+  }
+
+  .sectionWrapper {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    min-width: 10rem;
+    padding-right: 1rem;
+
+    > section {
+      &.isCollapsed {
+        > header {
+          .collapseBtn {
+            &:before {
+              transform: rotate(90deg);
+            }
+          }
+        }
+
+        .slideList {
+          display: none;
+        }
+      }
+
+      > header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        height: 3.25rem;
+
+        border-bottom: solid 1px @dividerColor;
+        border-bottom-color: var(--divider-color);
+
+        &:hover {
+          button {
+            opacity: 1;
+          }
+        }
+
+        h3 {
+          margin: 0;
+          word-break: break-all;
+          display: flex;
+          align-items: center;
+
+          .sectionHeaderIcon {
+            margin-right: 0.75rem;
+            color: #aaa;
+            .grab();
+            vertical-align: bottom;
+            &:before {
+              font-size: 1.25rem;
+            }
+          }
+        }
+
+        .editBtn,
+        .deleteBtn {
+          margin-left: 0.25rem;
+          opacity: 0;
+          transition: opacity 150ms linear;
+          &:before {
+            font-size: 1.25rem;
+            font-weight: 600;
+          }
+        }
+        .editBtn {
+          color: var(--base-color);
+        }
+        .deleteBtn {
+          color: var(--destructive-color);
+          &:hover:not(:focus) {
+            color: var(--destructive-color) !important;
+            background-color: #fff !important;
+          }
+        }
+
+        .editNameWrapper {
+          display: flex;
+          align-items: center;
+          margin-top: 0.5rem;
+          margin-left: 0.5rem;
+
+          input {
+            min-width: 10rem;
+            max-width: 24rem;
+            margin-bottom: 0;
+            margin-right: 0.5rem;
+            padding: 0.2rem 0.75rem;
+          }
+        }
+
+        .collapseBtn {
+          &:before {
+            transition: transform 150ms linear;
+          }
+        }
+      }
+    }
+  }
+
+  .slideList {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0.5rem -0.5rem 0;
+    min-height: 12.9rem;
+
+    > li {
+      list-style: none;
+      margin: 0.5rem;
+      .grab();
+
+      > div {
+        &:first-child {
+          box-shadow: 0 2px 16px 0 rgba(34, 34, 34, 0.12);
+          border: solid 1px #e9e9e9;
+          overflow: initial;
+        }
+
+        &:nth-child(2) > div {
+          font-weight: bold;
+          text-align: center;
+          width: fit-content;
+          margin: auto;
+          padding: 0.1rem 1rem;
+        }
+      }
+    }
+  }
+
+  .activeSlideContainer {
+    flex: 0 0 auto;
+    width: 25rem;
+    border: dashed 2px transparent;
+    padding: 1.15rem;
+    background-color: #f2f2f2;
+    overflow: auto;
+  }
+
+  .rightPadding {
+    padding-right: 1.5rem;
+  }
+
+  .dialogForPitch {
+    > div {
+      padding: 0;
+      width: 34.5rem;
+      height: 13.9375rem;
+      > div {
+        padding: 1.25rem;
+        > div:first-child {
+          background-color: var(--background-color);
+          padding: 0;
+          > div {
+            padding: 0;
+          }
+        }
+        > div:nth-child(2) {
+          > div {
+            padding: 0;
+            > p {
+              text-align: left;
+              color: var(--primary-text);
+            }
+          }
+        }
+        > div:last-child {
+          text-align: center;
+          padding: 0;
+          margin-top: 2.1875rem;
+          > div {
+            > button:last-child {
+              margin-left: 1rem;
+              &:hover {
+                background-color: var(--base-color);
+              }
+            }
+          }
+        }
+      }
+    }
+    h3 {
+      margin: 0 auto 2.5rem 0;
+      text-align: left;
+      color: #000;
+      font-size: 1.125rem;
+    }
+  }
+}
+
+.disableDrag {
+  cursor: default !important;
+}
+
+.sortableChosen {
+  opacity: 1;
+}
+
+.sortableGhost {
+  // block
+  > div:first-child {
+    background: #f7f7f7;
+    border: solid 1px #e1e1e1;
+    border-radius: 4px;
+
+    > * {
+      opacity: 0;
+    }
+  }
+
+  // meta
+  > div:last-child {
+    opacity: 0;
+  }
+}
+
+.sortableDrag {
+  opacity: 1 !important;
+  border-radius: 4px;
+
+  // block
+  > div:first-child {
+    box-shadow: 0 2px 17px rgba(0, 0, 0, 0.21);
+    transform-origin: center;
+
+    animation-name: slideDragScale;
+    animation-duration: 150ms;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+    border: none;
+  }
+
+  // meta
+  > div:last-child {
+    opacity: 0;
+  }
+}
+
+.sectionDrag {
+  opacity: 1 !important;
+  background-color: #fafafa !important;
+  padding: 0 0.5rem !important;
+
+  button {
+    opacity: 0 !important;
+  }
+}
+
+@keyframes slideDragScale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.24);
+  }
+}

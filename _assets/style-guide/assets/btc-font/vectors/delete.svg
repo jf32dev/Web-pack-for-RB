@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512px" height="512px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>Delete</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Delete" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill="#FF0000" fill-rule="nonzero" id="remove-icon">
+            <polygon points="54.8571429 0 0 54.8571429 201.142857 256 0 457.142857 54.8571429 512 256 310.857143 457.142857 512 512 457.142857 310.857143 256 512 54.8571429 457.142857 0 256 201.142857"></polygon>
+        </g>
+    </g>
+</svg>

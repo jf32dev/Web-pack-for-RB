@@ -1,0 +1,166 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Jason Huang <jason.huang@bigtincan.com>
+ */
+
+@import "../../../libs/less/variables.less";
+
+.SyncCreateModal {
+
+  /** Media Query breakpoints */
+  @media @mobile {
+
+  }
+  @media @tablet {
+
+  }
+  @media @desktop {
+
+  }
+  @media @desktop-xl {
+
+  }
+
+  padding: 0 0 0 0 !important;
+  margin: 2.188rem 1.5rem 0 1.5rem;
+
+  > div {
+    height: 100%;
+  }
+}
+
+.borderFooter {
+  border-top:solid 1px @dividerColor;
+  border-top-color: var(--divider-color);
+}
+
+// SLIDE Animation
+.slide-enter {
+  transform:translateX(100%);
+}
+
+.slide-enter.slide-enter-active {
+  background: white;
+  transform: translateX(0%);
+  transition: transform .5s;
+  z-index: 1;
+}
+
+.slide-exit.slide-exit-active {
+  position: absolute;
+  top: 2.188rem;
+  left: 1.5rem;
+  width: calc(~"100% - 1.5rem");
+  z-index: 0;
+  overflow: hidden;
+}
+
+.slide-enter-leave.slide-enter-leave-active {
+  background: white;
+  overflow: hidden;
+  transform: translateX(100%);
+  transition: transform .5s;
+  z-index: 2;
+}
+
+.slide-enter-leave {
+  transform:translateX(0%);
+}
+
+// slide animation end
+.cardList {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-flow: row wrap;
+  position: relative;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1.5rem;
+}
+
+.header {
+  height: 5.25rem;
+  .title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--secondary-text);
+    padding-bottom: 1rem;
+  }
+}
+
+/*************************
+* Confirmation animation
+*************************/
+@color-green: #7ac142;
+@curve: cubic-bezier(0.65, 0, 0.45, 1);
+
+.hideHeader { display: none; }
+.confirmationBodyModal { height: auto !important; overflow: hidden; text-align: center; }
+.checkmark__circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: @color-green;
+  fill: none;
+  animation: stroke .6s @curve forwards;
+}
+
+.checkmark {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 2;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  margin: 8% auto 4%;
+  box-shadow: inset 0px 0px 0px @color-green;
+  animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+}
+
+.checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke .3s @curve .8s forwards;
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes scale {
+  0%, 100% {
+    transform: none;
+  }
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+
+@keyframes fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 30px @color-green;
+  }
+}

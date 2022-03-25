@@ -1,0 +1,195 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Jason Huang <jason.huang@bigtincan.com>
+ */
+
+@import "../../../libs/less/variables.less";
+@import "../../../libs/less/btc-font-mixins.less";
+
+@BackgroundColor: #fafafa;
+
+.LDAP {
+
+  section {
+    border-top-color: var(--divider-color);
+    border-top: 1px solid @dividerColor;
+
+    &:first-child {
+      border-top: none;
+    }
+  }
+
+  /** Media Query breakpoints */
+  @media @mobile {
+
+  }
+  @media @tablet {
+
+  }
+  @media @desktop {
+
+  }
+  @media @desktop-xl {
+
+  }
+
+  ol {
+    width: 100%;
+    margin: 0;
+    li {
+      width: 100%;
+      //list-style-type: none;
+    }
+  }
+
+  .displayNone {
+    display: none;
+  }
+}
+
+.directoryServer {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-start;
+  padding-bottom: 1rem;
+
+  > label {
+    padding-right: 1rem;
+    font-size: 1rem;
+  }
+
+  > div {
+    width: 15rem;
+  }
+}
+
+.bridge {
+  padding: 1rem 0;
+
+  label {
+    font-size: 0.9rem;
+  }
+}
+
+.bridgeTextFields {
+  padding-left: 1rem;
+  padding-top: 1rem;
+
+  @media @tablet, @desktop, @desktop-xl {
+    width: calc(~"50% + 1rem");
+  }
+
+  label {
+    color: var(--primary-text);
+  }
+}
+
+.credentials {
+  > div.texts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    > div {
+      padding-top: 1rem;
+      width: 48%;
+      label {
+        font-size: 0.9rem;
+        color: var(--primary-text);
+      }
+    }
+  }
+
+  > div.message {
+    display: inline-flex;
+    padding-left: 1rem;
+  }
+
+  > div.messageDetails {
+    padding-left: 0rem;
+    padding-top: 16px;
+  }
+}
+
+.moreDetails {
+  cursor: pointer;
+  color: var(--base-color);
+  font-weight: bold;
+  margin-top: 16px;
+
+  &:after {
+    .btc-font();
+    font-size:12px;
+    content:'\f185';
+    margin-left:0.3rem;
+    margin-bottom:0.2rem;
+    transition: transform @timing-fast linear;
+    transform: rotate(-90deg);
+  }
+}
+
+.isDetailsDisplay {
+  &:after {
+    display:inline-block;
+    transform: rotate(0deg);
+  }
+}
+
+.testCredentialsResultMessage {
+  background-color: @BackgroundColor;
+  border-radius: 4px;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--primary-text);
+  margin-top: 1rem;
+}
+
+.successMessage > * {
+  margin: 10px 0;
+}
+
+.messageLabel {
+  color: #888;
+}
+
+.succeed {
+  color: #24a62b;
+
+  &:before {
+    .btc-font();
+    font-size:1.2rem;
+    color: #24a62b;
+    padding-right: 0.5rem;
+    content:'\f183';
+  }
+}
+
+.failed {
+  color: var(--error-color);
+
+  &:before {
+    .btc-font();
+    font-size:1.2rem;
+    color: var(--error-color);
+    padding-right: 0.5rem;
+    content:'\f12d';
+  }
+}
+
+.groupList {
+  margin-left: 0;
+  overflow:visible !important;
+}

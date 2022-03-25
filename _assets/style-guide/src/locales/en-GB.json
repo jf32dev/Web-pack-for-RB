@@ -1,0 +1,13 @@
+{
+  "hello": "Good day {name}, spot of tea?",
+  "n-forms": "{itemCount, plural, one {# form} other {# forms}}",
+  "n-people": "{itemCount, plural, one {# person} other {# people}}",
+  "n-tabs": "{itemCount, plural, one {# {tab}} other {# {tabs}}}",
+  "n-stories": "{itemCount, plural, one {# {story}} other {# {stories}}}",
+  "add-marketing-field": "Add Marketing Field",
+  "add-crm-field": "Add CRM Field",
+  "delete": "Delete",
+  "close": "Close",
+  "minimise-viewer": "Minimise Viewer",
+  "maximise-viewer": "Maximise Viewer"
+}

@@ -1,0 +1,102 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Jason Huang <jason.huang@bigtincan.com>
+ */
+
+@import "../../../libs/less/variables.less";
+
+.LogoEditItem {
+  margin-bottom: 2rem;
+
+  h3 {
+    margin-bottom: 1rem;
+    font-size: 0.9rem !important;
+  }
+
+  h5 {
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0.1rem;
+  }
+
+  > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    > div {
+      width: 9rem;
+
+      > div {
+        margin-bottom: 0.5rem;
+        font-size: 0.8rem;
+        color: var(--secondary-text);
+      }
+    }
+  }
+
+  svg {
+    width: 9rem;
+    height: 9rem;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.drapZoneActive {
+  background-color: var(--info-color);
+  border: 0.5px solid @dividerColor;
+  border-color: var(--divider-color);
+  position: relative;
+}
+
+.image {
+  position: relative;
+  width: 9rem;
+  height: 9rem;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rightContainer {
+  margin-left: 4rem;
+
+  > div:first-child {
+    background-color: var(--base-color);
+    width: 9rem;
+    height: 9rem;
+  }
+
+  svg {
+    width: 9.1rem;
+    height: 9.1rem;
+    position: relative;
+    top: -1px;
+    right: 1px;
+  }
+}
+
+.load {
+  position: absolute !important;
+  top: 50% !important;
+  left: 45% !important;
+  transform: translate(-45%, -50%) !important;
+}

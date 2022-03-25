@@ -1,0 +1,79 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2020 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../libs/less/variables.less";
+
+.CanvasSlideTemplate {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 5px;
+  background: #fff;
+  border: solid 1px @dividerColor;
+  border-color: var(--divider-color);
+  cursor: pointer;
+
+  &.isDisabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  &.isSelected {
+    border-color: var(--base-color);
+    border-width: 3px;
+    padding: 3px;
+  }
+
+  .title {
+    margin-bottom: 5px;
+    height: 0.75rem;
+    background-color: var(--divider-color);
+  }
+  .row {
+    display: flex;
+    justify-content: space-between;
+    flex: 1 1 auto;
+  }
+  .col {
+    height: 100%;
+    background-color: var(--divider-color);
+  }
+
+  &.oneColTitle, &.threeRow {
+    .row {
+      background-color: var(--divider-color);
+    }
+  }
+  &.twoColTitle, &.twoCol {
+    .col {
+      width: 48%;
+    }
+  }
+  &.threeColTitle, &.threeCol {
+    .col {
+      width: 31%;
+    }
+  }
+  &.threeRow {
+    .row:first-child {
+      margin-bottom: 0.35rem;
+    }
+    .row:last-child {
+      margin-top: 0.35rem;
+    }
+  }
+}

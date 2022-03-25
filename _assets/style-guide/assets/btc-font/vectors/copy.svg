@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>512</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="512" sketch:type="MSArtboardGroup" fill="#000000">
+            <path d="M272,240 L272,112 L240,112 L240,240 L112,240 L112,272 L240,272 L240,400 L272,400 L272,272 L400,272 L400,240 L272,240 L272,240 Z M0,64.068128 C0,28.684272 28.62444,0 64.0681232,0 L447.931877,0 C483.315725,0 512,28.624448 512,64.068128 L512,447.931872 C512,483.315728 483.37556,512 447.931877,512 L64.0681232,512 C28.6842752,512 0,483.375552 0,447.931872 L0,64.068128 L0,64.068128 Z M32,63.859904 C32,46.26416 46.39836,32 63.8599088,32 L448.140091,32 C465.735834,32 480,46.398368 480,63.859904 L480,448.140096 C480,465.73584 465.60164,480 448.140091,480 L63.8599088,480 C46.2641664,480 32,465.601632 32,448.140096 L32,63.859904 L32,63.859904 Z" id="icon-copy" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

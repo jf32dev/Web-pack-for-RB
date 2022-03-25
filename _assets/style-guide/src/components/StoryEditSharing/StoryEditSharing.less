@@ -1,0 +1,89 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../libs/less/btc-font-mixins.less";
+@import "../../libs/less/tooltips.less";
+@import "../../libs/less/variables.less";
+
+.StoryEditSharing {
+  > div {
+    margin-bottom:1rem;
+  }
+
+  /** Media Query breakpoints */
+  @media @mobile {
+
+  }
+  @media @tablet {
+
+  }
+  @media @desktop {
+
+  }
+  @media @desktop-xl {
+
+  }
+}
+
+.options, .smlOptions {
+  margin-top:1rem;
+  margin-left:1.5rem;
+
+  span {
+    color:@secondary-text;
+  }
+}
+
+.smlOptions {
+  display: flex;
+  align-items: center;
+}
+
+.descriptionInput {
+  display:flex;
+  align-items: center;
+  margin-bottom:1rem;
+
+  label {
+    min-width:5rem;
+  }
+  input {
+    margin-bottom:0 !important;
+  }
+}
+
+.downloadLimitInput, .downloadExpiryInput {
+  width:3.5rem;
+  margin-right:0.5rem;
+
+  input {
+    text-align:center;
+    margin-bottom:0 !important;
+  }
+}
+
+.tooltip {
+  .tooltip(n);
+  color:var(--secondary-text);
+  margin-left:0.5rem;
+  cursor:help;
+
+  > span {
+    .icon-info(14px);
+    padding-left:0.1rem;
+  }
+}

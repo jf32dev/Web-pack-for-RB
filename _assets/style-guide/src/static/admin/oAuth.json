@@ -1,0 +1,4 @@
+{
+  "accessTokenLifetime":1,
+  "refreshTokenLifetime":14
+}

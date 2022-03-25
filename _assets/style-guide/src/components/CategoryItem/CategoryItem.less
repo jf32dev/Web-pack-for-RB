@@ -1,0 +1,200 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../libs/less/utilities.less";
+@import "../../libs/less/variables.less";
+
+.CategoryItem {
+  display:block;
+  overflow:hidden;
+
+  &.isActive {
+    background-color: var(--light-base-color);
+  }
+}
+
+.noLink {
+  cursor:pointer;
+}
+
+.showEdit {
+  .name {
+    padding: 0 2rem 0 0;
+  }
+}
+
+/* List Styles */
+.listItem {
+  align-items:center;
+  transition:background @timing-fast linear;
+
+  &.noLink {
+    padding:0.5rem;
+
+    &:hover {
+      background-color:var(--light-base-color);
+    }
+  }
+
+  .wrapper {
+    display:flex;
+    align-items: center;
+  }
+
+  a {
+    display:flex;
+    align-items: center;
+    color:@primary-text;
+    padding:0.5rem;
+
+    &:hover {
+      text-decoration:none;
+      background-color:var(--light-base-color);
+    }
+  }
+
+  .info {
+    margin-left: 0.5rem;
+  }
+}
+
+.thumbWrapper {
+  position: relative;
+  margin-top: 0.25rem;
+  flex: 0 0 auto;
+
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-top: solid 1px @baseColor;
+    border-top-color: var(--base-color);
+  }
+  &:before {
+    top: -2px;
+    margin: 0 0.5rem;
+  }
+  &:after {
+    top: -4px;
+    margin: 0 0.75rem;
+  }
+}
+
+.thumbBg {
+  border-radius: 2px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--base-color);
+  opacity: 0.05;
+}
+
+.thumbnail() {
+  border-radius: 2px;
+  border: solid 1px @baseColor;
+  border-color: var(--base-color);
+  text-align:center;
+
+  &:before {
+    color:var(--base-color);
+  }
+}
+
+.listThumbnail {
+  .thumbnail();
+  position: absolute;
+  top: 0;
+  right: 0.35rem;
+  bottom: 0.3rem;
+  left: 0.35rem;
+
+  &:before {
+    font-size: 1.6rem;
+    line-height: 1.6;
+  }
+}
+
+.gridItem {
+  display:inline-block;
+  margin:0 1rem 1rem 1rem;
+  vertical-align:top;
+  position: relative;
+
+  .thumbWrapper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .thumbBg {
+    left: 0;
+    right: 0;
+    bottom: 0.4rem;
+  }
+
+  .name {
+    -webkit-line-clamp: 1;
+    max-height:1.35rem;
+  }
+}
+
+.gridThumbnail {
+  .thumbnail();
+  width: 80%;
+  margin: 0 auto;
+
+  &:before {
+    font-size:2.2rem;
+    line-height:1.5;
+  }
+
+  .thumbBg {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.name {
+  color:var(--primary-text);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow:hidden;
+  word-break: break-all;
+  line-height: 1.25;
+
+  // edit icon if visible
+  button {
+    position: absolute;
+    right: 0;
+    bottom: 1rem;
+
+    &:before {
+      font-size:1rem;
+    }
+  }
+}
+
+.note {
+  color:var(--secondary-text);
+  font-size:90%;
+  display:block;
+  text-transform:capitalize;
+  .overflow-ellipsis();
+}

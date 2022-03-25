@@ -1,0 +1,105 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Rubenson Barrios <rubenson.barrios@bigtincan.com>
+ */
+
+@import "../../libs/less/btc-font-mixins.less";
+@import "../../libs/less/variables.less";
+@import "../../libs/less/utilities.less";
+
+.Metadata {
+  padding: 0rem 0 1.5rem;
+  background-color: #fff;
+  min-width: 444px;
+  margin-right: 36px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 200;
+    font-size: 0.9rem;
+  }
+  input {
+    padding: 0.4rem 0.74rem !important;
+    margin: 0 !important;
+  }
+}
+.subHeader {
+  display: inline-block;
+  min-width: 10rem;
+  margin: 0 16px 0 0;
+  width: calc(~"40% - 16px");
+  font-size: 0.8rem;
+}
+
+.itemList {
+  list-style: none;
+  padding: 10px 0;
+  margin: 0 0 1.2rem 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-color: var(--divider-color);
+
+  > li {
+    padding: 0.15rem 0;
+    position: relative;
+
+    &:first-child {
+      padding: 0;
+      margin: 0;
+    }
+    > div { height: 41px; }
+  }
+}
+
+.customSelect, .customSubSelect {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  min-width: 10rem;
+  margin-right: 16px;
+  width: calc(~"40% - 16px");
+}
+.customInput {
+  vertical-align: bottom;
+  width: calc(~"40% - 16px");
+
+  > input {  min-width: 10rem;  }
+}
+
+.currencyContainer {
+  height: 36px;
+}
+.currencyInput {
+  margin-right: 14px;
+  vertical-align: bottom;
+
+  > input {  max-width: 8rem;  }
+}
+.currencyLabel {
+  color: @secondary-text;
+}
+.deleteBtn {
+  float: right;
+}
+.error {
+  color: red;
+  font-size: 90%;
+  margin-left: 30px;
+}

@@ -1,0 +1,72 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Rubenson Barrios <rubenson.barrios@bigtincan.com>
+ */
+
+@import "../../libs/less/variables.less";
+@import "../../libs/less/utilities.less";
+
+.SelectSearchItem {
+  transition:background @timing-fast linear;
+  overflow:hidden;
+  display:flex;
+  align-items: center;
+  color:@primary-text;
+  padding:0.5rem;
+  background-color: #fff;
+
+  &:hover {
+    background-color:@light-base-color;
+  }
+}
+
+.thumbnail() {
+  text-align:center;
+  background-size:cover;
+  background-image:url(../StoryThumb/bg_StoryHeader.svg);
+  flex-shrink:0;
+
+  &:before {
+    color:#fff;
+  }
+}
+
+.listThumbnail {
+  .thumbnail();
+  margin-right:0.5rem;
+  width: 30px;
+  height: 30px;
+
+  &:before {
+    font-size:32px;
+    line-height:1.45;
+  }
+}
+
+.title {
+  padding: 0; margin: 0;
+  color:@primary-text;
+  .overflow-ellipsis();
+}
+
+.note {
+  padding: 0; margin: 0;
+  color: @secondary-text;
+  font-size:90%;
+  display:block;
+  text-transform:capitalize;
+  .overflow-ellipsis();
+}
+

@@ -1,0 +1,291 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../libs/less/variables.less";
+
+.Loader {
+  display:block;
+}
+
+/**
+ * App Loader
+ */
+.app {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: visible !important;
+
+  .orange {
+    height: 51%;
+    width: 51%;
+    z-index: 3;
+    position: absolute;
+    top:28.5%;
+    left:29%;
+    opacity: 0;
+    stroke:@baseColor;
+    stroke:var(--base-color);
+    stroke-width:13;
+    stroke-alignment:inside;
+    fill:none;
+
+    animation-name: scaleAnimation, opacityAnimation;
+    animation-duration: 1.4s;
+    animation-timing-function: linear, ease-in-out;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+  }
+
+  .midGrey {
+    height: 48.5%;
+    width: 48.5%;
+    z-index: 2;
+    position: absolute;
+    top:26%;
+    left:20%;
+    opacity: 0;
+    stroke:#B2B2AB;
+    stroke-width:7;
+    stroke-alignment:inside;
+    fill:none;
+
+    animation-name: scaleAnimation, opacityAnimation;
+    animation-duration: 1.4s;
+    animation-timing-function: linear, ease-in-out;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+  }
+
+  .smallGrey {
+    height: 41%;
+    width: 41%;
+    z-index: 1;
+    position: absolute;
+    top:20.5%;
+    left:24.5%;
+    opacity: 0;
+    stroke:#B2B2AB;
+    stroke-width:3;
+    stroke-alignment:inside;
+    fill:none;
+
+    animation-name: scaleAnimation, opacityAnimation;
+    animation-duration: 1.4s;
+    animation-timing-function: linear, ease-in-out;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes opacityAnimation {
+  15% {
+    opacity:0;
+  }
+  50% {
+    opacity:1;
+  }
+  85% {
+    opacity:0;
+  }
+}
+
+@keyframes scaleAnimation {
+  0% {
+    transform: scaleX(0) scaleY(0);
+  }
+  50% {
+    transform: scaleX(1) scaleY(1);
+  }
+  100% {
+    transform: scaleX(2) scaleY(2);
+  }
+}
+
+
+/**
+ * Page Loader
+ */
+.page {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .orange {
+    height: 51%;
+    width: 51%;
+    z-index: 3;
+    position: absolute;
+    top:28.5%;
+    left:29%;
+    fill:var(--base-color);
+    overflow: visible;
+
+    animation-name: scaleAnimation200;
+    animation-duration: 1.2s;
+    animation-timing-function:cubic-bezier(0.3,0,0.3,1);
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  .midGrey {
+    height: 48.5%;
+    width: 48.5%;
+    z-index: 2;
+    position: absolute;
+    top:26%;
+    left:20%;
+    fill:#B2B2AB;
+    overflow: visible;
+
+    animation-name: scaleAnimation100;
+    animation-duration: 1.2s;
+    animation-timing-function:cubic-bezier(0.7,0,0.7,1);
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  .smallGrey {
+    height: 41%;
+    width: 41%;
+    z-index: 1;
+    position: absolute;
+    top:20.5%;
+    left:24.5%;
+    fill:#B2B2AB;
+    overflow: visible;
+
+    animation-name: scaleAnimation260;
+    animation-duration: 1.2s;
+    animation-timing-function:cubic-bezier(0.3,0,0.3,1);
+    animation-delay: 0.33s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+}
+
+@keyframes scaleAnimation200 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(2);
+  }
+}
+@keyframes scaleAnimation260 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(2.6);
+  }
+}
+@keyframes scaleAnimation100 {
+  0% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+/**
+ * Content Loader
+ */
+.content {
+  width: 26px;
+  height: 26px;
+  position: relative;
+  top: 0;
+  left: -12px;
+  overflow: visible;
+  z-index: 1;
+
+  .orange {
+    z-index:3;
+    height:100%;
+    width:100%;
+    position: absolute;
+    top:0;
+    left:-25%;
+    fill:#B2B2AB;
+    overflow:visible;
+
+    animation: scaleAnimation205 0.6s, colourAnimation 6s;
+    animation-timing-function:cubic-bezier(0.3,0,0.3,1);
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  .midGrey {
+    z-index:2;
+    height:100%;
+    width:100%;
+    position: absolute;
+    top:0;
+    left:45%;
+    fill:#B2B2AB;
+    overflow: visible;
+
+    animation: scaleAnimation205 0.6s, colourAnimation 6s;
+    animation-timing-function:cubic-bezier(0.3,0,0.3,1);
+    animation-delay: 0.2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  .smallGrey {
+    z-index:1;
+    height:100%;
+    width:100%;
+    position: absolute;
+    top:0;
+    left:115%;
+    fill:#B2B2AB;
+    overflow:visible;
+
+    animation: scaleAnimation205 0.6s, colourAnimation 6s;
+    animation-timing-function:cubic-bezier(0.3,0,0.3,1);
+    animation-delay: 0.4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+}
+
+@keyframes scaleAnimation205 {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes colourAnimation {
+  0% {
+    fill:#B2B2AB;
+  }
+  100% {
+    fill:var(--base-color);
+  }
+}

@@ -1,0 +1,64 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package hub-web-app
+ * @copyright 2010-2016 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+/*
+  Icon Font: <%= font_name %>
+*/
+
+<%= font_face %>
+
+[data-icon]:before { content: attr(data-icon); }
+
+[data-icon]:before,
+<%= glyph_selectors %> {
+<%= glyph_properties %>
+  font-size:16px;
+}
+
+/* Icon Sizes */
+.icon-32:before {
+    font-size:32px;
+}
+.icon-48:before {
+    font-size:48px;
+}
+.icon-64:before {
+    font-size:64px;
+}
+.icon-96:before {
+    font-size:96px;
+}
+.icon-112:before {
+    font-size:112px;
+}
+.icon-128:before {
+    font-size:128px;
+}
+.icon-144:before {
+    font-size:144px;
+}
+.icon-160:before {
+    font-size:160px;
+}
+.icon-176:before {
+    font-size:176px;
+}
+.icon-192:before {
+    font-size:192px;
+}
+
+<%= glyphs %>

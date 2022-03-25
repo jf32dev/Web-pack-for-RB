@@ -1,0 +1,105 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../../libs/less/btc-font-mixins.less";
+@import "../../../libs/less/variables.less";
+
+@containerWidth: 320px;
+
+.PdfOutlineBox {
+  height: 100%;
+  width: @containerWidth;
+  overflow: hiden;
+  float: left;
+  border-right:solid 1px @dividerColor;
+  border-right-color:var(--divider-color);
+}
+
+.PdfOutlineWrapper {
+  height: calc(~"100%" - 45px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.PdfOutlineHeader {
+  height: 45px;
+  background-color: #f8f8f8;
+  line-height: 45px;
+  text-align: center;
+}
+
+.PdfOutline {
+  width: @containerWidth;
+
+  margin:0rem 0rem 0rem 0.35rem;
+
+  padding:0;
+  list-style:none;
+  color:@primary-text;
+
+  > li {
+    border-bottom:solid 1px @dividerColor;
+    border-bottom-color: var(--divider-color);
+
+    ul {
+      list-style:none;
+      display: none;
+      padding-left: 20px;
+    }
+  }
+}
+
+.OutlineItem {
+  margin:0;
+  padding:0.85rem 0;
+  &:last-child {
+    border-bottom:none;
+    padding-bottom: 0;
+  }
+}
+
+.isExpanded {
+  > ul {
+    margin:0.5rem 0.5rem;
+    display:block !important;
+  }
+}
+
+.toggle {
+  display:inline-block;
+  float: left;
+  height: 28px;
+  pointer-events:none;
+  width:1.5rem;
+  color:@base-color;
+}
+
+.toggleVisible {
+  .icon-next(10px);
+  cursor:pointer;
+  pointer-events:all;
+}
+
+.toggleExanded {
+  &:before {
+    transform: rotate(90deg);
+  }
+}
+
+.outlineTitle {
+  cursor:pointer;
+}

@@ -1,0 +1,414 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package hub-web-app-v5
+ * @copyright 2010-2019 BigTinCan Mobile Pty Ltd
+ * @author Nimesh Sherpa <nimesh.sherpa@bigtincan.com>
+ */
+
+@import "../../less/_variables.less";
+
+@x-margin: 2.65rem;
+@y-margin: 0.95rem;
+@search-clear: #999;
+
+.Search {
+  background-color: var(--background-color);
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+
+  z-index: @modalZIndex;
+
+  padding-top:4.5rem;
+  padding-left:3rem;
+  padding-right: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.searchClose {
+  position: absolute;
+  top:1.25rem;
+  left:1.95rem;
+  display: inline-block;
+  color:var(--base-color);
+  cursor:pointer;
+  user-select:none;
+
+  &:before {
+    padding-right:0.5rem;
+  }
+}
+
+.keywordWrap {
+  position:relative;
+  padding-bottom:0.25rem;
+  border-bottom:solid 2px;
+  border-bottom-color: var(--divider-color);
+  display: flex;
+  .searcBtn{
+    height: 2rem;
+    color: #fff;
+  }
+}
+
+.keywordInput {
+  flex: 1;
+  &:before {
+    color: var(--base-color) !important;
+    left:0 !important;
+  }
+  > input {
+    border-bottom: none;
+    color: var(--primary-text);
+    background-color: #fff !important;
+    font-size: 16px;
+    padding-left: 1.8rem;
+    vertical-align: middle;
+    margin: 0 !important;
+
+    &:focus {
+      text-decoration: inherit;
+      outline-width: 0 !important;
+      outline-color: transparent !important;
+    }
+  }
+}
+
+.searchContainer {
+  display:flex;
+  padding-bottom: 20px;
+  height: calc(~"100% - 96px");
+  flex-direction: column;
+  margin-top: 1.4375rem;
+}
+.searchItems {
+  display:flex;
+  flex-flow: row wrap;
+  margin-bottom: 1.8125rem;
+  position: relative;
+  .searchItemByLocation {
+    width: 8.5rem;
+    margin-right: 0.625rem;
+    position: relative;
+    h4 {
+      margin-top:0;
+      font-size: 0.875rem;
+    }
+    .selectClear{
+      position: absolute;
+      right: 0.625rem;
+      height: 2.5rem;
+      z-index: 99;
+      cursor: pointer;
+      color: @search-clear;
+      line-height: 2.5rem;
+      .icon-close(10px);
+      &:hover{
+        color:var(--base-color);
+      }
+    }
+    .searchItemLocation{
+      border-radius: 3px;
+      color: var(--primary-text);
+      background:#F5F5F5;
+      padding-left:0.625rem;
+      line-height: 2.1875rem;
+      height:2.5rem;
+      font-size: 0.875rem;
+      cursor: pointer;
+      :first-child{
+        display: flex;
+        height: 100%;
+        align-items: center;
+      }
+    }
+  }
+  .searchItem {
+    flex-direction: column;
+    margin-top: 1.6875rem;
+    height: 2.6875rem;
+    margin-right: 1.25rem;
+    .searchType {
+      background-color: #F5F5F5;
+      border: 1px solid;
+      border-color:var(--divider-color);
+      list-style:none;
+      display: flex;
+      color:var(--base-color);
+      width: 12.6875rem;
+      margin: 0;
+      text-align: center;
+      border-radius: 3px;
+      li {
+        cursor:pointer;
+        padding: 0.5rem;
+        margin: 0;
+        flex: 1;
+        &:hover {
+          opacity:0.7;
+        }
+      }
+    }
+  }
+  .searchSelectItem {
+    width: 8.5rem;
+    margin-right: 0.625rem;
+    /* style to modify Select component for search page */
+    > div > label {
+      margin-bottom: 0.5rem;
+    }
+    > div > div > div > span > div {
+      height: 2.375rem;
+      line-height: 2.375rem;
+      span{
+        color: var(--primary-text) !important;
+        line-height: 2.375rem;
+      }
+    }
+    > div > div > div > span  {
+      span {
+        line-height: 2.375rem;
+      }
+    }
+    &.right {
+      margin-right: 0;
+    }
+    &.marginRightAuto {
+      margin-right: auto;
+    }
+
+    > div > div {
+      > :nth-child(2){
+        max-height: 600px;
+        > div {
+          max-height: 600px;
+        }
+      }
+    }
+  }
+  .searchSelectItemDatePicker {
+    width: 9rem;
+    position: relative;
+    margin-right: 0.625rem;
+    .selectClearZone{
+      position: absolute;
+      right: 2.125rem;
+      height: 2.5rem;
+      z-index: 99;
+      cursor: pointer;
+      color: @search-clear;
+      .selectClear{
+        line-height: 2.5rem;
+        .icon-close(10px);
+      }
+      &:hover{
+        color:var(--base-color);
+      }
+    }
+    /* style to modify datecomponent for search page */
+    h4 {
+      margin-top: 0;
+      font-size: 0.875rem;
+    }
+    > div > div >  div {
+      height: 2.5rem;
+      input {
+        color: var(--primary-text);
+      }
+    }
+  }
+}
+
+.tagSearchType {
+  color:var(--base-color);
+  li {
+    cursor:pointer;
+    margin: 0.25rem 0;
+
+    &:hover {
+      opacity:0.7;
+    }
+  }
+}
+.searchTypeActive {
+  border-bottom: 3px solid;
+  border-bottom-color:var(--primary-text);
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  cursor: default !important;
+}
+.activeCount{
+  height: 20px;
+  width: 27px;
+  opacity: 0.8;
+  border-radius: 2px;
+  background-color: var(--divider-color);
+  color: #FFFFFF;
+  padding:0 0.375rem;
+  margin-left: 0.625rem;
+}
+.inactiveCount{
+  height: 20px;
+  width: 27px;
+  opacity: 0.8;
+  border-radius: 2px;
+  background-color: #7C8194;
+  color: #FFFFFF;
+  padding:0 0.375rem;
+  margin-left: 0.625rem;
+}
+
+.typeFilter {
+  padding-top:0.5rem;
+  padding-bottom:0.5rem;
+
+  > li {
+    margin: 0.25rem 0;
+  }
+}
+
+.searchResults {
+  height: 100%;
+  overflow: hidden;
+  flex-grow:1;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid;
+  border-top-color:var(--divider-color);
+  h4 {
+    margin-bottom: .875rem !important;
+  }
+  > ul {
+    flex: 1;
+  }
+}
+
+.loading {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.switchSearchContainer{
+  height: calc(~"100% - 49px");
+  overflow: hidden;
+  padding-top:1.25rem;
+  padding-left: 2.81rem;
+  flex-grow:1;
+}
+
+.linkViewMore {
+  text-align: center;
+  padding: 1rem;
+}
+
+.accordionList {
+  margin:0;
+  list-style:none;
+
+  > li {
+    border-bottom:1px solid;
+    border-bottom-color:var(--divider-color);
+    padding: 0.8rem 0;
+    margin: 0;
+
+    &:first-child {
+      border-top:1px solid;
+      border-top-color:var(--divider-color);
+    }
+  }
+}
+
+.greyOut {
+  background-color: #fafafa;
+}
+.tagSearcArea{
+  .icon-search(1.165rem);
+  color: var(--base-color);
+}
+.selectedTag{
+  border-radius: 4px;
+  background-color: #EEEEEE;
+  margin-left: .625rem;
+  align-items: center;
+  padding: 0 .65rem;
+  height: 30px;
+  display: inline-flex;
+  color: var(--primary-text);
+  .closeIcon{
+    .icon-zoomIn(0.95rem);
+    display: flex;
+    justify-content: center;
+    height: 0.938rem;
+    width: .938rem;
+    margin-left: 0.265rem;
+    cursor: pointer;
+  }
+  .closeIcon:before{
+    transform: rotate(45deg);
+    color: red;
+  }
+}
+.tagSearchArea{
+  display: flex;
+  h4{
+    width: 6rem;
+  }
+  .tagContainer{
+
+    flex:1;
+    max-height: 90px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    .tagItem{
+      height: 30px;
+      border-radius: 4px;
+      background-color: #EEEEEE;
+      margin-left: .625rem;
+      display: flex;
+      align-items: center;
+      padding:0 .5rem;
+      cursor: pointer;
+      margin-top: .875rem;
+    }
+  }
+}
+
+.noTag{
+  margin-left: 0.625rem;
+  display: flex;
+  align-items: center;
+  margin-top: 0.625rem;
+  .tagIcon{
+    .icon-tag(17px);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: var(--base-color);
+  }
+  .noRelatedTags{
+    margin-left: 0.35rem;
+  }
+}

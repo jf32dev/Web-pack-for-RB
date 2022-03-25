@@ -1,0 +1,112 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../libs/less/btc-font-mixins.less";
+@import "../../libs/less/variables.less";
+
+@checkboxBorder: #ccc;
+
+.Checkbox {
+  label {
+    .icon-tick();
+    display: inline-block;
+    position: relative;
+    color:@secondary-text;
+  }
+
+  label:before {
+    display: inline-block;
+    vertical-align:middle;
+    margin-bottom:2px;
+
+    width: 16px;
+    height: 16px;
+    margin-right: 0.5rem;
+
+    font-size: 9px;
+    text-align: center;
+    line-height: 16px;
+
+    background-color: #fff;
+    border-radius: 3px;
+    border:solid 1px @checkboxBorder;
+    color:#fff;
+
+    transition:background @timing-fast ease-in-out;
+  }
+
+  /* hide <input> from view */
+  input[type=checkbox] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    border: none;
+    appearance:none;
+  }
+
+  /* checked */
+  input[type=checkbox]:checked + label:before {
+    background-color: @base-color;
+    background-color: var(--base-color);
+    border-color: @base-color;
+    border-color: var(--base-color);
+    color: #fff;
+  }
+
+  /* focused */
+  input[type=checkbox]:focus + label:before {
+    outline:dotted 1px #aaa;
+  }
+
+  /* disabled */
+  input[type=checkbox][disabled] + label {
+    opacity:0.5;
+    cursor:not-allowed;
+  }
+}
+
+.showIndeterminateValue {
+  label {
+    .icon-dash();
+
+    &:before {
+      font-size: 10px;
+      padding-top: 3px;
+    }
+  }
+}
+
+.inline {
+  display:inline-block;
+
+  &:not(:last-child) {
+    margin-right:1.5rem;
+  }
+}
+
+.required {
+  input[type=checkbox] + label:after {
+    content:'*';
+    color:#f00;
+    margin-left:0.25rem;
+    vertical-align:top;
+    font-size:90%;
+  }
+}

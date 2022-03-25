@@ -1,0 +1,72 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2016 BigTinCan Mobile Pty Ltd
+ * @author Rubenson Barrios <rubenson.barrios@bigtincan.com>
+ */
+
+@import "../../../libs/less/btc-font-mixins.less";
+@import "../../../libs/less/variables.less";
+@import "../../../libs/less/utilities.less";
+
+@inputBackgroundColor: #fafafa;
+
+.SubjectInput {
+  width: 100%;
+  min-height: 3.125rem;
+  border-radius: 3px;
+  background-color: @inputBackgroundColor;
+  border-color: var(--divider-color);
+  border: 1px solid @dividerColor;
+  padding: 0.625rem 0.625rem 0 0;
+
+  .SubjectItem {
+    margin: 0 0 0.625rem 0.625rem;
+    background-color: #ffffff;
+  }
+
+  .displayNone {
+    display: none;
+  }
+}
+
+.SubjectItem {
+  align-items: center;
+  > span:not(:last-child) {
+    height: auto !important;
+  }
+  > div + span {
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+
+  > span:first-child {
+    visibility: hidden;
+    margin: 0 0;
+  }
+}
+
+.plusValues {
+  cursor: pointer;
+  align-items: center;
+  font-style: normal;
+  display: flex;
+  color: var(--base-color);
+  font-weight: 900;
+  height: calc(~"3.125rem - 1.25rem");
+  .icon-plus-bold(0.6rem);
+  &:before {
+    padding-right: 0.8rem;
+    padding-left: 0.625rem;
+  }
+}

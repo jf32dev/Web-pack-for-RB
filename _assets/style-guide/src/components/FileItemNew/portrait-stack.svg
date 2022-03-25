@@ -1,0 +1,12 @@
+<svg width="200" height="201" viewBox="0 0 200 201" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect x="42.5" y="5" width="115" height="146.919" rx="6" fill="#EBEBEB" stroke="#E9E9E9"/>
+<rect x="34.5" y="9" width="131" height="167.322" rx="6.5" fill="#F4F4F4" stroke="#E9E9E9"/>
+<rect x="7.5" y="75" width="185" height="99" rx="6" fill="#F0F0F0" stroke="#E9E9E9"/>
+<rect x="0.5" y="79" width="199" height="115" rx="6.5" fill="#FAFAFA" stroke="#E9E9E9"/>
+<rect x="27.5" y="13" width="145" height="187" rx="7.5" fill="url(#pattern0)" stroke="#E9E9E9"/>
+<defs>
+<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0" transform="translate(0.00169332) scale(0.000649683 0.000504541)"/>
+</pattern>
+</defs>
+</svg>

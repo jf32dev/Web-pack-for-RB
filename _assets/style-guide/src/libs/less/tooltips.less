@@ -1,0 +1,204 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+/**
+ * Available directons: n, nw, ne, s, se, sw, w, e
+ * Gets tooltip text from aria-label attribute
+ */
+.tooltip(@direction, @color: #fff, @font-size: 0.75rem) {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    z-index: 1000001;
+    display: none;
+    width: 0;
+    height: 0;
+    color: var(--primary-text);
+    pointer-events: none;
+    content: '';
+    border: 5px solid transparent;
+  }
+
+  &:after {
+    position: absolute;
+    z-index: 1000000;
+    display: none;
+    padding: 0.2rem 0.4rem;
+    text-align: center;
+    word-wrap: break-word;
+    white-space: pre;
+    pointer-events: none;
+    content: attr(aria-label);
+    font-size: @font-size;
+    color: @color;
+    background-color: var(--primary-text);
+    border-radius: 3px;
+    -webkit-font-smoothing: subpixel-antialiased;
+  }
+
+  &:hover:before, &:hover:after,
+  &:focus:before, &:focus:after {
+    display: inline-block;
+  }
+
+  /** Tooltips are single line by default, include this mixin if it is a multi-line tip */
+  &[data-longtip] {
+    .longtip();
+  }
+}
+
+/* longtip tooltip mixin */
+.longtip(@width: 25rem) {
+  &:after {
+    width:@width;
+    white-space:pre-line;
+  }
+}
+
+.tooltip(s) {
+  &:after {
+    top: 100%;
+    right: 50%;
+    margin-top: 5px;
+    transform: translateX(50%);
+  }
+
+  &:before {
+    top: auto;
+    right: 50%;
+    bottom: -5px;
+    margin-right: -5px;
+    border-bottom-color: rgba(0, 0, 0, 0.8);
+  }
+}
+
+.tooltip(se) {
+  &:after {
+    top: 100%;
+    margin-top: 5px;
+
+    right: auto;
+    left: 50%;
+    margin-left: -15px;
+  }
+  &:before {
+    top: auto;
+    right: 50%;
+    bottom: -5px;
+    margin-right: -5px;
+    border-bottom-color: rgba(0, 0, 0, 0.8);
+  }
+}
+
+.tooltip(sw) {
+  &:after {
+    top: 100%;
+    right: 50%;
+    margin-top: 5px;
+    margin-right: -15px;
+  }
+  &:before {
+    top: auto;
+    right: 50%;
+    bottom: -5px;
+    margin-right: -5px;
+    border-bottom-color: rgba(0, 0, 0, 0.8);
+  }
+}
+
+.tooltip(n) {
+  &:after {
+    right: 50%;
+    bottom: 100%;
+    margin-bottom: 5px;
+    transform: translateX(50%);
+  }
+
+  &:before {
+    top: -5px;
+    right: 50%;
+    bottom: auto;
+    margin-right: -5px;
+    border-top-color: rgba(0, 0, 0, 0.8);
+  }
+}
+
+.tooltip(ne) {
+  &:after {
+    bottom: 100%;
+    margin-bottom: 5px;
+    right: auto;
+    left: 50%;
+    margin-left: -15px;
+  }
+  &:before {
+    top: -5px;
+    right: 50%;
+    bottom: auto;
+    margin-right: -5px;
+    border-top-color: rgba(0, 0, 0, 0.8);
+  }
+}
+
+.tooltip(nw) {
+  &:after {
+    right: 50%;
+    bottom: 100%;
+    margin-bottom: 5px;
+    margin-right: -15px;
+  }
+  &:before {
+    top: -5px;
+    right: 50%;
+    bottom: auto;
+    margin-right: -5px;
+    border-top-color: rgba(0, 0, 0, 0.8);
+  }
+}
+
+.tooltip(w) {
+  &:after {
+    right: 100%;
+    bottom: 50%;
+    margin-right: 5px;
+    transform: translateY(50%);
+  }
+  &:before {
+    top: 50%;
+    bottom: 50%;
+    left: -5px;
+    margin-top: -5px;
+    border-left-color: rgba(0, 0, 0, 0.8);
+  }
+}
+
+.tooltip(e) {
+  &:after {
+    bottom: 50%;
+    left: 100%;
+    margin-left: 5px;
+    transform: translateY(50%);
+  }
+  &:before {
+    top: 50%;
+    right: -5px;
+    bottom: 50%;
+    margin-top: -5px;
+    border-right-color: rgba(0, 0, 0, 0.8);
+  }
+}

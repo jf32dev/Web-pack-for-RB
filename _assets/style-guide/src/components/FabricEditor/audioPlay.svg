@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="210px" height="76px" viewBox="0 0 210 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+  <title>AudioButtonPlay</title>
+  <desc>Created with Sketch.</desc>
+  <defs>
+    <rect id="path-1" x="0" y="0" width="210" height="76" rx="6"></rect>
+    <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="210" height="76" fill="white">
+      <use xlink:href="#path-1"></use>
+    </mask>
+    <rect id="path-3" x="0" y="0" width="46" height="46" rx="23"></rect>
+    <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="46" height="46" fill="white">
+      <use xlink:href="#path-3"></use>
+    </mask>
+  </defs>
+  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Me---Notes---Text-Styles" transform="translate(-60.000000, -1344.000000)">
+      <g id="Content" transform="translate(60.000000, 248.000000)">
+        <g id="AudioButtonPlay" transform="translate(0.000000, 1096.000000)">
+          <use id="Rectangle-205-Copy" stroke="#000000" mask="url(#mask-2)" stroke-width="2" fill="#FFFFFF" xlink:href="#path-1"></use>
+          <g id="Group" transform="translate(22.000000, 15.000000)">
+            <use id="Rectangle-205-Copy" stroke="#000000" mask="url(#mask-4)" stroke-width="4" xlink:href="#path-3"></use>
+            <path d="M17,13.991155 C17,12.8914705 17.7396241,12.5084916 18.6520176,13.1357621 L31.3479824,21.8642379 C32.2603665,22.491502 32.2603759,23.5084916 31.3479824,24.1357621 L18.6520176,32.8642379 C17.7396335,33.491502 17,33.1103261 17,32.008845 L17,13.991155 Z" id="Play-Copy" fill="#000000"></path>
+          </g>
+          <g id="Group-Copy-2" transform="translate(88.000000, 20.000000)" fill="#000000">
+            <rect id="Rectangle-49" x="8" y="15" width="2" height="6" rx="1"></rect>
+            <rect id="Rectangle-49" x="0" y="16" width="2" height="4" rx="1"></rect>
+            <rect id="Rectangle-49-Copy" x="16" y="8" width="2" height="20" rx="1"></rect>
+            <rect id="Rectangle-49-Copy-2" x="24" y="13" width="2" height="10" rx="1"></rect>
+            <rect id="Rectangle-49-Copy-3" x="32" y="8" width="2" height="20" rx="1"></rect>
+            <rect id="Rectangle-49-Copy-4" x="40" y="0" width="2" height="36" rx="1"></rect>
+            <rect id="Rectangle-49-Copy-5" x="48" y="7" width="2" height="22" rx="1"></rect>
+            <rect id="Rectangle-49-Copy-7" x="57" y="10" width="2" height="16" rx="1"></rect>
+            <rect id="Rectangle-49-Copy-8" x="65" y="3" width="2" height="30" rx="1"></rect>
+            <rect id="Rectangle-49-Copy-9" x="73" y="8" width="2" height="20" rx="1"></rect>
+            <rect id="Rectangle-49-Copy-9" x="82" y="13" width="2" height="10" rx="1"></rect>
+            <rect id="Rectangle-49-Copy-9" x="90" y="12" width="2" height="12" rx="1"></rect>
+            <rect id="Rectangle-49-Copy-9" x="98" y="16" width="2" height="4" rx="1"></rect>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,192 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../libs/less/btc-font-mixins.less";
+@import "../../libs/less/variables.less";
+@import "../../libs/less/utilities.less";
+
+.TemplateEditorItem {
+  height: 100%;
+  background: #fff;
+  outline: 2px dashed @dividerColor;
+  outline-color: #ddd;
+  outline-color: var(--divider-color);
+  transition: outline-color @timing-fast ease-in;
+  overflow: hidden;
+
+  >header {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    min-height: 3rem;
+    min-width: 9rem;
+  }
+
+  &:hover {
+    outline-color: #F26724;
+    outline-color: var(--base-color);
+
+    .actions {
+      opacity: 1;
+    }
+  }
+
+  &.gridList {
+    .title {
+      margin-left: 0.75rem;
+    }
+  }
+
+  &.editMode {
+    outline-color: #F26724;
+    outline-color: var(--base-color);
+    opacity: 1 !important; // set in TemplateEditor.less
+  }
+
+  &.btca {
+    >header {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  &.featured-list {
+    margin-left: -0.85rem;
+    margin-right: -0.85rem;
+
+    // .react-resizable-handle
+    &+span {
+      display: none;
+    }
+
+    >header {
+      position: absolute;
+      top: 0;
+      right: -0.85rem;
+    }
+  }
+
+  &.featuredListNew {
+    margin-left: 0;
+    margin-right: 0;
+
+    >header {
+      right: 0;
+      z-index: 99999;
+    }
+  }
+
+  &.bookmark-list,
+  &.user-list,
+  &.file-list,
+  &.story-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &.hideResizeHandle {
+    // .react-resizable-handle
+    +span {
+      display: none;
+    }
+  }
+
+  /** Media Query breakpoints */
+  @media @mobile-xs {}
+
+  @media @mobile {}
+
+  @media @tablet {}
+
+  @media @desktop {}
+
+  @media @desktop-xl {}
+}
+
+.title {
+  margin-left: 0.5rem;
+  margin-top: 0;
+  padding-top: 1rem;
+}
+
+.btca {
+  >iframe {
+    pointer-events: none;
+    user-select: none;
+  }
+}
+
+.featuredList {
+  pointer-events: none;
+  user-select: none;
+}
+
+.list {
+  li {
+    pointer-events: none;
+    user-select: none;
+  }
+}
+
+.actions {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.1rem;
+  opacity: 0;
+  transition: opacity @timing-fast ease-in;
+  z-index: 10;
+
+  >span {
+    background-color: #F26724;
+    background-color: var(--base-color);
+    color: #fff;
+    color: var(--base-text);
+    border-radius: 3px;
+    margin: 0 0.25rem;
+    cursor: pointer;
+    padding: 0.35rem 1.25rem;
+
+    &.delete {
+      .icon-trash(0.95rem);
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+      background: #f00;
+    }
+  }
+}
+
+.newHeaderStyle {
+  padding-top: 0.4375rem;
+  min-height: 36.5px !important;
+  padding-left: 2.5rem;
+  >h4 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.375rem;
+    font-weight: bold;
+    line-height: 1.875rem;
+    color: #000000;
+    margin-left: 0 !important;
+  }
+}
+
+.newFeaturedStoryModule {
+  >div:first-child {
+    align-items: flex-start;
+  }
+}

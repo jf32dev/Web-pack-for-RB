@@ -1,0 +1,186 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Rubenson Barrios <rubenson.barrios@bigtincan.com>
+ */
+
+@import "../../libs/less/btc-font-mixins.less";
+@import "../../libs/less/utilities.less";
+@import "../../libs/less/variables.less";
+
+.Accordion {
+  position: relative;
+}
+
+.header {
+  border-radius: 3px;
+  display: flex;
+
+  > div {
+    .icon-triangle(0.75rem);
+    position: relative;
+    flex: 1 50%;
+    padding-right: 1.8rem;
+
+    &:before {
+      color: #f26724;
+      color: var(--base-color);
+      cursor: pointer;
+      position: absolute;
+      transition: transform @timing-medium linear;
+      top: 0.35rem;
+      right: 0.5rem;
+      transform: rotate(90deg);
+      will-change: transform;
+    }
+
+    // Description
+    > span {
+      font-size: 90%;
+      color: var(--secondary-text);
+    }
+  }
+
+  &.active > div:before {
+    transform: rotate(0deg);
+  }
+}
+
+.iconToLeft {
+  > div {
+    position: relative;
+    padding-left: 1rem !important;
+
+    &:before {
+      left: 0rem !important;
+      right: initial !important;
+      transform: rotate(-90deg);
+    }
+  }
+}
+
+// Alternative style
+.alternative {
+  max-width: 974px;
+  margin: auto;
+
+  /* icons */
+  > span {
+    color: #f26724;
+    color: var(--base-color);
+
+    /* adjacent icon spacing */
+    & + span {
+      margin-left: 1rem;
+    }
+  }
+
+  /* node icon */
+  .iconNode > * {
+    margin-top: 1rem;
+    width: 13rem;
+  }
+
+  a {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+}
+
+.alternativeHeader {
+  background-color: #f9f9f9;
+  height: 4.5rem;
+  vertical-align: middle;
+  cursor: pointer;
+
+  // accordion icon
+  > span {
+    position: relative;
+    display: block;
+    color: #f26724;
+    color: var(--base-color);
+    width: 4rem;
+
+    &:before {
+      text-align: center;
+      vertical-align: middle;
+      font-size: 1.6rem;
+      top: 0%;
+      width: 45%;
+      transform: translate(50%, 90%);
+    }
+  }
+
+  > div {
+    padding: 0.75rem 2rem 0.75rem 0;
+
+    &:before {
+      right: 2rem;
+      top: 1.9rem;
+    }
+  }
+}
+// .--
+
+.content {
+  overflow: hidden;
+}
+
+a.heading {
+  padding: 0;
+  margin: 0;
+  display: block;
+  color: var(--primary-text);
+  text-transform: capitalize;
+  .overflow-ellipsis();
+}
+
+.disabled,
+.disabled * {
+  cursor: not-allowed !important;
+
+  > div > div:before {
+    cursor: not-allowed !important;
+    color: var(--secondary-text);
+  }
+}
+
+// SLIDE Animation
+.slide-appear {
+  opacity: 0;
+  transition: opacity 0.4s ease-in;
+}
+
+.slide-appear.slide-appear-done {
+  opacity: 1;
+}
+
+.slide-enter {
+  height: 0;
+  transition: height 0.3s ease-in;
+}
+
+.slide-enter.slide-enter-active {
+  height: 2rem;
+  transition: height 0.1s ease;
+}
+
+.slide-exit {
+  height: 5rem;
+  transition: height 0.3s ease-out;
+}
+
+.slide-exit.slide-exit-active {
+  height: 0;
+}

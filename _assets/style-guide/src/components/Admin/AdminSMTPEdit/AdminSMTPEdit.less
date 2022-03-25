@@ -1,0 +1,155 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Jason Huang <jason.huang@bigtincan.com>
+ */
+
+@import "../../../libs/less/variables.less";
+
+.SMTP {
+  padding: 0 3.15rem 2rem 1.6rem;
+
+  /** Media Query breakpoints */
+  @media @mobile {
+
+  }
+  @media @tablet {
+
+  }
+  @media @desktop {
+
+  }
+  @media @desktop-xl {
+
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+
+    button {
+      height: calc(~"1rem + 22px");
+      width: 8.125rem;
+    }
+
+    button[disabled] {
+      background-color: var(--secondary-text);
+    }
+  }
+}
+
+.inputContainer {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  > div {
+    width: 49%;
+    min-width: 250px;
+  }
+
+  > div:first-child {
+    margin-bottom: 1.5rem;
+  }
+  h3 {
+    min-width: 100%;
+    .borderBottom();
+  }
+
+  label {
+    cursor: pointer !important;
+    color: var(--primary-text) !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+}
+
+.testContainer {
+  h3 {
+    min-width: 100%;
+    .borderBottom();
+  }
+
+  label {
+    cursor: pointer !important;
+    color: var(--primary-text) !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  input {
+    width: 49% !important;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.checkboxContainer {
+  padding-bottom: 1rem;
+}
+
+.borderBottom {
+  border-bottom: 0.5px solid;
+  border-bottom-color: var(--divider-color);
+  padding: 0.25rem 0 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.normalLabel {
+  cursor: pointer;
+  color: var(--secondary-text);
+  margin: 0.5rem 0 0.25rem;
+}
+
+.testAddressBtn {
+  margin-top: 0.5rem;
+}
+
+.error {
+  color: var(--error-color);
+}
+
+.emailInputError {
+  input {
+    border: 0.5px solid @errorColor !important;
+    border-color: var(--error-color);
+    margin: 0 0 0 0;
+  }
+}
+
+.loading {
+  animation: spin 400ms infinite linear;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  border-right-color: #333;
+  display: inline-block;
+  vertical-align: middle;
+
+  margin-right: 0.4rem;
+
+  //position: absolute;
+  //right: 0.5rem;
+  //top: 0.7rem;
+  //z-index: 1;
+}
+
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+}
+
+

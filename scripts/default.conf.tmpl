@@ -1,0 +1,51 @@
+server {
+    listen 80;
+    server_name localhost;
+    root /var/www/;
+
+    location /p/ {
+        return 302 ${WEBSHARE_URL}${ESC}request_uri;
+    }
+    set ${ESC}redirect_to_https 0;
+    if (${ESC}http_x_forwarded_proto != "https") {
+        set ${ESC}redirect_to_https 1;
+    }
+    if (${ESC}remote_addr ~ 172\.) {
+        set ${ESC}redirect_to_https 0;
+    }
+    if (${ESC}redirect_to_https = 1) {
+        rewrite ^(.*)${ESC} https://${ESC}host${ESC}1 permanent;
+    }
+
+    location / {
+        set ${ESC}maintenance ${MAINTENANCE};
+        if (${ESC}maintenance) {
+            return 503;
+        }
+
+        index index.html index.htm;
+        try_files ${ESC}uri ${ESC}uri/ /index.html =404;
+    }
+
+    location @maintenance {
+        rewrite ^(.*)$ /maintenance.html break;
+    }
+
+    location /.well-known/apple-app-site-association {
+        allow all;
+        default_type application/json;
+        if_modified_since off;
+    }
+
+    error_page 404 @maintenance;
+    error_page 500 502 503 504 @maintenance;
+
+    ### BTC; Nginx can't serve static Content via POST
+    ### It results in error 405 trying to get locales
+    ### The line below fixes it
+    error_page 405 =200 ${ESC}uri;
+
+    location ~ /\.git {
+        deny  all;
+    }
+}

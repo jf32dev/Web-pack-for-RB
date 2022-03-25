@@ -1,0 +1,313 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package hub-web-app-v5
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+// Legacy. Not to be used for new development
+
+@import "../../libs/less/btc-font-mixins.less";
+@import "../../libs/less/tooltips.less";
+@import "../../libs/less/utilities.less";
+@import "../../libs/less/variables.less";
+
+.UserItem {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+
+  &.isActive {
+    background-color: var(--light-base-color);
+  }
+}
+
+.noLink {
+  cursor: default;
+
+  .name:hover {
+    color: inherit;
+  }
+}
+
+.thumbWrap {
+  position: relative;
+
+  // chat presence indicator
+  &[data-presence]:after {
+    position: absolute;
+    bottom: 3px;
+    right: 30px;
+    content: '';
+    display: block;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    border: solid 2px #f5f5f5;
+  }
+
+  // offline
+  &[data-presence='0']:after {
+    display: none;
+  }
+
+  // unavailable
+  &[data-presence='50']:after {
+    background: #ccc;
+  }
+
+  // busy
+  &[data-presence='70']:after {
+    background: orange;
+  }
+
+  // available
+  &[data-presence='100']:after {
+    background: #4cd502;
+  }
+}
+
+/* List Styles */
+.listItem {
+  .info {
+    margin-left: 0.5rem;
+  }
+
+  &.inList {
+    padding: 0.5rem;
+  }
+
+  .listActions {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding-left: 0.15rem;
+
+    >ul {
+      margin-right: 1rem;
+    }
+  }
+}
+
+/* List Sizes */
+.listItemLarge {
+  .name {
+    -webkit-line-clamp: 3;
+    max-height: 4.1rem;
+  }
+
+  .thumbWrap[data-presence]:after {
+    bottom: 5px;
+    right: 6px;
+  }
+}
+
+.listItemMedium {
+  .name {
+    max-height: 2.65rem;
+  }
+
+  .thumbWrap[data-presence]:after {
+    bottom: 2px;
+    right: 2px;
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.listItemSmall {
+  .name {
+    -webkit-line-clamp: 1;
+    max-height: 1.35rem;
+    .overflow-ellipsis();
+  }
+
+  .thumbWrap[data-presence]:after {
+    bottom: 3px;
+    right: 1px;
+    width: 9px;
+    height: 9px;
+    border-width: 1px;
+  }
+}
+
+.listItemTiny {
+  .name {
+    -webkit-line-clamp: 1;
+    max-height: 1.35rem;
+  }
+
+  .thumbWrap[data-presence]:after {
+    bottom: 0;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    border-width: 1px;
+  }
+}
+
+/* Grid Styles */
+.gridItem {
+  display: inline-block;
+  text-align: center;
+  margin: 1rem;
+  vertical-align: top;
+
+  a {
+    display: block;
+  }
+
+  .thumbWrap {
+    display: inline-block;
+  }
+
+  .info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 0.5rem;
+  }
+
+  .name {
+    max-width: 10rem;
+  }
+
+  .gridActions {
+    margin: 1rem auto;
+
+    >ul {
+      margin-top: 1rem;
+    }
+  }
+}
+
+/* Grid Sizes */
+.gridItemLarge {
+  width: 8rem;
+
+  .thumbWrap[data-presence]:after {
+    bottom: 0.15rem;
+    right: 0.75rem;
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+}
+
+.gridItemMedium {
+  width: 6.5rem;
+
+  .thumbWrap[data-presence]:after {
+    bottom: 0.05rem;
+    right: 0.5rem;
+    width: 0.7rem;
+    height: 0.7rem;
+  }
+}
+
+.gridItemSmall {
+  margin: 0.25rem;
+  overflow: visible; // required for tooltip
+  .tooltip(n);
+
+  &:after {
+    max-width: 20rem;
+    .overflow-ellipsis();
+  }
+
+  .gridThumbnail {
+    margin: 0;
+  }
+
+  .thumbWrap[data-presence]:after {
+    bottom: 3px;
+    right: 1px;
+    width: 9px;
+    height: 9px;
+    border-width: 1px;
+  }
+}
+
+.gridItemTiny {
+  margin: 0.25rem;
+
+  .gridThumbnail {
+    margin: 0;
+  }
+
+  .thumbWrap[data-presence]:after {
+    bottom: 0;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    border-width: 1px;
+  }
+}
+
+/* Follow button placement */
+.listWithButton {
+  >button {
+    margin-left: 0.5rem;
+    float: right;
+  }
+}
+
+.gridWithButton {
+  >button {
+    margin-top: 1rem;
+  }
+}
+
+.selected {
+  background-color: @light-base-color;
+}
+
+.info {
+  display: inline-block;
+  flex: 1 1 auto;
+  height: 100%;
+  line-height: 140%;
+}
+
+.name {
+  display: inline;
+  display: -webkit-box;
+  color: #222;
+  color: var(--primary-text);
+  transition: all @timing-fast linear;
+
+  max-height: 2.5rem;
+
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  &:hover {
+    color: @base-color;
+  }
+}
+
+.note {
+  .overflow-ellipsis();
+  color: @secondary-text;
+  font-size: 90%;
+  max-width: 10rem;
+  display: block;
+}
+
+.showDelete {
+  .name {
+    position: relative;
+    padding: 0 2rem 0 0;
+  }
+}

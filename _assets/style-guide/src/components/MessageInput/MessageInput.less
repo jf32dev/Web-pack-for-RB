@@ -1,0 +1,62 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../libs/less/variables.less";
+
+.MessageInput {
+  width:100%;
+
+  /* must override Textarea */
+  > textarea {
+    background:#fff !important;
+    border:solid 1px #fff !important;
+    border-bottom-color: var(--divider-color) !important;
+    border-radius:0 !important;
+    margin:0 !important;
+    max-height:7rem;
+    min-height:2rem;
+    padding:0 0.25rem !important;
+    transition:all @timing-fast linear;
+
+    &:focus {
+      border-bottom-color: var(--base-color) !important;
+      outline:none !important;
+    }
+  }
+
+  /** Media Query breakpoints */
+  @media @mobile {
+
+  }
+  @media @tablet {
+
+  }
+  @media @desktop {
+
+  }
+  @media @desktop-xl {
+
+  }
+}
+
+.textInputExpanded {
+  textarea {
+    border-left-color:@divider-color !important;
+    border-right-color:@divider-color !important;
+    border-top-color:@divider-color !important;
+  }
+}

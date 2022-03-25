@@ -1,0 +1,238 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Jason Huang <jason.huang@bigtincan.com>
+ */
+
+@import "../../../libs/less/btc-font-mixins.less";
+@import "../../../libs/less/variables.less";
+
+@iconSize: 20px;
+
+.PresentationToolbar{
+  border-radius:4px;
+  color:#fff;
+  z-index:2;
+  width: calc(~'100%' - 2rem);
+
+  position:absolute;
+  top:1rem;
+  left:50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  height: 2.6rem;
+}
+
+.background {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 2.6rem;
+}
+
+.blackBackground {
+  background-color: rgba(35, 35, 35, 0.9);
+}
+
+.leftItems {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius:4px;
+}
+
+.rightItems {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius:4px;
+}
+
+.centerItems {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  border-radius:4px;
+  height: 100%;
+
+  span {
+    font-size: 10px;
+    display: none;
+  }
+}
+
+.centerAnnotate {
+  width: 100%;
+  margin: 0px 1rem;
+}
+
+.centerNormal {
+  padding:0.5rem 0.5rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-70%);
+}
+
+.item-close{
+  padding-right: 1rem;
+  font-size: 15px;
+  padding-left: 8px;
+  cursor: pointer;
+  .icon-close(15px);
+
+  &:before{
+    margin-right: 0.5rem;
+  }
+}
+
+.item-docPages{
+  margin-right: 1rem;
+  cursor: pointer;
+  .icon-doc-pages(@iconSize);
+  &:before{
+    .itemBtn();
+  }
+}
+
+.item-eye {
+  margin-right: 1rem;
+  cursor: pointer;
+  .icon-eye(@iconSize);
+  padding-top: 8px;
+  &:before{
+    .itemBtn();
+  }
+}
+
+.item-annotate{
+  .icon-annotate(@iconSize);
+  cursor: pointer;
+  margin-right: 1rem;
+  &:before{
+    .itemBtn();
+  }
+}
+
+.item-airPlay {
+  margin-right: 1rem;
+  .icon-video(@iconSize);
+  cursor: pointer;
+  &:before{
+    .itemBtn();
+  }
+}
+
+.item-note{
+  .icon-note(@iconSize);
+  cursor: pointer;
+  &:before{
+    .itemBtn();
+  }
+}
+
+.item-broadcast {
+  margin-right: 1rem;
+  .icon-broadcast-screen(1.3rem);
+  cursor: pointer;
+
+  &:before{
+    .itemBtn();
+  }
+}
+
+.toolBarItem {
+  position: relative;
+}
+
+.item-note-active{
+  .icon-note-fill(@iconSize);
+  cursor: pointer;
+  .active();
+  &:before{
+    .itemBtn();
+    //border: solid 0.5px @base-text;
+  }
+}
+
+.item-docPages-active{
+  margin-right: 1rem;
+  cursor: pointer;
+  .icon-doc-pages(@iconSize);
+  .active();
+  &:before{
+    //  color: @base-text;
+    //  border: solid 0.5px @base-text;
+    .itemBtn();
+  }
+}
+
+.item-broadcast-active {
+  margin-right: 1rem;
+  cursor: pointer;
+  .icon-broadcast-screen(1.3rem);
+  .active();
+  &:before {
+    //color: @base-color;
+    .itemBtn();
+    //background-color: @base-text;
+    //border: solid 0.5px @base-text;
+  }
+}
+
+.item-annotate-active {
+  .icon-annotate(@iconSize);
+  cursor: pointer;
+  .active();
+
+  &:before{
+    //color: @base-color;
+    .itemBtn();
+    //background-color: @base-text;
+    //border: solid 0.5px @base-text;
+  }
+  margin-right: 1rem;
+}
+
+
+.item-eye-active {
+  .icon-eye(@iconSize);
+  cursor: pointer;
+  .active();
+
+  &:before{
+    //color: @base-color;
+    .itemBtn();
+    padding-top: 8px;
+    //background-color: @base-text;
+    //border: solid 0.5px @base-text;
+  }
+  margin-right: 1rem;
+}
+
+.itemBtn {
+  width: 35px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.active {
+  border-bottom: 0.5px solid white;
+  border-bottom-color: white;
+  cursor: pointer;
+}

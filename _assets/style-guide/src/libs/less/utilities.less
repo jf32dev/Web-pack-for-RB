@@ -1,0 +1,81 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+// Overflow ellipsis
+// Must define a width/max-width
+.overflow-ellipsis() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// CSS3 Cursors
+// grab/grabbing - not supported in IE
+.grab() {
+  cursor: move; /* IE */
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: grab;
+}
+
+.grabbing() {
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: grabbing;
+}
+
+// Zoom in/out - not supported in IE
+.zoom-in() {
+  cursor: -webkit-zoom-in;
+  cursor: -moz-zoom-in;
+  cursor: zoom-in;
+}
+
+.zoom-out() {
+  cursor: -webkit-zoom-out;
+  cursor: -moz-zoom-out;
+  cursor: zoom-out;
+}
+
+// ie 11 fix - http://hackingui.com/front-end/a-pure-css-solution-for-multiline-text-truncation/
+.line-clamp-ie-fix(@lineHeight, @lineClampLines, @textAlign, @ellipsisColor) {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  line-height: @lineHeight;
+  max-height: @lineHeight * @lineClampLines;
+  text-align: @textAlign;
+  padding-right: 1rem;
+
+  &:before {
+    content: '...';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: @ellipsisColor;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 1rem;
+    height: @lineHeight;
+    margin-top: 0.2rem;
+    background: white;
+  }
+}

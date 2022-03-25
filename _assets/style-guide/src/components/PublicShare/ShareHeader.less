@@ -1,0 +1,313 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Jason Huang <jason.huang@bigtincan.com>
+ */
+
+@import "../../libs/less/variables.less";
+
+@headerHeight: 80px;
+@headerMobileHeight: 120px;
+
+.ShareHeader {
+  display: flex;
+  width: 100%;
+  height: @headerHeight;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  padding: 0 2rem;
+  align-items: center;
+
+  /** Media Query breakpoints */
+  @media @mobile, @mobile-xs {
+    flex-direction: column-reverse;
+    height: @headerMobileHeight;
+    padding: 0;
+  }
+
+  > div {
+    min-width: 150px;
+  }
+}
+
+.select {
+  min-width: 150px;
+  max-width: 288px;
+  width: 288px;
+}
+
+.left {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  button {
+    margin-left: 1.25rem;
+    @media @mobile, @mobile-xs {
+      margin-left: 0;
+    }
+  }
+  @media @mobile, @mobile-xs {
+    justify-content: space-between;
+    width: 100%;
+    flex: 1;
+    border-top: 1px solid @dividerColor;
+    border-top-color: var(--divider-color);
+    padding: 0 0.5rem;
+  }
+}
+
+.headerSubtitle {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  @media @mobile, @mobile-xs {
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+
+.selectContainer {
+  display: flex;
+  position: relative;
+  align-items: center;
+  @media @mobile, @mobile-xs {
+    width: 50%;
+  }
+}
+
+.downloadShareContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  @media @mobile, @mobile-xs {
+    width: 50%;
+  }
+}
+
+
+.filesText {
+  @media @mobile, @mobile-xs {
+    display: none;
+  }
+}
+
+.headerSubtitle span {
+  margin-right: 10px;
+}
+
+.fileCount {
+  position: absolute;
+  right: 40px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 50%;
+  background: white;
+  color: var(--base-color);
+}
+
+.center {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  @media @mobile, @mobile-xs {
+    justify-content: space-between;
+    width: 100%;
+    flex: 1;
+  }
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+  @media @mobile, @mobile-xs {
+    margin-right: 1rem;
+  }
+
+  > div {
+    display: inline-flex;
+    flex-shrink: 1;
+    flex-grow: 0;
+  }
+}
+
+
+.companyLogo {
+  width: 160px;
+  height: 36px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+  flex: 1;
+  margin-left: 10px;
+  @media @mobile, @mobile-xs, @tablet {
+    background-position: center;
+    margin-left: 0;
+  }
+}
+
+.date {
+  font-size: 0.75rem;
+  color: @secondaryText;
+}
+
+.mobileDivider {
+  @media @mobile, @mobile-xs {
+    background-color: var(--divider-color);
+    width: 1px;
+    height: 3.3rem;
+  }
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none !important;
+
+  &.share {
+    background-color:var(--base-color);
+    color:var(--base-text);
+    margin-left: 1.25rem;
+  }
+
+  &.mobile {
+    margin: 0 !important;
+    @media @tablet, @desktop, @desktop-xl, @desktop-xxl {
+      display: none;
+    }
+  }
+
+  &.desktop {
+    @media @mobile, @mobile-xs {
+      display: none;
+    }
+  }
+
+  &.download {
+    @media @mobile, @mobile-xs {
+      vertical-align: middle;
+    }
+  }
+
+  &:hover:not(.disabled):not(.loading) {
+    background-color:var(--base-color);
+    color:var(--base-text);
+  }
+
+  &.disabled{
+    background-color: white !important;
+    color: @disabledColor !important;
+  }
+}
+
+.userItem {
+  align-items: center;
+
+
+  > div {
+    align-items: center;
+    display: flex;
+  }
+}
+
+.handIcon:hover {
+  cursor: pointer;
+}
+
+:global {
+  .Select-menu-outer {
+    z-index:5 !important;
+  }
+  .Select.is-open > div {
+    border-color: #ddd !important;
+  }
+  .Select-option {
+    &.is-selected { //&.is-focused
+      background-color: #fafafa !important;
+    }
+    &.is-focused {
+      background-color: var(--light-base-color) !important;
+    }
+  }
+  .is-focused:not(.is-open) > .Select-control {
+    border-color: transparent !important;
+    box-shadow: none !important;
+
+    outline-color: var(--base-color);
+    outline-offset: -2px;
+    outline-style: auto;
+    outline-width: 3px;
+  }
+  .VirtualizedSelectFocusedOption {
+    background-color: var(--light-base-color) !important;
+  }
+
+  // New Select style
+  .Select {
+    > div {
+      background-color: #f5f5f5;
+      border-color: #f5f5f5;
+
+      .Select-arrow-zone {
+        > span {
+          border-top-color: var(--base-color);
+          color: var(--secondary-text) !important;
+        }
+        &:hover > span {
+          border-top-color: var(--dark-base-color);
+        }
+      }
+    }
+    &.is-disabled {
+      > div {
+        background-color: #fff !important;
+        border-color: var(--divider-color);
+        cursor:not-allowed;
+        > span span {
+          color: var(--secondary-text) !important;
+          border-top-color: #999 !important;
+        }
+      }
+    }
+
+    // Multi value drop down
+    &.Select--multi {
+      .Select-value {
+        border-color: var(--base-color) !important;
+        background-color: var(--light-base-color) !important;
+        span {
+          color: var(--primary-text) !important;
+        }
+        .Select-value-icon {
+          border-right-color: var(--base-color) !important;
+        }
+      }
+    }
+
+    .Select-value {
+      max-width: calc(100% - 20px) !important;
+    }
+
+  }
+}

@@ -1,0 +1,108 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Jason Huang <jason.huang@bigtincan.com>
+ */
+
+@import "../../../libs/less/variables.less";
+
+.SyncEditModal {
+
+  /** Media Query breakpoints */
+  @media @mobile {
+
+  }
+  @media @tablet {
+
+  }
+  @media @desktop {
+
+  }
+  @media @desktop-xl {
+
+  }
+
+  .header {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--secondary-text);
+  }
+
+  .minBodyHeight {
+    min-height: 22rem;
+    transition: max-height .5s;
+  }
+
+  .section1 {
+    padding: 2.188rem 1.5rem 0.5rem 1.5rem;
+    border-bottom:solid 1px @dividerColor;
+    border-bottom-color: var(--divider-color);
+  }
+
+  .folderConnectionTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    > div {
+      display: flex;
+      justify-content: center;
+    }
+
+    .svgIcon {
+      width: 1.25rem;
+      height: 1.25rem;
+      margin-right: 0.3125rem;
+    }
+
+    .name {
+      font-size: 0.875rem;
+      color: var(--secondary-text);
+    }
+
+    .label {
+      .label();
+    }
+  }
+
+  .nameInput {
+    padding-top: 1.25rem;
+  }
+
+  .userGroups {
+    padding: 1.375rem 1.5rem 0rem 1.5rem;
+    margin-right: 0rem;
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20rem;
+}
+
+.label() {
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: left;
+  color: var(--secondary-text);
+}
+
+

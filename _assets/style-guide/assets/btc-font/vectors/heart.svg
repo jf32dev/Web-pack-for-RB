@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="512px" height="512px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>512</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="512" sketch:type="MSArtboardGroup" stroke="#000000" stroke-width="25">
+            <g id="icon-heart" sketch:type="MSLayerGroup" transform="translate(13.000000, 48.000000)">
+                <path d="M355.09583,-2.84217094e-14 C307.312028,-2.84217094e-14 265.841265,27.2197245 242.997621,67.4481292 C220.163115,27.2171526 178.691047,-2.84217094e-14 130.904635,-2.84217094e-14 C58.3203565,-2.84217094e-14 0.000464439065,61.4427381 0.000464439065,137.407721 C0.000464439065,144.489453 -1.93026013,253.685981 243.17777,416 C485.780688,268.410119 486,157.449267 486,137.407721 C486,61.4427381 427.5339,-2.84217094e-14 355.09583,-2.84217094e-14" id="heart" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

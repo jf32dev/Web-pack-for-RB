@@ -1,0 +1,120 @@
+
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2016 BigTinCan Mobile Pty Ltd
+ * @author Rubenson Barrios <rubenson.barrios@bigtincan.com>
+ */
+
+@import "../../../libs/less/btc-font-mixins.less";
+@import "../../../libs/less/variables.less";
+
+
+/* Graph container */
+.wrapper {
+  position: relative;
+  display: block;
+  background-color: #fafafa;
+  height: 100%;
+  padding-top: 3rem;
+  //min-height: 29rem;
+
+  .graphContainer {
+    height: 100%;
+
+    > div {
+      height: 100%;
+      width: 100%;
+      min-width: 486px;
+      position: relative;
+
+      > svg {
+        position: relative;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* User Actions */
+.actions {
+  position: absolute;
+  top: 4.2rem;
+  right: 1rem;
+  z-index: 2;
+
+  > span:first-child {
+    margin-right: 1rem;
+  }
+}
+.zoomIn {
+  content: " ";
+  display: inline-block;
+  border-radius: 50%;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: #f0f0f0;
+  cursor: pointer;
+
+  .icon-plus(1rem);
+  &:before {
+    text-align: center;
+    line-height: 2.5rem;
+    width: 2.5rem;
+    color: var(--base-color);
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.zoomOut {
+  content: " ";
+  display: inline-block;
+  border-radius: 50%;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: #f0f0f0;
+  cursor: pointer;
+
+  .icon-minus(1rem);
+  &:before {
+    text-align: center;
+    line-height: 2.5rem;
+    width: 2.5rem;
+    color: var(--base-color);
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.blank {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 50%;
+}
+.loading {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 10%;
+  width: 100%;
+  align-self: center;
+
+  > div {
+    margin: auto;
+  }
+}

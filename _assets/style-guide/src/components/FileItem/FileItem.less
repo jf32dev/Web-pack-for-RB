@@ -1,0 +1,699 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../libs/less/btc-font-mixins.less";
+@import "../../libs/less/tooltips.less";
+@import "../../libs/less/utilities.less";
+@import "../../libs/less/variables.less";
+
+@fileBg: #f9f9f9;
+
+/* Processing Animation */
+@keyframes reverseBgScroll {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: -120px 0;
+  }
+}
+
+/* Striped angle gradient */
+.stripedGradient(@startColor: #F26724) {
+  background: repeating-linear-gradient(
+    -55deg,
+    @startColor,
+    @startColor 16px,
+    lighten(@startColor, 10%) 16px,
+    lighten(@startColor, 10%) 33px);
+}
+
+/* Striped angle gradient with bigtincan orange */
+.baseStripedGradient() {
+  background: repeating-linear-gradient(
+    -55deg,
+    @baseColor,
+    @baseColor 16px,
+    @lightBaseColor 16px,
+    @lightBaseColor 33px);
+}
+
+.FileItem {
+  &.isActive {
+    background-color: var(--light-base-color);
+  }
+
+  // No click event on folders & processing/syncing
+  &[data-category=folder],
+  &[data-status=processing],
+  &[data-status=syncing] {
+    cursor: default;
+  }
+
+  // No icon on folder (custom svg)
+  &[data-category=folder] {
+    >div:before {
+      display: none;
+    }
+  }
+}
+
+/* List Styles */
+.listItem {
+  display: flex;
+  padding: 0.5rem;
+  align-items: center;
+  transition: background @timing-fast linear;
+  position: relative;
+  min-width: 10rem;
+
+  &:hover {
+    background-color: @light-base-color;
+  }
+
+  &.fileStack {
+
+    // hide stack indicators in list
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+
+  .checkbox {
+    transition: all @timing-fast linear;
+    width: 1.5rem;
+    visibility: hidden;
+
+    >div {
+      transition: all @timing-fast ease-in-out;
+      opacity: 0;
+    }
+  }
+
+  .processing,
+  .syncing {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 14.5rem;
+    max-width: 19%;
+    transition: all @timing-fast linear;
+  }
+
+  @media @mobile-xs {
+
+    .category,
+    .date,
+    .size,
+    .tags,
+    .shareStatus {
+      display: none;
+    }
+  }
+
+  @media @mobile {
+
+    .category,
+    .date,
+    .size,
+    .tags,
+    .shareStatus {
+      display: none;
+    }
+  }
+
+  @media @tablet {
+
+    .category,
+    .size,
+    .tags,
+    .shareStatus {
+      display: none;
+    }
+  }
+
+  @media @desktop {
+
+    .category,
+    .size,
+    .tags,
+    .shareStatus {
+      display: none;
+    }
+  }
+}
+
+.processing,
+.syncing {
+  p {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+
+    color: #fff;
+    font-size: 0.8rem;
+  }
+}
+
+.progressBar,
+.syncBar {
+  position: relative;
+  height: 1.45rem;
+
+  /* Overlay category label */
+  &:after {
+    background-color: @primary-text;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 2px;
+    content: '';
+    animation: reverseBgScroll 2.5s linear infinite;
+  }
+
+  .gridCategoryColours();
+  .stripedGradientColours();
+}
+
+/* List Sizes */
+.listItemLarge {}
+
+.listItemMedium {}
+
+.listItemSmall {
+  @media @mobile {
+
+    .category,
+    .date,
+    .size {
+      display: none;
+    }
+  }
+
+  .name {
+    min-width: 10rem;
+  }
+}
+
+/* Grid Styles */
+.gridItem {
+  display: inline-block;
+  position: relative;
+  margin: 1rem;
+  cursor: pointer;
+
+  .checkbox {
+    position: absolute;
+    top: 0.3rem;
+    left: 0.5rem;
+    z-index: 1;
+    margin-left: 1.25rem;
+  }
+
+  .processing,
+  .syncing {
+    position: absolute;
+    top: 5.95rem;
+    left: -0.25rem;
+    right: -0.25rem;
+    height: 1.35rem;
+  }
+
+  .name {
+    max-width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+    white-space: pre-wrap;
+    cursor: default;
+  }
+
+  .sizeAndDate {
+    color: @secondary-text;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+
+    .container {
+
+      .size,
+      .date {
+        display: flex;
+        align-items: center;
+      }
+
+      .infoIcon {
+        .icon-info-fill(0.8rem, ~'after');
+        text-align: left;
+        text-transform: capitalize;
+
+        &:after {
+          color: @secondary-text;
+          margin-left: 0.35rem;
+        }
+      }
+    }
+  }
+
+  .sizeAndDate:hover {
+    background-color: var(--base-color);
+    color: #FFFFFF;
+    border-radius: 2px;
+    padding-left: 0.265rem;
+
+    .infoIcon {
+      &:after {
+        color: #FFFFFF;
+        margin-left: 0.35rem;
+      }
+    }
+  }
+}
+
+/* Grid Sizes */
+.gridItemLarge {
+  .infoIcon {
+    .icon-info(0.8rem, ~'after');
+    text-align: left;
+    text-transform: capitalize;
+
+    &:after {
+      color: @secondary-text;
+      margin-left: 0.35rem;
+    }
+  }
+}
+
+.gridItemMedium {
+  margin: 0.75rem;
+  font-size: 0.85rem;
+
+  .processing {
+    top: 3.5rem;
+
+    p {
+      font-size: 0.75rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  .infoIcon {
+    .icon-info(0.8rem, ~'after');
+    text-align: left;
+    text-transform: capitalize;
+
+    &:after {
+      color: @secondary-text;
+      margin-left: 0.35rem;
+    }
+  }
+}
+
+.gridItemSmall {
+  .tooltip(s);
+  margin: 0.5rem;
+  font-size: 0.8rem;
+
+  &:after {
+    max-width: 20rem;
+    .overflow-ellipsis();
+  }
+
+  .processing {
+    top: 2.5rem;
+
+    p {
+      font-size: 0.7rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  .name {
+    display: none; // shown via tooltip
+  }
+
+  .infoIcon {
+    .icon-info(0.8rem, ~'after') !important;
+    text-align: left;
+    text-transform: capitalize;
+
+    &:after {
+      color: @secondary-text !important;
+      margin-left: 0.35rem !important;
+    }
+  }
+}
+
+.info {
+  width: 2rem;
+  min-width: 2rem;
+
+  .infoIcon {
+    .icon-info(1.2rem, ~'after');
+    text-align: left;
+    text-transform: capitalize;
+    cursor: pointer;
+
+    &:after {
+      color: var(--base-color);
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+.actionContainer {
+  width: 6.5rem;
+  min-width: 6.5rem;
+  display: flex;
+  margin-right: -0.5rem;
+}
+
+/* File Stack */
+.fileStack {
+
+  &:before,
+  &:after {
+    content: '';
+    border-top: solid 1px #ddd;
+    border-top-color: @divider-color;
+    position: absolute;
+  }
+
+  &:before {
+    top: -4px;
+    left: 6px;
+    right: 6px;
+  }
+
+  &:after {
+    top: -2px;
+    left: 3px;
+    right: 3px;
+  }
+}
+
+// match width of description in FileList.less
+.name {
+  white-space: pre;
+  color: @primary-text;
+  flex: 1;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  div {
+    display: flex;
+    p {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.category {
+  .overflow-ellipsis();
+  color: @secondary-text;
+  text-transform: capitalize;
+  width: 6.75rem;
+  min-width: 6.75rem;
+
+  /* Uppercase abbreviations */
+  &[data-category=btc],
+  &[data-category=cad],
+  &[data-category=csv],
+  &[data-category=pdf],
+  &[data-category=rtf],
+  &[data-category=rtfd],
+  &[data-category=txt],
+  &[data-category="3d-model"] {
+    text-transform: uppercase;
+  }
+}
+
+.tags {
+  width: 100%;
+  margin-top: 0.375rem;
+  overflow: hidden;
+
+  @media @mobile-xs {
+    display: none;
+  }
+
+  @media @mobile {
+    display: none;
+  }
+
+  @media @tablet {
+    display: none;
+  }
+
+  @media @desktop-xl {
+    display: none;
+  }
+
+  @media @desktop-xxl {
+    display: block;
+  }
+}
+
+.size {
+  .overflow-ellipsis();
+  color: @secondary-text;
+  width: 6rem;
+  min-width: 6rem;
+}
+
+.thumbnailNameContainer {
+  flex: 1;
+  display: flex;
+  min-width: 10rem;
+}
+
+.date {
+  .overflow-ellipsis();
+  color: @secondary-text;
+  text-align: left;
+  width: 6rem;
+  min-width: 6rem;
+
+  @media @tablet {
+    text-align: left;
+  }
+}
+
+.shareStatus {
+  .icon-info(0.8rem, ~'after');
+  color: @secondary-text;
+  text-align: left;
+  text-transform: capitalize;
+
+  &:after {
+    color: @base-color;
+    margin-left: 0.35rem;
+  }
+}
+
+.shareStatusColumn {
+  width: 7rem;
+  min-width: 7rem;
+  display: inline-block;
+
+  @media @mobile-xs {
+    display: none;
+  }
+
+  @media @mobile {
+    display: none;
+  }
+
+  @media @tablet {
+    display: none;
+  }
+}
+
+.shareActive {
+  width: 0.5rem;
+  height: 0.5rem;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.shareActive[data-status=mandatory] {
+  background: #f5a623;
+}
+
+.shareActive[data-status=blocked] {
+  background: #ff0000;
+}
+
+.shareActive[data-status=optional] {
+  background: #68c700;
+}
+
+// match .controls in FileList.less
+.download {
+  color: @base-color;
+  text-align: center;
+  width: 4rem;
+  min-width: 4rem;
+  transition: all @timing-fast linear;
+
+  @media @mobile {
+    opacity: 1;
+  }
+
+  @media @tablet {
+    opacity: 1;
+    width: 3rem; // @deviceControlWidth in FileList.less
+  }
+}
+
+.downloadIcon {
+  .icon-download();
+  cursor: pointer;
+  vertical-align: middle;
+  transition: all @timing-fast linear;
+  opacity: 0;
+}
+
+.tagContainer {
+  width: ~"calc(100% + 70px)" !important;
+  display: flex;
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+
+  .tagItem {
+    height: 30px;
+    border-radius: 4px;
+    background-color: #EEEEEE;
+    margin-left: .625rem;
+    display: flex;
+    align-items: center;
+    padding: 0 .5rem;
+  }
+
+  .tagItem:first-child {
+    margin-left: 0 !important;
+  }
+}
+
+.tagMain {
+  display: flex;
+  width: 100%;
+}
+
+.moreTag {
+  .overflow-ellipsis();
+  min-width: 60px;
+  border-radius: 4px;
+  display: flex;
+  margin-left: .625rem;
+  margin-right: .625rem;
+  align-items: center;
+  padding: 0 .6rem;
+  color: var(--base-color);
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.moreTagsContainer {
+  z-index: 111111;
+  position: absolute;
+  top: 2.5rem;
+  right: .75rem;
+  background-color: var(--background-color);
+  color: var(--secondary-text);
+  border: solid 1px #ddd;
+  border-color: var(--divider-color);
+  border-radius: 3px;
+  width: 20rem;
+  padding: .75rem;
+}
+
+.tagPopupContainer {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+
+  .tagItem {
+    height: 30px;
+    border-radius: 4px;
+    background-color: #EEEEEE;
+    margin-left: .5rem;
+    display: flex;
+    align-items: center;
+    padding: 0 .5rem;
+    margin-top: 10px;
+  }
+}
+
+.ThumbnailContainer {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.description {
+  .overflow-ellipsis();
+  margin-left: 0.5rem;
+}
+
+.notag {
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+  p {
+    .overflow-ellipsis();
+    width: ~"calc(100% - 20px)";
+  }
+}
+
+.nameWrapper {
+  display: flex;
+}
+
+.tooltipCommon(@dir) {
+  .tooltip(@dir);
+
+  >span {
+    .icon-approved-content(1.35rem);
+
+    &:before {
+      color: #F7C94B;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+    }
+  }
+}
+
+.tooltipListView {
+  .tooltipCommon(ne);
+}
+
+.tooltipGridView {
+  .tooltipCommon(n);
+}

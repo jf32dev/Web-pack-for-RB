@@ -1,0 +1,73 @@
+[{
+  "id": 1,
+  "type": "event",
+  "title": "Event Title 1",
+  "thumbnail": "src/static/images/story1.jpg",
+  "start": 1449637627,
+  "end": 1453761077,
+  "tz": "UTC",
+  "allDay": true,
+  "storyId": 1001,
+  "storyTitle": "Example Story 1",
+  "storyColour": "#0092ec"
+}, {
+  "id": 2,
+  "type": "event",
+  "title": "Event Title 2",
+  "thumbnail": "src/static/images/story3.png",
+  "start": 1449637627,
+  "end": 1449637827,
+  "tz": "UTC",
+  "allDay": false,
+  "storyId": 1002,
+  "storyTitle": "Example Story 2",
+  "storyColour": "#e202ae"
+}, {
+  "id": 3,
+  "type": "event",
+  "title": "Event Title 3",
+  "thumbnail": "",
+  "start": 1449637627,
+  "end": 1453761077,
+  "tz": "UTC",
+  "allDay": false,
+  "storyId": 1003,
+  "storyTitle": "Example Story 3",
+  "storyColour": "#f26724"
+}, {
+  "id": 4,
+  "type": "event",
+  "title": "Event Title 4",
+  "thumbnail": "",
+  "start": 1449637627,
+  "end": 1449637627,
+  "tz": "UTC",
+  "allDay": true,
+  "storyId": 1004,
+  "storyTitle": "Example Story 4",
+  "storyColour": "#ffd400"
+  }, {
+  "id": 5,
+  "type": "event",
+  "title": "Event Title 5",
+  "thumbnail": "",
+  "start": 1449637627,
+  "end": 1449637627,
+  "tz": "UTC",
+  "allDay": false,
+  "storyId": 1005,
+  "storyTitle": "Example Story 5",
+  "storyColour": "#ffd400"
+}, {
+  "id": 6,
+  "type": "event",
+  "title": "Event Title 6",
+  "thumbnail": "",
+  "start": 1449637627,
+  "end": 1449637627,
+  "tz": "UTC",
+  "allDay": false,
+  "storyId": 1006,
+  "storyTitle": "Example Story 6",
+  "storyColour": "#f26724"
+}]

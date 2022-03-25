@@ -1,0 +1,71 @@
+[{
+  "id": 166154,
+  "type": "group",
+  "name": "Test Group with a very long name surely this name is too long why would anyone do this someone will.",
+  "thumbnail": "src/static/images/story1.jpg",
+  "childCount": 1,
+  "colour": "#e202ae",
+  "canSubscribe": false,
+  "permissions": 1,
+  "notes": "My personal group"
+}, {
+  "id": 301054,
+  "type": "group",
+  "name": "Android Test",
+  "thumbnail": "src/static/images/story2.png",
+  "childCount": 0,
+  "colour": "#ffd400",
+  "canSubscribe": true,
+  "permissions": 2,
+  "notes": "Users responsible for creating solutions Synth blog locavore, gastropub food truck Vice pop-up +1 fap fixie forage swag jean shorts."
+}, {
+  "id": 166152,
+  "type": "group",
+  "name": "iOS Groups",
+  "thumbnail": "",
+  "childCount": 14,
+  "colour": "#cccccc",
+  "canSubscribe": false,
+  "permissions": 3,
+  "notes": "Testing notes in groups"
+}, {
+  "id": 166150,
+  "type": "group",
+  "name": "More Testing Grous",
+  "thumbnail": "",
+  "childCount": 5,
+  "colour": "#02e8d1",
+  "canSubscribe": false,
+  "permissions": 2,
+  "notes": "notes in groups"
+}, {
+  "id": 166158,
+  "type": "group",
+  "name": "testing test blah blah",
+  "thumbnail": "",
+  "childCount": 120,
+  "colour": "#02e8d1",
+  "canSubscribe": true,
+  "permissions": 3,
+  "notes": "Some more Testing notes in groups"
+},{
+  "id": 166157,
+  "type": "group",
+  "name": "Android Grous",
+  "thumbnail": "",
+  "childCount": 34,
+  "colour": "#02e8d1",
+  "canSubscribe": true,
+  "permissions": 2,
+  "notes": "Testing notes in groups"
+},{
+  "id": 166156,
+  "type": "group",
+  "name": "testing this items long test blah blah",
+  "thumbnail": "",
+  "childCount": 120,
+  "colour": "#02e8d1",
+  "canSubscribe": false,
+  "permissions": 1,
+  "notes": "testing this items long test blah blah"
+}]

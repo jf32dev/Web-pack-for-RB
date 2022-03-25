@@ -1,0 +1,15 @@
+.git
+
+.idea/
+node_modules/
+dist/
+build/
+.vscode/
+_assets/translations/extractedMessages
+*.iml
+webpack-assets.json
+webpack-stats.json
+npm-debug.log
+.DS_Store
+TODO.md
+

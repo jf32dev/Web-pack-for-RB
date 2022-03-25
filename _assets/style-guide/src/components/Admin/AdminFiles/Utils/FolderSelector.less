@@ -1,0 +1,276 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Jason Huang <jason.huang@bigtincan.com>
+ */
+
+@import "../../../../libs/less/variables.less";
+@import "../../../../libs/less/btc-font-mixins.less";
+@import "../../../../libs/less/utilities.less";
+
+.FolderSelector {
+  /** Media Query breakpoints */
+  @media @mobile {
+
+  }
+  @media @tablet {
+
+  }
+  @media @desktop {
+
+  }
+  @media @desktop-xl {
+
+  }
+
+  margin-bottom: 0.625rem;
+  transition: max-height .5s;
+
+  .disable {
+    cursor:not-allowed !important;
+
+    a {
+      cursor:not-allowed;
+      opacity: 0.7;
+    }
+  }
+
+  .structure {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+
+    > div {
+      position: relative;
+    }
+
+    .item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 2.813rem;
+      padding-right: 1.5rem;
+      padding-left: 1.5rem;
+      cursor: pointer;
+      position: relative;
+
+      &:hover {
+        background-color: var(--light-base-color);
+      }
+
+      .hidden {
+        visibility: hidden;
+      }
+
+      .folder {
+        .icon-folder();
+        &:before {
+          width: 1.625rem;
+          //margin: 0 1rem 0 0.8rem;
+        }
+      }
+
+      .file {
+        .disable();
+        .icon-document();
+        &:before {
+          width: 1.063rem;
+          //margin: 0 1.35rem 0 1rem;
+        }
+      }
+
+      .folder, .file {
+        padding-left: 3.5rem;
+        max-width: 22rem;
+        font-size: 0.875rem;
+        .overflow-ellipsis();
+        &:before {
+          height: 1.625rem;
+          color: var(--base-color);
+          position: absolute;
+          left: 3.5rem;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+
+    // SLIDE Animation
+    .slide-enter {
+      transform:translateX(100%);
+    }
+
+    .slide-enter.slide-enter-active {
+      background: white;
+      //opacity: 1;
+      transform: translateX(0%);
+      transition: transform .5s;
+      z-index: 2;
+      overflow: hidden;
+    }
+
+    .slide-enter-leave.slide-enter-leave-active {
+      background: white;
+      overflow: hidden;
+      transform: translateX(100%);
+      transition: transform .5s;
+      z-index: 2;
+    }
+
+    .slide-enter-leave {
+      transform: translateX(0%);
+    }
+
+    .slide-exit.slide-exit-active {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: calc(~"100% - 1.5rem");
+      z-index: 1;
+      overflow: hidden;
+    }
+  }
+
+  .paths {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .refresh {
+      .icon-syncing(1.3rem);
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:before {
+        width: 1.3rem;
+        height: 1.2rem;
+        color: var(--base-color);
+      }
+    }
+
+    .syncing {
+      cursor:not-allowed;
+
+      &:before {
+        animation: rotation 1s infinite linear;
+      }
+
+      @keyframes rotation {
+        from {transform: rotate(0deg);}
+        to   {transform: rotate(359deg);}
+      }
+    }
+  }
+
+  .header {
+    border-bottom:solid 1px @dividerColor;
+    border-bottom-color: var(--divider-color);
+    margin-bottom: 0.625rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    h5:first-child {
+      margin-bottom: 0.3125rem;
+      margin-left: 1.7rem;
+    }
+
+    h5:nth-child(2) {
+      color: var(--secondary-text);
+    }
+
+    h5 {
+      font-size: 0.75rem;
+      cursor: pointer;
+      display: flex;
+      margin-right: 0.5rem;
+      span {
+        .icon-play(.4rem);
+        display: flex;
+        position: absolute;
+        right: -0.75rem;
+        top: 50%;
+        transform: translateY(-50%);
+        &:before {
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+
+  .content {
+    position: relative;
+
+    .loader {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .loading {
+      opacity: 0.7;
+    }
+
+    .last {
+      position: absolute;
+      right: 1.5rem;
+      font-size: 0.75rem;
+    }
+  }
+
+  .crumbs {
+    display: flex;
+    width: 30rem;
+    overflow: hidden;
+
+    > li {
+      min-width: 3rem;
+      flex: 0 1 auto;
+
+      &:first-child {
+        flex: 0 0 auto;
+        white-space: nowrap;
+      }
+      &:nth-child(4) {
+        flex: 1 1 auto;
+      }
+      &:last-child {
+        white-space: nowrap;
+        flex: 0 0 auto;
+        text-overflow: unset;
+      }
+      &:not(:first-child) {
+        max-width: unset;
+      }
+    }
+  }
+
+  .rotation {
+    transform: translateY(-50%) rotate(180deg) !important;
+  }
+
+  label[for^="radio-"]:before {
+    margin-right: 0rem !important;
+  }
+
+  .radioFolder label:before {
+    padding-left:0.05rem
+  }
+}
+
+.syncRootPath {
+  margin-bottom: 0rem;
+}

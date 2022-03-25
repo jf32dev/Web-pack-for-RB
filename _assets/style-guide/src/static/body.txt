@@ -1,0 +1,272 @@
+<div class="titleCard">
+<h1>Brian</h1>
+
+<h2>Enterprise Architect</h2>
+<img alt="" src="http://www.blu99.com/persona/ea-persona-img.png" /></div>
+
+<ul id="tabs">
+    <li><a href="#tab1" id="img1">Summary</a></li>
+    <li><a href="#tab2" id="img2">Preferences</a></li>
+    <li><a href="#tab3" id="img3">Background</a></li>
+    <li><a href="#tab4" id="img4">Perspective</a></li>
+</ul>
+
+<div class="tabContent" id="tab1">
+<h2>Job Responsibilities</h2>
+
+<div>
+<ul>
+    <li>Manage enterprise architecture across all domains, inc. information, data, technology, business, security, and application environments</li>
+    <li>Gather and synthesize information about each domain and provide clear, consistent architectural direction</li>
+    <li>Align IT with business, ensuring that solutions meet corporate strategic direction and translating requirements to roadmaps</li>
+    <li>and nurture future-state technology vision, inc. identification and implementation of underlying foundational enablers</li>
+    <li>Integrate and extend existing systems with emerging/new business application needs</li>
+    <li>Develop and improve processes, standards, &amp; templates</li>
+    <li>Create more user-friendly and efficient experiences that customers actually want to use</li>
+    <li>Maintain or improve security, governance, and compliance</li>
+    <li>Guide technical resources and socialize architectural vision, values, and principles</li>
+    <li><a href="#test">Internal link test</a></li>
+</ul>
+</div>
+
+<h2>Objectives</h2>
+
+<div>
+<ul>
+    <li>Drive a long-term, innovative strategy around application development, deployment, management, security, integration, infrastructure, governance</li>
+    <li>Successfully integrate new initiatives (Mobile, Social, Cloud, Digital Transformation) with existing ecosystem</li>
+    <li>Create competitive advantage operationally and externally</li>
+    <li>Balance and prioritize the latest demands with day-to-day requirements (IoT, big data, DevOps, infrastructure needs)</li>
+    <li>Increase infrastructure agility, process/workflow efficiency, team innovation</li>
+    <li>Improve visibility across the enterprise ecosystem</li>
+    <li>Balance enterprise-wide scalability and security vs. flexibility and UX</li>
+    <li>Effect change management with little to no disruption</li>
+    <li>Improve performance to meet SLAs</li>
+    <li>Measure and demonstrate the impact of his team&rsquo;s recommendations and implementations</li>
+    <li>Prove himself to upper management</li>
+    <li><a href="http://www.google.com">External link test</a></li>
+</ul>
+</div>
+
+<h2>Business Challenges/Risks<a id="test" name="test"></a></h2>
+
+<div>
+<ul>
+    <li>Retaining control in a world of BYOD, shadow IT, and hackers</li>
+    <li>Reducing dependency on and managing legacy infrastructure; Fragmentation of tools</li>
+    <li>Security and compliance</li>
+    <li>Standardization processes, extensibility (anything can write on top of a solution)</li>
+    <li>Organizational silos, mergers/acquisitions</li>
+    <li>Juggling competing business priorities while keeping the lights on</li>
+</ul>
+</div>
+</div>
+
+<div class="tabContent" id="tab2">
+<h2>Interaction (Tactic) Preferences</h2>
+
+<div>
+<ul>
+    <li>Trusted advisor/consultant/analyst meetings</li>
+    <li>User groups and meet-ups (likes and can adapt to both pizza &amp; beer and wine &amp; dine)</li>
+    <li>Industry events, 1:1 workshops</li>
+    <li>Informal meetings with friends, colleagues &ndash; trusts past experiences (his and his colleagues/buddies&rsquo;)</li>
+    <li>&ldquo;A sales guy with a bunch of slides is not compelling. Rather deal with engineers, get handed code and documentation and say give it a shot.&rdquo;&nbsp;</li>
+    <li>Visual learner, so prefers in person or Webex to email or conf calls</li>
+</ul>
+</div>
+
+<h2>Watering Holes (where they get and/or exchange information)</h2>
+
+<div>
+<ul>
+    <li>Dev cons (Qcon, O&rsquo;Reilly, etc.)</li>
+    <li>Analyst websites and conferences: Gartner.com, Forrester.com, Gartner ITxpo</li>
+    <li>General media: NY Times, PC Magazine, HBR</li>
+    <li>IT sites: DevOps.com, JavaWorld.com, sys-con.com, SiliconAngle.com, InformationWeek.com, CIOinsight.com, CIO.com, ITcentralstation.com, computerweekly.com</li>
+    <li>LinkedIn Groups / Blogs:
+    <ul>
+        <li>
+        <div><a href="https://www.linkedin.com/groups?gid=60545&amp;goback=.npv_ADEAAAAtkIIB6polprEpCwe7TkABG3kASUMxywY_*1_*1_OUT*4OF*4NETWORK_g7eN_*1_en*4US_*1_*1_*1_319898691440719447795_1_80077_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_vsrp*4people*4res*4name_*1_*1&amp;trk=prof-groups-membership-name">TOGAF</a></div>
+        </li>
+        <li>
+        <div><a href="https://www.linkedin.com/groups?gid=67926&amp;goback=.npv_ADEAAAAtkIIB6polprEpCwe7TkABG3kASUMxywY_*1_*1_OUT*4OF*4NETWORK_g7eN_*1_en*4US_*1_*1_*1_319898691440719447795_1_80077_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_vsrp*4people*4res*4name_*1_*1&amp;trk=prof-groups-membership-name">TOGAF for Architecture</a></div>
+        </li>
+        <li>
+        <div><a href="https://www.linkedin.com/grp/home?gid=36248&amp;goback=.npv_ADEAAAAtkIIB6polprEpCwe7TkABG3kASUMxywY_*1_*1_OUT*4OF*4NETWORK_g7eN_*1_en*4US_*1_*1_*1_319898691440719447795_1_80077_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_vsrp*4people*4res*4name_*1_*1">Enterprise Architecture Forum</a></div>
+        </li>
+        <li>
+        <div><a href="https://www.linkedin.com/grp/home?gid=36781&amp;goback=.npv_ADEAAAAtkIIB6polprEpCwe7TkABG3kASUMxywY_*1_*1_OUT*4OF*4NETWORK_g7eN_*1_en*4US_*1_*1_*1_319898691440719447795_1_80077_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_vsrp*4people*4res*4name_*1_*1">Enterprise Architecture Network</a></div>
+        </li>
+        <li>
+        <div><a href="https://www.linkedin.com/groups?gid=100988&amp;goback=.npv_ADEAAAAmC5AB7ktMR3T*4zn3oTI98xxMqBZ8LYvE_*1_*1_OUT*4OF*4NETWORK_iqqF_*1_en*4US_*1_*1_*1_319898691440719447795_2_80077_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_vsrp*4people*4res*4name_*1_*1&amp;trk=prof-groups-membership-name">The IT Architect Network</a></div>
+        </li>
+        <li>
+        <div><a href="https://www.linkedin.com/groups?gid=45151&amp;goback=.npv_ADEAAAAtkIIB6polprEpCwe7TkABG3kASUMxywY_*1_*1_OUT*4OF*4NETWORK_g7eN_*1_en*4US_*1_*1_*1_319898691440719447795_1_80077_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_vsrp*4people*4res*4name_*1_*1&amp;trk=prof-groups-membership-name">Cloud Computing, SaaS, &amp; Virtualization</a></div>
+        </li>
+        <li>
+        <div><a href="https://www.linkedin.com/groups?gid=36604&amp;goback=.npv_ADEAAAAmC5AB7ktMR3T*4zn3oTI98xxMqBZ8LYvE_*1_*1_OUT*4OF*4NETWORK_iqqF_*1_en*4US_*1_*1_*1_319898691440719447795_2_80077_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_vsrp*4people*4res*4name_*1_*1&amp;trk=prof-groups-membership-name">SOA Special Interest Group</a></div>
+        </li>
+    </ul>
+    </li>
+</ul>
+</div>
+
+<h2>Content Depth/Content Types</h2>
+
+<div>
+<ul>
+    <li>More technical leaning, but will also look at higher level content if applicable</li>
+    <li>Anything hands-on: POCs, demos, trials</li>
+    <li>Values analysts opinions, but cynical about pay-to-play</li>
+    <li>Technical info from vendors during evaluation: datasheets, tech briefs, tech docs and forums</li>
+    <li>Case studies</li>
+    <li>Thought leadership pieces showing new trends in the industry and how they can be applied from trusted media/press or blogs (NOT vendors)</li>
+</ul>
+</div>
+
+<h2>Interaction and Content Dislikes</h2>
+
+<div>
+<ul>
+    <li>Traditional vendor collateral (white papers, webinars) although can be won over with good, innovative content</li>
+    <li>Fluffy marketing materials and promises &ndash; interested in facts, not stories</li>
+</ul>
+</div>
+</div>
+
+<div class="tabContent" id="tab3">
+<div class="twoCols">
+<h2>Common Titles</h2>
+
+<div>
+<ul>
+    <li>CTO</li>
+    <li>Application/Integration/Solution/API/SOA/Technical/Systems/Platform/Cloud Architect</li>
+    <li>Director (ITS global, eCommerce, engineering)</li>
+    <li>Reports to: Office of CIO or CTO, IT Strategy, Business Information Systems</li>
+</ul>
+</div>
+
+<h2>Demographics</h2>
+
+<div>
+<ul>
+    <li>Typically male, age 35-50, 10+ years experience</li>
+    <li>Education: BA/BS or higher in Computer Science/Engineering, Info Systems</li>
+    <li>Industry: Financial Services, Telecom, Retail, Professional Services, Manufacturing, Public Sector, Healthcare</li>
+    <li>Company size: $500M and up</li>
+</ul>
+</div>
+</div>
+
+<div class="twoCols">
+<h2>Buying Role, Buying Center, Budget Authority</h2>
+
+<div>
+<ul>
+    <li><strong>Buying Role:</strong> Major influencer with veto power who needs to say &lsquo;yes&rsquo; to solution. Product evaluator engaged in various stages of sales cycle: BVA, ROI, RFP</li>
+    <li><b>Buying Center:</b> First footprint often ends up being LOB or one specific project budget</li>
+    <li><b>Budget Authority:</b> Operates within team budget; must get approval from economic buyer (usually CIO/CTO).</li>
+</ul>
+</div>
+
+<h2>Personality and Perceptions</h2>
+
+<div>
+<ul>
+    <li><i>Personality:</i> VP&rsquo;s right hand man and trusted advisor. Big picture problem solver who can also get down in the weeds. Forward thinker. Translator between IT and LOB. Cynical.</li>
+    <li><i>Likes:</i> Finding innovative solutions, solving business problems in a technical way, getting his hands dirty</li>
+    <li><i>Dislikes:</i> Fire drills, marketing BS, closed-minded thinking, politics</li>
+    <li><i>Perception of CA Technologies:</i> Possibly an existing customer, sometimes new to CA. May have other enterprise-level CA products. At least knows of CA.</li>
+    <li><i>Perception of Competition:</i> Most likely has IBM or HP testing solutions or open source related products within the organization. We are likely competing against IBM, HP, and other smaller vendors (i.e. Parasoft).</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="tabContent" id="tab4">
+<h2>Narrative</h2>
+
+<div>
+<p>Business alignment is my top priority, no matter what the technology. But new initiatives are often a double-edged sword: they offer the potential to make serving our internal clients and customers faster, more efficient, and more user-friendly, but have also taught them to expect that level of service &ndash; all. the. time.</p>
+
+<p>Sometimes missed SLAs just lead to frustration, sometimes they lead to a whole implementation that&rsquo;s totally off of our grid. Not only is that professionally annoying &ndash; it presents significant concerns around security, compliance, and integration. Even worse? When IT issues impact external customers. It&rsquo;s empowering that my job directly affects the success of the business, but pretty damn stressful sometimes, too.</p>
+
+<p>What the business doesn&rsquo;t always understand is that I&rsquo;m all for innovation &ndash; it&rsquo;s one of my passions! It&rsquo;s just hard to know where to start and what&rsquo;s real out there. Seems like everything has &ldquo;cloud&rdquo;, &ldquo;mobile&rdquo;, &ldquo;Internet of Things&rdquo;, &ldquo;big data&rdquo; plastered all over it these days. I hear from every vendor that they can drive transformation quickly and easily but when I check with my peers outside our company, I hear the horror stories&hellip;</p>
+
+<p>I need to meet our current needs &ndash; better service, lower costs - and also plan for the future &ndash; the immediate future of &ldquo;ok, this thing is built, how do we keep it running smoothly,&rdquo; and the more distant future of new technology, more integrations, certain retirements, and bigger scale.</p>
+
+<p>&nbsp;</p>
+
+<p>All that being said, I think I&rsquo;m up to the challenge. I enjoy being the person who pulls everyone together and tries to balance the stakeholders&rsquo; needs with our reality in IT. It definitely feels like herding cats some days (and like babysitting on others) but it&rsquo;s also very satisfying &ndash; I&rsquo;m proud to be the front-line leader and mediator on ever-tighter business and IT alignment.</p>
+</div>
+
+<h2>Obstacles to Purchase</h2>
+
+<div>
+<ul>
+    <li>Has been burned in the past by vendor promises</li>
+    <li>Can&rsquo;t get support for his vision; therefore no budget</li>
+    <li>Loyalty to particular vendors (IBM, SAP), either emotionally or practically or both</li>
+    <li>Doesn&rsquo;t want to make the wrong decision since he&rsquo;s trying to make his way up the chain</li>
+    <li>Rate of change is overwhelming</li>
+    <li>Prioritizing shiny new objects (mobile, social, big data) on top of day-to-day job</li>
+    <li>Needs sign off from above (VP/CxO) and sometimes below</li>
+    <li>Resistance to perceived over-complexity</li>
+</ul>
+</div>
+
+<h2>Questions</h2>
+
+<div>
+<table>
+    <tbody>
+        <tr>
+            <th>Funnel Stage</th>
+            <th>Buyer Questions</th>
+        </tr>
+        <tr>
+            <td>Discover</td>
+            <td>
+            <ul>
+                <li>How can I create a top down, big picture strategy for x initiative? I need a long term vision and short term answers.</li>
+                <li>Once I have a vision for x initiative, what&rsquo;s the best way to go about implementing it?</li>
+                <li>How can I improve control? I need to manage BYOD, and prevent or eliminate &ldquo;shadow IT&rdquo;, address security and compliance&hellip;</li>
+                <li>What are the best practices for implementing Agile and DevOps principles to gain speed and agility for the business?</li>
+                <li>How can I balance today&rsquo;s technology needs (and our legacy infrastructure) with tomorrow&rsquo;s demands and technology?</li>
+            </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Explore</td>
+            <td>
+            <ul>
+                <li>How easy is it to integrate your solution with my existing infrastructure? Even the legacy stuff?</li>
+                <li>How will you help me drive our future vision while making our current systems easier to run?</li>
+                <li>Is your technology stack consistent with our current infrastructure? Show me how the architecture works.</li>
+                <li>How will the solution integrate with the rest of my systems, data sources, and environments? What does the middleware look like? What&rsquo;s the operational impact on my processes and tooling?</li>
+                <li>What kind of ROI will I see, both in terms of time and money?</li>
+            </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Buy</td>
+            <td>
+            <ul>
+                <li>How have other customers like me used the solution? How successful have they been?</li>
+                <li>How do I justify the cost? How do you prove TCO? I need to show real value up the chain.</li>
+                <li>Demonstrate how the platform can meet my specific needs.</li>
+            </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<h2>Lexicon</h2>
+
+<div>
+<p>standards, integration, solution architecture, application architecture, architecture frameworks (TOGAF, Zachman, Gartner, SOA), protocols, infrastructure, integration, development, multi-tenancy, system integration, security, multi-channel, end-to-end processing, elastic computing, virtualization, data center automation, cloud, SDLC, agile methodologies, scrum, DevOps, SaaS, business intelligence</p>
+</div>
+</div>

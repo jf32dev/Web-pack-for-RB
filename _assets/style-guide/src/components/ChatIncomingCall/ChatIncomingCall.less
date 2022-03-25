@@ -1,0 +1,93 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../libs/less/btc-font-mixins.less";
+@import "../../libs/less/transitions.less";
+@import "../../libs/less/variables.less";
+
+@acceptColor: #4cd964;
+@denyColor: #ff3b30;
+
+@iconSize: 46px;
+@itemWidth: 24.5rem;
+
+.ChatIncomingCall {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  width:@itemWidth;
+  padding:0.5rem;
+  background-color: #fff;
+  box-shadow: 0 6px 23px 0 rgba(0, 0, 0, 0.28);
+}
+
+.userItem {
+  user-select:none;
+}
+
+.actions {
+  margin:0;
+  padding:0;
+  list-style:none;
+
+  > li {
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    margin:0 0 0 1.25rem;
+    padding:0;
+    border-radius:50%;
+    width:@iconSize;
+    height:@iconSize;
+    cursor:pointer;
+    transition:all @timing-medium linear;
+
+    &:before {
+      color:#fff;
+    }
+  }
+}
+
+.acceptCall {
+  .icon-phone-fill();
+  background:@acceptColor;
+
+  &:before {
+    animation-name: tada;
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+  }
+
+  &:hover {
+
+  }
+}
+.denyCall {
+  .icon-phone-fill();
+  background:@denyColor;
+
+  &:before {
+    transform:rotate(135deg);
+    transition:all @timing-fast ease-out;
+  }
+  &:hover:before {
+    animation-name: hangup;
+    animation-duration: @timing-slow;
+    animation-fill-mode: both;
+  }
+}

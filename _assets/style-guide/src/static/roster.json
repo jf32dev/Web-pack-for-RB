@@ -1,0 +1,164 @@
+[{
+  "id": 101,
+  "type": "people",
+  "name": "My Man",
+  "presence": 100,
+  "messages": [{
+    "id": 1,
+    "type": "chat",
+    "body": "Porchetta :( pancetta meatloaf chicken kielbasa, ball tip frankfurter pork belly kevin beef ribs capicola ground round. Filet mignon doner cow, corned beef pork chop ham hock tail kielbasa fatback beef. Andouille t-bone pork pancetta drumstick. Drumstick brisket cupim t-bone, doner salami rump venison pork fatback turducken ground round spare ribs prosciutto.",
+    "time": 1459305207774,
+    "received": true,
+    "user": {
+      "id": 202,
+      "name": "Radical Guy",
+      "thumbnail": ""
+    }
+  }, {
+    "id": 2,
+    "type": "chat",
+    "body": "Nice :poop:",
+    "time": 1459305205774,
+    "sent": true,
+    "user": {
+      "id": 202,
+      "name": "Radical Guy",
+      "thumbnail": ""
+    }
+  }, {
+    "id": 3,
+    "type": "hub-attachment",
+    "body": "StoryFileIdentifier/10093",
+    "time": 1459305203774,
+    "sent": true,
+    "user": {
+      "id": 202,
+      "name": "Radical Guy",
+      "thumbnail": ""
+    },
+    "file": {
+      "id": 10093,
+      "filename": "example_file.jpg",
+      "description": "Example File",
+      "category": "image",
+      "thumbnail": ""
+    }
+  }, {
+    "id": 4,
+    "type": "hub-attachment",
+    "body": "StoryPermanentIdentifier/408134",
+    "time": 1459305201774,
+    "sent": true,
+    "user": {
+      "id": 202,
+      "name": "Radical Guy",
+      "thumbnail": ""
+    },
+    "story": {
+      "permId": 408134,
+      "name": "Example Story",
+      "thumbnail": "",
+      "colour": ""
+    }
+  }, {
+    "id": 5,
+    "type": "chat",
+    "body": "I looooooooove 🍕 ! https://www.dominos.com.au",
+    "time": 1459305197774,
+    "received": true,
+    "user": {
+      "id": 202,
+      "name": "Radical Guy",
+      "thumbnail": ""
+    }
+  }, {
+    "id": 6,
+    "type": "chat",
+    "body": "True story. Check this link: www.google.com or http://www.google.com",
+    "time": 1459305197778,
+    "received": true,
+    "user": {
+      "id": 202,
+      "name": "Radical Guy",
+      "thumbnail": ""
+    }
+  }, {
+    "id": 7,
+    "type": "chat",
+    "body": ":| @username Tail turducken pork belly strip steak, www.whirlpool.net.au turkey bacon chicken short loin pancetta beef hamburger. coolguy@exmaple.com Tenderloin venison turducken, meatloaf turkey ham tri-tip pork chop ball tip alcatra bresaola chicken. :)",
+    "time": 1459207611243,
+    "sent": true,
+    "user": {
+      "id": 202,
+      "name": "Radical Guy",
+      "thumbnail": ""
+    }
+  }],
+  "unreadCount": 1
+}, {
+  "id": 202,
+  "type": "people",
+  "name": "Radical Guy",
+  "presence": 0,
+  "messages": [{
+    "id": 1,
+    "type": "chat",
+    "body": "Porchetta pancetta meatloaf chicken kielbasa, ball tip frankfurter pork belly kevin beef ribs capicola ground round. Filet mignon doner cow, corned beef pork chop ham hock tail kielbasa fatback beef. Andouille t-bone pork pancetta drumstick. Drumstick brisket cupim t-bone, doner salami rump venison pork fatback turducken ground round spare ribs prosciutto.",
+    "time": 1459380411243,
+    "received": true,
+    "user": {
+      "id": 203,
+      "name": "Awesome Dude",
+      "thumbnail": ""
+    }
+  }],
+  "unreadCount": 100
+}, {
+  "id": 203,
+  "type": "people",
+  "name": "Awesome Dude",
+  "presence": 0,
+  "messages": []
+}, {
+  "id": 301,
+  "type": "people",
+  "name": "Awesome Guy 1",
+  "presence": 0,
+  "messages": []
+}, {
+  "id": 302,
+  "type": "people",
+  "name": "Awesome Guy 2",
+  "presence": 0,
+  "messages": []
+}, {
+  "id": 303,
+  "type": "people",
+  "name": "Awesome Guy 3",
+  "presence": 0,
+  "messages": []
+}, {
+  "id": 304,
+  "type": "people",
+  "name": "Awesome Guy 4",
+  "presence": 0,
+  "messages": []
+}, {
+  "id": 305,
+  "type": "people",
+  "name": "Awesome Guy 5",
+  "presence": 0,
+  "messages": []
+}, {
+  "id": 306,
+  "type": "people",
+  "name": "Awesome Guy 6",
+  "presence": 0,
+  "messages": []
+}, {
+  "id": 307,
+  "type": "people",
+  "name": "Awesome Guy 7",
+  "presence": 0,
+  "messages": []
+}]

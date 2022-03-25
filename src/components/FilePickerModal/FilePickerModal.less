@@ -1,0 +1,103 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package hub-web-app-v5
+ * @copyright 2010-2017 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../less/_variables.less";
+
+.FilePickerModal {
+  z-index: 1100;
+  h3 {
+    text-align: center;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.crumbWrapper {
+  padding: 1rem;
+
+  .crumbs {
+    display: flex;
+
+    > li {
+      min-width: 3rem;
+      flex: 0 1 auto;
+
+      &:first-child {
+        flex: 0 0 auto;
+      }
+      &:nth-child(4) {
+        flex: 1 1 auto;
+      }
+    }
+  }
+}
+
+.selectAllWrapper {
+  margin: 0 1rem;
+  border-bottom-color: var(--divider-color);
+  border-bottom: solid 1px @dividerColor;
+  padding: 0 0 0.25rem;
+}
+
+.body {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.listWrapper {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 13rem;
+
+  &.loading,
+  &.empty {
+    justify-content: center;
+    align-content: center;
+
+    > div {
+      height: auto; // safari fix
+    }
+  }
+
+  > ul {
+    height: auto; // safari fix
+  }
+}
+
+// IE min-height flex bug
+// https://github.com/philipwalton/flexbugs#3-min-height-on-a-flex-container-wont-apply-to-its-flex-items
+.ieBody {
+  height: 20rem;
+}
+
+.footer {
+  border-top: solid 1px @dividerColor;
+  border-top-color: var(--divider-color);
+}
+
+.item {
+  padding: 0.5rem 1rem !important;
+}
+
+.fileList {
+  > li > div > div[data-share-status="optional"],
+  div[data-share-status="blocked"] {
+    display: none;
+  }
+}

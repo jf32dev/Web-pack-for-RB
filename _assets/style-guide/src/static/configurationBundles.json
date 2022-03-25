@@ -1,0 +1,218 @@
+[
+  {
+    "id": 397,
+    "name": "Testing",
+    "description": "",
+    "childCount": 1,
+    "lastUpdated": 1478800304,
+    "type": "configurationBundle"
+  },
+  {
+    "id": 3011,
+    "name": "Alex test bundle",
+    "description": "",
+    "childCount": 2,
+    "lastUpdated": 1493243500,
+    "type": "configurationBundle"
+  },
+  {
+    "id": 87,
+    "name": "Controlled Authoring",
+    "description": "Users cannot create personal content.\nOnly authors can modify their respective stories.",
+    "childCount": 9,
+    "lastUpdated": 1466441307,
+    "type": "configurationBundle"
+  },
+  {
+    "id": 2716,
+    "name": "Doc test bundle",
+    "description": "",
+    "childCount": 1,
+    "lastUpdated": 1477833331,
+    "type": "configurationBundle"
+  },
+  {
+    "id": 84,
+    "name": "Full Privileges",
+    "description": "Full access to all functionality including social sharing. more",
+    "childCount": 1077,
+    "lastUpdated": 1493231616,
+    "type": "configurationBundle"
+  },
+  {
+    "id": 2717,
+    "name": "Full Privileges - Download Subscribed Only",
+    "description": "",
+    "childCount": 4,
+    "lastUpdated": 1491595816,
+    "type": "configurationBundle"
+  },
+  {
+    "id": 2290,
+    "name": "Full Privileges with Pin Code",
+    "description": "",
+    "childCount": 1,
+    "lastUpdated": 1490208283,
+    "type": "configurationBundle"
+  },
+  {
+    "id": 2462,
+    "name": "iOS Test Bundle",
+    "description": "Holds iOs Testing exploratory sessions",
+    "childCount": 3,
+    "lastUpdated": 1493319646,
+    "type": "configurationBundle"
+  },
+  {
+    "id": 98,
+    "name": "Kelvin Bundle",
+    "description": "",
+    "childCount": 1,
+    "lastUpdated": 1493139063,
+    "type": "configurationBundle"
+  },
+  {
+    "id": 86,
+    "name": "Kiosk",
+    "description": "Limited, read-only functionality.",
+    "childCount": 0,
+    "lastUpdated": 1457867100,
+    "type": "configurationBundle"
+  },
+  {
+    "id": 2359,
+    "name": "Kostia's test bundle",
+    "description": "",
+    "childCount": 1,
+    "lastUpdated": 1493142281,
+    "type": "configurationBundle"
+  },
+  {
+    "id": 99,
+    "name": "Lesley Bundle",
+    "description": "switched off My Content\nenabled show subscribed",
+    "childCount": 0,
+    "lastUpdated": 1456977513,
+    "type": "configurationBundle"
+  },
+  {
+    "id": 3262,
+    "name": "Lochlan Test Bundle",
+    "description": "",
+    "childCount": 1,
+    "lastUpdated": 1491735836,
+    "type": "configurationBundle"
+  },
+  {
+    "id": 3372,
+    "name": "Low bandwidth",
+    "description": "",
+    "childCount": 1,
+    "lastUpdated": 1487251644,
+    "type": "configurationBundle"
+  },
+  {
+    "id": 2676,
+    "name": "MadhuriTestBundle",
+    "description": "Test bundle",
+    "childCount": 3,
+    "lastUpdated": 1492613079,
+    "type": "configurationBundle"
+  },
+  {
+    "id": 2635,
+    "name": "Maha bundle",
+    "description": "Maha bundle",
+    "childCount": 0,
+    "lastUpdated": 1474827455,
+    "type": "configurationBundle"
+  },
+  {
+    "id": 3128,
+    "name": "Neil's test bundle",
+    "description": "A test bundle for Neil!",
+    "childCount": 1,
+    "lastUpdated": 1491772721,
+    "type": "configurationBundle"
+  },
+  {
+    "id": 398,
+    "name": "Nitesh Test - JavascritptBridge",
+    "description": "",
+    "childCount": 1,
+    "lastUpdated": 1484761715,
+    "type": "configurationBundle"
+  },
+  {
+    "id": 104,
+    "name": "No Salesforce bundle",
+    "description": "",
+    "childCount": 0,
+    "lastUpdated": 1457466683,
+    "type": "configurationBundle"
+  },
+  {
+    "id": 105,
+    "name": "Pete's Bundle",
+    "description": "",
+    "childCount": 1,
+    "lastUpdated": 1457866141,
+    "type": "configurationBundle"
+  },
+  {
+    "id": 1997,
+    "name": "Rakhi's Bundle",
+    "description": "",
+    "childCount": 2,
+    "lastUpdated": 1473361621,
+    "type": "configurationBundle"
+  },
+  {
+    "id": 2958,
+    "name": "Re-auth bundle",
+    "description": "For testing inactivity reauthentication.",
+    "childCount": 1,
+    "lastUpdated": 1480268556,
+    "type": "configurationBundle"
+  },
+  {
+    "id": 396,
+    "name": "Ryans Bundle(Of Joy)",
+    "description": "I wonder whether its a boy or girl?",
+    "childCount": 0,
+    "lastUpdated": 1460292773,
+    "type": "configurationBundle"
+  },
+  {
+    "id": 85,
+    "name": "Standard Privileges",
+    "description": "Full access to all functionality excluding social sharing.",
+    "childCount": 2,
+    "lastUpdated": 1455815394,
+    "type": "configurationBundle"
+  },
+  {
+    "id": 2715,
+    "name": "Tim Bundle",
+    "description": "",
+    "childCount": 5,
+    "lastUpdated": 1491411744,
+    "type": "configurationBundle"
+  },
+  {
+    "id": 2698,
+    "name": "Vinay Bundle",
+    "description": "",
+    "childCount": 2,
+    "lastUpdated": 1492958905,
+    "type": "configurationBundle"
+  },
+  {
+    "id": 3186,
+    "name": "Windows test",
+    "description": "Windows test",
+    "childCount": 1,
+    "lastUpdated": 1491766539,
+    "type": "configurationBundle"
+  }
+]

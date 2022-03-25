@@ -1,0 +1,19 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.bigtincan.mobile.hub",
+    "sha256_cert_fingerprints":
+    ["7E:52:99:28:C7:F2:A8:1F:C3:0C:74:08:AE:93:D1:96:7F:D9:C4:8A:05:5A:31:E5:89:BE:9E:70:F1:37:44:6E",
+     "04:D6:70:13:7A:D2:01:19:D4:20:F6:32:60:21:27:03:57:D4:BA:71:23:70:0D:E5:D6:63:9C:95:9B:D0:52:02"]
+  }
+},
+{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.bigtincan.mobile.hub.tmobile",
+    "sha256_cert_fingerprints":
+    ["7E:52:99:28:C7:F2:A8:1F:C3:0C:74:08:AE:93:D1:96:7F:D9:C4:8A:05:5A:31:E5:89:BE:9E:70:F1:37:44:6E"]
+  }
+}]

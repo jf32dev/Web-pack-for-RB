@@ -1,0 +1,25 @@
+{
+  "currency": "AUD",
+  "entities": [
+    {
+      "id": 1,
+      "name":"Marketing",
+      "propertyTypes": [
+        {"id": 1, "name": "Category", "allowMultiple": 0, "isTrait": 1, "predefined": ["test"]},
+        {"id": 2, "name": "Department", "allowMultiple": 0, "isTrait": 1},
+        {"id": 3, "name": "Agency/Content Creator", "allowMultiple": 0, "isTrait": 1, "predefined": ["Category test", "More data"]},
+        {"id": 4, "name": "Cost to produce content", "allowMultiple": 0, "isTrait": 0}
+      ]
+    },
+    {
+      "id": 2,
+      "name":"CRM",
+      "propertyTypes": [
+        {"id": 5, "name": "Category", "allowMultiple": 0, "isTrait": 1, "predefined": ["Category test", "More data"]},
+        {"id": 6, "name": "Product", "allowMultiple": 0, "isTrait": 1, "predefined": ["GenWatt Diesel 1000kW"]},
+        {"id": 7, "name": "Stage", "allowMultiple": 0, "isTrait": 1, "predefined": ["Prospecting"]},
+        {"id": 8, "name": "Keywords", "allowMultiple": 0, "isTrait": 1}
+      ]
+    }
+  ]
+}

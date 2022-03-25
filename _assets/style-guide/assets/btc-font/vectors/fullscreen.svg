@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="512px" height="512px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>fullscreen</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="fullscreen" sketch:type="MSArtboardGroup" fill="#000000">
+            <g id="icon-fullscreen" sketch:type="MSLayerGroup" transform="translate(0.000000, 32.000000)">
+                <path d="M32,32 L144,32 L144,0 L0,0 L0,128 L32,128 L32,32 Z" id="tl" sketch:type="MSShapeGroup"></path>
+                <path d="M32,352 L144,352 L144,320 L0,320 L0,448 L32,448 L32,352 Z" id="bl" sketch:type="MSShapeGroup" transform="translate(72.000000, 384.000000) scale(1, -1) translate(-72.000000, -384.000000) "></path>
+                <path d="M400,32 L512,32 L512,0 L368,0 L368,128 L400,128 L400,32 Z" id="tr" sketch:type="MSShapeGroup" transform="translate(440.000000, 64.000000) scale(-1, 1) translate(-440.000000, -64.000000) "></path>
+                <path d="M400,352 L512,352 L512,320 L368,320 L368,448 L400,448 L400,352 Z" id="br" sketch:type="MSShapeGroup" transform="translate(440.000000, 384.000000) scale(-1, -1) translate(-440.000000, -384.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

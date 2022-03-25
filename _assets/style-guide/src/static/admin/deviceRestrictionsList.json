@@ -1,0 +1,6 @@
+[{
+  "id":609,
+  "name":"Google",
+  "type":"whitelist",
+  "last_updated":"1500548060"
+},{"id":567,"name":"ABC","type":"blacklist","last_updated":"1479857733"},{"id":603,"name":"Google","type":"blacklist","last_updated":"1500548022"}]

@@ -1,0 +1,205 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2016 BigTinCan Mobile Pty Ltd
+ * @author Rubenson Barrios <rubenson.barrios@bigtincan.com>
+ */
+
+@import "../../../libs/less/btc-font-mixins.less";
+@import "../../../libs/less/utilities.less";
+@import "../../../libs/less/variables.less";
+
+@appHeaderHeight: 2.65rem;
+
+/* Animate list transitions */
+@keyframes slide-in {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+@keyframes slide-out {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0%); }
+}
+
+.AdminMenu {
+  display: flex;
+  height: 100vh;
+  flex-direction:column;
+
+  @media @desktop-xl {
+    > header {
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+.mainWrapper {
+  flex-wrap: wrap;
+  overflow-x: hidden;
+  position: absolute;
+  height: 100%;
+}
+
+.header {
+  font-size: 90%;
+  max-width: 90%;
+  .overflow-ellipsis();
+}
+.collapseHeader {
+  font-size: 90%;
+  max-width: 82%;
+  .overflow-ellipsis();
+}
+
+.AdminMenuList {
+  transition: width @timing-fast ease-in-out;
+
+  &.indexList {
+    margin-left: 0.5rem;
+  }
+
+  &.subList {
+    margin-top: 1.25rem;
+  }
+
+  > ul {
+    width: 100%;
+    transition: width @timing-fast ease-in-out;
+  }
+}
+
+.list {
+  margin:0;
+  padding:0;
+  list-style:none;
+  overflow: auto;
+  height:100%;  // causes problems in Safari in some cases
+
+  > li {
+    margin:0;
+    padding:0;
+    list-style:none;
+
+    a > span {
+      opacity: 1;
+      transition: opacity @timing-slow ease-in-out;
+      text-transform: capitalize;
+    }
+  }
+
+  .selected {
+    background-color: var(--light-base-color);
+  }
+}
+
+/* List Styles */
+.MenuItem {
+  display:block;
+  color: var(--primary-text);
+  padding: 1rem 0.75rem;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &.fullWidth {
+    //max-width: 95%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &:before {
+    //display: block;
+    color: var(--base-color);
+    margin-right: 1rem;
+    font-size: 1.4rem;
+    width: 1.6rem;
+    text-align: center;
+  }
+
+  &:hover {
+    text-decoration:none;
+    background-color: var(--light-base-color);
+  }
+}
+
+/* List Wrapper (wraps Transition container) */
+.listWrapper {
+  display:flex;
+
+  overflow: hidden;
+  position: relative;
+  flex: 1 1 auto;
+
+  transition: width @timing-slow ease-in-out;
+}
+
+.transitionWrapper {
+  width:100%;
+}
+
+.animationsEnabled {
+  > div {
+    overflow-x:hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width:100%;
+  }
+}
+
+.list0ActiveAnimate {
+  animation: slide-out @timing-medium forwards linear;
+}
+
+.list1ActiveAnimate {
+  animation: slide-in @timing-medium forwards linear;
+}
+
+.toggleIcon {
+  z-index: 1;
+  cursor: pointer;
+  position: absolute;
+  right: 0.25rem;
+  top: 0.75rem;
+  color: var(--base-color);
+  border-radius: 4px;
+  line-height: 0.5rem;
+  padding: 0.45rem 0.55rem;
+  .icon-triangle(0.6rem);
+
+  &:hover {
+    transition: background-color @timing-fast linear;
+    background-color: var(--light-base-color);
+  }
+  &:before {
+    transition:all @timing-medium linear;
+    transform: rotate(90deg);
+  }
+  &.active:before {
+    transform: rotate(270deg);
+  }
+}
+
+.collapseMenu {
+  ul {
+    overflow: hidden;
+    width: 3.25rem !important;
+
+    a {
+      white-space: nowrap;
+
+      span {
+        opacity: 0;
+      }
+    }
+  }
+}

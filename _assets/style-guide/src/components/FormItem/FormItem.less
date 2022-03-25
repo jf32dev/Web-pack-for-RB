@@ -1,0 +1,146 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package hub-web-app-v5
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../libs/less/utilities.less";
+@import "../../libs/less/variables.less";
+
+.FormItem {
+  display:block;
+  overflow:hidden;
+
+  &.isActive {
+    background-color: var(--light-base-color);
+  }
+}
+
+.noLink {
+  cursor:pointer;
+}
+
+/* List Styles */
+.listItem {
+  align-items:center;
+  transition:background @timing-fast linear;
+
+  &.noLink {
+    padding:0.5rem;
+
+    &:hover {
+      background-color:@light-base-color;
+    }
+  }
+
+  .wrapper {
+    display:flex;
+    align-items: center;
+  }
+
+  a {
+    display:flex;
+    align-items: center;
+    color:@primary-text;
+    padding:0.5rem;
+
+    &:hover {
+      text-decoration:none;
+      background-color:@light-base-color;
+    }
+  }
+}
+
+/* Grid Styles */
+.gridItem {
+  display:inline-block;
+  margin:1rem;
+  margin-top:0;
+  position: relative;
+
+  .checkbox {
+    position:absolute;
+    top: 0.3rem;
+    left: 0.5rem;
+    z-index:1;
+  }
+}
+
+.thumbnail() {
+  text-align:center;
+  background-color:rgb(2, 154, 159);
+  flex: 0 0 auto;
+
+  &:before {
+    color:#fff;
+  }
+}
+
+.listThumbnail {
+  .thumbnail();
+  margin-right:0.5rem;
+
+  &:before {
+    font-size:32px;
+    line-height:1.45;
+  }
+}
+
+.gridThumbnail {
+  .thumbnail();
+
+  &:before {
+    font-size:128px;
+    line-height:1.5;
+  }
+}
+
+.thumbnailDraft {
+  background-color:#fff;
+  border:solid 0.1rem rgb(2, 154, 159);
+
+  &:before {
+    color:rgb(2, 154, 159);
+  }
+}
+
+.thumbnailRetired {
+  opacity:0.5;
+}
+
+/**
+ * Form info
+ */
+.name {
+  color:@primary-text;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow:hidden;
+}
+
+.note {
+  color:@secondary-text;
+  font-size:90%;
+  display:block;
+  .overflow-ellipsis();
+}
+
+.status {
+  color:@secondary-text;
+  font-size:90%;
+  display:block;
+  text-transform:capitalize;
+  .overflow-ellipsis();
+}

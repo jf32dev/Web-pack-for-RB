@@ -1,0 +1,4 @@
+{ "crmList":[{"crm":"salesforce","description":"Salesforce"},{"crm":"dynamics","description":"Microsoft Dynamics"}],
+  "crmSettings":{"contact_filter":1,"crm_id":null,"crm_id_type":null,"opportunity_filter":"[\"Qualification\",\"Value Proposition\"]","enable_followup_task":1,"followup_due_date":2,"enable_reminder":1,"reminder_due_date":1,"last_updated":"2018-06-15 03:46:46","override":0,"is_authenticated":true,"cloud_account_id":8299110,"cloud_app_id":"oGxrGNUetsemdONiO6ch_kJwLiD6S1EFTTqdIU1_55CdSlbo","cloud_server_url":"https:\/\/cloudfiles.bigtincan.com"},
+  "opportunityStages":{"next_page":"Mg==","stages":["Prospecting","Qualification","Needs Analysis","Value Proposition","Id. Decision Makers","Perception Analysis","Proposal\/Price Quote","Negotiation\/Review","Closed Won","Closed Lost"]}
+}

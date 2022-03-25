@@ -1,0 +1,144 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Jason Huang <jason.huang@bigtincan.com>
+ */
+
+@import '../../../libs/less/variables.less';
+@import "../../../libs/less/btc-font-mixins.less";
+
+@black: #222222;
+@red: #f43a3a;
+@orange: #f66a27;
+@green: #7cd13c;
+@blue: #3691ee;
+@purple: #714cec;
+
+
+.iconDropMenu {
+
+  > div > span:before{
+    border: 0.5px solid #dddddd;
+    border-radius: 20px;
+  }
+  /** Media Query breakpoints */
+  @media @mobile {
+
+  }
+  @media @tablet {
+
+  }
+  @media @desktop {
+
+  }
+  @media @desktop-xl {
+
+  }
+}
+
+.iconList {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.icon {
+  padding-bottom: 0px;
+
+  .icon-circle-fill(30px);
+
+  &:hover {
+    .icon-subscribe-fill(30px);
+  }
+
+  &:before {
+    padding-right: 0px;
+  }
+}
+
+.iconActive {
+  padding-bottom: 0px;
+
+  .icon-subscribe-fill(30px);
+
+  &:before {
+    padding-right: 0px;
+  }
+}
+
+.iconWhiteActive {
+  .icon-subscribe(30px);
+
+  &:before {
+    color: #afafaf;
+  }
+}
+
+.iconWhite {
+  box-sizing: border-box;
+  color: white;
+  border: 1px solid #DDDDDD;
+  border-radius: 30px;
+  width: 30px;
+  height: 30px;
+
+  &:hover {
+    .icon-subscribe(30px);
+    border: none;
+
+    &:before {
+      color: #afafaf;
+      border: none;
+    }
+  }
+}
+
+.fontIcon {
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: @light-base-color;
+  }
+}
+
+.fontIconInner {
+  border: 0.5px solid;
+  border-color: @base-color;
+}
+
+.fontIconActive {
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: @light-base-color;
+}
+
+.fontEdit {
+  padding: 0px 3px;
+  font-weight: 900;
+}
+
+.underline {
+  height: 19px;
+  border-bottom: 2px solid;
+  width: 11px;
+  padding: 0px;
+}
+

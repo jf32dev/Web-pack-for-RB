@@ -1,0 +1,117 @@
+[
+  {
+    "email": "userTest@gmail.com",
+    "id": 17676,
+    "type": "people",
+    "name": "Testy McTester",
+    "thumbnail": "src/static/images/user1.png",
+    "role": "",
+    "isFollowed": false,
+    "isFollowLoading": true
+  },
+  {
+    "email": "testTetser@gmail.com",
+    "id": 165819,
+    "type": "people",
+    "name": "Tester Tester",
+    "thumbnail": "src/static/images/user2.png",
+    "role": "",
+    "isFollowed": false
+  },
+  {
+    "email": "test@gmail.com",
+    "id": 155491,
+    "type": "people",
+    "name": "Security Tester",
+    "thumbnail": "src/static/images/user3.png",
+    "role": "sec",
+    "isFollowed": true
+  },
+  {
+    "email": "test@gmail.com",
+    "id": 141589,
+    "type": "people",
+    "name": "Deleted Designer",
+    "thumbnail": "src/static/images/user4.png",
+    "role": "Designer",
+    "status": "deleted",
+    "isFollowed": true
+  },
+  {
+    "email": "test321@gmail.com",
+    "id": 124875,
+    "type": "people",
+    "name": "The Tester with the longest name you will ever see it just keeps going my parents were assholes",
+    "thumbnail": "",
+    "role": "TEEEEEEEEEESSTTTTTTTTTTTTT",
+    "isFollowed": true
+  },
+  {
+    "email": "test321@gmail.com",
+    "id": 124023,
+    "type": "people",
+    "name": "Gooberdaddy",
+    "thumbnail": "",
+    "role": "",
+    "isFollowed": false
+  },
+  {
+    "email": "testLongestName@gmail.com",
+    "id": 1248745,
+    "type": "people",
+    "name": "The Tester with the longest name you will ever see it just keeps going my parents were assholes",
+    "thumbnail": "",
+    "role": "TEEEEEEEEEESSTTTTTTTTTTTTT",
+    "isFollowed": true
+  },
+  {
+    "email": "userTest123@gmail.com",
+    "id": 1240233,
+    "type": "people",
+    "name": "Gooberdaddy",
+    "thumbnail": "",
+    "role": "",
+    "isFollowed": false
+  },
+  {
+    "email": "userTest345@gmail.com",
+    "id": 1248725,
+    "type": "people",
+    "name": "The Tester with the longest name you will ever see it just keeps going my parents were assholes",
+    "thumbnail": "",
+    "role": "TEEEEEEEEEESSTTTTTTTTTTTTT",
+    "isFollowed": true
+  },
+  {
+    "email": "userTest678@gmail.com",
+    "id": 12404213,
+    "type": "people",
+    "name": "Gooberdaddy",
+    "thumbnail": "",
+    "role": "",
+    "isFollowed": false
+  },
+  {
+    "email": "userTestAnother@gmail.com",
+    "id": 12487325,
+    "type": "people",
+    "name": "The Tester with the longest name you will ever see it just keeps going my parents were assholes",
+    "thumbnail": "",
+    "role": "TEEEEEEEEEESSTTTTTTTTTTTTT",
+    "isFollowed": true
+  },
+  {
+    "email": "userTest987@gmail.com",
+    "id": 1240323,
+    "type": "people",
+    "name": "Gooberdaddy User",
+    "thumbnail": "src/static/images/user4.png",
+    "role": "Developer",
+    "isFollowed": false
+  },
+  {
+    "email": "cathryn_hand@yahoo.com",
+    "id": 1240324,
+    "type": "externalPeople"
+  }
+]

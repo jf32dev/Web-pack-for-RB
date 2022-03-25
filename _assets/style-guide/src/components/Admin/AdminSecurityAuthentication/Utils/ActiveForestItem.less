@@ -1,0 +1,84 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Jason Huang <jason.huang@bigtincan.com>
+ */
+
+@import "../../../../libs/less/btc-font-mixins.less";
+@import "../../../../libs/less/variables.less";
+
+.ActiveForestItem {
+  border: 1px solid @dividerColor;
+  border-bottom-color: var(--divider-color);
+  border-radius: 3px;
+  background-color: white;
+}
+
+.menuHeader {
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: space-between;
+  align-content: center;
+  text-align: center;
+  position: relative;
+  padding: 0.5rem 1rem;
+  background-color: #f8f8f8;
+  color: var(--base-color);
+  margin-bottom: 1rem;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.body {
+  padding: 0 1rem 1rem 1rem;
+
+  > div {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .ActiveForestItemText {
+    width: 48%;
+    label {
+      color: var(--primary-text);
+    }
+  }
+}
+
+.body > div.add {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  padding-top: 0.5rem;
+  justify-content: flex-start;
+
+  &:before {
+    .btc-font();
+    font-size:1.2rem;
+    color: var(--base-color);
+    padding-right: 0.75rem;
+    content:'\f1d0';
+  }
+}
+
+.iconClassName:before {
+  font-size: 0.7rem;
+}
+
+.DomainControllerSorting {
+  box-shadow: none !important;
+  border: inherit !important;
+  background-color: transparent !important;
+}

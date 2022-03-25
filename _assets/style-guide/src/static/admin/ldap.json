@@ -1,0 +1,29 @@
+{
+  "ldapType":"ad",
+  "onPremiseAdBridge": true,
+  "adBridgeConfiguration":"https:\/\/61.68.19.150:4443",
+  "token":"d17TktyFtNuZptub1B7i9sgp0onJ9boZ",
+  "manageGroups":1,
+  "recursiveGroups":0,
+  "ldapSecure":0,
+  "port":"389",
+  "activeForest":[{
+    "forestName":"LDAP ",
+    "serviceAccount":"service.account",
+    "serviceAccountPassword":"serviceaccount",
+    "domains":[{"accountSuffix":"@dev.bigtincan.mobi",
+      "baseDn":"DC=dev,DC=bigtincan,DC=mobi",
+      "domainController":"10.10.10.151",
+      "usernamePrefix":""
+    }]
+  }],
+  "accountSuffix":"",
+  "baseDn":"",
+  "domainController":"https:\/\/125.253.8.35",
+  "usernamePrefix":"",
+  "bridgeToken":"d17TktyFtNuZptub1B7i9sgp0onJ9boZ",
+  "edAdminDn":"",
+  "edAdminPassword":"",
+  "edLdapFilter":"",
+  "edLdapPort":"389"
+}

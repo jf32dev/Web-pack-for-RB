@@ -1,0 +1,107 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Jason Huang <jason.huang@bigtincan.com>
+ */
+
+@import "../../../libs/less/variables.less";
+@import "../../../libs/less/btc-font-mixins.less";
+
+@toolBarHeight: 2rem;
+@itemHeight: 32px;
+
+.NoteControl {
+  background-color: black;
+  width: 22rem;
+  min-width: 400px;
+  height: 100%;
+  padding: 3rem 1rem 20px 5px;
+
+  /** Media Query breakpoints */
+  @media @mobile {
+
+  }
+  @media @tablet {
+
+  }
+  @media @desktop {
+
+  }
+  @media @desktop-xl {
+
+  }
+}
+
+.noteContainer {
+  background-color: @primaryText;
+  margin-top: 21px;
+  height: calc(~'100%' - 21px);
+  z-index:2;
+  position: relative;
+}
+
+.title {
+  display: flex;
+  color: @secondaryText;
+  font-weight: 100;
+  height: 45px;
+  font-size: 0.75rem;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 0.5px solid @secondaryText;
+  border-bottom-color: @secondary-text;
+
+  div {
+    padding: 0px 15px;
+    cursor: pointer;
+  }
+}
+
+.active {
+  color: @baseText;
+  font-weight: 900;
+}
+
+.speakerNotes {
+  color: @base-text;
+  padding: 2rem;
+  font-size: 0.75rem;
+  height: calc(~'100%' - 45px);
+  overflow-y: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.noNotes {
+  color: @secondaryText;
+  display: flex;
+  height: calc(~'100%' - 3rem);
+  justify-content: center;
+  align-items: center;
+}
+
+.noteBtnTitle {
+  font-size: 1.2rem;
+  color: @baseText;
+  font-weight: 600;
+}
+
+.noteBtnDesc {
+  font-size: 0.77rem;
+  color: @baseText;
+  font-weight: 300;
+  padding-bottom: 10px;
+}

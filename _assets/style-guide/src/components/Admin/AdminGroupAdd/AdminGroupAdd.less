@@ -1,0 +1,107 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Rubenson Barrios <rubenson.barrios@bigtincan.com>
+ */
+
+@import "../../../libs/less/btc-font-mixins.less";
+@import "../../../libs/less/variables.less";
+@import "../../../libs/less/utilities.less";
+
+.GroupSettings {
+  cursor: auto;
+  width: 17.5rem;
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5);
+  text-align: left;
+}
+
+.headerWrap {
+  position: relative;
+  padding: 0.5rem;
+}
+.headerCounter {
+  padding-left:0.5rem;
+  line-height: 1.2rem;
+  font-size: 95%;
+  text-align: left;
+  color: var(--secondary-text);
+}
+.actions {
+  line-height: 1.2rem;
+  font-size: 95%;
+  cursor: pointer;
+  color: var(--base-color);
+  position: absolute;
+  right: 0.75rem;
+  top: 0.6rem;
+}
+
+.detailWrap {
+  padding: 0.25rem 0.75rem 0 0.25rem;
+  position:relative;
+  color: var(--secondary-text);
+  display: flex;
+  align-items: center;
+  align-content: stretch;
+
+  > div {
+    a {
+      cursor: default !important;
+    }
+    &:hover { // remove hover
+      background-color: #fff !important;
+    }
+  }
+}
+
+.groupItem {
+  flex-grow: 1;
+
+  > div {
+    max-width: 100%;
+    width: 100%;
+  }
+  > div > div {
+    .overflow-ellipsis();
+
+    a { display: inline; .overflow-ellipsis();  }
+  }
+}
+.select {
+  min-width: 6.5rem;
+
+  div {
+    font-size: 97% !important;
+  }
+}
+
+.saveWrap {
+  width: 100%;
+  width: ~"calc(100% + 2px)";
+  margin-left: -1px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+  > button {
+    width: 100%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
+
+.itemListing {
+  min-height: 9.75rem;
+}

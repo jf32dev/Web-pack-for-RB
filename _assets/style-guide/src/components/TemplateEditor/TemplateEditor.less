@@ -1,0 +1,174 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../libs/less/btc-font-mixins.less";
+@import "../../libs/less/variables.less";
+@import "../../libs/less/utilities.less";
+
+.TemplateEditor {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+
+  &.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+  }
+
+  /** Media Query breakpoints */
+  @media @mobile-xs {
+
+  }
+  @media @mobile {
+
+  }
+  @media @tablet {
+
+  }
+  @media @desktop {
+
+  }
+  @media @desktop-xl {
+
+  }
+
+}
+
+.editHeader {
+  border-bottom: solid 1px @dividerColor;
+  border-bottom-color: var(--divider-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex: 1 1 auto;
+  padding: 0 1.5rem;
+  height: 2.5rem;
+
+  input {
+    margin-bottom: 0 !important;
+  }
+}
+
+.clearBtn {
+  min-width: inherit !important;
+  padding-left: 0.75rem !important;
+  padding-right: 0.75rem !important;
+  margin-right: 0.75rem;
+}
+
+.name {
+  .icon-edit(1rem, ~'after');
+  line-height: 2rem;
+  font-size: 120%;
+
+  &:after {
+    cursor: pointer;
+    color: var(--base-color);
+    margin-left: 0.5rem;
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+
+  button + button {
+    margin-left: 0.65rem !important;
+  }
+}
+
+.addModuleMenu {
+  margin-right: 2rem;
+}
+
+.contentWrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-top: 1rem;
+  position: relative;
+  overflow: auto;
+}
+
+.homeWrapper {
+  flex: 1;
+  position: relative;
+  overflow: auto;
+  padding-bottom: 2.5rem;
+
+  &.isEmpty {
+    display: flex;
+    align-items: center;
+  }
+
+  &.editMode {
+    // TemplateEditorItem
+    > div > div > div {
+      opacity: 0.3;
+    }
+  }
+}
+
+.addOnSearch {
+  margin: 1rem;
+}
+
+.addOnListItem {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+:global {
+  .react-grid-item:not(.react-grid-placeholder) {
+    .grab();
+    background: #fff;
+  }
+
+  .react-grid-item.react-grid-placeholder {
+    background-color: var(--base-color);
+    opacity: 0.2;
+  }
+
+  .react-grid-item.react-draggable-dragging {
+    .grabbing();
+    position: relative;
+    box-shadow: 0 2px 11px 0 rgba(0, 0, 0, 0.31);
+  }
+
+  .react-grid-item > .react-resizable-handle {
+    .icon-handle-diagonal(1rem);
+    bottom: 0.05rem !important;
+    right: 0.1rem !important;
+    padding: 0 !important;
+    text-align: center;
+    background-image: none !important;
+    height: 1.5rem !important;
+    width: 1.5rem !important;
+    color: var(--primary-text);
+  }
+}

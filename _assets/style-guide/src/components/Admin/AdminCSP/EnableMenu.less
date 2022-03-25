@@ -1,0 +1,90 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../../libs/less/btc-font-mixins.less";
+@import "../../../libs/less/variables.less";
+
+.enableMenu {
+  width: 11.88rem;
+
+  > div {
+    width: 100%;
+  }
+
+  > div > div {
+    width: 100% !important;
+    top: 0px;
+  }
+
+  .button {
+    text-align: left;
+    font-size: 0.875rem !important;
+    height: 40px;
+    padding: 0.625rem 0.9375rem !important;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    .icon-play();
+    &:before {
+      display: inline;
+      float: right;
+      color: var(--base-color) !important;
+      font-size: 0.4rem !important;
+      transform: rotate(90deg);
+      margin: 0 0 0 0 !important;
+    }
+  }
+  .ShareMenu {
+    button {
+      width: 100% !important;
+      padding: 0.625rem 0.9rem !important;
+      color: var(--secondary-text) !important;
+      &:active {
+        background-color: unset !important;
+        color: var(--secondary-text) !important;
+      }
+      &:before {
+        transform: rotate(-90deg);
+      }
+    }
+    .linkList {
+      margin:0 !important;
+      font-size:90%;
+
+      li {
+        margin: 0 0;
+        padding: 0.5rem 0.05rem 0.5rem 1rem;
+        display: flex;
+        justify-content: space-between;
+
+        &:hover {
+          background-color: var(--light-base-color) !important;
+        }
+
+        > label {
+          flex: 1 1 auto;
+          text-align: left;
+
+          &:hover { cursor: pointer; }
+        }
+      }
+    }
+  }
+}
+

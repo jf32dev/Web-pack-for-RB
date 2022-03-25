@@ -1,0 +1,219 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package hub-web-app-v5
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Rubenson Barrios <rubenson.barrios@bigtincan.com>
+ */
+
+@import "../../../libs/less/btc-font-mixins.less";
+@import "../../../libs/less/variables.less";
+@import "../../../libs/less/utilities.less";
+
+.ManageList {
+  position: relative;
+  flex: 0 1 auto;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+
+  border-right: 1px solid;
+  border-right-color: var(--divider-color);
+}
+.List, .ListSearch {
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  > li > div {
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 4rem;
+      right: 0.5rem;
+      border-bottom: 1px solid;
+      border-color: var(--divider-color);
+    }
+  }
+
+  > li > div > div > div:nth-child(2) {
+    .overflow-ellipsis();
+
+    > span:first-child {
+      display: inline;
+    }
+  }
+}
+.ListSearch {
+  min-height: 5rem; //9rem;
+}
+.AddGroupList {
+  position: absolute;
+  max-height: calc(100% - 2rem);
+  padding: 0.6rem;
+  height: auto;
+  bottom: 0;
+}
+.SearchList {
+  position: relative !important;
+  display: block;
+  height: calc(~"100% - 3rem") !important;
+  max-height: calc(~"100% - 3rem");
+  padding: 0.5rem;
+  //top: 3rem;
+}
+.SearchListFullHeight {
+  position: relative;
+  display: block;
+  height: 100%;
+  max-height: 100%;
+  padding: 0.5rem;
+  top: 0;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-height: 100%;
+  margin-top: auto;
+  padding-top: 0.5rem;
+  //align-content: flex-end;
+  //align-items: flex-end;
+
+  > h3 {
+    width: 100%;
+    margin: 0;
+    margin-top: auto;
+    background-color: #fff;
+    padding: 0.5rem;
+    color: @secondary-text;
+    font-size: 100%;
+  }
+  > ul, > div {
+    overflow:auto;
+    width: 100%;
+    height:auto;
+    background-color: #fff;
+    max-height: calc(~"100% - 3rem");
+  }
+  > div { // No results
+    max-height: 20rem;
+    transition: all @timing-fast, visibility @timing-fast;
+  }
+}
+.addLink {
+  right: 0.5rem;
+  position: absolute;
+  cursor: pointer;
+  color: var(--base-color);
+}
+.filterInput {
+  width: 95%;
+  margin: 0.5rem auto;
+  > input {
+    margin: 0 !important;
+  }
+}
+.filterList {
+  width: 95%;
+  margin: 0.5rem 0 0;
+  position: relative;
+}
+.headerInput {
+  //position: absolute !important;
+  //width: calc(~"100% - 0.5rem") !important;
+  top: 0;
+  //padding: 0.5rem 0.5rem 0 !important;
+  z-index: 3;
+
+  &:before {
+    color: @base-color !important;
+  }
+  > input {
+    margin: 0 !important;
+    &:before {
+      bottom: 0.8rem !important;
+    }
+  }
+}
+
+.overlayList {
+  background-color: rgba(34, 34, 34, 0.4);
+  visibility: hidden;
+
+  transition: background @timing-fast, visibility @timing-fast;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  outline: 0;
+  position: absolute;
+  z-index: 2;
+  overflow:hidden;
+}
+
+// List Items
+// User Item
+.itemList {
+  cursor:pointer !important;
+  align-items:center;
+  transition:background @timing-fast linear;
+  padding:0.5rem;
+
+  &:hover {
+    background-color:@light-base-color;
+  }
+
+  > div:nth-child(2) {
+    .overflow-ellipsis();
+
+    > span {
+      display: block;
+    }
+  }
+}
+
+.infoClassName {
+  max-width: 100%;
+  .overflow-ellipsis();
+}
+
+// SLIDE Animation
+.slide-appear {
+  opacity: 0;
+  transition: opacity .3s ease-in;
+}
+
+.slide-appear.slide-appear-active {
+  opacity: 1;
+}
+
+.slide-enter {
+  height: 0;
+  transition: height .3s ease-in;
+}
+
+.slide-enter.slide-enter-active {
+  height: 2rem;
+  transition: height .1s ease;
+}
+
+.slide-exit {
+  height: 5rem;
+  transition: height .3s ease-out;
+}
+
+.slide-exit.slide-exit-active {
+  height: 0;
+}

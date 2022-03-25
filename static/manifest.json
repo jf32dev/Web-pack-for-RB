@@ -1,0 +1,11 @@
+{
+  "short_name": "Bigtincan Hub",
+  "name": "Bigtincan Hub for Android",
+  "prefer_related_applications": true,
+  "related_applications": [
+    {
+    "platform": "play",
+    "id": "com.bigtincan.mobile.hub"
+    }
+  ]
+}

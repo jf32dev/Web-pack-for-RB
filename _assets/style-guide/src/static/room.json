@@ -1,0 +1,56 @@
+[{
+  "id": 3001,
+  "name": "Sample Room",
+  "messages": [{
+    "id": 1,
+    "type": "chat",
+    "body": "Porchetta :( pancetta meatloaf chicken kielbasa, ball tip frankfurter pork belly kevin beef ribs capicola ground round. Filet mignon doner cow, corned beef pork chop ham hock tail kielbasa fatback beef. Andouille t-bone pork pancetta drumstick. Drumstick brisket cupim t-bone, doner salami rump venison pork fatback turducken ground round spare ribs prosciutto.",
+    "time": 1459305203774,
+    "received": true,
+    "user": {
+      "id": 202,
+      "name": "Radical Guy",
+      "thumbnail": ""
+    }
+  }, {
+    "id": 2,
+    "type": "chat",
+    "body": "Another contender has arrived",
+    "time": 1459305205774,
+    "received": true,
+    "user": {
+      "id": 203,
+      "name": "Cool Dude",
+      "thumbnail": ""
+    }
+  }, {
+    "id": 3,
+    "type": "chat",
+    "body": "Nice :poop:",
+    "time": 1459305207774,
+    "sent": true,
+    "user": {
+      "id": 202,
+      "name": "Radical Guy",
+      "thumbnail": ""
+    }
+  }, {
+    "id": 4,
+    "type": "hub-attachment",
+    "body": "StoryFileIdentifier/10093",
+    "time": 1459305203774,
+    "sent": true,
+    "user": {
+      "id": 202,
+      "name": "Radical Guy",
+      "thumbnail": ""
+    },
+    "file": {
+      "id": 10093,
+      "filename": "example_file.jpg",
+      "description": "Example File",
+      "category": "image",
+      "thumbnail": ""
+    }
+  }]
+}]

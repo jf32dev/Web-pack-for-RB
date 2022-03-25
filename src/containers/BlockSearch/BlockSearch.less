@@ -1,0 +1,269 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package hub-web-app-v5
+ * @copyright 2010-2020 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../less/_variables.less";
+
+.BlockSearch {
+  height: 100%;
+
+  .blocksearchWrapper {
+    display: flex;
+
+    // initial screen without results
+    &.fullWrapper {
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+
+      background: url('../../../static/img/bg_blocksearch.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50%;
+    }
+
+    &.hasSearch {
+      flex-direction: column;
+
+      position: absolute;
+      top: @appHeaderHeight;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      > div {
+        padding-left: @pageMargin;
+        padding-right: @pageMargin;
+      }
+    }
+  }
+
+  .loadingWrapper, .emptyWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+
+  .breadcrumbs {
+    li {
+      font-size: 0.875rem;  // update in Breadcrumbs.less ?
+    }
+  }
+
+  .resultsRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.875rem;
+    position: relative;
+
+    // fade scroll
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -1rem;
+      left: 0;
+      width: 100%;
+      height: 1rem;
+      background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 95%);
+    }
+
+    .tabs {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+
+      li {
+        color: var(--base-color);
+        border-top: solid 2px transparent;
+        border-bottom: solid 2px transparent;
+        margin-right: 1rem;
+        font-size: 0.875rem;
+        font-weight: 600;
+        line-height: 1.57;
+        padding: 0.5rem 0.75rem;
+        cursor: pointer;
+        opacity: 0.6;
+      }
+    }
+    .tabItemActive {
+      border-bottom-color: var(--base-color) !important;
+      opacity: 1 !important;
+    }
+
+    .sortBy {
+      display: flex;
+      align-items: center;
+
+      > label {
+        margin: 0 0.5rem 0 0;
+      }
+      > div {
+        width: 9rem;
+
+        &.is-focused {
+          outline: none;
+        }
+      }
+    }
+  }
+
+  .scrollContainer {
+    overflow: auto;
+    padding-top: 1rem;
+
+    // trickery to allow the list item's
+    // box shadow to overflow
+    padding-left: 0 !important;
+  }
+
+  .blockResults, .fileResults {
+    margin-bottom: 2.5rem;
+
+    > header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--secondary-text);
+      padding-left: @pageMargin;
+      margin-bottom: 0.5rem;
+
+      h3 {
+        &.hasTooltip {
+          .tooltip(e);
+        }
+
+        // what is a block?
+        > span {
+          display: inline-block;
+          margin-left: 0.75rem;
+          margin-right: 0.5rem;
+          font-size: 0.75rem;
+          color: var(--accent-color);
+        }
+      }
+      .pagination {
+        font-size: 0.875rem;
+
+        > a {
+          margin-left: 1rem;
+
+          &[disabled] {
+            pointer-events: none;
+            color: var(--disabled-color);
+          }
+        }
+        .viewAll {
+          display: inline-block;
+          margin-left: 1rem;
+          color: var(--base-color);
+          cursor: pointer;
+
+        }
+      }
+    }
+  }
+
+  .blockResults {
+    &+.blockResults {
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      margin: 0.75rem 0;
+    }
+
+    .list {
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: @pageMargin + 0.1rem;
+
+      // list item margin
+      margin: -0.75rem;
+
+      > div {
+        margin: 0.75rem;
+      }
+    }
+  }
+
+  .fileResults {
+    .list {
+      padding-left: @pageMargin + 0.1rem;
+
+      // list item margin
+      margin-left: 0.15rem;
+    }
+  }
+
+  .openStackActions {
+    > header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 4rem;
+      margin: 1rem 0;
+
+      h3 {
+        margin: 0;
+        color: var(--primary-text);
+      }
+
+      // n blocks selected
+      > div > span {
+        display: inline-block;
+        margin-right: 1rem;
+        padding-right: 1rem;
+        color: var(--primary-text);
+        border-right: solid 1px @dividerColor;
+        border-right-color: var(--divider-color);
+        min-width: 8rem;
+      }
+
+      .addAllButton {
+        &:before {
+          font-size: 1.2rem;
+        }
+      }
+
+      .cancelBtn[disabled], .selectAllBtn[disabled] {
+        background-color: transparent;
+        color: var(--secondary-text);
+      }
+    }
+  }
+
+  .dialogMessage {
+    text-align:center;
+    color:@secondary-text;
+  }
+
+  /** Media Query breakpoints */
+  @media @mobile {
+
+  }
+  @media @tablet {
+
+  }
+  @media @desktop {
+
+  }
+  @media @desktop-xl {
+
+  }
+}

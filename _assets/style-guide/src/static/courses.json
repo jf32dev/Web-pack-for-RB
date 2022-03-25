@@ -1,0 +1,57 @@
+[{
+  "id": 166154,
+  "type": "course",
+  "title": "Test Group with a very long name surely this name is too long why would anyone do this someone will.",
+  "thumbnail": "src/static/images/story1.jpg",
+  "childCount": 1,
+  "colour": "#e202ae",
+  "notes": "My personal group"
+}, {
+  "id": 301054,
+  "type": "course",
+  "title": "Android Test",
+  "thumbnail": "src/static/images/story2.png",
+  "childCount": 0,
+  "colour": "#ffd400",
+  "notes": "Users responsible for creating solutions Synth blog locavore, gastropub food truck Vice pop-up +1 fap fixie forage swag jean shorts."
+}, {
+  "id": 166152,
+  "type": "course",
+  "title": "iOS Groups",
+  "thumbnail": "",
+  "childCount": 14,
+  "colour": "#cccccc",
+  "notes": "Testing notes in groups"
+}, {
+  "id": 166150,
+  "type": "course",
+  "title": "More Testing Grous",
+  "thumbnail": "",
+  "childCount": 5,
+  "colour": "#02e8d1",
+  "notes": "notes in groups"
+}, {
+  "id": 166158,
+  "type": "course",
+  "title": "testing test blah blah",
+  "thumbnail": "",
+  "childCount": 120,
+  "colour": "#02e8d1",
+  "notes": "Some more Testing notes in groups"
+},{
+  "id": 166157,
+  "type": "course",
+  "title": "Android Grous",
+  "thumbnail": "",
+  "childCount": 34,
+  "colour": "#02e8d1",
+  "notes": "Testing notes in groups"
+},{
+  "id": 166156,
+  "type": "course",
+  "title": "testing this items long test blah blah",
+  "thumbnail": "",
+  "childCount": 120,
+  "colour": "#02e8d1",
+  "notes": "testing this items long test blah blah"
+}]

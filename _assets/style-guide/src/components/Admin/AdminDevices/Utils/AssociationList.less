@@ -1,0 +1,284 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Jason Huang <jason.huang@bigtincan.com>
+ */
+
+@import "../../../../libs/less/btc-font-mixins.less";
+@import "../../../../libs/less/utilities.less";
+@import "../../../../libs/less/variables.less";
+
+.List {
+  -webkit-print-color-adjust: exact;
+
+  > ul, > ol {
+    margin:0;
+    padding:0;
+    list-style:none;
+
+    li {
+      margin:0;
+      padding: 0 0.5rem;
+      vertical-align:top;
+      display: flex;
+      flex-direction: row;
+      color: var(--secondary-text);
+      .borderBottom;
+
+      > div {
+        min-width: 5rem;
+      }
+
+      > div:not(:last-child) {
+        width: 30%;
+      }
+
+      > div:not(:first-child) {
+        display: flex;
+        align-items: center;
+      }
+
+      > div:first-child {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0.5rem 0rem;
+        > div {
+          width: 100%;
+          -webkit-line-clamp: 1;
+          .ellipsis();
+        }
+
+        > div:nth-child(2) {
+          font-size: 0.7rem;
+        }
+      }
+
+      > div:last-child {
+        justify-content: flex-end;
+        width: 10%;
+      }
+    }
+  }
+
+  button[data-action="filter"]{
+    background-color: #fff;
+    padding: 0.15rem 0.3rem;
+    float: right;
+    margin-right: 1rem;
+
+    &:before {
+      font-size: 1rem;
+      color: var(--base-color);
+    }
+
+    &:active, &.active {
+      background-color: var(--dark-base-color) !important;
+
+      &:before {
+        font-size: 1rem;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.ellipsis() {
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.header {
+  display:flex;
+  align-items: flex-start;
+  min-height:1.75rem;
+  position:relative;
+  .borderBottom;
+
+  li:not(:last-child) {
+    width: 30%;
+  }
+
+  li {
+    min-width: 5rem;
+    color: var(--base-color);
+    position: relative;
+  }
+
+  li:last-child {
+    text-align: right;
+    width: 10%;
+  }
+}
+
+.count {
+  color: var(--secondary-text);
+  flex:1 0 auto;
+}
+
+.selectControls, .sortHeadings {
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.selectControls {
+  width:100%;
+}
+
+.selectedCount {
+  flex:1 0 auto;
+  padding:0 1rem;
+}
+
+.sortHeadings {
+  flex:1 0 auto;
+  margin:0;
+  padding: 0.5rem;
+  list-style:none;
+  user-select:none;
+
+  > li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: color @timing-fast linear;
+  }
+
+  > li:hover {
+    color: var(--base-color);
+  }
+}
+
+.reverseSort {
+  li span:after {
+    transform: rotate(180deg);
+  }
+}
+
+.sortKey() {
+  margin:0;
+  display:inline-block;
+  span {
+    cursor:pointer;
+  }
+
+  span:after {
+    .btc-font();
+    font-size:12px;
+    content:'\f185';
+    margin-left:0.3rem;
+    margin-bottom:0.2rem;
+    display:none;
+    transition: transform @timing-fast linear;
+  }
+}
+
+.sortKey {
+  .sortKey();
+}
+
+.activeSortKey {
+  .sortKey();
+  color:var(--base-color);
+
+  span:after {
+    display:inline-block;
+  }
+}
+
+.activeSortKeyReverse {
+  .sortKey();
+  color:var(--base-color);
+}
+
+.description {
+  .overflow-ellipsis();
+  flex:1 1 auto;
+  max-width: 10rem;
+}
+
+.FileList {
+  .flexRemain();
+}
+
+.flexRemain() {
+  display: flex;
+  flex: 1;
+  flex-flow: column;
+  overflow: hidden;
+}
+
+.deleteIcon {
+  .icon-filter-fill();
+  cursor:pointer;
+  vertical-align:middle;
+  color: var(--base-color);
+  right: 1rem;
+  position: absolute;
+  top: 0;
+}
+
+.filterText {
+  width: 29% !important;
+  margin-left: -0.25rem;
+  position: relative;
+
+  input {
+    margin: 0 0 0;
+  }
+
+  span {
+    bottom: 1rem;
+  }
+}
+
+.listLoader {
+  margin: 0 auto;
+}
+
+.borderBottom {
+  border-bottom: 0.5px solid @dividerColor;
+  border-bottom-color: var(--divider-color);
+}
+
+.size {
+  .overflow-ellipsis();
+  color:var(--secondary-text);
+  width:6rem;
+}
+
+.itemTitle {
+  flex: 1;
+  overflow: hidden;
+}
+
+.itemTotalDevices {
+  span {
+    cursor: pointer;
+
+    &:after {
+      .btc-font();
+      font-size:0.7rem;
+      content:'\f185';
+      color: var(--base-color);
+      position: relative;
+      top: 0.1rem;
+      left: 0.3rem;
+    }
+  }
+}

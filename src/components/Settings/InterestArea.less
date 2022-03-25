@@ -1,0 +1,61 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package hub-web-app-v5
+ * @copyright 2010-2017 BigTinCan Mobile Pty Ltd
+ * @author Rubenson Barrios <rubenson.barrios@bigtincan.com>
+ */
+
+@import "../../less/_variables.less";
+
+.InterestArea {
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  height: 100%;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 1rem;
+
+  h3 {
+    margin-bottom: 0.7rem;
+    text-transform:capitalize;
+  }
+}
+
+.ListController {
+  overflow: auto;
+
+  ul {
+    max-width: 50%;
+    min-width: 510px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+}
+/*
+.ListController {
+  overflow: auto;
+  > div {
+    max-width: 50%;
+    min-width: 510px;
+    margin: auto;
+
+    ul {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}*/

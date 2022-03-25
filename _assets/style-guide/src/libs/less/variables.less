@@ -1,0 +1,294 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+// LESS Variables for standard theme
+// Avoid using these
+@baseColor: #F26724;
+@accentColor: #43b7f1;
+
+@darkBaseColor: darken(@baseColor, 15%);
+@lightBaseColor: lighten(@baseColor, 35%);
+@baseText: #ffffff;
+@textIcons: #ffffff;
+
+@backgroundColor: #ffffff;
+@primaryText: #000000;
+@secondaryText: #666666;
+@descriptionText: #222222;
+@dividerColor: #dddddd;
+@disabledColor: #999999;
+@dropdownMenuBackgroundColor: #eeeeee;
+
+@errorColor: #e85d5d;
+@infoColor: #ffe5a7;
+@successColor: #04d97e;
+@notificationColor: #43b7f1;
+
+@borderRadius: 0.25rem; // used for buttons & inputs
+
+
+// Remove these when all CSS references are gone
+@base-color: var(--base-color);
+@accent-color: var(--accent-color);
+@dark-base-color: var(--dark-base-color);
+@light-base-color: var(--light-base-color);
+@base-text: var(--base-text);
+@background-color: var(---background-color);
+@text-icons: var(---text-icons);
+
+@primary-text: var(--primary-text);
+@secondary-text: var(--secondary-text);
+@divider-color: var(--divider-color);
+@disabled-color: var(--disabled-color);
+
+@info-color: var(--info-color);
+@error-color: var(--error-color);
+@success-color: var(--success-color);
+
+/**
+ * Media Query Breakpoints
+ * em choice: https://zellwk.com/blog/media-query-units/
+ * Source: http://blog.scur.pl/2012/06/variable-media-queries-less-css/
+ * e.g.
+    @media @mobile {
+      border-color: @color1;
+    }
+    @media @tablet {
+      border-color: @color2;
+    }
+    @media @desktop {
+      border-color: @color3;
+    }
+    @media @desktop-xl {
+      border-color: @color4;
+    }
+  *
+  * Reference via js with MediaContext
+  * e.g. this.context.media = ['desktop-xl']
+ */
+@mobile-xs: ~"only screen and (max-width: 35.9375em)"; // 575
+@mobile: ~"only screen and (min-width: 36em) and (max-width: 47.9375em)"; // 576 - 767
+@tablet: ~"only screen and (min-width: 48em) and (max-width: 59.3125em)"; // 768 - 949
+@desktop: ~"only screen and (min-width: 59.375em) and (max-width: 70.5em)"; // 950 - 1128
+@desktop-xl: ~"only screen and (min-width: 70.5625em)"; // 1129
+@desktop-xxl: ~"only screen and (min-width: 80em)"; // 1280
+
+// Fonts
+.body-font() {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-weight: normal;
+}
+
+.body-font-bold() {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.body-font-italic() {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-style: italic;
+}
+
+@body-font: 'Open Sans', Helvetica, Arial, sans-serif;
+@body-font-bold: 'Open Sans', Helvetica, Arial, sans-serif;
+@body-font-italic: 'Open Sans', Helvetica, Arial, sans-serif;
+
+// box shadow
+@boxShadow: 0px 2px 16px rgba(34, 34, 34, 0.12);
+
+
+// Animation timing variables
+@timing-fast: 150ms;
+@timing-medium: 250ms;
+@timing-slow: 350ms;
+
+// Inputs
+@inputBg: #f5f5f5;
+@inputPlaceholderText: #777;
+
+/* Bigtincan / Light Mode / Neutral / Grey 60 */
+@footNote-color: #7A7A7A;
+
+/* Bigtincan / Light Mode / Neutral / Grey 10 */
+@border-color: #E9E9E9;
+
+// File Category colours
+@categories: app #f26726,
+  audio #da42db,
+  btc #f26726,
+  cad #d0021b,
+  csv #24a62b,
+  earthviewer #6379de,
+  ebook #8a623d,
+  epub #97cf00,
+  excel #08872c,
+  folder #555,
+  form #01aeb4,
+  ibooks #f0842e,
+  image #9052e3,
+  keynote #1baff9,
+  learning #9052e3,
+  none #999999,
+  numbers #24da1c,
+  oomph #f0118c,
+  pages #ff9900,
+  pdf #f01300,
+  potx #ff7752,
+  powerpoint #ff7752,
+  project #17a149,
+  prov #888888,
+  rtf #4d4d4d,
+  rtfd #4d4d4d,
+  scrollmotion #0098bc,
+  stack #222222,
+  twixl #9a1656,
+  txt #555555,
+  '3d-model'#8B2D74,
+  vcard #41ebe1,
+  video #6a73ff,
+  visio #38549e,
+  web #038ac6,
+  word #3ea2d9,
+  zip #fab600;
+
+@service: cq5 #77A240,
+  alfresco #8dc63f,
+  s3 #f7981d,
+  azure #00abec,
+  box #0081c6,
+  cmis #652B9D,
+  documentum #394D58,
+  dropbox #007ee5,
+  egnyte #4a9895,
+  evernote #7ac142,
+  gdrive #0f9d58,
+  hubspot #f47621,
+  jive #292d6c,
+  onedrive #0949b2,
+  salesforce #1798c1,
+  savo #0a9ec0,
+  sharefile #c1ca35,
+  sharepoint #0072c6,
+  smb #ffcb08,
+  sugarsync #02a15e,
+  webdav #12aae2;
+
+/*
+  Colours by category
+  include mixin to style by data-category attribute
+*/
+
+// List
+.listCategoryColours(@iterator: 1) when(@iterator <=length(@categories)) {
+  @name: extract(extract(@categories, @iterator), 1);
+
+  &[data-category='@{name}'] {
+    background-color: extract(extract(@categories, @iterator), 2);
+  }
+
+  .listCategoryColours((@iterator + 1));
+}
+
+// Grid
+.gridCategoryColours(@iterator: 1) when(@iterator <=length(@categories)) {
+  @name: extract(extract(@categories, @iterator), 1);
+
+  &[data-category="@{name}"] {
+    &:before {
+      color: extract(extract(@categories, @iterator), 2);
+    }
+
+    &:after {
+      background-color: extract(extract(@categories, @iterator), 2);
+    }
+  }
+
+  .gridCategoryColours((@iterator + 1));
+}
+
+// Grid Striped gradient
+.stripedGradientColours(@iterator: 1) when(@iterator <=length(@categories)) {
+  @name: extract(extract(@categories, @iterator), 1);
+
+  &[data-category="@{name}"] {
+    &:after {
+      .stripedGradient(extract(extract(@categories, @iterator), 2));
+    }
+  }
+
+  .stripedGradientColours((@iterator + 1));
+}
+
+/* Component Mixins */
+.field-message() {
+  visibility: hidden; // hidden by default
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  max-width: 450px;
+  z-index: 10;
+  margin: 5px 0 0;
+  padding: 3px 9px;
+  font-size: 90%;
+  border-radius: 3px;
+  transition: visibility 0s linear @timing-fast, opacity @timing-fast ease-in-out;
+  .body-font-bold();
+
+  &:after {
+    bottom: 100%;
+    z-index: 15;
+    left: 10px;
+    border: 5px solid transparent;
+    content: ' ';
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+}
+
+/* Use to show message */
+.field-message-visible() {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+}
+
+/* Error state */
+.field-error() {
+  .field-message();
+  color: #fff;
+  background-color: @errorColor;
+  border-color: darken(@errorColor, 10%);
+
+  &:after {
+    border-bottom-color: @errorColor;
+  }
+}
+
+/* Info Message */
+.field-info() {
+  .field-message();
+  color: #4e401e;
+  background-color: @infoColor;
+  border: darken(@infoColor, 10%);
+
+  &:after {
+    border-bottom-color: @infoColor;
+  }
+}

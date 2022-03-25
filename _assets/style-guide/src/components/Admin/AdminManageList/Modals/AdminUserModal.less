@@ -1,0 +1,213 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package hub-web-app-v5
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Rubenson Barrios <rubenson.barrios@bigtincan.com>
+ */
+
+@import "../../../../libs/less/variables.less";
+@import "../../../../libs/less/utilities.less";
+
+.modalBody {
+  display: flex;
+  flex-wrap:wrap;
+  flex-direction:row;
+  justify-content:flex-start;
+  align-items:stretch;
+  padding: 1rem 0.2rem 1rem 0.5rem;
+
+  > div {
+    flex: 1 50%;
+    padding: 0 0.2rem;
+
+    /** Media Query breakpoints */
+    @media @mobile, @mobile-xs {
+      flex: 1 100%;
+    }
+  }
+}
+.fullFlex {
+  flex: 100% !important;
+}
+
+.footer {
+  border-top: 1px solid;
+  border-top-color: var(--divider-color);
+}
+
+.select {
+  display: inline-block;
+  width: 16.5rem;
+  margin: 0 0 0.75rem;
+
+  @media @mobile {
+    width: 75%;
+  }
+  @media @mobile-xs {
+    width: 100%;
+  }
+}
+
+.selectWrapper {
+  margin: 0 !important;
+  vertical-align: top;
+
+  > label {
+    vertical-align: top;
+  }
+}
+
+.metadataWrap {
+  margin: 0 !important;
+  vertical-align: top;
+
+  > span {
+    display: inline-block;
+    vertical-align: top;
+  }
+  > section {
+    display: inline-block;
+  }
+}
+
+.radioWrap {
+  margin: 0.5rem 0 0.75rem;
+
+  > div {
+    > div {
+      padding: 0 0 0.5rem 0;
+    }
+
+    @media @mobile-xs {
+      width: 100%;
+    }
+  }
+}
+
+.inputClass {
+  margin: 0 !important;
+}
+
+.inputClass, .selectWrapper, .radioWrap, .metadataWrap {
+  > legend {
+    width: 9.5rem;
+    font-weight: bold;
+    margin-right: 1rem;
+  }
+
+  > label, > span {
+    width: 9.5rem;
+    text-align: left;
+    font-weight: bold;
+    color: var(--secondary-text);
+    margin-right: 1rem;
+    vertical-align: top;
+    padding-top: 0.5rem;
+    .overflow-ellipsis();
+  }
+
+  textarea {
+    width: 16.5rem !important;
+    display: inline-block !important;
+  }
+
+  @media @mobile {
+    width: 100%;
+    > legend {  width: 22% !important;  }
+    > label { width: 22% !important; }
+    > span { width: 22% !important; }
+    > input { width: 75% !important; }
+    > textarea { width: 75% !important; }
+  }
+
+  @media @mobile-xs {
+    width: 100%;
+    > legend {  width: 100% !important;  }
+    > label { width: 100% !important; }
+    > span { width: 100% !important; }
+    > input { width: 100% !important; }
+    > textarea { width: 100% !important; }
+  }
+
+}
+
+.checkboxGroupWrap {
+  display: inline-block;
+  margin-bottom: 1.2rem;
+
+  > div {
+    margin-bottom: 0.5rem;
+  }
+
+  > div > input {
+    text-align: center;
+  }
+
+  > span {
+    margin: 0.75rem;
+    position: relative;
+    top: 0.5rem;
+  }
+}
+
+.groupList {
+  margin: -0.5rem -0.5rem 0.75rem;
+  min-height: 0.5rem;
+  max-height: 16rem;
+  max-width: 17.5rem;
+  display: inline-block;
+
+  > div > ul {
+    padding-bottom: 1rem;
+    overflow-y: auto;
+
+    &[data-id='list'] {
+      max-height: 14rem;
+      overflow-y: auto;
+    }
+  }
+
+  div > ul {
+    overflow-y: hidden;
+    overflow-x: hidden !important;
+
+    a {
+      max-width: 7.5rem;
+      display: inherit;
+      .overflow-ellipsis();
+    }
+  }
+
+  @media @mobile {
+    width: 100% !important;
+  }
+
+  @media @mobile-xs {
+    width: 100% !important;
+  }
+}
+
+.deleteBtn {
+  position: absolute !important;
+  right: 1rem;
+  top: 0.7rem;
+}
+
+.flexPadding {
+  padding-bottom: 1.5rem;
+}
+
+.metadataList {
+  overflow: initial;
+  max-height: 11rem;
+}

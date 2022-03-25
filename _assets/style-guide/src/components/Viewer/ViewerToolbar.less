@@ -1,0 +1,208 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package style-guide
+ * @copyright 2010-2018 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ */
+
+@import "../../libs/less/btc-font-mixins.less";
+@import "../../libs/less/variables.less";
+
+@iconSize: 20px;
+@animation-speed: @timing-slow;
+
+.ViewerToolbar {
+  display:inline-block;
+  background-color: rgba(35, 35, 35, 0.95);
+  padding:0.8rem 0.5rem;
+  border-radius:4px;
+  color:#fff;
+  z-index:2;
+
+  position:absolute;
+  bottom:10%;
+  left:50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+@media @mobile {
+  .ViewerToolbar {
+    text-align: center;
+  }
+  .fullscreen {
+    display:none !important;
+  }
+}
+@media @tablet {
+  .ViewerToolbar {
+    text-align: center;
+  }
+  .fullscreen {
+    display:none !important;
+  }
+}
+
+.inViewer {
+  position:fixed;
+}
+
+.pageIndicator {
+  display:inline-block;
+  user-select:none;
+  margin:0 0 0 1.05rem;
+  padding:0;
+  list-style:none;
+  vertical-align:middle;
+  height:1.65rem;
+
+  > li {
+    display:inline;
+    vertical-align:middle;
+    padding:0 0.15rem;
+  }
+}
+
+.pageTools, .zoomTools, .screenTools, .rotateTools {
+  display:inline-block;
+  margin:0;
+  padding:0;
+  list-style:none;
+  vertical-align:middle;
+
+  > li {
+    display:inline;
+    vertical-align:middle;
+    padding:0 1.05rem;
+    margin:0;
+    transition:all @timing-fast ease-in;
+
+    &:not(.disabled):hover {
+      color:@secondary-text;
+    }
+  }
+}
+
+.currentPage {
+  background:transparent;
+  color:#fff;
+  width:1.5rem;
+  margin:0 0.15rem;
+  text-align:center;
+  border:solid 1px #fff;
+  border-radius:3px;
+}
+
+.totalPages {
+  margin-right:0.5rem;
+}
+
+.prevPage {
+  .icon-prevPage(@iconSize);
+}
+
+.nextPage {
+  .icon-nextPage(@iconSize);
+}
+
+.zoomIn {
+  .icon-zoomIn(@iconSize);
+}
+
+.zoomOut {
+  .icon-zoomOut(@iconSize);
+}
+
+.rotate {
+  .icon-rotate(@iconSize);
+}
+
+.fullscreen {
+  .icon-fullscreen(@iconSize);
+}
+
+.disabled {
+  opacity:0.6;
+  cursor:not-allowed;
+}
+
+.fadeOut {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s @animation-speed, opacity @animation-speed linear;
+}
+
+.disappear {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.fadeIn {
+  visibility: visible;
+  opacity: 0.8;
+  transition: opacity @animation-speed linear;
+}
+
+.zoomControls {
+  display: block;
+  background-color: rgba(35, 35, 35, 0.95);
+  padding:0.2rem 0.5rem;
+  border-radius:4px;
+  color:#fff;
+  z-index:2;
+  position:absolute;
+  left: ~"calc(50% + 5px)";
+  top: -220px;
+  white-space: nowrap;
+
+  > ul {
+    list-style: none;
+    text-align: center;
+    li {
+      &:not(.disabled):hover {
+        color:@secondary-text;
+      }
+    }
+  }
+}
+
+.zoomLabel {
+  //display: inline-block;
+  text-align: center;
+}
+
+.reverseSort:after {
+  transform: rotate(0deg) !important;
+}
+
+.sortKey() {
+  width: 50px;
+  display: inline-block !important;
+  text-align: center;
+  padding: 0 !important;
+}
+
+.sortKey {
+  .sortKey();
+}
+
+.sortKey:after {
+  .btc-font();
+  font-size:12px;
+  content:'\f185';
+  margin-left:0.3rem;
+  margin-bottom:0.2rem;
+  transform: rotate(180deg);
+  transition: transform @timing-fast linear;
+}
+

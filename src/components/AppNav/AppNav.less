@@ -1,0 +1,212 @@
+/**
+ *
+ * BIGTINCAN - CONFIDENTIAL
+ *
+ * All Rights Reserved.
+ *
+ * NOTICE: All information contained herein is, and remains the property of BigTinCan Mobile Pty Ltd and its suppliers,
+ * if any. The intellectual and technical concepts contained herein are proprietary to BigTinCan Mobile Pty Ltd and its
+ * suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or
+ * copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior
+ * written permission is obtained from BigTinCan Mobile Pty Ltd.
+ *
+ * @package hub-web-app-v5
+ * @copyright 2010-2020 BigTinCan Mobile Pty Ltd
+ * @author Lochlan McBride <lochlan.mcbride@bigtincan.com>
+ * @author Nimesh Sherpa <nimesh.sherpa@bigtincan.com>
+ */
+
+@import "../../less/_variables.less";
+
+@item-height: 40px;
+@item-width: 50px;
+@appNavSelectionWidth: 62px;
+@icon-size: 24px;
+
+/* Light Style */
+@nav-bg-light: #F4F4F4;
+@tooltip-c-light: #eee;
+@tooltip-bg-light: #000000;
+@tooltip-bg-hover-light: var(--background-color);
+
+.AppLogo {
+  height: @appHeaderHeight;
+  background-image: url('../../../static/logo.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30px;
+}
+
+// AppNav mixin
+.AppNav() {
+  position: relative;
+  width: @appNavWidth;
+  transition: all ease-out @timing-medium;
+  flex: 0 0 auto;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    >li:first-child {
+      margin-top: 0;
+    }
+
+    >li {
+      .tooltip(e);
+      position: relative;
+      display: block;
+      border-bottom: 0;
+      padding: 0;
+      transition: all ease-out @timing-fast;
+      width: @item-width;
+      margin: 0.5rem auto;
+      cursor: pointer;
+
+      >a {
+        position: relative;
+        border-radius: 0.5rem;
+        height: @item-height;
+        color: var(--secondary-text);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.AppNavLight {
+  .AppNav();
+  background: @nav-bg-light;
+
+  li {
+
+    /* Tool tip */
+    &:before {
+      border-right-color: @tooltip-bg-light !important;
+    }
+
+    &:after {
+      background: @tooltip-bg-light !important;
+      color: var(--background-color);
+    }
+
+    &:hover {
+      background-color: @tooltip-bg-hover-light;
+      border-radius: 0.5rem;
+    }
+
+    a.lightActive:before {
+      color: var(--base-color);
+    }
+  }
+}
+
+.lightActive {
+  background-color: var(--background-color);
+}
+
+.newIndicator:after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--notification-color);
+}
+
+.CompanyNav {
+  a {
+    .icon-company-nav(@icon-size);
+  }
+}
+
+.ContentNav {
+  a {
+    .icon-content-nav(@icon-size);
+  }
+}
+
+.ChatNav {
+  a {
+    .icon-chat-nav(@icon-size);
+  }
+}
+
+.CalendarNav {
+  a {
+    .icon-calendar-nav(@icon-size);
+  }
+}
+
+.ActivityNav {
+  a {
+    .icon-notifications-nav(@icon-size);
+  }
+}
+
+.MeNav {
+  a {
+    .icon-me-nav(@icon-size);
+  }
+}
+
+.SearchNav {
+  a {
+    .icon-search-nav(@icon-size);
+  }
+}
+
+.CanvasNav {
+  a {
+    .icon-canvas-nav(@icon-size);
+  }
+}
+
+.ArchiveNav {
+  a {
+    .icon-archive-nav(@icon-size);
+  }
+}
+
+.FormsNav {
+  a {
+    .icon-forms-nav(@icon-size);
+  }
+}
+
+.ReportsNav {
+  a {
+    .icon-reports-nav(@icon-size);
+  }
+}
+
+.AdminNav {
+  a {
+    .icon-settings-nav(@icon-size);
+  }
+}
+
+.HelpNav {
+  a {
+    .icon-help-nav(@icon-size);
+  }
+}
+
+.mostRecentChatUser {
+  position: relative;
+  border-top: solid 1px;
+  border-color: var(--disabled-color);
+  padding-top: 1rem;
+  cursor: pointer;
+}
+
+.separator {
+  border-top: 1px solid #ccc;
+  display: block;
+  margin: 0.3125rem 0;
+}
